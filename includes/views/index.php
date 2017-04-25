@@ -1,5 +1,4 @@
 <?php
 require_once 'core/init.php';
-
-echo 'OVERCOOKED';
+echo 'Home Page';
 ?>

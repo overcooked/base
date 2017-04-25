@@ -1,15 +1,19 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 class Application {
 
+  /**
+    * Loads a new view.
+    */
   public function __construct() {
     self::load_view();
   }
 
+  /**
+    * Loads the view if one exists, if not
+    * it redirects to a error 404 page.
+    * @return true if page exists, false if not.
+    */
   public static function load_view() {
     if (isset($_SERVER['REQUEST_URI'])) {
 
@@ -31,21 +35,20 @@ class Application {
         $link = $chunk;
       }
 
-      // Check if the view is available.
-      if(is_dir("../includes/views/")) {
-        $files = scandir("../includes/views/");
-        foreach($files as $filename) {
-          if ($link != '.' && $link != '..') { // This is an issue.
-            if ($link === $filename) {
-              require_once 'includes/views/' . $link;
-              return;
-            }
+      // Check to see if the view exists or not.
+      $files = scandir($_SERVER['DOCUMENT_ROOT'] . "/includes/views/");
+      foreach($files as $filename) {
+        if ($link != '.' && $link != '..') { // This is an issue.
+          if ($link === $filename) {
+            require_once 'includes/views/' . $link;
+            return true;
           }
         }
       }
 
       // No view was found, delete.
       require_once 'includes/errors/404.php';
+      return false;
     }
   }
 

@@ -1,5 +1,5 @@
 <?php
-require_once '../core/init.php';
+require_once 'core/init.php';
 
 if (Input::exists() && Token::check(Input::get('token'))) {
   $validate = new Validate();

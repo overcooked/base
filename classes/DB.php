@@ -213,6 +213,10 @@ class DB {
   public function count() {
     return $this->_count;
   }
+
+  public function first() {
+    return $this->results()[0];
+  }
 }
 
 ?>

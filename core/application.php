@@ -1,9 +1,14 @@
 <?php
 
+/**
+  * The application class is used to control
+  * the views of the application.
+  */
 class Application {
 
   /**
-    * Loads a new view.
+    * Constructor for the application, it loads
+    * a new view if one exists within the view folder.
     */
   public function __construct() {
     self::load_view();

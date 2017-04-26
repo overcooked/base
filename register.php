@@ -31,7 +31,25 @@ if (Input::exists() && Token::check(Input::get('token'))) {
   ));
 
   if($validation->passed()) {
-    echo 'Dom was created.';
+
+    $user = new User();
+    $salt = Hash::salt(32);
+
+    try {
+      $user->create(array(
+        'username' => Input::get('username'),
+        'password' => Hash::make(Input::get('password'), $salt),
+        'salt' => $salt,
+        'name' => Input::get('name'),
+        'joined' => date('Y-m-d H:i:s'),
+        'permission' => 1
+      ));
+
+      Session::flash('success', 'You have registered!');
+      Redirect::to('index.php');
+    } Catch(Exception $e) {
+      die($e->getMessage()); // Message about broken register.
+    }
   } else {
     foreach($validation->errors() as $error) {
       echo $error . '<br>';

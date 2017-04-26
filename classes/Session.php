@@ -45,6 +45,25 @@ class Session {
     }
   }
 
+  /**
+    * Allows the ability to flash messages onto
+    * pages, that only show once flashed.
+    * @param name - The name of the session/flash.
+    * @param contents - The contents of the flash message.
+    * @return the contents of the message to be flashed.
+    */
+  public static function flash($name, $contents = '') {
+    if(self::exists($name)) {
+      $session = self::get($name);
+      self::delete($name);
+      return $session;
+    } else {
+      self::set($name, $contents);
+    }
+
+    return '';
+  }
+
 }
 
 ?>

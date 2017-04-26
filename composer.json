@@ -1,0 +1,14 @@
+{
+    "name": "phpunit/phpunit",
+    "description": "phpunit",
+    "authors": [
+        {
+            "name": "mac craig",
+            "email": "maccraig98@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/php-invoker": "^1.1"
+    }
+}

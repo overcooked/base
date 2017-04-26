@@ -1,7 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-class TrueTest extends TestCase
+class BasicTest extends TestCase
 {
     public function testFailure()
     {

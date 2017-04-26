@@ -4,4 +4,4 @@ php:
   - '7.1'
   - hhvm
   - nightly
-script: phpunit
+script: phpunit tests/Example.php

@@ -1,13 +1,13 @@
 {
     "name": "phpunit/phpunit",
     "description": "phpunit",
-    "authors": [
-        {
-            "name": "mac craig",
-            "email": "maccraig98@gmail.com"
-        }
-    ],
-    "require": {},
+    "authors": [{
+        "name": "mac craig",
+        "email": "maccraig98@gmail.com"
+    }],
+    "require": {
+        "leafo/scssphp": "0.0.12"
+    },
     "require-dev": {
         "phpunit/php-invoker": "^1.1"
     }

@@ -1,34 +1,39 @@
 <?php
 /**
-  * The Token class allows for Token based
-  * authentication to help prevent against
-  * cross site forgery requests using tokens.
-  * @author Justin leung
-  * @version 1.0
-  */
+ * The Token class allows for Token based
+ * authentication to help prevent against
+ * cross site forgery requests using tokens.
+ * @author Team Point.
+ * @version 1.0
+ */
 class Token {
 
   /**
-    * Generates and saves a token into a session variable.
-    * @return the value of the token you have created.
-    */
+   * Generates and sets a token into a session variable.
+   * @return String - The value of the generated token.
+   */
   public static function generate() {
     return Session::set(Config::get('session/token_name'), md5(uniqid()));
   }
 
   /**
-    * Authenticates whether the token are valid.
-    * @param token - The token that was submitted.
-    * @return boolean - Whether the token was valid or not.
-    */
+   * Authenticates whether a token is valid.
+   * @param  String $token - The token from the input form.
+   * @return boolean       - True if token is valid, false if not.
+   */
   public static function check($token) {
-    $tokenName = Config::get('session/token_name');
 
-    if(Session::exists($tokenName) && $token === Session::get($tokenName)) {
-      Session::delete($tokenName);
+    // Save the pre-defined global token name.
+    $token_name = Config::get('session/token_name');
+
+    // Check if a user token exists, and if it's equal to the input form token.
+    if(Session::exists($token_name) && $token === Session::get($token_name)) {
+      // Delete token if successful and return true.
+      Session::delete($token_name);
       return true;
     }
 
+    // Token was not valid, return false.
     return false;
   }
 

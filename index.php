@@ -1,21 +1,17 @@
 <?php
-require_once 'core/init.php';
-
-if(Session::exists('success')) {
-  echo Session::flash('success');
-}
+/** REQUIRED file */
+require_once (getcwd() . "/core/init.php");
 
 $user = new User();
+if($user->is_logged_in()) {
 
-if($user->isLoggedIn()) {
-?>
-  <p>Welcome <?php echo escape($user->data()->username); ?></p>
+  $welcome = "<p>Welcome " . escape($user->data()->username) . "</p>";
+  $login = "<ul><li><a href='logout.php'>Logout</a></li></ul>";
 
-  <ul>
-    <li><a href="logout.php">Logout</a></li>
-  </ul>
-<?php
+  echo $welcome . $login;
 } else {
-  echo '<p>You need to <a href="login.php">login</a> or <a href="register.php">register</a></p>';
+  $alt = "<p>You need to <a href='login.php'>login</a> or <a href='register.php'>register</a></p>";
+
+  echo $alt;
 }
 ?>

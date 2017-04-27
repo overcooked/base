@@ -2,8 +2,8 @@
 /**
  * The Redirect class redirects users to other
  * pages using PHP's header functionality.
- * @param  [type] $location [description]
- * @return [type]           [description]
+ * @author Team Point.
+ * @version 1.0
  */
 class Redirect {
 

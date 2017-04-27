@@ -19,15 +19,16 @@ class Hash {
 
   /**
    * Generates a salt value with a length of 32.
-   * @return [type]         [description]
+   * @return string - The value of the generated salt.
    */
+
   public static function salt() {
     return utf8_encode(openssl_random_pseudo_bytes(32));
   }
 
   /**
    * Generates a unique random hash with no salt.
-   * @return [type] [description]
+   * @return string - The value of the random value.
    */
   public static function unique() {
     return self::make(uniqid());

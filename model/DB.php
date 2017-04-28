@@ -107,7 +107,7 @@ class DB {
     if(count($where) === 3) {
       $operators = array('=', '>', '<', '>=', '<=');
 
-      // Get the field, operator, and value of the query action. (username = 'mac')
+      // Get the field, operator, and value of the query action. (email = 'hello@test.ca')
       $field = $where[0];
       $operator = $where[1];
       $value = $where[2];

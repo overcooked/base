@@ -1,48 +1,14 @@
 <?php
-require_once 'core/init.php';
+/**
+ * The login page allows for a user to login to
+ * the website given an email and password.
+ * @uses controllers/LoginController - To handle the login.
+ * @uses views/Login/login           - For the pages UI.
+ */
 
-if(Input::exists() && Token::check(Input::get('token'))) {
-  $validate = new Validate();
-  $validation = $validate->check($_POST, array(
-    'username' => array(
-      'inputname' => 'Username',
-      'required' => true
-    ),
-    'password' => array(
-      'inputname' => 'Password',
-      'required' => true
-    )
-  ));
+/** REQUIRED Import For App Initialization. */
+require_once (getcwd() . "/core/init.php");
 
-  if($validation->passed()) {
-    $user = new User();
-    $login = $user->login(Input::get('username'), Input::get('password'));
-
-    // TODO: Add session flash.
-    if($login) {
-      Redirect::to('index.php');
-    } else {
-      echo 'Problem logging in.';
-    }
-  } else {
-    foreach($validation->errors() as $error) {
-      echo $error, '<br>';
-    }
-  }
-}
+/** Load the pages view. */
+View::load('Login');
 ?>
-
-<form action="" method="post">
-  <div class="field">
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" autocomplete="off" value="">
-  </div>
-
-  <div class="field">
-    <label for="password">Password</label>
-    <input type="text" name="password" id="password" autocomplete="off" value="">
-  </div>
-
-  <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-  <input type="submit" name="" value="Log In">
-</form>

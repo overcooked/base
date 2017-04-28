@@ -33,7 +33,7 @@ class Validate {
 
     /* - Passed In Array Structure -
         [$form_rule][0] -> 'password' => array('field_name' => 'Password') <- [$rules][0]
-        [$form_rule][1] -> 'username' => array('field_name' => 'Username') <- [$rules][1]
+        [$form_rule][1] -> 'email' => array('field_name' => 'Email') <- [$rules][1]
                           [$form_name]           [$rule]      [$rule_value]
      */
 
@@ -76,7 +76,7 @@ class Validate {
           if ($rule === 'unique') {
             $check = $this->_db->get($rule_value, array($form_name, '=', $value));
             if($check->count()) {
-              $this->add_error("{$field_name} already exists.");
+              $this->add_error("Please use a different email.");
             }
             continue;
           }

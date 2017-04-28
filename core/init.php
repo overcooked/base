@@ -8,9 +8,11 @@
  *   1.) PHP Session starting.
  *   2.) PHP Error Displaying Enabled.
  *   3.) GLOBAL Config Information. (DB info, Global Variable Names)
- *   4.) Sanitization Functions Import.
- *   5.) Autoloader To Import Classes.
- *   6.) Login Cookie Checker With Auto Login.
+ *   4.) Loads the Controller for the MVC.
+ *   5.) Loads the Model for the MVC.
+ *   6.) Autoloader To Import Classes.
+ *   7.) Login Cookie Checker With Auto Login.
+ *   8.) Escape function to help escape dangerous strings.
  *
  */
 
@@ -40,15 +42,18 @@ $GLOBALS['config'] = array(
   )
 );
 
-/** 4.) Include sanitize functions to secure inputs. */
-require_once 'functions/sanitize.php';
+/** 5.) Include sanitize functions to secure inputs. */
+require_once (getcwd() . '/core/Controller.php');
 
-/** 5.) Automatic class loader. */
+/** 6.) Include sanitize functions to secure inputs. */
+require_once (getcwd() . '/core/View.php');
+
+/** 7.) Automatic class loader. */
 spl_autoload_register(function($class) {
-  require_once('classes/' . $class . '.php');
+  require_once (getcwd() . '/model/'  . $class . '.php');
 });
 
-/** 6.) Checks for saved cookie, and logs user in automatically. */
+/** 8.) Checks for saved cookie, and logs user in automatically. */
 if(Cookie::exists(Config::get('remember/cookie_name')) && !Session::exists(Config::get('session/session_name'))) {
 
   // Get the users saved cookie value.
@@ -62,5 +67,14 @@ if(Cookie::exists(Config::get('remember/cookie_name')) && !Session::exists(Confi
     $user = new User($hash_check->results()[0]->user_id);
     $user->login();
   }
+}
+
+/**
+ * 9.) Used to escape strings and sql queries.
+ * @param  string $string - The string to be escaped.
+ * @return string         - The escaped string.
+ */
+function escape($string) {
+  return htmlentities($string, ENT_QUOTES, 'UTF-8');
 }
 ?>

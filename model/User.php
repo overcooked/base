@@ -64,15 +64,14 @@ class User {
   }
 
   /**
-   * Finds a user based on their user ID or username.
-   * TODO: Change username to email.
+   * Finds a user based on their user ID or email.
    * @param  int $user - The user ID number.
    * @return boolean   - True if user is found, false if not.
    */
   public function find($user) {
 
-    // Choose whether to check id or username.
-    $field = (is_numeric($user)) ? 'id' : 'username';
+    // Choose whether to check id or email.
+    $field = (is_numeric($user)) ? 'id' : 'email';
 
     // Search for user in database.
     $data = $this->_db->get('users', array($field, '=', $user));
@@ -88,31 +87,23 @@ class User {
   }
 
   /**
-   * Returns the users data. (Email, password, name)
-   * @return array - Containing current users data.
-   */
-  public function data() {
-    return $this->_data;
-  }
-
-  /**
-   * Login a user with a username and password. Also,
+   * Login a user with a email and password. Also,
    * it saves a cookie to remember a logged in user.
-   * @param  String $username - The input form username value.
+   * @param  String $email - The input form email value.
    * @param  String $password - The input form password value.
    * @return Boolean          - True if successful login, false if not.
    */
-  public function login($username = null, $password = null) {
+  public function login($email = null, $password = null) {
 
-    // If user exists, and password/username is null.
-    if(!$username && !$password && $this->exists()) {
+    // If user exists, and password/email is null.
+    if(!$email && !$password && $this->exists()) {
       // Set the current session to be for this user (Log them in.)
       Session::set($this->_session_name, $this->data()->id);
       return true;
     }
 
-    // If username exists in database.
-    if($this->find($username)) {
+    // If email exists in database.
+    if($this->find($email)) {
 
       // If the password is correct.
       if($this->data()->password === Hash::make($password, $this->data()->salt)) {
@@ -145,6 +136,25 @@ class User {
 
     // Login failed, return false.
     return false;
+  }
+
+  /**
+   * Updates a users information given the fields.
+   * @param  array  $fields - The fields and values to be updated.
+   * @throws exception      - Problem updating the information.
+   */
+  public function update($fields = array()) {
+    if(!$this->_db->update('users', $this->data()->id, $fields)) {
+      throw new Exception("There Was A Problem Updating");
+    }
+  }
+
+  /**
+   * Returns the users data. (Email, password, name)
+   * @return array - Containing current users data.
+   */
+  public function data() {
+    return $this->_data;
   }
 
   /**

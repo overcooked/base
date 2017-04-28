@@ -1,17 +1,15 @@
 <?php
-/** REQUIRED file */
+/**
+ * The index page is the home page of the website.
+ * This page either displays a logged out view
+ * or a logged in view depending on the user.
+ * @uses controllers/HomeController - To control the home page.
+ * @uses views/Home/home            - For the pages UI.
+ */
+
+/** REQUIRED Import For App Initialization. */
 require_once (getcwd() . "/core/init.php");
 
-$user = new User();
-if($user->is_logged_in()) {
-
-  $welcome = "<p>Welcome " . escape($user->data()->username) . "</p>";
-  $login = "<ul><li><a href='logout.php'>Logout</a></li></ul>";
-
-  echo $welcome . $login;
-} else {
-  $alt = "<p>You need to <a href='login.php'>login</a> or <a href='register.php'>register</a></p>";
-
-  echo $alt;
-}
+/** Load the pages view. */
+View::load('Home');
 ?>

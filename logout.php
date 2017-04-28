@@ -1,10 +1,12 @@
 <?php
+/**
+ * The logout page simply logs a user out.
+ * @uses controllers/LogoutController - To handle the logout.
+ */
+
+/** REQUIRED Import For App Initialization. */
 require_once (getcwd() . "/core/init.php");
 
-$user = new User();
-if($user->is_logged_in()) {
-  $user->logout();
-}
-
-Redirect::to('index.php');
+/** Load the pages logout controller. */
+Controller::load('LogoutController');
 ?>

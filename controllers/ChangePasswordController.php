@@ -1,9 +1,20 @@
 <?php
-// Create a new user object.
+/**
+ * The change password controller is
+ * used to change a users password.
+ * @author Team Point.
+ */
+
+/** User to check logged in and get user data. */
 $user = new User();
 
 // If the user isn't logged in, redirect to index.
-$user->is_not_logged_in();
+$user->not_logged_in_redirect();
+
+// If a flash success message exists, print the message.
+if(Session::exists('changed')) {
+  echo Session::flash('changed');
+}
 
 // Check if input exists, and the form token is valid.
 if(Input::exists() && Token::check(Input::get('token'))) {
@@ -34,20 +45,27 @@ if(Input::exists() && Token::check(Input::get('token'))) {
   if($validation->passed()) {
 
     // If the input password is equal to the users password.
-    if(Hash::make(Input::get('current_password'), $user->data()->salt) !== $user->data()->password) {
-      echo 'Your current password is wrong.';
-    } else {
+    if(Hash::make(Input::get('current_password'), $user->data()->salt) === $user->data()->password) {
 
-      // Update the new password using a new salt.
-      $salt = Hash::salt(32);
-      $user->update(array(
-        'password' => Hash::make(Input::get('new_password'), $salt),
-        'salt' => $salt
-      ));
+      try {
+        // Update the new password using a new salt.
+        $salt = Hash::salt(32);
+        $user->update(array(
+          'password' => Hash::make(Input::get('new_password'), $salt),
+          'salt' => $salt
+        ));
+      } catch(Exception $e) {
+        die($e->getMessage());
+      }
+
+      Session::flash('changed', 'Your password has been updated.');
+      Redirect::to('changepassword.php');
+
+    } else {
+      Session::flash('changed', 'Your current password is not correct.');
+      Redirect::to('changepassword.php');
     }
 
-    // Go back to the homepage.
-    Redirect::to('index.php');
   } else {
     foreach($validation->errors() as $error) {
       echo $error . '</br>';

@@ -168,12 +168,12 @@ class DB {
   /**
    * Update a table given a user ID.
    * TODO: Change to update given some other value.
-   * @param  String $table  - The table where the value will be updated.
-   * @param  int    $id     - The id of the row to be updated.
-   * @param  array  $fields - The fields and values to be updated.
-   * @return boolean        - True if update was successful, false if not.
+   * @param  String $table   - The table where the value will be updated.
+   * @param  int    $user_id - The id of the row to be updated.
+   * @param  array  $fields  - The fields and values to be updated.
+   * @return boolean         - True if update was successful, false if not.
    */
-  public function update($table, $id, $fields) {
+  public function update($table, $user_id, $fields) {
     $set = '';
     $x = 1;
 
@@ -189,7 +189,7 @@ class DB {
     }
 
     // Build the SQL query to be executed.
-    $sql = "UPDATE {$table} SET {$set} WHERE id = {$id}";
+    $sql = "UPDATE {$table} SET {$set} WHERE user_id = {$user_id}";
 
     // If the query was successful, return true.
     if (!$this->query($sql, $fields)->error()) {

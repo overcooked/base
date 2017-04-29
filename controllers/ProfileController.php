@@ -1,7 +1,13 @@
 <?php
-// Create a new user object.
+/**
+ * The profile controller is used to
+ * view a users profile page.
+ * @author Team Point.
+ */
+
+/** User to check logged in and get user data. */
 $user = new User();
 
 // If the user isn't logged in, redirect to index.
-$user->is_not_logged_in();
+$user->not_logged_in_redirect();
 ?>

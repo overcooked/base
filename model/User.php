@@ -71,7 +71,7 @@ class User {
   public function find($user) {
 
     // Choose whether to check id or email.
-    $field = (is_numeric($user)) ? 'id' : 'email';
+    $field = (is_numeric($user)) ? 'user_id' : 'user_email';
 
     // Search for user in database.
     $data = $this->_db->get('users', array($field, '=', $user));
@@ -98,7 +98,7 @@ class User {
     // If user exists, and password/email is null.
     if(!$email && !$password && $this->exists()) {
       // Set the current session to be for this user (Log them in.)
-      Session::set($this->_session_name, $this->data()->id);
+      Session::set($this->_session_name, $this->data()->user_id);
       return true;
     }
 
@@ -109,19 +109,19 @@ class User {
       if($this->data()->password === Hash::make($password, $this->data()->salt)) {
 
         // Set the current session to be for this user (Log them in.)
-        Session::set($this->_session_name, $this->data()->id);
+        Session::set($this->_session_name, $this->data()->user_id);
 
         // Generate a unique hash.
         $hash = Hash::unique();
 
         // If the user has a cookie saved before.
-        $hash_check = $this->_db->get('users_session', array('user_id', '=', $this->data()->id));
+        $hash_check = $this->_db->get('users_session', array('user_id', '=', $this->data()->user_id));
 
         // If no previous cookies were found, insert a new one.
         if(!$hash_check->count()) {
           $this->_db->insert('users_session', array(
-            'user_id' => $this->data()->id,
-            'hash' => $hash
+            'user_id' => $this->data()->user_id,
+            'session_hash' => $hash
           ));
         } else {
           // If the cookie exists, save that cookie again.
@@ -144,7 +144,7 @@ class User {
    * @throws exception      - Problem updating the information.
    */
   public function update($fields = array()) {
-    if(!$this->_db->update('users', $this->data()->id, $fields)) {
+    if(!$this->_db->update('users', $this->data()->user_id, $fields)) {
       throw new Exception("There Was A Problem Updating");
     }
   }
@@ -171,7 +171,7 @@ class User {
    */
   public function logout() {
     // Remove the cookie from the database.
-    $this->_db->delete('users_session', array('user_id', '=', $this->data()->id));
+    $this->_db->delete('users_session', array('user_id', '=', $this->data()->user_id));
 
     // Delete the current session and cookie.
     Session::delete($this->_session_name);
@@ -187,12 +187,23 @@ class User {
   }
 
   /**
-   * Checks if a user isn't logged in. If not
-   * logged in, redirect them to the homepage.
+   * Checks whether a user is logged in. If so,
+   * redirect a user to the homepage.
    * @return void
    */
-  public function is_not_logged_in() {
-    if(!$this->is_logged_in()) {
+  public function logged_in_redirect() {
+    if($this->_logged_in) {
+      Redirect::to('index.php');
+    }
+  }
+
+  /**
+   * Checks if a user isn't logged in. If not
+   * logged in, redirect the user to the homepage.
+   * @return void
+   */
+  public function not_logged_in_redirect() {
+    if(!$this->_logged_in) {
       Redirect::to('index.php');
     }
   }

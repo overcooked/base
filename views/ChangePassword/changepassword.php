@@ -1,7 +1,3 @@
-<?php
-Controller::load('ChangePasswordController');
-?>
-
 <form action="" method="post">
   <div class="field">
     <label for="current_password">Current Password</label>

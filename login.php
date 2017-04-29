@@ -9,6 +9,9 @@
 /** REQUIRED Import For App Initialization. */
 require_once (getcwd() . "/core/init.php");
 
+/** Loads the login controller. */
+Controller::load('LoginController');
+
 /** Load the pages view. */
 View::load('Login');
 ?>

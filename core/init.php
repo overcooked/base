@@ -1,6 +1,6 @@
 <?php
 /**
- * The init.php was created to initialize every other file
+ * The init.php was created to initialize curtain files
  * with useful imports and data to support code re-use.
  * @author Team Point.
  *
@@ -13,7 +13,6 @@
  *   6.) Autoloader To Import Classes.
  *   7.) Login Cookie Checker With Auto Login.
  *   8.) Escape function to help escape dangerous strings.
- *
  */
 
 /** 1.) Start the session for the users browser. */
@@ -42,25 +41,25 @@ $GLOBALS['config'] = array(
   )
 );
 
-/** 5.) Include sanitize functions to secure inputs. */
+/** 4.) Include sanitize functions to secure inputs. */
 require_once (getcwd() . '/core/Controller.php');
 
-/** 6.) Include sanitize functions to secure inputs. */
+/** 5.) Include sanitize functions to secure inputs. */
 require_once (getcwd() . '/core/View.php');
 
-/** 7.) Automatic class loader. */
+/** 6.) Automatic class loader. */
 spl_autoload_register(function($class) {
   require_once (getcwd() . '/model/'  . $class . '.php');
 });
 
-/** 8.) Checks for saved cookie, and logs user in automatically. */
+/** 7.) Checks for saved cookie, and logs user in automatically. */
 if(Cookie::exists(Config::get('remember/cookie_name')) && !Session::exists(Config::get('session/session_name'))) {
 
   // Get the users saved cookie value.
   $hash = Cookie::get(Config::get('remember/cookie_name'));
 
   // Check if that cookie is expired or exists.
-  $hash_check = DB::getInstance()->get('users_session', array('hash', '=', $hash));
+  $hash_check = DB::getInstance()->get('users_session', array('session_hash', '=', $hash));
 
   // If cookie is valid, log the user in automatically.
   if($hash_check->count()) {
@@ -70,7 +69,7 @@ if(Cookie::exists(Config::get('remember/cookie_name')) && !Session::exists(Confi
 }
 
 /**
- * 9.) Used to escape strings and sql queries.
+ * 8.) Used to escape strings and sql queries.
  * @param  string $string - The string to be escaped.
  * @return string         - The escaped string.
  */

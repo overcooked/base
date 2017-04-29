@@ -1,12 +1,7 @@
-<?php
-// Loads the login controller.
-Controller::load('LoginController');
-?>
-
 <form action="" method="post">
   <div class="field">
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email" autocomplete="off" value="">
+    <label for="user_email">Email</label>
+    <input type="text" name="user_email" id="user_email" autocomplete="off" value="">
   </div>
 
   <div class="field">

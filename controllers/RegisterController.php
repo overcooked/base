@@ -57,7 +57,7 @@ if (Input::exists() && Token::check(Input::get('token'))) {
         'user_email' => Input::get('user_email'),
         'user_password' => Hash::make(Input::get('user_password'), $salt),
         'user_salt' => $salt,
-        'user_joined' => date('Y-m-d H:i:s')
+        'user_join_date' => date('Y-m-d H:i:s')
       ));
 
       $user->login(Input::get('user_email'), Input::get('user_password'));

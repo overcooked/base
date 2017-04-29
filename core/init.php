@@ -29,7 +29,7 @@ $GLOBALS['config'] = array(
     'host' => 'localhost',
     'username' => 'root',
     'password' => 'root',
-    'db' => 'Leftover'
+    'db' => 'overcooked_db'
   ),
   'remember' => array(
     'cookie_name' => 'hash',

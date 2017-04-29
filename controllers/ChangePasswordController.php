@@ -45,14 +45,14 @@ if(Input::exists() && Token::check(Input::get('token'))) {
   if($validation->passed()) {
 
     // If the input password is equal to the users password.
-    if(Hash::make(Input::get('current_password'), $user->data()->salt) === $user->data()->user_password) {
+    if(Hash::make(Input::get('current_password'), $user->data()->user_salt) === $user->data()->user_password) {
 
       try {
         // Update the new password using a new salt.
         $salt = Hash::salt(32);
         $user->update(array(
           'user_password' => Hash::make(Input::get('new_password'), $salt),
-          'salt' => $salt
+          'user_salt' => $salt
         ));
       } catch(Exception $e) {
         die($e->getMessage());

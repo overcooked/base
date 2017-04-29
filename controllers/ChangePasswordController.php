@@ -45,23 +45,25 @@ if(Input::exists() && Token::check(Input::get('token'))) {
   if($validation->passed()) {
 
     // If the input password is equal to the users password.
-    if(Hash::make(Input::get('current_password'), $user->data()->salt) === $user->data()->password) {
+    if(Hash::make(Input::get('current_password'), $user->data()->salt) === $user->data()->user_password) {
 
       try {
         // Update the new password using a new salt.
         $salt = Hash::salt(32);
         $user->update(array(
-          'password' => Hash::make(Input::get('new_password'), $salt),
+          'user_password' => Hash::make(Input::get('new_password'), $salt),
           'salt' => $salt
         ));
       } catch(Exception $e) {
         die($e->getMessage());
       }
 
+      // Password change was successful.
       Session::flash('changed', 'Your password has been updated.');
       Redirect::to('changepassword.php');
 
     } else {
+      // Password change failed.
       Session::flash('changed', 'Your current password is not correct.');
       Redirect::to('changepassword.php');
     }

@@ -32,7 +32,7 @@ if (Input::exists() && Token::check(Input::get('token'))) {
       'max' => 255,
       'unique' => 'users'
     ),
-    'password' => array(
+    'user_password' => array(
       'field_name' => 'Password',
       'required' => true,
       'min' => 6,
@@ -41,7 +41,7 @@ if (Input::exists() && Token::check(Input::get('token'))) {
     'password_again' => array(
       'field_name' => 'Password again',
       'required' => true,
-      'matches' => 'password'
+      'matches' => 'user_password'
     )
   ));
 
@@ -55,12 +55,12 @@ if (Input::exists() && Token::check(Input::get('token'))) {
         'user_first' => Input::get('user_first'),
         'user_last' => Input::get('user_last'),
         'user_email' => Input::get('user_email'),
-        'password' => Hash::make(Input::get('password'), $salt),
+        'user_password' => Hash::make(Input::get('user_password'), $salt),
         'salt' => $salt,
         'joined' => date('Y-m-d H:i:s')
       ));
 
-      $user->login(Input::get('user_email'), Input::get('password'));
+      $user->login(Input::get('user_email'), Input::get('user_password'));
       Redirect::to('index.php');
     } Catch(Exception $e) {
       die($e->getMessage()); // Message about broken register.

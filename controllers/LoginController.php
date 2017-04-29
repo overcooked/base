@@ -16,11 +16,11 @@ if(Input::exists() && Token::check(Input::get('token'))) {
   $validate = new Validate();
   $validation = $validate->check($_POST, array(
     'user_email' => array('field_name' => 'Email', 'required' => true ),
-    'password' => array('field_name' => 'Password', 'required' => true)
+    'user_password' => array('field_name' => 'Password', 'required' => true)
   ));
 
   if($validation->passed()) {
-    if($user->login(Input::get('user_email'), Input::get('password'))) {
+    if($user->login(Input::get('user_email'), Input::get('user_password'))) {
       Redirect::to('index.php');
     } else {
       echo 'Incorrect Login Details';

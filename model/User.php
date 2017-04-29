@@ -106,7 +106,7 @@ class User {
     if($this->find($email)) {
 
       // If the password is correct.
-      if($this->data()->password === Hash::make($password, $this->data()->salt)) {
+      if($this->data()->user_password === Hash::make($password, $this->data()->salt)) {
 
         // Set the current session to be for this user (Log them in.)
         Session::set($this->_session_name, $this->data()->user_id);

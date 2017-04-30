@@ -3,10 +3,11 @@
  * @author Team point.
  */
 
-$primary-color: #4aa57c;
-
 /** Import The Default Typography Fonts */
 @import url('/public/css/fonts.css');
+
+/** Import The Global Variables. */
+@import 'variables';
 
 /* ========== ========== ========== ========== */
 
@@ -85,7 +86,7 @@ body {
   padding-right: 14px;
   padding-bottom: 5px;
   padding-top: 8px;
-  background-color: $primary-color;
+  background-color: $primary-green;
   color: #fff;
   font-size: 13px;
   border: none;
@@ -112,6 +113,7 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 0.6px;
+    font-family: $font-regular;
 }
 
 /**

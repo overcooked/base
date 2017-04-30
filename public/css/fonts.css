@@ -11,7 +11,7 @@
 
 /** Font for the main logo. */
 @font-face {
-  font-family: 'Whitney';
+  font-family: 'whitney-black';
   src: url('/public/assets/fonts/whitney/Whitney-Black.ttf') format('truetype');
 }
 
@@ -41,13 +41,12 @@
 
 /** Proxima Nova Regular Italic - Font Weight 400 */
 @font-face {
-  font-family: 'proximanova-regular';
+  font-family: 'proximanova-regularitalic';
   src: url('/public/assets/fonts/proxima-nova/proximanova-regularitalic.eot'); /* IE9 Compat Modes */
   src: url('/public/assets/fonts/proxima-nova/proximanova-regularitalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('/public/assets/fonts/proxima-nova/proximanova-regularitalic.woff') format('woff'), /* Pretty Modern Browsers */
        url('/public/assets/fonts/proxima-nova/proximanova-regularitalic.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('/public/assets/fonts/proxima-nova/proximanova-regularitalic.svg#proximanova-regularitalic') format('svg'); /* Legacy iOS */
-  font-style: italic;
 }
 
 /** Proxima Nova Semi Bold - Font Weight 600 */

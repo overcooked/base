@@ -1,7 +1,12 @@
 {
 "version": 3,
+<<<<<<< HEAD
 "mappings": "",
 "sources": [],
+=======
+"mappings": "AAAA;;;GAGG;AACH,iDAAiD;AAEjD,mEAAmE;AAKnE,0BAA0B",
+"sources": ["../scss/variables.scss"],
+>>>>>>> c0e13e51b0f9e3d3f970e7892a03c688c0a65e9c
 "names": [],
 "file": "variables.css"
 }

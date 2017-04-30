@@ -1,4 +1,17 @@
-<?php $user = new User(); ?>
+<?php
+/**
+ * The update page allows users to
+ * update their personal information.
+ * @uses controllers/UpdateController - To handle the updates.
+ * @uses views/Update/update          - For the pages UI.
+ */
+
+/** Load the pages controller. */
+Controller::load('UpdateController');
+
+/** User to check logged in and get user data. */
+$user = new User();
+?>
 
 <form action="" method="post">
   <div class="field">

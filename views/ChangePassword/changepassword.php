@@ -1,3 +1,15 @@
+<?php
+/**
+ * The change password page is used
+ * to change a users password.
+ * @uses controllers/ChangePasswordController - To handle the password change.
+ * @uses views/ChangePassword/changepassword  - For the pages UI.
+ */
+
+/** Load the pages controller. */
+Controller::load('ChangePasswordController');
+?>
+
 <form action="" method="post">
   <div class="field">
     <label for="current_password">Current Password</label>

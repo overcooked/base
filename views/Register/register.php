@@ -1,3 +1,15 @@
+<?php
+/**
+ * The register page gives the ability for a
+ * person to create an account on the app.
+ * @uses controllers/RegisterController - To handle the registering.
+ * @uses views/Register/register        - For the pages UI.
+ */
+
+/** Load the pages controller. */
+Controller::load('RegisterController');
+?>
+
 <form action="" method="post">
 
   <div class="field">

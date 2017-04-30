@@ -11,8 +11,8 @@ $user = new User();
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- General -->
-    <title>Overcooked: Feed those in need, with your extra food.</title>
+    <!-- General. -->
+    <title>Overcooked: Feed those in need with your extra food.</title>
     <meta name="description" content="Overcooked lets you give your extra food to people who really need it.">
 
     <!-- Boiler Plate Tags -->

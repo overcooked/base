@@ -9,10 +9,20 @@ $user = new User();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Welcome!</title>
+
+    <!-- General. -->
+    <title>Home - Recent Posts</title>
+    <meta name="description" content="Overcooked: Feed those in need, with your extra food.">
+
+    <!-- Boiler Plate Tags. -->
+    <?php View::head(); ?>
+
+    <!-- Style Files. -->
+
+    <!-- Script Files. -->
+
   </head>
   <body>
 

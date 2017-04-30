@@ -1,0 +1,129 @@
+/**
+ * The default styling for a page. This includes
+ * margins, fonts, and other re-used tags/code.
+ * @author Team point.
+ */
+
+/* ========== ========== ========== ========== */
+
+/**
+ * Typography Imports.
+ * @TODO: Add OTF format.
+ */
+
+/** Font for the general text. */
+@font-face {
+  font-family: 'Camphor';
+  src: url('/public/assets/fonts/CamphorPro-Regular.ttf') format('truetype');
+}
+
+/** Font for the main logo. */
+@font-face {
+  font-family: 'Whitney';
+  src: url('/public/assets/fonts/Whitney-Black.ttf') format('truetype');
+}
+
+/**
+ * General Layout.
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+blockquote, body, dd, dl,
+figure, h1, h2, h3, h4,
+h5, h6, ol, p, pre, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  min-height: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: 0.2px;
+  font-family: Camphor, Helvetica, Arial, sans-serif;
+}
+
+/**
+ * Miscellaneous Styling.
+ */
+
+/**
+ * Default Header.
+ * @uses views/Template/header-bar
+ */
+
+#header-logo {
+  font-size: 30px;
+  font-family: Whitney, Helvetica, Arial, sans-serif;
+  color: #474d50;
+  margin-top: 3px;
+  margin-right: 30px;
+}
+
+#header-search {
+  margin-top: 12px;
+}
+
+#header-search-input {
+  border: 1px solid #E3E4E6;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 3px;
+  padding: 11px 30px 8px 13px;
+  height: 33px;
+}
+
+#header-join-now {
+  margin-top: 12px;
+  padding-bottom: 6px;
+  padding-top: 8px;
+  background-color: #4aa57c;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 1px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/** Navbar Styling. */
+.navbar-default {
+    background-color: #f7f7f7;
+    border-color: #E7E7E7;
+    height: 60px;
+    line-height: 30px;
+}
+
+/** Navbar Link Styling. */
+.navbar-default .navbar-nav > li > a {
+    margin-top: 6px;
+    color: #737373;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+}
+
+/**
+ * Default Footer.
+ * @uses views/Template/footer-bar
+ */

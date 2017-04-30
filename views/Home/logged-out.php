@@ -31,6 +31,12 @@ $user = new User();
     <section class="main">
       <div class="container">
         <p>You need to <a href='login.php'>login</a> or <a href='register.php'>register</a></p>
+        <p style="font-family: proximanova-light">light</p>
+        <p style="font-family: proximanova-regular">regular</p>
+        <p style="font-family: proximanova-regular; font-style: italic;">regular italic</p>
+        <p style="font-family: proximanova-semibold">semibold</p>
+        <p style="font-family: proximanova-bold">bold</p>
+        <p style="font-family: proximanova-black">black</p>
       </div>
     </section>
 

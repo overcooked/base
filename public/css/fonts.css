@@ -1,0 +1,81 @@
+/**
+ * The default font types for a website.
+ * @author Team point.
+ */
+
+/* ========== ========== ========== ========== */
+
+/**
+ * Header Bar Logo Font.
+ */
+
+/** Font for the main logo. */
+@font-face {
+  font-family: 'Whitney';
+  src: url('/public/assets/fonts/whitney/Whitney-Black.ttf') format('truetype');
+}
+
+/**
+ * Typography Imports.
+ */
+
+  /** Proxima Nova Light - Font Weight 300 */
+@font-face {
+  font-family: 'proximanova-light';
+  src: url('/public/assets/fonts/proxima-nova/proximanova-light.eot'); /* IE9 Compat Modes */
+  src: url('/public/assets/fonts/proxima-nova/proximanova-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/public/assets/fonts/proxima-nova/proximanova-light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/public/assets/fonts/proxima-nova/proximanova-light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/public/assets/fonts/proxima-nova/proximanova-light.svg#proximanova-light') format('svg'); /* Legacy iOS */
+}
+
+/** Proxima Nova Regular - Font Weight 400 */
+@font-face {
+  font-family: 'proximanova-regular';
+  src: url('/public/assets/fonts/proxima-nova/proximanova-regular.eot'); /* IE9 Compat Modes */
+  src: url('/public/assets/fonts/proxima-nova/proximanova-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/public/assets/fonts/proxima-nova/proximanova-regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/public/assets/fonts/proxima-nova/proximanova-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/public/assets/fonts/proxima-nova/proximanova-regular.svg#proximanova-regular') format('svg'); /* Legacy iOS */
+}
+
+/** Proxima Nova Regular Italic - Font Weight 400 */
+@font-face {
+  font-family: 'proximanova-regular';
+  src: url('/public/assets/fonts/proxima-nova/proximanova-regularitalic.eot'); /* IE9 Compat Modes */
+  src: url('/public/assets/fonts/proxima-nova/proximanova-regularitalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/public/assets/fonts/proxima-nova/proximanova-regularitalic.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/public/assets/fonts/proxima-nova/proximanova-regularitalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/public/assets/fonts/proxima-nova/proximanova-regularitalic.svg#proximanova-regularitalic') format('svg'); /* Legacy iOS */
+  font-style: italic;
+}
+
+/** Proxima Nova Semi Bold - Font Weight 600 */
+@font-face {
+  font-family: 'proximanova-semibold';
+  src: url('/public/assets/fonts/proxima-nova/proximanova-semibold.eot'); /* IE9 Compat Modes */
+  src: url('/public/assets/fonts/proxima-nova/proximanova-semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/public/assets/fonts/proxima-nova/proximanova-semibold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/public/assets/fonts/proxima-nova/proximanova-semibold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/public/assets/fonts/proxima-nova/proximanova-semibold.svg#proximanova-semibold') format('svg'); /* Legacy iOS */
+}
+
+/** Proxima Nova Bold - Font Weight 700 */
+@font-face {
+  font-family: 'proximanova-bold';
+  src: url('/public/assets/fonts/proxima-nova/proximanova-bold.eot'); /* IE9 Compat Modes */
+  src: url('/public/assets/fonts/proxima-nova/proximanova-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/public/assets/fonts/proxima-nova/proximanova-bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/public/assets/fonts/proxima-nova/proximanova-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/public/assets/fonts/proxima-nova/proximanova-bold.svg#proximanova-bold') format('svg'); /* Legacy iOS */
+}
+
+/** Proxima Nova Bold - Font Weight 900 */
+@font-face {
+  font-family: 'proximanova-black';
+  src: url('/public/assets/fonts/proxima-nova/proximanova-black.eot'); /* IE9 Compat Modes */
+  src: url('/public/assets/fonts/proxima-nova/proximanova-black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/public/assets/fonts/proxima-nova/proximanova-black.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/public/assets/fonts/proxima-nova/proximanova-black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/public/assets/fonts/proxima-nova/proximanova-black.svg#proximanova-black') format('svg'); /* Legacy iOS */
+}

@@ -1,0 +1,24 @@
+/**
+  * Default Footer Styling.
+  * @uses views/Template/footer
+  * @author Team Point.
+  */
+/** Import The Global Variables. */
+/**
+ * Global scss variables.
+ * @author Team point.
+ */
+/* ========== ========== ========== ========== */
+/** Primary Colours. TODO: Temporary color, don't freak out pls. */
+/** Typography Styling. */
+/* ========== ========== ========== ========== */
+footer a {
+  color: #fa7600; }
+
+footer a:hover {
+  color: #c75e00; }
+
+.footer-area {
+  margin-bottom: 20px; }
+
+/*# sourceMappingURL=footer.css.map */

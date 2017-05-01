@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav">
-        <li><a href="#">About</a></li>
+        <li><a href="about.php">About</a></li>
         <li role="separator" class="divider"></li>
         <li><a href="#">How It Works</a></li>
         <li role="separator" class="divider"></li>

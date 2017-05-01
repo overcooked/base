@@ -1,6 +1,6 @@
 <?php
 /**
- * Logged out View.
+ * Login View.
  * @author Team Point.
  */
 

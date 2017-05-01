@@ -1,30 +1,69 @@
-<form action="" method="post">
+<?php
+/**
+ * Register View.
+ * @author Team Point.
+ */
 
-  <div class="field">
-    <label for="user_first">First Name</label>
-    <input type="text" name="user_first" value="<?php echo escape(Input::get('user_first')); ?>" id="user_first">
-  </div>
+$user = new User();
+?>
 
-  <div class="field">
-    <label for="user_last">Last Name</label>
-    <input type="text" name="user_last" value="<?php echo escape(Input::get('user_last')); ?>" id="user_last">
-  </div>
 
-  <div class="field">
-    <label for="user_email">Email</label>
-    <input type="text" name="user_email" id="user_email" value="<?php echo escape(Input::get('user_email')); ?>" autocomplete="off">
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- General. -->
+    <title>Overcooked: Feed those in need with your extra food.</title>
+    <meta name="description" content="Overcooked lets you give your extra food to people who really need it.">
 
-  <div class="field">
-    <label for="user_password">Password</label>
-    <input type="password" name="user_password" id="user_password">
-  </div>
+    <!-- Boiler Plate Tags. -->
+    <?php View::head(); ?>
 
-  <div class="field">
-    <label for="password_again">Password Again</label>
-    <input type="password" name="password_again" id="password_again">
-  </div>
+    <!-- Style Files. -->
+    <link rel="stylesheet" href="/public/css/login/login.css">
 
-  <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-  <input type="submit" value="Register">
-</form>
+
+  </head>
+  <body>
+
+    <!-- Header Section -->
+    <?php View::header_logged_out(); ?>
+
+    <!-- Main Content // Start -->
+    <section class="main">
+      <div class="container login-area">
+        <h2 class="center">Register</h2>
+        <form action="" method="post">
+
+          <div class="field">
+            <input type="text" name="user_first" class="form-control" placeholder="First Name" value="<?php echo escape(Input::get('user_first')); ?>" id="user_first">
+          </div>
+
+          <div class="field">
+            <input type="text" name="user_last" class="form-control" placeholder="Last Name" value="<?php echo escape(Input::get('user_last')); ?>" id="user_last">
+          </div>
+
+          <div class="field">
+            <input type="text" name="user_email" class="form-control" placeholder="Email" id="user_email" value="<?php echo escape(Input::get('user_email')); ?>" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <input type="password" name="user_password" class="form-control" placeholder="Password" id="user_password">
+          </div>
+
+          <div class="field">
+            <input type="password" name="password_again" class="form-control" placeholder="Repeat Password" id="password_again">
+          </div>
+
+          <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+          <input type="submit" class="btn btn-default login-btn" value="Register">
+        </form>
+      </div>
+    </section>
+
+
+
+    <!-- Header Section -->
+    <?php // View::footer(); ?>
+
+  </body>
+</html>

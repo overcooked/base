@@ -29,7 +29,8 @@ $user = new User();
     <!-- Main Content -->
     <section class="main">
       <div class="container">
-        <p>You need to <a href='login.php'>login</a> or <a href='register.php'>register</a></p>
+        <h3>Web Fonts</h3>
+        <hr>
         <p style="font-family: proximanova-light">light</p>
         <p style="font-family: proximanova-regular">regular</p>
         <p style="font-family: proximanova-regular; font-style: italic;">regular italic</p>

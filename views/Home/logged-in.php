@@ -1,6 +1,6 @@
 <?php
 /**
- * Logged out View.
+ * Logged in page view.
  * @author Team Point.
  */
 
@@ -13,26 +13,35 @@ $user = new User();
   <head>
 
     <!-- General. -->
-    <title>Home - Recent Posts</title>
+    <title>Welcome <?php echo escape($user->data()->user_first) ?> | Overcooked</title>
     <meta name="description" content="Overcooked: Feed those in need, with your extra food.">
 
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
 
-    <!-- Style Files. -->
-
-    <!-- Script Files. -->
-
   </head>
   <body>
 
-    <p>Welcome, <?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?>!</p>
+    <!-- Header Section -->
+    <?php View::header_logged_in(); ?>
 
-    <ul>
-      <li><a href='logout.php'>Logout</a></li>
-      <li><a href='update.php'>Update</a></li>
-      <li><a href='changepassword.php'>Change Password</a></li>
-    </ul>
+    <!-- Main Content -->
+    <section class="main">
+      <div class="container">
+
+        <h3>Welcome, <?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?>!</h3>
+
+        <hr>
+
+        <ul>
+          <li><a href='post.php'>Create Post</a></li>
+          <li><a href='logout.php'>Logout</a></li>
+          <li><a href='update.php'>Update</a></li>
+          <li><a href='changepassword.php'>Change Password</a></li>
+        </ul>
+
+      </div>
+    </section>
 
   </body>
 </html>

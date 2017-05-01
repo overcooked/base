@@ -49,5 +49,13 @@ class View {
     require_once (getcwd() . "/views/Template/footer.php");
   }
 
+  /**
+   * Loads a views component.
+   * @return void
+   */
+  public static function component($location) {
+    require_once (getcwd() . '/views/' . $location);
+  }
+
 }
 ?>

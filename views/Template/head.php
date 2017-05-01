@@ -47,3 +47,6 @@
 <!-- Default Styling -->
 <link rel="stylesheet" href="/public/css/default.css">
 <link rel="stylesheet" href="/public/css/template/header.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="/public/assets/fonts/ss-pika/ss-pika.css"/>

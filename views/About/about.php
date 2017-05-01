@@ -55,10 +55,10 @@ $user = new User();
 
             <h1 style="font-size: 64px; font-family: proximanova-bold; letter-spacing: 5px;">
               <br>
-              MEET THE TEAM
+              PROJECT SUMMARY
             </h1>
             <span style="text-align: center; font-family: proximanova-bold; font-size: 22px; position: relative; top: -13px; color: #ffc189;"> _ </span>
-            <h4 style="font-family: proximanova-regular; font-size: 16px; color: #a8a8a8; letter-spacing: 0.5px; ">Project Summary</h4>
+            <h4 style="font-family: proximanova-regular; font-size: 16px; color: #a8a8a8; letter-spacing: 0.5px; ">COMP 2910</h4>
             <br><br>
           </div>
         </div>
@@ -269,7 +269,7 @@ $user = new User();
 
             <div class="page-header text-center" style="margin-top: 52px;">
                 <h1 style="font-family: proximanova-light; color: #555; letter-spacing: 1.3px; text-transform: uppercase;">Success Criteria</h1>
-                <hr style="width: 50px; border-color: #f1faf0;">
+                <hr style="width: 50px;">
             </div>
 
             <div class="row grid-divider">

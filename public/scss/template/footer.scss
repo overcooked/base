@@ -1,0 +1,22 @@
+/**
+  * Default Footer Styling.
+  * @uses views/Template/footer
+  * @author Team Point.
+  */
+
+/** Import The Global Variables. */
+@import 'variables';
+
+/* ========== ========== ========== ========== */
+
+footer a {
+  color: $primary-color;
+}
+
+footer a:hover {
+  color: darken($primary-color, 10%);
+}
+
+.footer-area {
+  margin-bottom: 20px;
+}

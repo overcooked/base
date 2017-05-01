@@ -6,14 +6,13 @@
  *
  *   - Supported Intialization Features -
  *   1.) PHP Session starting.
- *   2.) PHP Error Displaying Enabled. (Development Only)
+ *   2.) PHP Error Displaying Enabled.
  *   3.) GLOBAL Config Information. (DB info, Global Variable Names)
  *   4.) Loads the Controller for the MVC.
  *   5.) Loads the Model for the MVC.
  *   6.) Autoloader To Import Classes.
  *   7.) Login Cookie Checker With Auto Login.
  *   8.) Escape function to help escape dangerous strings.
- *   9.) Application class included to control the views.
  */
 
 /** 1.) Start the session for the users browser. */
@@ -77,7 +76,4 @@ if(Cookie::exists(Config::get('remember/cookie_name')) && !Session::exists(Confi
 function escape($string) {
   return htmlentities($string, ENT_QUOTES, 'UTF-8');
 }
-
-/** 9.) Includes the Application class to control the views. */
-require_once (getcwd() . '/core/Application.php');
 ?>

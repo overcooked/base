@@ -1,14 +1,10 @@
 <?php
 /**
- * The index page is the home page of the website.
- * This page either displays a logged out view
- * or a logged in view depending on the user.
- * @uses controllers/HomeController - To control the home page.
- * @uses views/Home/home            - For the pages UI.
+ * Home page where the user would land
+ * if just entered in the domain name.
+ * @author Team Point.
+ * @version 1.0
  */
-
-/** Load the pages controller. */
-Controller::load('HomeController');
 
 /** User to check logged in and get user data. */
 $user = new User();

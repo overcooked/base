@@ -286,7 +286,7 @@ $user = new User();
                 <div class="col-padding">
                   <h3>Back End</h3>
                   <hr style="width: 50px; position: relative; right: 84px; margin-top: 14px;">
-                  <p style="font-size: 17px;">Our backend and database is secure and safe. This includes hashing and salting all storage and transmission of passwords to protect users.</p>
+                  <p style="font-size: 17px;">Our backend and database are secure and safe. This includes hashing and salting all storage and transmission of passwords to protect users.</p>
                 </div>
               </div>
 

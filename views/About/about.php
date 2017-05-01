@@ -47,9 +47,8 @@ $user = new User();
     <?php View::header_logged_out(); ?>
 
     <!-- Main Content -->
-    <section class="main">
+    <section class="main" style="margin-top: -32px; background-color: #f9f8f7;">
       <div class="container">
-
         <!-- Meet The Team Header. -->
         <div class="row">
           <div class="col-md-12 text-center">
@@ -59,14 +58,16 @@ $user = new User();
               MEET THE TEAM
             </h1>
             <span style="text-align: center; font-family: proximanova-bold; font-size: 22px; position: relative; top: -13px; color: #ffc189;"> _ </span>
-            <h4 style="font-family: proximanova-regular; font-size: 16px; color: #bdbdbd; letter-spacing: 0.5px; ">Project Summary</h4>
-            <hr>
-
+            <h4 style="font-family: proximanova-regular; font-size: 16px; color: #a8a8a8; letter-spacing: 0.5px; ">Project Summary</h4>
+            <br><br>
           </div>
         </div>
+      </div>
+      <div class="container" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); background-color: #fff; border-radius: 3px;">
 
         <!--  -->
         <div class="row">
+          <br>
           <div class="col-md-3 col-md-offset-2">
 
             <br><br><br><br><br><br>
@@ -140,7 +141,7 @@ $user = new User();
               Problem Statement
             </h1>
             <hr style="width: 50px;">
-            <p style="font-size: 19px; letter-spacing: 0.3px">Some people want to reduce their food waste, while also giving back in their community. Currently this is not possible.</p>
+            <p style="font-size: 19px; letter-spacing: 0.3px; padding-left: 20px; padding-right:  20px;">Some people want to reduce their food waste, while also giving back in their community. Currently this is not possible.</p>
           </div>
 
           <div class="col-md-6">
@@ -149,7 +150,7 @@ $user = new User();
               Project Goals and Objective
             </h1>
             <hr style="width: 50px;">
-            <p style="font-size: 19px; letter-spacing: 0.3px">Create an app that allows people to give their extra food to hungry families, students, or anyone who needs it.</p>
+            <p style="font-size: 19px; letter-spacing: 0.3px; padding-left: 20px; padding-right:  20px;">Create an app that allows people to give their extra food to hungry families, students, or anyone who needs it.</p>
           </div>
 
         </div>
@@ -162,10 +163,10 @@ $user = new User();
         <!-- Gather Requirements -->
         <div class="row">
 
-          <h2 style="font-family: proximanova-bold; text-align: center;"><span class="ss-icon" style="position: relative; top: 4px; left: -8px;">checkclipboard</span> Application Requirements</h2>
+          <h2 style="font-family: proximanova-bold; text-align: center;"><span class="ss-icon" style="position: relative; top: 4px; left: -8px; color: #ffc189;">checkclipboard</span> Application Requirements</h2>
           <hr style="width: 50px;">
 
-          <div class="col-md-6">
+          <div class="col-md-6" style="padding-left: 30px; padding-right:  30px; margin-top: 7px;">
             <ul class="list-group text-center" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); border-radius: 3px; font-size: 20px; letter-spacing: 0.3px; text-transform: capitalize;">
               <li style="border: none;" class="list-group-item">Creating a user account</li>
               <li style="border: none; background-color: #f9f8f7;" class="list-group-item">Creating a listing</li>
@@ -178,7 +179,7 @@ $user = new User();
             </ul>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-6" style="padding-left: 30px; padding-right: 30px; margin-top: 7px;">
             <ul class="list-group text-center" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); border-radius: 3px; font-size: 20px; letter-spacing: 0.3px; text-transform: capitalize; border: none !important;">
               <li style="border: none;" class="list-group-item">Viewing other users profile pages</li>
               <li style="border: none; background-color: #f9f8f7;" class="list-group-item">Viewing current listings near you</li>
@@ -204,8 +205,8 @@ $user = new User();
 
             <div class="col-md-4 col-md-offset-4 text-center">
               <h1>
-                <span style="font-size: 60px;" class="ss-icon">departure </span>
-                <span style="font-size: 60px; color: #444;" class="ss-icon"> arrival</span>
+                <span style="font-size: 60px; color: #ffc189" class="ss-icon">departure </span>
+                <span style="font-size: 60px; color: #ffc189;" class="ss-icon"> arrival</span>
               </h1>
               <div style="height: 10px;"></div>
               <h1 style="font-family: proximanova-bold; text-transform: uppercase; font-size: 47px; letter-spacing: 2px;">Deliverables</h1>
@@ -215,7 +216,7 @@ $user = new User();
 
             <div class="col-md-6">
               <div class="list-group">
-                <a href="#" class="list-group-item">
+                <a href="#" class="list-group-item" style="border: none; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);">
                   <hr style="width: 50px;">
                   <h4 class="list-group-item-heading" style="letter-spacing: 0.5px; font-size: 20px; padding-left: 10px; padding-right: 10px;">A working web application where users can post/take extra food.</h4>
                   <hr style="width: 50px;">
@@ -225,7 +226,7 @@ $user = new User();
 
             <div class="col-md-6">
               <div class="list-group">
-                <a href="#" class="list-group-item">
+                <a href="#" class="list-group-item" style="border: none; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);">
                   <hr style="width: 50px;">
                   <h4 class="list-group-item-heading" style="letter-spacing: 0.5px; font-size: 20px; padding-left: 10px; padding-right: 10px;">Users can view posts in their area, and view any other posts from past users or themselves. </h4>
                   <hr style="width: 50px;">
@@ -235,7 +236,7 @@ $user = new User();
 
             <div class="col-md-6">
               <div class="list-group">
-                <a href="#" class="list-group-item">
+                <a href="#" class="list-group-item" style="border: none; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);">
                   <hr style="width: 50px;">
                   <h4 class="list-group-item-heading" style="letter-spacing: 0.5px; font-size: 20px; padding-left: 10px; padding-right: 10px;">Safe and functional database system to maintain users data safely and in a secure manner.</h4>
                   <hr style="width: 50px;">
@@ -245,7 +246,7 @@ $user = new User();
 
             <div class="col-md-6">
               <div class="list-group">
-                <a href="#" class="list-group-item">
+                <a href="#" class="list-group-item" style="border: none; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);">
                   <hr style="width: 50px;">
                   <h4 class="list-group-item-heading" style="letter-spacing: 0.5px; font-size: 20px; padding-left: 10px; padding-right: 10px;">Working peer to peer chat system, allowing posters and consumers to contact each other directly.</h4>
                   <hr style="width: 50px;">
@@ -353,6 +354,7 @@ $user = new User();
         <hr>
 
       </div>
+      <br><br><br>
     </section>
 
   </body>

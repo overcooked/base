@@ -55,7 +55,7 @@ $user = new User();
 
             <h1 style="font-size: 64px; font-family: proximanova-bold; letter-spacing: 5px;">
               <br>
-              PROJECT SUMMARY
+              MEET THE TEAM
             </h1>
             <span style="text-align: center; font-family: proximanova-bold; font-size: 22px; position: relative; top: -13px; color: #ffc189;"> _ </span>
             <h4 style="font-family: proximanova-regular; font-size: 16px; color: #a8a8a8; letter-spacing: 0.5px; ">COMP 2910</h4>

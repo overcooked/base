@@ -7,10 +7,24 @@
 
 // To hold all errors in the input form.
 $errors = null;
+$image_error = null;
 
 // If a flash success message exists, print the message.
 if(Session::exists('errors')) {
   $errors = Session::flash('errors');
+}
+
+// If the post validation passed.
+if(Session::exists('success')) {
+  echo Session::flash('success');
+}
+
+// If a flash success message exists, print the message.
+if(Session::exists('image_error')) {
+  $image_error = Session::flash('image_error');
+  if($image_error === '') {
+    $image_error = null;
+  }
 }
 ?>
 
@@ -25,18 +39,22 @@ if(Session::exists('errors')) {
 
           <hr>
 
-          <form action="" method="POST">
+          <form method="POST" enctype="multipart/form-data">
 
             <!-- Display Input Form Errors -->
-            <?php if(isset($errors)) { ?>
-              <div class="form-group has-error">
-                <?php
-                  foreach ($errors as $error) {
-                    echo '<span class="help-block">* ' . $error . '</span>';
-                  }
-                ?>
-              </div>
-            <?php } ?>
+            <div class="form-group has-error">
+              <?php
+              if(isset($errors)) {
+                foreach ($errors as $error) {
+                  echo '<span class="help-block">* ' . $error . '</span>';
+                }
+              }
+
+              if(isset($image_error)) {
+                echo '<span class="help-block">* ' . $image_error . '</span>';
+              }
+              ?>
+            </div>
 
             <!-- Title -->
             <div class="form-group">
@@ -57,6 +75,12 @@ if(Session::exists('errors')) {
               <!-- TODO: Add Javascript letter counter. -->
             </div>
 
+            <!-- Image Upload -->
+            <div class="form-group">
+              <input type="hidden" name="MAX_FILE_SIZE" value="1000000"/>
+              <input type="file" name="post_image"/>
+            </div>
+
             <!-- Required Field Reminder -->
             <div class="form-group">
               <p><span class="require">*</span> required fields</p>
@@ -65,7 +89,7 @@ if(Session::exists('errors')) {
             <!-- Submit/Cancel Buttons -->
             <div class="form-group">
               <input type="hidden" name="token" value="<?php echo escape(Token::generate()); ?>">
-              <button type="submit" class="btn btn-primary">Post</button>
+              <button type="submit" value="upload" class="btn btn-primary">Post</button>
               <button class="btn btn-default">Cancel</button>
             </div>
         </form>

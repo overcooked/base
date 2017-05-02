@@ -8,6 +8,9 @@
 /** REQUIRED Import For App Initialization. */
 require_once (getcwd() . "/core/init.php");
 
+/** Image Uploading Library (Secure Uploads.). */
+require_once (getcwd() . "/model/bulletproof.php");
+
 /** Load the pages controller. */
 Controller::load('PostController');
 

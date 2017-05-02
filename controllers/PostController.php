@@ -32,9 +32,9 @@ if(Input::exists() && Token::check(Input::get('token'))) {
       'max' => 1000
     )
   ));
-
+  
   if($validation->passed()) {
-    echo 'Sweeeeet bro.';
+    echo 'Successful Upload';
   } else {
     Session::flash('errors', $validation->errors());
   }

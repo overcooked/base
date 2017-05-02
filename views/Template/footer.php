@@ -1,7 +1,7 @@
 <section id="footer">
   <footer>
     <div class="footer navbar-fixed-bottom">
-  <div class="footer-area container">
+  <div class="footer-area coloredlinks container">
       <div class="row">
               <div class="col-sm-3 col-xs-6">
                   <ul class="list-unstyled">

@@ -22,7 +22,7 @@
         <li role="separator" class="divider"></li>
         <li role="separator" class="divider"></li>
         <li role="separator" class="divider"></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="contact.php">Contact</a></li>
       </ul>
 
       <form class="navbar-form navbar-left" id="header-search">

@@ -34,6 +34,14 @@ a {
   text-decoration: none;
 }
 
+.coloredlinks a {
+  color: $primary-color;
+}
+
+.coloredlinks a:hover {
+  color: darken($primary-color, 10%);
+}
+
 :root {
   overflow-x: hidden;
   height: 100%;

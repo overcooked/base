@@ -54,14 +54,14 @@ $user = new User();
               <ol class="legal-list">
                 <li class="legal-list-item">user content; </li>
                 <li class="legal-list-item">user conduct, e.g. illegal conduct; </li>
-                <li class="legal-list-item">your OVERCOOKED use;</li>
+                <li class="legal-list-item">your OVERCOOKED© use;</li>
                 <li class="legal-list-item">our representations; </li>
               </ol>
            <li class="legal-list-item">WE AND OUR OFFICERS, DIRECTORS, EMPLOYEES
       ("OVERCOOKED© ENTITIES"), DISCLAIM ALL WARRANTIES &amp;
       CONDITIONS, EXPRESS OR IMPLIED, OF MERCHANTABILITY,
       FITNESS FOR PURPOSE, OR NON-INFRINGEMENT;</li>
-           <li class="legal-list-item">OVERCOOKED ENTITIES ARE NOT LIABLE FOR ANY INDIRECT,
+           <li class="legal-list-item">OVERCOOKED© ENTITIES ARE NOT LIABLE FOR ANY INDIRECT,
       INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
       DAMAGES, OR ANY LOSS (E.G. OF PROFIT, REVENUE, DATA, OR
       GOODWILL);</li>
@@ -80,7 +80,7 @@ BC (except we may seek injunctive remedy anywhere); </li>
                <li class="legal-list-item">not to bring or take part in a class action against Overcooked© Entities;</li>
                <li class="legal-list-item">(except government agencies) to indemnify Overcooked© Entities for any damage,
 loss, and expense (e.g. legal fees) arising from claims related to your Overcooked© use; </li>
-               <li class="legal-list-item">you are liable for TOU breaches by affiliates (e.g. marketers) paid by you,
+               <li class="legal-list-item">you are liable for TOS breaches by affiliates (e.g. marketers) paid by you,
      directly or indirectly (e.g. through an affiliate network); and </li>
                <li class="legal-list-item">to pay us for breaching or inducing others to breach the "USE" section, not
       as a penalty, but as a reasonable estimate of our damages (actual damages

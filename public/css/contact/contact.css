@@ -1,5 +1,5 @@
 /**
- * The styling for the login page.
+ * The styling for the contact page.
  * @author Team point.
  */
 /** Import The Global Variables. */
@@ -11,16 +11,15 @@
 /** Primary Colours. TODO: Temporary color, don't freak out pls. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
-.login-area {
+.contact-area {
   margin-top: 50px;
   max-width: 500px;
   width: 80%; }
 
-.login-area input {
-  margin-top: 15px;
+.contact-area input {
   margin-bottom: 15px; }
 
-.login-button {
-  width: 40vw; }
+.contact-submit {
+  margin-top: 15px; }
 
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=contact.css.map */

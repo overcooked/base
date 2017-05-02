@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;;GAGG;AAEF,mCAAmC;ACLpC;;;GAGG;AACH,iDAAiD;AAEjD,mEAAmE;AAMnE,0BAA0B;ADJzB,iDAAiD;AAEjD,WAAY;EACV,UAAU,EAAE,IAAI;EAChB,SAAS,EAAE,KAAK;EAChB,KAAK,EAAE,GAAG;;AAGb,WAAY;EACV,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;;AAGjB,uCAAuC;AACvC,WAAY;EACV,UAAU,EAAE,cAAc;EAC1B,WAAW,EAAE,IAAI;;AAGnB,gBAAiB;EACb,OAAO,EAAE,SAAS",
+"sources": ["../../scss/legal/legal.scss","../../scss/variables.scss"],
+"names": [],
+"file": "legal.css"
+}

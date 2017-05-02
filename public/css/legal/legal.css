@@ -1,5 +1,5 @@
 /**
- * The styling for the login page.
+ * The styling for the contact page.
  * @author Team point.
  */
 /** Import The Global Variables. */
@@ -11,16 +11,21 @@
 /** Primary Colours. TODO: Temporary color, don't freak out pls. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
-.login-area {
+.legal-area {
   margin-top: 50px;
-  max-width: 500px;
+  max-width: 700px;
   width: 80%; }
 
-.login-area input {
-  margin-top: 15px;
-  margin-bottom: 15px; }
+.legal-bold {
+  font-weight: bold;
+  font-size: 120%; }
 
-.login-button {
-  width: 40vw; }
+/* Fixes bootstrap messing with <ol> */
+.legal-list {
+  list-style: decimal inside;
+  margin-left: 50px; }
 
-/*# sourceMappingURL=login.css.map */
+.legal-list-item {
+  display: list-item; }
+
+/*# sourceMappingURL=legal.css.map */

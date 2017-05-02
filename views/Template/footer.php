@@ -14,7 +14,7 @@
               <div class="col-sm-3 col-xs-6">
                   <ul class="list-unstyled">
                       <li>Legal<li>
-                      <li><a href="#">Terms of Services</a></li>
+                      <li><a href="tos.php">Terms of Services</a></li>
                       <li><a href="#">Disclaimer</a></li>
                   </ul>
               </div>

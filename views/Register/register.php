@@ -30,7 +30,7 @@ $user = new User();
 
     <!-- Main Content // Start -->
     <section class="main">
-      <div class="container login-area">
+      <div class="container coloredlinks login-area">
         <h2 class="center">Register</h2>
         <form action="" method="post">
 
@@ -53,7 +53,7 @@ $user = new User();
           <div class="field">
             <input type="password" name="password_again" class="form-control" placeholder="Repeat Password" id="password_again">
           </div>
-
+          <p>By registering, you agree to our <a href="#">Terms and Services</a></p>
           <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
           <input type="submit" class="btn btn-default login-btn" value="Register">
         </form>

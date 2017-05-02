@@ -31,6 +31,12 @@ ol, ul {
 a {
   text-decoration: none; }
 
+.coloredlinks a {
+  color: #fa7600; }
+
+.coloredlinks a:hover {
+  color: #c75e00; }
+
 :root {
   overflow-x: hidden;
   height: 100%; }

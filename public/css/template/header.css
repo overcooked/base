@@ -18,11 +18,10 @@
 }
 */
 #header-logo {
-  font-size: 30px;
-  font-family: whitney-black, Helvetica, Arial, sans-serif;
-  color: #4f4f4f;
-  padding-top: 16px;
-  margin-right: 30px; }
+  margin-top: -5px;
+  margin-right: 30px;
+  width: 202px;
+  height: auto; }
 
 #header-search {
   margin-top: 12px; }

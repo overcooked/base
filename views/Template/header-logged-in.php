@@ -8,7 +8,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/index.php" id="header-logo"><span class="ss-icon">cook</span> Overcooked</a>
+      <a class="navbar-brand" href="/index.php">
+        <img class="img-responsive" id="header-logo" src="/public/assets/images/overcooked-logo.svg" alt="Overcooked Logo">
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

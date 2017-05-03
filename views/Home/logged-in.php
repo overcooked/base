@@ -13,13 +13,25 @@ $user = new User();
   <head>
 
     <!-- General. -->
-    <title>Welcome <?php echo escape($user->data()->user_first) ?> | Overcooked</title>
+    <title>Welcome, <?php echo escape($user->data()->user_first) ?> | Overcooked</title>
     <meta name="description" content="Overcooked: Feed those in need, with your extra food.">
 
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
 
     <style media="screen">
+
+    body {
+      background: #f9f8f7;
+    }
+    .main .container {
+      border-radius: 3px;
+      padding-left: 25px;
+      padding-right: 25px;
+      background: #fff;
+      padding-top: 25px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    }
     .thumbnail {
       padding-left: 20px;
       padding-right: 20px;
@@ -43,11 +55,14 @@ $user = new User();
     <!-- Main Content -->
     <section class="main">
       <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <h3>Welcome, <b><?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?></b>!</h3>
+            <hr>
+          </div>
+        </div>
 
-        <h3>Welcome, <?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?>!</h3>
-        <hr>
-
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-10">
 
           <?php /** Check whether the user had a successful post. */
           if(Session::exists('successful_post'))
@@ -83,6 +98,9 @@ $user = new User();
               $post_date = strtotime($post->post_date);
               $post_date = date('Y-m-d', $post_date);
 
+              // Get the ID for the posting.
+              $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
+
               echo "
               <div class='col-md-6'>
                 <div class='thumbnail'>
@@ -97,7 +115,7 @@ $user = new User();
                     <small style='color: #666; font-family: proximanova-regularitalic'><b>Type: </b>{$post->post_tag} &nbsp;|&nbsp; <b>Posted: </b> {$post_date}</small>
                     <hr>
                     <p class='text-center'>
-                      <a href='' class='btn btn-primary' style='font-family: proximanova-bold, Helvetica, Arial, sans-serif; margin-top: -7px; padding: 8px 14px 7px; background-color: #fa7600; color: #fff; font-size: 13px; border: none; border-radius: 3px; text-transform: uppercase; letter-spacing: 1px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;' role='button'>View Listing</a>
+                      <a href='{$post_listing_url}' class='btn btn-primary' style='font-family: proximanova-bold, Helvetica, Arial, sans-serif; margin-top: -7px; padding: 8px 14px 7px; background-color: #fa7600; color: #fff; font-size: 13px; border: none; border-radius: 3px; text-transform: uppercase; letter-spacing: 1px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;' role='button'>View Listing</a>
                     </p>
                   </div>
                 </div>

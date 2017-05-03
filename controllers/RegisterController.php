@@ -63,7 +63,8 @@ if (Input::exists() && Token::check(Input::get('token'))) {
       $user->login(Input::get('user_email'), Input::get('user_password'));
       Redirect::to('index.php');
     } Catch(Exception $e) {
-      die($e->getMessage()); // Message about broken register.
+      // Registering user failed.
+      die($e->getMessage());
     }
   } else {
     foreach($validation->errors() as $error) {

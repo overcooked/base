@@ -14,11 +14,6 @@ if(Session::exists('errors')) {
   $errors = Session::flash('errors');
 }
 
-// If the post validation passed.
-if(Session::exists('success')) {
-  echo Session::flash('success');
-}
-
 // If a flash success message exists, print the message.
 if(Session::exists('image_error')) {
   $image_error = Session::flash('image_error');
@@ -59,7 +54,7 @@ if(Session::exists('image_error')) {
             <!-- Title -->
             <div class="form-group">
               <label for="post_title">Title <span class="require">*</span></label>
-              <input type="text" class="form-control" name="post_title" id="post_title" placeholder="Ramen, pasta, chicken, etc.." />
+              <input type="text" class="form-control" name="post_title" id="post_title" autocomplete="off" placeholder="Ramen, pasta, chicken, etc.." />
             </div>
 
             <!-- Pickup Location -->
@@ -77,7 +72,7 @@ if(Session::exists('image_error')) {
 
             <!-- Image Upload -->
             <div class="form-group">
-              <input type="hidden" name="MAX_FILE_SIZE" value="1000000"/>
+              <input type="hidden" name="MAX_FILE_SIZE" value="1572864"/>
               <input type="file" name="post_image"/>
             </div>
 

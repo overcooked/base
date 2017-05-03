@@ -41,8 +41,24 @@ class Validate {
     foreach($form_rule as $form_name => $rules) {
       foreach($rules as $rule => $rule_value) {
 
-        // Get the form input.
-        $value = $input[$form_name];
+        // If the form name is post_image.
+        if($form_name === 'post_image') {
+
+          // Check if the image exists.
+          $image = new Bulletproof\Image($_FILES);
+
+          if($_SESSION['image_check'] === 0){
+            $this->add_error("Image is required.");
+          }
+
+          unset($_SESSION['image_check']);
+
+          // Move to the next validation.
+          continue;
+        } else {
+          // Get the form input.
+          $value = $input[$form_name];
+        }
 
         // Get rules for a specific field.
         $field_name = $rules['field_name'];

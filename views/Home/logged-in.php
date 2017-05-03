@@ -106,7 +106,7 @@ $user = new User();
                 <div class='thumbnail'>
                   <img src='{$image->post_image_url}' class='img-responsive' alt='Post Image'>
                   <div class='caption'>
-                    <p style='padding-top: 10px; padding-bottom: 6px; font-size: 20px; font-family: proximanova-semibold; text-transform: capitalize;'>
+                    <p style='padding-top: 10px; padding-bottom: 6px; font-size: 19px; font-family: proximanova-semibold; text-transform: capitalize;'>
                     {$post->post_title}
                     </p>
                     <div style='height: 1px; width: 50px; background-color: #eee; margin-bottom: 10px;'></div>

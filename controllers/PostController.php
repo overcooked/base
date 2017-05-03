@@ -26,8 +26,8 @@ if(Input::exists() && Token::check(Input::get('token'))) {
   // Define allowed mime types to upload
   $image->setMime(array("jpeg", "jpg", "png"));
 
-  // Define the min/max image upload size (size in bytes) Min: 0.01 MB and Max: 1.5 MB
-  $image->setSize(1048, 3145728);
+  // Define the min/max image upload size (size in bytes)
+  $image->setSize(1, 9000000);
 
   // Validate the input form data.
   $validate = new Validate();

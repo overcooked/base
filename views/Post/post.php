@@ -17,6 +17,10 @@ $user = new User();
 
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
+
+    <!-- Style Files. -->
+    <link rel="stylesheet" href="/public/css/post/post.css">
+
   </head>
   <body>
 

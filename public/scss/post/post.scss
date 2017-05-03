@@ -1,0 +1,24 @@
+/**
+ * The styling for the post page.
+ * @author Team point.
+ */
+
+ /** Import The Global Variables. */
+ @import 'variables';
+
+ /* ========== ========== ========== ========== */
+
+ body {
+   background: $background-light-grey;
+ }
+
+ textarea {
+   resize: vertical;
+ }
+
+ .main .container {
+   border-radius: 3px;
+   padding: 40px 25px 0 25px;
+   background: #fff;
+   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+ }

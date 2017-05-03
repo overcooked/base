@@ -1,0 +1,26 @@
+/**
+ * The styling for the post page.
+ * @author Team point.
+ */
+/** Import The Global Variables. */
+/**
+ * Global scss variables.
+ * @author Team point.
+ */
+/* ========== ========== ========== ========== */
+/** Primary Colours. TODO: Temporary color, don't freak out pls. */
+/** Typography Styling. */
+/* ========== ========== ========== ========== */
+body {
+  background: #f9f8f7; }
+
+textarea {
+  resize: vertical; }
+
+.main .container {
+  border-radius: 3px;
+  padding: 40px 25px 0 25px;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); }
+
+/*# sourceMappingURL=post.css.map */

@@ -24,8 +24,8 @@ class User {
 
   /**
    * Constructor for the User class. Has ability to
-   * create a user if passed in a valid user ID number.
-   * @param int $user - User ID to create a specific user.
+   * create a user if passed in a valid user ID.
+   * @param int $user_id - User ID to create a specific user.
    */
   public function __construct($user_id = null) {
 
@@ -78,7 +78,7 @@ class User {
 
     // If user exists, save data into current user object.
     if($data->count()) {
-      $this->_data = $data->results()[0];
+      $this->_data = $data->first();
       return true;
     }
 

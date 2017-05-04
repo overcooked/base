@@ -17,6 +17,13 @@ $user = new User();
 
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
+
+    <!-- Style Files. -->
+    <link rel="stylesheet" href="/public/css/post/post.css">
+
+    <!-- Script Files -->
+    <script src="/public/js/post/post.js" type="text/javascript"></script>
+
   </head>
   <body>
 

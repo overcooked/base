@@ -61,70 +61,29 @@ body {
   text-align: center;
 }
 
-/**
- * Default Header.
- * @uses views/Template/header-bar
- */
-
-#header-logo {
-  font-size: 30px;
-  font-family: Whitney, Helvetica, Arial, sans-serif;
-  color: #474d50;
-  margin-top: 3px;
-  margin-right: 30px;
+.font-black {
+  font-family: $font-black;
 }
 
-#header-search {
-  margin-top: 12px;
+.font-bold {
+  font-family: $font-bold;
 }
 
-#header-search-input {
-  border: 1px solid #E3E4E6;
-  background: #fff;
-  box-shadow: none;
-  border-radius: 3px;
-  padding: 11px 30px 8px 13px;
-  height: 33px;
+.font-semibold {
+  font-family: $font-semibold;
 }
 
-#header-join-now {
-  font-family: proximanova-bold, Helvetica, Arial, sans-serif;
-  margin-top: 12px;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-bottom: 5px;
-  padding-top: 8px;
-  background-color: $primary-color;
-  color: #fff;
-  font-size: 13px;
-  border: none;
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.font-light {
+  font-family: $font-light;
 }
 
-/** Navbar Styling. */
-.navbar-default {
-    background-color: #fff;
-    border-color: #E7E7E7;
-    height: 60px;
-    line-height: 30px;
+.primary-color {
+  color: $primary-color;
 }
 
-/** Navbar Link Styling. */
-.navbar-default .navbar-nav > li > a {
-    margin-top: 6px;
-    color: #737373;
-    font-size: 13px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0.6px;
-    font-family: $font-regular;
+.divider {
+  height: 1px;
+  width: 30px;
+  background-color: #eee;
+  margin: 10px 0 10px 0;
 }
-
-/**
- * Default Footer.
- * @uses views/Template/footer-bar
- */

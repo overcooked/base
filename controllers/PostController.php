@@ -21,16 +21,14 @@ $upload = null;
 if(Input::exists() && Token::check(Input::get('token'))) {
 
   // Pass name (and optional chmod) to create folder for storage
+
   $image->setLocation(getcwd() . "/uploads", 2);
 
   // Define allowed mime types to upload
   $image->setMime(array("jpeg", "jpg", "png"));
 
-  // Set the max width/height limit of images to upload (limit in pixels)
-  $image->setDimension(840, 480);
-
-  // Define the min/max image upload size (size in bytes) Min: 0.01 MB and Max: 1.5 MB
-  $image->setSize(1048, 3145728);
+  // Define the min/max image upload size (size in bytes)
+  $image->setSize(1, 9000000);
 
   // Validate the input form data.
   $validate = new Validate();
@@ -43,7 +41,7 @@ if(Input::exists() && Token::check(Input::get('token'))) {
     'post_title' => array(
       'field_name' => 'Post title',
       'required' => true,
-      'min' => 2,
+      //'min' => 2,
       'max' => 50
     ),
     'post_pickup_location' => array(
@@ -53,7 +51,7 @@ if(Input::exists() && Token::check(Input::get('token'))) {
     'post_description' => array(
       'field_name' => 'Description',
       'required' => true,
-      'min' => 50,
+      //'min' => 50,
       'max' => 1000
     ),
     'post_image' => array(
@@ -69,6 +67,17 @@ if(Input::exists() && Token::check(Input::get('token'))) {
 
     // Check if the upload was successful.
     if($upload) {
+
+      // Resize the image.
+      $resize = Bulletproof\resize(
+  			$image->getFullPath(),
+  			$image->getMime(),
+  			$image->getWidth(),
+  			$image->getHeight(),
+  			600,
+  			450,
+        true
+  	  );
 
       // Create a new post object.
       $post = new Post();

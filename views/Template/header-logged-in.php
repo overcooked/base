@@ -2,13 +2,40 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
+
+      <!-- Responsive Menu Toggle -->
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/index.php" id="header-logo"><span class="ss-icon">cook</span> Overcooked</a>
+
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="/index.php">
+        <img class="img-responsive" id="header-logo" src="/public/assets/images/overcooked-logo.svg" alt="Overcooked Logo">
+      </a>
+
+      <!-- For the placeholder typing script -->
+      <script>
+        var strings = new Array("Search for food!", "Canned goods", "Fresh fruit", "Boxed pasta");
+        var typingSpeed = 150;
+        var deleteSpeed = 150;
+        var isLoop = true;
+        var waitTime = 3000;
+        var isPlaceholder = true;
+      </script>
+
+      <!-- Search Bar -->
+      <form class="navbar-form navbar-left" id="header-search">
+        <div class="input-group">
+          <span class="input-group-addon" id="search-icon">
+            <span class="ss-icon">search</span>
+          </span>
+          <input type="text" class="form-control" id="header-search-input">
+        </div>
+      </form>
+
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

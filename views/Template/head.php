@@ -43,12 +43,12 @@
 <!-- Bootstrap CSS/JS Imports -->
 <link rel="stylesheet" href="/public/css/bootstrap/bootstrap.min.css">
 <script defer type="text/javascript" src="/public/js/bootstrap/bootstrap.min.js"></script>
+<script src="/public/js/libraries/typing.js" type="text/javascript"></script>
 
 <!-- Default Styling -->
 <link rel="stylesheet" href="/public/css/default.css">
 <link rel="stylesheet" href="/public/css/template/header.css">
 <link rel="stylesheet" href="/public/css/template/footer.css">
-
 
 <!-- Icons -->
 <link rel="stylesheet" href="/public/assets/fonts/ss-pika/ss-pika.css"/>

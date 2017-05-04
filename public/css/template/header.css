@@ -87,6 +87,7 @@
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.6px;
+  padding-top: 20px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease; }

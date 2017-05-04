@@ -23,4 +23,27 @@ textarea {
   background: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); }
 
+#help-block-arrow {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #fa7600;
+  position: relative;
+  top: 23px;
+  right: 27px; }
+
+#post-form-div {
+  margin-left: 50px;
+  padding-right: 25px; }
+
+#help-block {
+  margin-top: -15px;
+  padding-left: 10px; }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  #post-form-div {
+    margin-left: 0; } }
+
 /*# sourceMappingURL=post.css.map */

@@ -53,15 +53,25 @@ body {
 .center {
   text-align: center; }
 
-/**
- * Default Header.
- * @uses views/Template/header-bar
- */
-#header-logo {
-  font-size: 30px;
-  font-family: Whitney, Helvetica, Arial, sans-serif;
-  color: #474d50;
-  margin-top: 3px;
-  margin-right: 30px; }
+.font-black {
+  font-family: proximanova-black, Helvetica, Arial, sans-serif; }
+
+.font-bold {
+  font-family: proximanova-bold, Helvetica, Arial, sans-serif; }
+
+.font-semibold {
+  font-family: proximanova-semibold, Helvetica, Arial, sans-serif; }
+
+.font-light {
+  font-family: proximanova-light, Helvetica, Arial, sans-serif; }
+
+.primary-color {
+  color: #fa7600; }
+
+.divider {
+  height: 1px;
+  width: 30px;
+  background-color: #eee;
+  margin: 10px 0 10px 0; }
 
 /*# sourceMappingURL=default.css.map */

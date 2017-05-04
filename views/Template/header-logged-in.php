@@ -18,7 +18,7 @@
 
       <!-- For the placeholder typing script -->
       <script>
-        var strings = new Array("Search for food!", "Canned food", "Fresh fruit", "Food bank", "Fun!");
+        var strings = new Array("Search for food!", "Canned goods", "Fresh fruit", "Boxed pasta");
         var typingSpeed = 150;
         var deleteSpeed = 150;
         var isLoop = true;

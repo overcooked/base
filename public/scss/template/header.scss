@@ -23,22 +23,27 @@
 }
 
 #header-search {
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 #header-search-input {
-  border: 1px solid $primary-light-grey;
+  border: none;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #e3e4e6;
   background: #fff;
   box-shadow: none;
-  border-radius: 3px;
-  padding: 11px 30px 8px 13px;
+  padding: 1px 31px 0 11px;
   height: 33px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 #header-join-now {
   font-family: $font-bold;
-  margin-top: 13px;
-  padding: 8px 14px 7px;
+  margin-top: 12px;
+  padding: 8px 14px 14px 5px;
   background-color: $primary-color;
   color: #fff;
   font-size: 13px;
@@ -61,6 +66,16 @@
   letter-spacing: 0.6px;
 }
 
+#search-icon {
+  background-color: #fff;
+  border-color: $primary-light-grey;
+  color: #a29c99;
+  font-size: 13px;
+  padding: 6px 0px 0 13px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
 /** Navbar Styling. */
 .navbar-default {
   background-color: #fff;
@@ -79,7 +94,6 @@
   letter-spacing: 0.6px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
 }
 

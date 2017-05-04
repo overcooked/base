@@ -16,6 +16,7 @@
 - Segment each input into grids/rows. Easier for explination.
 
 - POST PREVIEW
+- Javascript Letter Counter.
 */
 
 /** REQUIRED Import For App Initialization. */

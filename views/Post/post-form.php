@@ -53,9 +53,8 @@ if(Session::exists('image_error')) {
             <!-- Title -->
             <div class="form-group">
               <label for="post_title">Title <span class="require">*</span></label>
-              <input required="true" type="text" class="form-control" name="post_title" id="post_title" autocomplete="off" placeholder="Ramen, pasta, chicken, etc.." />
+              <input required="true" type="email" class="form-control" name="post_title" id="post_title" autocomplete="off" placeholder="Ramen, pasta, chicken, etc.." />
             </div>
-
             <hr>
 
             <!-- Pickup Location -->
@@ -63,25 +62,21 @@ if(Session::exists('image_error')) {
               <label for="post_pickup_location">Pickup Location <span class="require">*</span></label>
               <input required="true" type="text" class="form-control" name="post_pickup_location" id="post_pickup_location" placeholder="2132 Dominic Ave." />
             </div>
-
             <hr>
 
             <!-- Description -->
             <div class="form-group">
               <label for="post_description">Description <span class="require">*</span></label>
               <textarea required="true" rows="5" class="form-control" name="post_description" id="post_description" placeholder="Describe your food."></textarea>
-              <!-- TODO: Add Javascript letter counter. -->
             </div>
-
             <hr>
 
             <!-- Image Upload -->
             <div class="form-group">
               <label for="post_image">Post Image <span class="require">*</span></label>
-              <input required="true" type="hidden" name="MAX_FILE_SIZE" value="9000000"/>
+              <input required="true" accept="image/jpeg,image/x-png,image/png,/image/jpg"type="hidden" name="MAX_FILE_SIZE" value="9000000"/>
               <input type="file" name="post_image"/>
             </div>
-
             <hr>
 
             <!-- Food Tags TODO: ADD VALIDATION SO VALUES AREN'T CHANGED HERE -->
@@ -107,9 +102,7 @@ if(Session::exists('image_error')) {
 
               </div>
             </div>
-
-            <br>
-            <hr>
+            <br><hr>
 
             <!-- Required Field Reminder -->
             <div class="form-group">

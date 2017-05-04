@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;;GAGG;AAEF,mCAAmC;ACLpC;;;GAGG;AACH,iDAAiD;AAEjD,mEAAmE;AAQnE,0BAA0B;ADNzB,iDAAiD;AAElD,YAAa;EACX,UAAU,EAAE,IAAI;EAChB,SAAS,EAAE,KAAK;EAChB,KAAK,EAAE,GAAG;;AAGZ,kBAAmB;EACjB,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,IAAI;;AAGrB,cAAe;EACb,KAAK,EAAE,IAAI",
+"sources": ["../../scss/update/update.scss","../../scss/variables.scss"],
+"names": [],
+"file": "update.css"
+}

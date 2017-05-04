@@ -45,10 +45,19 @@ $user = new User();
 
           if($postings->count()) {
             foreach ($postings->results() as $post) {
+              // Get the image for the post.
+              $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
+              $image = '';
+
+              // Save into a variable.
+              if($post_image->count()) {
+              	$image = $post_image->first();
+              }
+
               echo '
               <div class="row post">
               <div class="col-sm-3">
-              <img class="post-pic" src="http://placehold.it/150x150">
+              <img class="post-pic" src="' . $image->post_image_url . '" height="150" width="150">
               </div>
               <div class="col-sm-9">
               ';

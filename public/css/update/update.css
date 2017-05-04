@@ -1,0 +1,26 @@
+/**
+ * The styling for the update page.
+ * @author Team point.
+ */
+/** Import The Global Variables. */
+/**
+ * Global scss variables.
+ * @author Team point.
+ */
+/* ========== ========== ========== ========== */
+/** Primary Colours. TODO: Temporary color, don't freak out pls. */
+/** Typography Styling. */
+/* ========== ========== ========== ========== */
+.update-area {
+  margin-top: 50px;
+  max-width: 500px;
+  width: 80%; }
+
+.update-area input {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.update-button {
+  width: 40vw; }
+
+/*# sourceMappingURL=update.css.map */

@@ -53,7 +53,7 @@ if(Session::exists('image_error')) {
             <!-- Title -->
             <div class="form-group">
               <label for="post_title">Title <span class="require">*</span></label>
-              <input required="true" tabindex="-1" type="email" class="form-control post_input" name="post_title" id="post_title" autocomplete="off" placeholder="Ramen, pasta, chicken, etc.." />
+              <input required="true" tabindex="-1" type="text" class="form-control post_input" name="post_title" id="post_title" autocomplete="off" placeholder="Ramen, pasta, chicken, etc.." />
             </div>
             <hr>
 
@@ -122,12 +122,12 @@ if(Session::exists('image_error')) {
         <div id="help-block">
           <div class="arrow-left" id="help-block-arrow"></div>
           <h3 id="help-title">What Makes a <span class="font-bold">Good</span> Post?</h3>
-          <div class="divider"></div>
+          <div class="hoz-divider"></div>
           <p id="help-text">
             A good post has a short but clear title, describes their foods in detail,
             has clear images of the food, and contains up-to-date contact information.
             <span id="help-extra-hide">
-              <div class="divider"></div>
+              <div class="hoz-divider"></div>
               Example of a <a href="">perfect post.</a>
             </span>
           </p>

@@ -12,7 +12,7 @@ $user = new User();
 <html lang="en">
   <head>
     <!-- General. -->
-    <title>Overcooked: Feed those in need with your extra food.</title>
+    <title>Overcooked | Feed those in need with your extra food.</title>
     <meta name="description" content="Overcooked lets you give your extra food to people who really need it.">
 
     <!-- Boiler Plate Tags -->
@@ -20,6 +20,19 @@ $user = new User();
 
     <!-- Style Files -->
     <link rel="stylesheet" href="/public/css/home/home.css">
+
+    <!-- Script Files -->
+    <script>
+      var strings = new Array("Throw ", "Give");
+      var typingSpeed = 150;
+      var deleteSpeed = 130;
+      var waitTime = 700;
+      var exists_text = true;
+      var isLoop = false;
+      var starting_text = "Throw ";
+      var b = starting_text.length;
+    </script>
+
   </head>
   <body>
 
@@ -27,18 +40,59 @@ $user = new User();
     <?php View::header_logged_out(); ?>
 
     <!-- Main Content -->
-    <section class="main">
-      <div class="container">
-        <h3>Web Fonts</h3>
-        <hr>
-        <p style="font-family: proximanova-light">light</p>
-        <p style="font-family: proximanova-regular">regular</p>
-        <p style="font-family: proximanova-regular; font-style: italic;">regular italic</p>
-        <p style="font-family: proximanova-semibold">semibold</p>
-        <p style="font-family: proximanova-bold">bold</p>
-        <p style="font-family: proximanova-black">black</p>
+    <section id="lander-top">
+      <div class="jumbotron" style="background-color: #f9f8f7;">
+        <div class="container" style="padding: 50px 0 50px 0;">
+
+          <h1 class="font-bold" style="font-size: 50px;">
+            <span class="primary-color">
+              <span id="home-type-text">Throw </span>away
+            </span>
+            your extra foods!
+          </h1>
+          <div class="hoz-divider"></div>
+          <p style="font-size: 18px;">
+            Over half of Metro Vancouvers wasted food could have been eaten.<br>
+            Thats 100,000 tonnes of food wasted each year.
+          </p>
+
+        </div>
       </div>
     </section>
+
+    <!-- Lander Section One -->
+    <section id="lander-section-two">
+      <div class="container">
+
+        <div class="row">
+
+          <!-- Link Section #1 -->
+          <div class="col-md-4">
+            <h2 class="font-semibold">Reduce Waste</h2>
+            <div class="hoz-divider"></div>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          </div>
+
+          <!-- Link Section #1 -->
+          <div class="col-md-4">
+            <h2 class="font-semibold">Community</h2>
+            <div class="hoz-divider"></div>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+         </div>
+
+         <!-- Link Section #1 -->
+          <div class="col-md-4">
+            <h2 class="font-semibold">Help People</h2>
+            <div class="hoz-divider"></div>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          </div>
+
+        </div>
+
+      </section>
 
   </body>
 </html>

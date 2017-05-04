@@ -14,8 +14,8 @@
 - Link to what a good post looks like.
 - Scroll/Display and display what a good title looks like. (Fade In, Fade Out)
 - Segment each input into grids/rows. Easier for explination.
-
-- POST PREVIEW
+- Refractor Post Functionality
+- Redocument All SCSS Classes
 - Javascript Letter Counter.
 */
 

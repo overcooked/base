@@ -32,10 +32,10 @@ a {
   text-decoration: none; }
 
 .coloredlinks a {
-  color: #fa7600; }
+  color: #50ba4a; }
 
 .coloredlinks a:hover {
-  color: #c75e00; }
+  color: #3f973a; }
 
 :root {
   overflow-x: hidden;
@@ -48,7 +48,7 @@ body {
   font-size: 16px;
   font-style: normal;
   letter-spacing: 0.2px;
-  font-family: proximanova-regular, Helvetica, Arial, sans-serif; }
+  font-family: proximanova-regular, Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif; }
 
 .center {
   text-align: center; }
@@ -66,9 +66,12 @@ body {
   font-family: proximanova-light, Helvetica, Arial, sans-serif; }
 
 .primary-color {
-  color: #fa7600; }
+  color: #50ba4a; }
 
-.divider {
+.main {
+  margin-top: 30px; }
+
+.hoz-divider {
   height: 1px;
   width: 30px;
   background-color: #eee;

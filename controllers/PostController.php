@@ -21,7 +21,7 @@ $upload = null;
 if(Input::exists() && Token::check(Input::get('token'))) {
 
   // Pass name (and optional chmod) to create folder for storage
-  $image->setLocation(getcwd() . "/uploads/");
+  $image->setLocation(getcwd() . "/uploads", 2);
 
   // Define allowed mime types to upload
   $image->setMime(array("jpeg", "jpg", "png"));

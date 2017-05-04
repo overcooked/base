@@ -21,18 +21,6 @@ $user = new User();
     <!-- Style Files -->
     <link rel="stylesheet" href="/public/css/home/home.css">
 
-    <!-- Script Files -->
-    <script>
-      var strings = new Array("Throw ", "Give");
-      var typingSpeed = 150;
-      var deleteSpeed = 130;
-      var waitTime = 700;
-      var exists_text = true;
-      var isLoop = false;
-      var starting_text = "Throw ";
-      var b = starting_text.length;
-    </script>
-
   </head>
   <body>
 
@@ -44,12 +32,27 @@ $user = new User();
       <div class="jumbotron" style="background-color: #f9f8f7;">
         <div class="container" style="padding: 50px 0 50px 0;">
 
+          <!-- Setup Typing Variables. -->
+          <script>
+            var strings = new Array("Throw ", "Give ");
+            var typingSpeed = 150;
+            var deleteSpeed = 130;
+            var waitTime = 700;
+            var exists_text = true;
+            var isLoop = false;
+            var starting_text = "Throw ";
+            var b = starting_text.length;
+          </script>
+
+          <!-- Lander Main Title -->
           <h1 class="font-bold" style="font-size: 50px;">
             <span class="primary-color">
               <span id="home-type-text">Throw </span>away
             </span>
             your extra foods!
           </h1>
+
+          <!-- Lander Text. -->
           <div class="hoz-divider"></div>
           <p style="font-size: 18px;">
             Over half of Metro Vancouvers wasted food could have been eaten.<br>

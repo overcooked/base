@@ -53,7 +53,7 @@ if(Session::exists('image_error')) {
             <!-- Title -->
             <div class="form-group">
               <label for="post_title">Title <span class="require">*</span></label>
-              <input required="true" tabindex="-1" type="email" class="form-control post_input" name="post_title" id="post_title" autocomplete="off" placeholder="Ramen, pasta, chicken, etc.." />
+              <input required="true" tabindex="-1" type="text" class="form-control post_input" name="post_title" id="post_title" autocomplete="off" placeholder="Ramen, pasta, chicken, etc.." />
             </div>
             <hr>
 

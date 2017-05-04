@@ -1,0 +1,35 @@
+/**
+ * The styling for the profile page.
+ * @author Team point.
+ */
+
+ /** Import The Global Variables. */
+ @import 'variables';
+
+ /* ========== ========== ========== ========== */
+
+.profile-area {
+  margin-top: 35px;
+}
+
+.left-tab {
+  padding-top: 50px;
+  text-align: right;
+  h4 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+
+.middle-tab {
+
+}
+
+.right-tab {
+
+}
+
+.profile-pic {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

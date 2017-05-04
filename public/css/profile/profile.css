@@ -1,0 +1,28 @@
+/**
+ * The styling for the profile page.
+ * @author Team point.
+ */
+/** Import The Global Variables. */
+/**
+ * Global scss variables.
+ * @author Team point.
+ */
+/* ========== ========== ========== ========== */
+/** Primary Colours. TODO: Temporary color, don't freak out pls. */
+/** Typography Styling. */
+/* ========== ========== ========== ========== */
+.profile-area {
+  margin-top: 35px; }
+
+.left-tab {
+  padding-top: 50px;
+  text-align: right; }
+  .left-tab h4 {
+    margin-top: 3px;
+    margin-bottom: 3px; }
+
+.profile-pic {
+  border-radius: 10px;
+  margin-bottom: 10px; }
+
+/*# sourceMappingURL=profile.css.map */

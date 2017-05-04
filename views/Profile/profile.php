@@ -35,30 +35,41 @@ $user = new User();
           <?php echo $user->data()->user_first; ?>
           <?php echo $user->data()->user_last; ?>
         </h3>
-        <h4>Vancouver, BC</h4>
-        <p>I recently saw a wonderful play called Floydada for which the music was composed by an artist whose bio begins like this.</p>
+        <h4>user_location</h4>
+        <p>This user has not written their bio yet.</p>
         <hr>
         </div>
-        <div class="col-md-4 middle-tab">
-
+        <div class="col-md-8 right-tab">
           <?php
           $postings = DB::getInstance()->get('posts', array('user_id', '=', $user->data()->user_id));
 
           if($postings->count()) {
             foreach ($postings->results() as $post) {
+              echo '
+              <div class="row post">
+              <div class="col-sm-3">
+              <img class="post-pic" src="http://placehold.it/150x150">
+              </div>
+              <div class="col-sm-9">
+              ';
+              echo '<h3>';
               echo $post->post_title . '<br>';
+              echo '</h3>';
+              echo '<h4>';
               echo $post->post_description . '<br>';
+              echo '</h4><hr>';
               echo $post->post_pickup_location . '<br>';
               echo '<br>';
+              echo '
+              </div>
+              </div>
+              ';
+
             }
           } else {
             echo 'No posts for this user.';
           }
           ?>
-
-        </div>
-        <div class="col-md-4 right-tab">
-          <p>asdf</p>
 
         </div>
       </div>

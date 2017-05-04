@@ -13,7 +13,7 @@
 }
 
 .left-tab {
-  padding-top: 50px;
+  padding-top: 30px;
   text-align: right;
   h4 {
     margin-top: 3px;
@@ -21,15 +21,19 @@
   }
 }
 
-.middle-tab {
-
-}
-
 .right-tab {
-
+  padding-top: 30px;
 }
 
 .profile-pic {
   border-radius: 10px;
   margin-bottom: 10px;
+}
+
+.post-pic {
+  border-radius: 10px;
+}
+
+.post {
+  margin-bottom: 20px;
 }

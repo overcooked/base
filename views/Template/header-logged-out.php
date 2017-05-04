@@ -16,7 +16,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" id="logged-out-links">
         <li><a href="about.php">About</a></li>
         <li role="separator" class="divider"></li>
         <li><a href="#">How It Works</a></li>
@@ -27,16 +27,10 @@
         <li><a href="contact.php">Contact</a></li>
       </ul>
 
-      <form class="navbar-form navbar-left" id="header-search">
-        <div class="form-group">
-          <input type="text" class="form-control" id="header-search-input" placeholder="Search">
-        </div>
-      </form>
-
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/login.php" style="text-transform: capitalize; font-size: 14px;">Sign In</a></li>
+        <li><a href="/login.php" id="header-sign-in">Sign In</a></li>
         <li>
-          <a href="register.php" class="btn btn-default navbar-btn" id="header-join-now">Get Started</a>
+          <a href="register.php" class="btn btn-default navbar-btn" id="header-get-started">Get Started</a>
         </li>
       </ul>
 

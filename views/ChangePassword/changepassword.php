@@ -12,7 +12,7 @@ $user = new User();
 <html lang="en">
   <head>
     <!-- General. -->
-    <title>Overcooked: Feed those in need with your extra food.</title>
+    <title>Change Password | Overcooked.ca</title>
     <meta name="description" content="Overcooked lets you give your extra food to people who really need it.">
 
     <!-- Boiler Plate Tags. -->
@@ -26,32 +26,31 @@ $user = new User();
   <body>
 
     <!-- Header Section -->
-    <?php View::header_logged_out(); ?>
+    <?php View::header_logged_in(); ?>
 
     <!-- Main Content // Start -->
     <section class="main">
-      <div class="container change-area">
+      <div class="container password-change-area">
         <h2 class="center">Change Password</h2>
+        <hr />
         <form action="" method="post">
           <div class="field">
             <label for="current_password">Current Password</label>
-            <input type="password" name="current_password" id="current_password">
+            <input type="password" required="true" name="current_password" class="form-control" placeholder="Current Password" id="current_password">
           </div>
 
           <div class="field">
             <label for="new_password">New Password</label>
-            <input type="password" name="new_password" id="new_password">
+            <input type="password" required="true" name="new_password" class="form-control" placeholder="New Password" id="new_password">
           </div>
 
           <div class="field">
             <label for="new_password_again">New Password Again</label>
-            <input type="password" name="new_password_again" id="new_password_again">
+            <input type="password" required="true" name="new_password_again" class="form-control" placeholder="Confirm New Password" id="new_password_again">
           </div>
 
           <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-          <input type="submit" value="Change Password">
-        </form>
-          <input type="submit" class="btn btn-default login-btn" name="" value="Log In">
+          <input type="submit" class="btn btn-default" value="Change Password">
         </form>
       </div>
     </section>

@@ -8,3 +8,4 @@ shortcuts.txt
 .sass-cache
 /uploads
 travis_rsa
+deploy-key

@@ -1,1 +1,1 @@
-<?php `git pull git@github.com:overcooked/base.git`;?>
+<?php `git pull git@github.com:overcooked/base/tree/dev.git`;?>

@@ -1,39 +1,28 @@
-#!/usr/bin/env bash
-DEPLOY_URI="ssh://mac@138.68.237.56:/var/repo/overcooked.git"
-DEPLOY_USER="Mackenzie Craig"
-DEPLOY_EMAIL="hello@maccraig.net"
-if [ "${TRAVIS_PULL_REQUEST}" == "false" ] && [ "${TRAVIS_BRANCH}" == "dev" ]; then
+#!/bin/bash
 
-  echo "Clears git information"
-  rm -rf .git
+# print outputs and exit on first failure
+# mac@138.68.237.56:/var/www/overcooked.ca
+set -xe
 
-  echo "Writing custom gitignore for build"
+if [ $TRAVIS_BRANCH == "dev" ] ; then
 
-  echo "# Build Ignores" > .gitignore
-  echo "composer.phar" >> .gitignore
-  echo "config.json" >> .gitignore
-  echo "deploy_key.*" >> .gitignore
-  echo "build/" >> .gitignore
-  echo "codeclimate.json" >> .gitignore
-  echo "coverage.xml" >> .gitignore
+    # setup ssh agent, git config and remote
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/travis_rsa
+    git remote add deploy "mac@138.68.237.56:/var/www/overcooked.ca"
+    git config user.name "Travis CI"
+    git config user.email "travis@overcooked.ca"
 
-  echo "Sets up package for sending"
-  git init
-  git remote add deploy $DEPLOY_URI
-  git config user.name $DEPLOY_USER
-  git config user.email $DEPLOY_EMAIL
-  git add --all .
-  git commit -m "Deploy from Travis - build {$TRAVIS_BUILD_NUMBER}"
+    # commit compressed files and push it to remote
+    git add .
+    git status # debug
+    git commit -m "Deploy built files"
+    git push -f deploy HEAD:master
 
-  echo "Sets up permissions"
-  echo -e "Host 138.68.237.56\n\tStrictHostKeyChecking no" >> ~/.ssh/config
-  openssl aes-256-cbc -K $encrypted_a9d53792e855_key -iv $encrypted_a9d53792e855_iv -in deploy_key.pem.enc -out deploy_key.pem -d
-  eval "$(ssh-agent -s)"
-  chmod 600 deploy_key.pem
-  ssh-add deploy_key.pem
-  echo "Generating key"
-  ssh-keygen -R 138.68.237.56
-  echo "Sends build"
-  git push -f deploy master
-  send "yes"
+    echo "DONE!"
+
+else
+
+    echo "No deploy script for branch '$TRAVIS_BRANCH'"
+
 fi

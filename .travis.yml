@@ -2,14 +2,5 @@ language: php
 php:
 - '7.1'
 script: phpunit tests
-branches:
-  only:
-  - dev
-addons:
-  ssh_known_hosts: 138.68.237.56
-before_install:
-  - bash _scripts/install.sh
-after_success:
-  - bash _scripts/deploy.sh
 notifications:
   email: false

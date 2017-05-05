@@ -26,7 +26,7 @@ if [ "${TRAVIS_PULL_REQUEST}" == "false" ] && [ "${TRAVIS_BRANCH}" == "dev" ]; t
   git commit -m "Deploy from Travis - build {$TRAVIS_BUILD_NUMBER}"
 
   echo "Sets up permissions"
-  echo -e "Host 138.68.237.56" >> ~/.ssh/config
+  echo -e "Host 138.68.237.56\n\tStrictHostKeyChecking no" >> ~/.ssh/config
   openssl aes-256-cbc -K $encrypted_a9d53792e855_key -iv $encrypted_a9d53792e855_iv -in deploy_key.pem.enc -out deploy_key.pem -d
   eval "$(ssh-agent -s)"
   chmod 600 deploy_key.pem

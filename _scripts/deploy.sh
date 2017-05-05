@@ -31,6 +31,8 @@ if [ "${TRAVIS_PULL_REQUEST}" == "false" ] && [ "${TRAVIS_BRANCH}" == "dev" ]; t
   eval "$(ssh-agent -s)"
   chmod 600 deploy_key.pem
   ssh-add deploy_key.pem
+  echo "Generating key"
+  ssh-keygen -R 138.68.237.56
   echo "Sends build"
   git push -f deploy master
   send "yes"

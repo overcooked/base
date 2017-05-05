@@ -4,7 +4,7 @@ DEPLOY_USER="Mackenzie Craig"
 $DEPLOY_EMAIL"hello@maccraig.net"
 if [ "${TRAVIS_PULL_REQUEST}" == "false" ] && [ "${TRAVIS_BRANCH}" == "dev" ]; then
   echo "Writing custom gitignore for build"
-  
+
   echo "# Build Ignores" > .gitignore
   echo "composer.phar" >> .gitignore
   echo "config.json" >> .gitignore
@@ -29,4 +29,5 @@ if [ "${TRAVIS_PULL_REQUEST}" == "false" ] && [ "${TRAVIS_BRANCH}" == "dev" ]; t
   ssh-add deploy_key.pem
   echo "Sends build"
   git push -f deploy master
+  send "yes"
 fi

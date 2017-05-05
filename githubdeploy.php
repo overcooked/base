@@ -1,1 +1,5 @@
-<?php `git pull git@github.com:overcooked/base/tree/dev.git`;?>
+<?php
+if ( $_POST['payload'] ) {
+  shell_exec( 'cd /var/www/html/ && git pull' );
+}
+?>

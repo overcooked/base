@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 DEPLOY_URI="ssh://mac@138.68.237.56:/var/repo/overcooked.git"
 DEPLOY_USER="Mackenzie Craig"
-$DEPLOY_EMAIL="hello@maccraig.net"
+DEPLOY_EMAIL="hello@maccraig.net"
 if [ "${TRAVIS_PULL_REQUEST}" == "false" ] && [ "${TRAVIS_BRANCH}" == "dev" ]; then
   echo "Writing custom gitignore for build"
 

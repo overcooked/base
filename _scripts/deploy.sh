@@ -9,7 +9,7 @@ if [ $TRAVIS_BRANCH == "dev" ] ; then
     # setup ssh agent, git config and remote
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/travis_rsa
-    git remote add deploy "mac@138.68.237.56:/var/www/overcooked.ca"
+    git remote add deploy "travis@138.68.237.56:/var/www/overcooked.ca"
     git config user.name "Travis CI"
     git config user.email "travis@overcooked.ca"
 

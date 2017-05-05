@@ -11,7 +11,5 @@ before_install:
   - bash _scripts/install.sh
 after_success:
   - bash _scripts/deploy.sh
-  on:
-    all_branches: true
 notifications:
   email: false

@@ -27,6 +27,8 @@
   margin-top: 14px;
 }
 
+recieve
+
 #header-search-input {
   border: none;
   border-right: 1px solid;
@@ -75,10 +77,11 @@
 /* Sign in button for logged out header-bar. */
 #header-sign-in {
   text-transform: capitalize;
+  font-family: $font-semibold;
   font-size: 14px;
-  padding: 22px 0 0 0;
-  margin: 0 15px;
-  border-bottom: 1px solid rgba(238, 238, 238, 0.50);
+  padding: 1px 12px 0 0;
+  margin: 20px 14px 0 0;
+  border-right: 1px solid rgba(238, 238, 238, 0.5);
 }
 
 #header-bar {
@@ -181,7 +184,7 @@
 
     #header-sign-in {
       border-bottom: 1px solid rgba(238, 238, 238, 0.5);
-      font-family: proximanova-bold, Helvetica, Arial, sans-serif;
+      font-family: $font-bold, Helvetica, Arial, sans-serif;
       margin-top: 6px;
       padding: 8px 18px;
       background-color: #f0f0f0;

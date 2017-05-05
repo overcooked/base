@@ -49,7 +49,7 @@ $user = new User();
             <span class="primary-color">
               <span id="home-type-text">Throw </span>away
             </span>
-            your extra foods!
+            your extra food!
           </h1>
 
           <!-- Lander Text. -->
@@ -67,6 +67,7 @@ $user = new User();
     <section id="lander-section-two">
       <div class="container">
 
+        <!-- Main Information. -->
         <div class="row">
 
           <!-- Link Section #1 -->
@@ -95,7 +96,24 @@ $user = new User();
 
         </div>
 
-      </section>
+        <!-- City Skyline -->
+        <div class="row" id="section-one-skyline">
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Lander Section Two -->
+    <section id="lander-section-three">
+      <div class="container-fluid">
+
+        <div class="row" style="height: 50px; background-color: #eee;">
+
+        </div>
+
+      </div>
+    </section>
 
   </body>
 </html>

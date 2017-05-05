@@ -1,7 +1,6 @@
 #!/bin/bash
 set -x
 if [ $TRAVIS_BRANCH == 'dev' ] ; then
-    cd html
     git init
 
     git remote add deploy "deploy@138.68.237.56:/var/www/html"

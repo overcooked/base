@@ -6,6 +6,3 @@ openssl aes-256-cbc -K $encrypted_b0b2958c016f_key -iv $encrypted_b0b2958c016f_i
 rm deploy-key.enc # Don't need it anymore
 chmod 600 deploy-key
 mv deploy-key ~/.ssh/id_rsa
-
-
-cd ..

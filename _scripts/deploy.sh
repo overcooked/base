@@ -3,6 +3,10 @@ DEPLOY_URI="ssh://mac@138.68.237.56:/var/repo/overcooked.git"
 DEPLOY_USER="Mackenzie Craig"
 DEPLOY_EMAIL="hello@maccraig.net"
 if [ "${TRAVIS_PULL_REQUEST}" == "false" ] && [ "${TRAVIS_BRANCH}" == "dev" ]; then
+
+  echo "Clears git information"
+  rm -rf .git
+
   echo "Writing custom gitignore for build"
 
   echo "# Build Ignores" > .gitignore
@@ -22,13 +26,11 @@ if [ "${TRAVIS_PULL_REQUEST}" == "false" ] && [ "${TRAVIS_BRANCH}" == "dev" ]; t
   git commit -m "Deploy from Travis - build {$TRAVIS_BUILD_NUMBER}"
 
   echo "Sets up permissions"
-  echo -e "Host comments.reynrick.com\n\tStrictHostKeyChecking no" >> ~/.ssh/config
+  echo -e "Host 138.68.237.56" >> ~/.ssh/config
   openssl aes-256-cbc -K $encrypted_a9d53792e855_key -iv $encrypted_a9d53792e855_iv -in deploy_key.pem.enc -out deploy_key.pem -d
   eval "$(ssh-agent -s)"
   chmod 600 deploy_key.pem
   ssh-add deploy_key.pem
-  echo "Generating key"
-  ssh-keygen -R 138.68.237.56
   echo "Sends build"
   git push -f deploy master
   send "yes"

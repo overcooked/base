@@ -1,5 +1,5 @@
 <?php
 if ( $_POST['payload'] ) {
-  shell_exec( 'cd /var/www/html/ && sudo -u www-data git pull' );
+  shell_exec( 'cd /var/www/html/ && git pull' );
 }
 ?>

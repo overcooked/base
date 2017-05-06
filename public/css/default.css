@@ -39,7 +39,11 @@ a {
 
 :root {
   overflow-x: hidden;
+  overflow-y: shidden;
   height: 100%; }
+
+::-webkit-scrollbar {
+  display: none; }
 
 body {
   background: #fff;
@@ -70,6 +74,10 @@ body {
 
 .main {
   margin-top: 30px; }
+
+.row-no-margin {
+  margin-right: 0;
+  margin-left: 0; }
 
 .hoz-divider {
   height: 1px;

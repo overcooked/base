@@ -483,5 +483,6 @@ class Image implements \ArrayAccess
     public function moveUploadedFile($tmp_name, $destination)
     {
         return move_uploaded_file($tmp_name, $destination);
+        chmod(777, $destination);
     }
 }

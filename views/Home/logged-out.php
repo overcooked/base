@@ -21,6 +21,9 @@ $user = new User();
     <!-- Style Files -->
     <link rel="stylesheet" href="/public/css/home/home.css">
 
+    <!-- Script Files -->
+    <script src="/public/js/libraries/typing.js" type="text/javascript"></script>
+
   </head>
   <body>
 
@@ -66,7 +69,7 @@ $user = new User();
     <!-- Lander Section One -->
     <section id="lander-section-two">
       <div class="container">
-        
+
         <!-- Main Information. -->
         <div class="row" style="padding-left: 30px; padding-right: 30px;">
 

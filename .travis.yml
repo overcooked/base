@@ -1,11 +1,6 @@
 language: php
 php:
-- '7.0'
 - '7.1'
-- nightly
 script: phpunit tests
-deploy:
-  provider: heroku
-  app: overcookedca
-  api_key:
-    secure: dXAFf5lgTRZykDmfkWSSyP3jfk8yU7XWLyocvltaN2K/3yC/plxrNsSXiytrjoZKuQDXLEOd27CHOf+PDfmFfhO3ssJNtIaQmA5shX9QMf/Vn0OM1yyhtiJ0BlI8H1FxxLSo/ZGsHrCeR8xMGbzv1B+5Vgc9AoNSl/T/GahPM8baTI0SYT+tuVXIXQ6GEP/w7PyettTitSEejpKa7rLmFqu3C5BXakoC2uKdr3p1fHdNq/KlEw487KlCbGq07a6bXD/ldpmGPGpYhzxeV8Nd859Of81Qc9Jev8ngAdJmQmjxhhNwUBdOFKd28s2pOwNcZ/WEIHj1jn0VFpvJTuxLpr9X3FU0NlRXwUUz8i1vnxW4gs0FOcWxjOrZ95lmOxl+bzlbH/3mW4YDllw3dZQFe0fqPqd7U9izw0JQdoeL9wmng7N1S4uDo1aGY7o79rJ779e2lqdFi/mEYTeEUpyems1h7aF2/j7vDAEWz+7K5rm8nwVgRZBnGfhPLrzXVGjAAfnFyZBjoywCGevd2RUZsVr7OAPDj3XA0UNtffJ7DrS23vn1g6anYC4ztY91sqcE68lrWKdkuO/DmVo5q3q6ov/fESAEftdF4/2xCrzTUwpr8ZEKnfdmiKZB+ucDQTkaeDmbvrYKI3cnRPCCtVTMr/QsyVY1Lt8eK5coNQqdPd0=
+notifications:
+  email: false

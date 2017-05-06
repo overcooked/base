@@ -1,5 +1,5 @@
-.DS_Store
 Thumbs.db
+.DS_Store
 npm-debug.log
 /bower_components
 /node_modules
@@ -7,3 +7,6 @@ npm-debug.log
 shortcuts.txt
 .sass-cache
 /uploads
+travis_rsa
+deploy-key
+/core/init.php

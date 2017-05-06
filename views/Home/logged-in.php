@@ -62,7 +62,7 @@ $user = new User();
           </div>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-10 col-md-offset-1">
 
           <?php /** Check whether the user had a successful post. */
           if(Session::exists('successful_post'))
@@ -115,7 +115,7 @@ $user = new User();
                     <small style='color: #666; font-family: proximanova-regularitalic'><b>Type: </b>{$post->post_tag} &nbsp;|&nbsp; <b>Posted: </b> {$post_date}</small>
                     <hr>
                     <p class='text-center'>
-                      <a href='{$post_listing_url}' class='btn btn-primary' style='font-family: proximanova-bold, Helvetica, Arial, sans-serif; margin-top: -7px; padding: 8px 14px 7px; background-color: #fa7600; color: #fff; font-size: 13px; border: none; border-radius: 3px; text-transform: uppercase; letter-spacing: 1px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;' role='button'>View Listing</a>
+                      <a href='{$post_listing_url}' class='btn btn-primary' style='font-family: proximanova-bold, Helvetica, Arial, sans-serif; margin-top: -7px; padding: 8px 14px 7px; background-color: #50ba4a; color: #fff; font-size: 13px; border: none; border-radius: 3px; text-transform: uppercase; letter-spacing: 1px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;' role='button'>View Listing</a>
                     </p>
                   </div>
                 </div>

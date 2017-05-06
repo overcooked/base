@@ -42,7 +42,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="post.php" class="btn btn-default navbar-btn" id="header-post-btn">Post</a></li>
+        <li><a href="/post.php" class="btn btn-default navbar-btn" id="header-post-btn">Post</a></li>
 
         <li class="dropdown">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>

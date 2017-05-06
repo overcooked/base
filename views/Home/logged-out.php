@@ -45,7 +45,7 @@ $user = new User();
           </script>
 
           <!-- Lander Main Title -->
-          <h1 class="font-bold" style="font-size: 50px;">
+          <h1 class="font-bold" style="font-size: 50px; color: #4e4e4e;">
             <span class="primary-color">
               <span id="home-type-text">Throw </span>away
             </span>
@@ -54,7 +54,7 @@ $user = new User();
 
           <!-- Lander Text. -->
           <div class="hoz-divider"></div>
-          <p style="font-size: 18px;">
+          <p style="font-size: 18px; letter-spacing: 0.2px; color: #4e4e4e;">
             Over half of Metro Vancouvers wasted food could have been eaten.<br>
             Thats 100,000 tonnes of food wasted each year.
           </p>
@@ -68,38 +68,36 @@ $user = new User();
       <div class="container">
 
         <!-- Main Information. -->
-        <div class="row">
+        <div class="row" style="padding-left: 30px; padding-right: 30px;">
 
-          <!-- Link Section #1 -->
-          <div class="col-md-4">
-            <h2 class="font-semibold">Reduce Waste</h2>
+          <!-- Info Section #1 -->
+           <div class="col-md-4" style="padding-top: 35px;">
+             <h2 class="font-semibold" style="letter-spacing: 0.2px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #626262; text-rendering: optimizeLegibility;">Find a Meal</h2>
+             <h5 style="font-family: proximanova-regularitalic; color: #b8bfc2; padding-top: 6px;">Find food near you</h5>
+             <div class="hoz-divider"></div>
+             <p style="letter-spacing: 0.4px; color: #898d94;">Overcooked allows users to meet each other face-to-face for meal pickups. All meals posted are free of charge to help promote giving.</p>
+           </div>
+
+          <!-- Info Section #2 -->
+          <div class="col-md-4" style="padding-top: 35px;">
+            <h2 class="font-semibold" style="letter-spacing: 0.2px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #626262; text-rendering: optimizeLegibility;">Reduce Waste</h2>
+            <h5 style="font-family: proximanova-regularitalic; color: #b8bfc2; padding-top: 6px;">Make a difference</h5>
             <div class="hoz-divider"></div>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <p style="letter-spacing: 0.4px; color: #898d94;">You can reduce the amount of waste you create by choosing what food you throw away. This can help the environment, economy, and much more.</p>
           </div>
 
-          <!-- Link Section #1 -->
-          <div class="col-md-4">
-            <h2 class="font-semibold">Community</h2>
+          <!-- Info Section #3 -->
+          <div class="col-md-4" style="padding-top: 35px;">
+            <h2 class="font-semibold" style="letter-spacing: 0.2px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #626262; text-rendering: optimizeLegibility;">Community</h2>
+            <h5 style="font-family: proximanova-regularitalic; color: #b8bfc2; padding-top: 6px;">Giveback to those around you</h5>
             <div class="hoz-divider"></div>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <p style="letter-spacing: 0.4px; color: #898d94;">Our organization takes donations in the form of fresh-made, leftover, or perishable foods and uploads them online for those in need.<br /></p>
          </div>
-
-         <!-- Link Section #1 -->
-          <div class="col-md-4">
-            <h2 class="font-semibold">Help People</h2>
-            <div class="hoz-divider"></div>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-          </div>
 
         </div>
 
         <!-- City Skyline -->
-        <div class="row" id="section-one-skyline">
-
-        </div>
+        <div class="row row-no-margin" id="section-one-skyline"></div>
       </div>
 
     </section>
@@ -108,7 +106,46 @@ $user = new User();
     <section id="lander-section-three">
       <div class="container-fluid">
 
-        <div class="row" style="height: 50px; background-color: #eee;">
+        <div class="container">
+
+          <div class="col-sm-12 text-center" id="section-two-city-title">
+            <img src="/public/assets/icons/city.svg" alt="">
+
+            <h1 class="font-light" style="padding-top: 15px;">
+              reducing waste in <span class="font-bold">metro</span> vancouver
+            </h1>
+          </div>
+
+          <div class="col-sm-12 text-center">
+
+            <div class="col-sm-2 col-sm-offset-2">
+              <img src="/public/assets/icons/money.svg" alt=""><br>
+              <hr class="hr-divider">
+              Helps the local economy
+            </div>
+
+            <div class="col-sm-2">
+              <img src="/public/assets/icons/lock.svg" alt="">
+              <hr class="hr-divider">
+              Protects the environment
+            </div>
+
+            <div class="col-sm-2">
+              <img src="/public/assets/icons/lego.svg" alt="">
+              <hr class="hr-divider">
+              Creates a better future
+            </div>
+
+            <div class="col-sm-2">
+              <img src="/public/assets/icons/checks.svg" alt="">
+              <hr class="hr-divider">
+              Easily Give Away Food
+            </div>
+
+          </div>
+
+          <!-- USELESS REMOVE LATER -->
+          <div style="height: 350px;"></div>
 
         </div>
 

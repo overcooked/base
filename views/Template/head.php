@@ -13,7 +13,7 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://overcooked.ca/">
-<link rel="shortcut icon" href="/public/assets/favicon.ico">
+<link rel="shortcut icon" href="/public/assets/images/favicon.ico">
 <meta name="robots" content="noodp">
 
 <!-- Open Graph Meta Tags. -->

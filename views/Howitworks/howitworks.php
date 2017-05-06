@@ -21,7 +21,6 @@ $user = new User();
 
         <!-- Style Files. -->
         <link rel="stylesheet" href="/public/css/contact/howitworks.css">
-
         <style media="screen">
             ::-webkit-scrollbar {
                 display: none;
@@ -75,5 +74,11 @@ $user = new User();
                 </div>
 
                 <hr>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="main">
+            <div class ="Main_Section Container">
             </div>
         </section>

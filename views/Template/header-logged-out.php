@@ -24,8 +24,8 @@
 
       <ul class="nav navbar-nav" id="logged-out-links">
         <li><a href="about.php">About</a></li>
-        <li><a href="/howitworks.php">How It Works</a></li>
-        <li><a href="/contact.php">Contact</a></li>
+        <li><a href="howitworks.php">How It Works</a></li>
+        <li><a href="contact.php">Contact</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">

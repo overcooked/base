@@ -59,7 +59,7 @@ $user = new User();
                    </td>
                 </tr>
                 <tr>
-                   <td colspan="2" style="text-align: right;">
+                   <td colspan="2" style="text-align: left;">
                       <input type="submit" class="contact-submit btn btn-default" value="Submit">
                    </td>
                 </tr>

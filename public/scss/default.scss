@@ -57,6 +57,14 @@ input:-webkit-autofill {
     -webkit-text-fill-color: #738a94;
 }
 
+input {
+  -webkit-appearance: none;
+  box-shadow: none !important; }
+
+:-webkit-autofill {
+  color: #fff !important;
+}
+
 body {
   background: #fff;
   min-height: 100%;

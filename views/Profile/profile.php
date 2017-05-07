@@ -56,10 +56,10 @@ $user = new User();
 
               echo '
               <div class="row post">
-              <div class="col-sm-3">
+              <div class="col-xs-3 hidden-xs">
               <img class="post-pic" src="' . $image->post_image_url . '" height="150" width="150">
               </div>
-              <div class="col-sm-9">
+              <div class="col-xs-9">
               ';
               echo '<h3>';
               echo $post->post_title . '<br>';

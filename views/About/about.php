@@ -21,7 +21,7 @@ $user = new User();
 
     <style media="screen">
         ::-webkit-scrollbar {
-            display: none; 
+            display: none;
         }
         .grid-divider {
           position: relative;

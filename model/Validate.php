@@ -48,7 +48,7 @@ class Validate {
           $image = new Bulletproof\Image($_FILES);
 
           if($_SESSION['image_check'] === 0){
-            $this->add_error("Image is required.");
+            $this->add_error("post_image/Image is required.");
           }
 
           unset($_SESSION['image_check']);
@@ -65,7 +65,7 @@ class Validate {
 
         // If the rule is required and empty.
         if ($rule === 'required' && empty($value)) {
-          $this->add_error("{$field_name} is required.");
+          $this->add_error("{$form_name}/{$field_name} is required.");
         }
 
         // If the values aren't empty, check them.
@@ -73,26 +73,26 @@ class Validate {
 
           // Checks for minimum input string length.
           if ($rule === 'min' && strlen($value) < $rule_value) {
-            $this->add_error("{$field_name} must be a minimum of {$rule_value} characters.");
+            $this->add_error("{$form_name}/{$field_name} must be a minimum of {$rule_value} characters.");
             continue;
           }
 
           // Checks for maximum input string length.
           if ($rule === 'max' && strlen($value) > $rule_value) {
-            $this->add_error("{$field_name} can be a maximum of {$rule_value} characters.");
+            $this->add_error("{$form_name}/{$field_name} can be a maximum of {$rule_value} characters.");
             continue;
           }
 
           // Checks if two field match or not.
           if ($rule === 'matches' && $value != $input[$rule_value]) {
-            $this->add_error("{$rule_value} must match {$field_name}");
+            $this->add_error("{$form_name}/{$rule_value} must match {$field_name}");
           }
 
           // Checks if the value is unique within the database.
           if ($rule === 'unique') {
             $check = $this->_db->get($rule_value, array($form_name, '=', $value));
             if($check->count()) {
-              $this->add_error("Please use a different email.");
+              $this->add_error("user_email/Please use a different email.");
             }
             continue;
           }

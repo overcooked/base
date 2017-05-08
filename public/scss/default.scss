@@ -114,3 +114,19 @@ body {
   background-color: #eee;
   margin: 10px 0 10px 0;
 }
+
+.error-placeholder::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #b4bac5;
+}
+
+.error-placeholder::-moz-placeholder { /* Firefox 19+ */
+  color: #b4bac5;
+}
+
+.error-placeholder:-ms-input-placeholder { /* IE 10+ */
+  color: #b4bac5;
+}
+
+.error-placeholder:-moz-placeholder { /* Firefox 18- */
+  color: #b4bac5;
+}

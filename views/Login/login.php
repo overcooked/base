@@ -32,6 +32,7 @@ $user = new User();
     <section class="main">
       <div class="container login-area">
         <h2 class="center">Login</h2>
+        <hr />
         <form action="" method="post">
           <div class="field">
             <input type="text" name="user_email" class="form-control" placeholder="Email" id="user_email" autocomplete="off">

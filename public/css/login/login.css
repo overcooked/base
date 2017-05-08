@@ -11,8 +11,7 @@
 /** Primary Colours. TODO: Temporary color, don't freak out pls. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
-html,
-body {
+html, body {
   width: 100%;
   height: 100%; }
 
@@ -178,6 +177,22 @@ body {
 :-moz-placeholder {
   /* Firefox 18- */
   color: #b4bac5; }
+
+.error-placeholder::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #ff9b9b; }
+
+.error-placeholder::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ff9b9b; }
+
+.error-placeholder:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #ff9b9b; }
+
+.error-placeholder:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ff9b9b; }
 
 .absolute-center-form .btn-submit:hover {
   opacity: 0.99;

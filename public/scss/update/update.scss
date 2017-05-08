@@ -2,23 +2,20 @@
  * The styling for the update page.
  * @author Team point.
  */
-
- /** Import The Global Variables. */
- @import 'variables';
-
- /* ========== ========== ========== ========== */
-
+/** Import The Global Variables. */
+@import 'variables';
+/* ========== ========== ========== ========== */
 .update-area {
-  margin-top: 50px;
-  max-width: 500px;
-  width: 80%;
+    margin-top: 50px;
+    max-width: 500px;
+    width: 80%;
 }
 
 .update-area input {
-  margin-top: 15px;
-  margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .update-button {
-  width: 40vw;
+    width: 40vw;
 }

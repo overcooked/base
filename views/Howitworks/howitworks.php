@@ -21,7 +21,7 @@ $user = new User();
 
         <!-- Style Files. -->
         <link rel="stylesheet" href="/public/css/contact/howitworks.css">
-        
+
         <style media="screen">
             ::-webkit-scrollbar {
                 display: none;

@@ -19,7 +19,7 @@ $user = new User();
     <?php View::head(); ?>
 
     <!-- Style Files. -->
-    <link rel="stylesheet" href="/public/css/login/login.css">
+    <link rel="stylesheet" href="/public/css/register/register.css">
 
 
   </head>
@@ -30,8 +30,9 @@ $user = new User();
 
     <!-- Main Content // Start -->
     <section class="main">
-      <div class="container coloredlinks login-area">
+      <div class="container coloredlinks register-area">
         <h2 class="center">Register</h2>
+        <hr>
         <form action="" method="post">
 
           <div class="field">
@@ -55,7 +56,7 @@ $user = new User();
           </div>
           <p>By registering, you agree to our <a href="#">Terms and Services</a></p>
           <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-          <input type="submit" class="btn btn-default login-btn" value="Register">
+          <input type="submit" class="btn btn-default register-submit" value="Register">
         </form>
       </div>
     </section>

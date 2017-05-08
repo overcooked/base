@@ -2,34 +2,42 @@
  * The styling for the profile page.
  * @author Team point.
  */
-
- /** Import The Global Variables. */
- @import 'variables';
-
- /* ========== ========== ========== ========== */
+/** Import The Global Variables. */
+@import 'variables';
+/* ========== ========== ========== ========== */
+.post {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
 .profile-area {
-  margin-top: 35px;
+    margin-top: 35px;
 }
 
 .left-tab {
-  padding-top: 30px;
-  text-align: right;
-  h4 {
-    margin-top: 3px;
-    margin-bottom: 3px;
-  }
+    padding-top: 30px;
+    text-align: center;
+
+    h4 {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+}
+@media(min-width:992px) {
+    .left-tab {
+        text-align: right;
+    }
 }
 
 .right-tab {
-  padding-top: 30px;
+    padding-top: 30px;
 }
 
 .profile-pic {
-  border-radius: 10px;
-  margin-bottom: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .post-pic {
-  border-radius: 10px;
+    border-radius: 10px;
 }

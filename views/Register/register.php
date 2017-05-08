@@ -63,7 +63,7 @@ $user = new User();
 
 
     <!-- Header Section -->
-    <?php // View::footer(); ?>
+    <?php // View::footer();?>
 
   </body>
 </html>

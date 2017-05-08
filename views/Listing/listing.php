@@ -16,7 +16,7 @@ $not_found = 'Post does not exist!';
 $post_exists = false;
 
 // Checks if post exists, all numbers/letters, and is 13 characters long.
-if(isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) == 13) {
+if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) == 13) {
 
   // Add post_ prefix to ID.
   $post_id = 'post_' . $_GET["post"];
@@ -25,11 +25,10 @@ if(isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) =
   $posting = DB::getInstance()->get('posts', array('post_id', '=', $post_id));
 
   // If the post exists.
-  if($posting->count()) {
-    $post_exists = true;
-    $post = $posting->first();
+  if ($posting->count()) {
+      $post_exists = true;
+      $post = $posting->first();
   }
-
 }
 
 ?>
@@ -81,17 +80,17 @@ if(isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) =
 
           <?php
 
-            if($post_exists) {
-              // Get the image for the post.
+            if ($post_exists) {
+                // Get the image for the post.
               $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
-              $image = '';
+                $image = '';
 
               // Save into a variable.
-              if($post_image->count()) {
-                $image = $post_image->first();
+              if ($post_image->count()) {
+                  $image = $post_image->first();
               }
 
-              echo "
+                echo "
               <!-- Post Listing -->
               <div class='col-md-8 col-md-offset-2' id='post-information'>
 

@@ -43,40 +43,39 @@ $user = new User();
           <?php
           $postings = DB::getInstance()->get('posts', array('user_id', '=', $user->data()->user_id));
 
-          if($postings->count()) {
-            foreach ($postings->results() as $post) {
-              // Get the image for the post.
+          if ($postings->count()) {
+              foreach ($postings->results() as $post) {
+                  // Get the image for the post.
               $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
-              $image = '';
+                  $image = '';
 
               // Save into a variable.
-              if($post_image->count()) {
-              	$image = $post_image->first();
+              if ($post_image->count()) {
+                  $image = $post_image->first();
               }
 
-              echo '
+                  echo '
               <div class="row post">
-              <div class="col-sm-3">
+              <div class="col-xs-3 hidden-xs">
               <img class="post-pic" src="' . $image->post_image_url . '" height="150" width="150">
               </div>
-              <div class="col-sm-9">
+              <div class="col-xs-9">
               ';
-              echo '<h3>';
-              echo $post->post_title . '<br>';
-              echo '</h3>';
-              echo '<h4>';
-              echo $post->post_description . '<br>';
-              echo '</h4><hr>';
-              echo $post->post_pickup_location . '<br>';
-              echo '<br>';
-              echo '
+                  echo '<h3>';
+                  echo $post->post_title . '<br>';
+                  echo '</h3>';
+                  echo '<h4>';
+                  echo $post->post_description . '<br>';
+                  echo '</h4><hr>';
+                  echo $post->post_pickup_location . '<br>';
+                  echo '<br>';
+                  echo '
               </div>
               </div>
               ';
-
-            }
+              }
           } else {
-            echo 'No posts for this user.';
+              echo 'No posts for this user.';
           }
           ?>
 

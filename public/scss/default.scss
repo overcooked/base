@@ -2,92 +2,139 @@
  * The default styling for the website.
  * @author Team point.
  */
-
 /** Import The Default Typography Fonts */
-@import url('/public/css/fonts.css');
-
+@import url( '/public/css/fonts.css');
 /** Import The Global Variables. */
 @import 'variables';
-
 /* ========== ========== ========== ========== */
-
 /**
  * General Layout.
  */
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-blockquote, body, dd, dl,
-figure, h1, h2, h3, h4,
-h5, h6, ol, p, pre, ul {
-  margin: 0;
-  padding: 0;
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+pre,
+ul {
+    margin: 0;
+    padding: 0;
 }
 
-ol, ul {
-  list-style: none;
+ol,
+ul {
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .coloredlinks a {
-  color: $primary-color;
+    color: $primary-color;
 }
 
 .coloredlinks a:hover {
-  color: darken($primary-color, 10%);
+    color: darken($primary-color, 10%);
 }
 
 :root {
-  overflow-x: hidden;
-  height: 100%;
+    overflow-x: hidden;
+    overflow-y: shidden;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    -webkit-text-fill-color: #738a94;
+}
+
+input {
+  -webkit-appearance: none;
+  box-shadow: none !important;}
+
+:-webkit-autofill {
+    color: #fff !important;
 }
 
 body {
-  background: #fff;
-  min-height: 100%;
-  font-weight: 400;
-  font-size: 16px;
-  font-style: normal;
-  letter-spacing: 0.2px;
-  font-family: $font-regular, Helvetica, Arial, sans-serif;
+    background: #fff;
+    min-height: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: 0.2px;
+    font-family: $font-regular, Helvetica, Arial, sans-serif;
 }
 
 .center {
-  text-align: center;
+    text-align: center;
 }
 
 .font-black {
-  font-family: $font-black;
+    font-family: $font-black;
 }
 
 .font-bold {
-  font-family: $font-bold;
+    font-family: $font-bold;
 }
 
 .font-semibold {
-  font-family: $font-semibold;
+    font-family: $font-semibold;
 }
 
 .font-light {
-  font-family: $font-light;
+    font-family: $font-light;
 }
 
 .primary-color {
-  color: $primary-color;
+    color: $primary-color;
 }
 
 .main {
-  margin-top: 30px;
+    margin-top: 30px;
+}
+
+.row-no-margin {
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .hoz-divider {
-  height: 1px;
-  width: 30px;
-  background-color: #eee;
-  margin: 10px 0 10px 0;
+    height: 1px;
+    width: 30px;
+    background-color: #eee;
+    margin: 10px 0;
+}
+
+.error-placeholder::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #b4bac5;
+}
+
+.error-placeholder::-moz-placeholder { /* Firefox 19+ */
+  color: #b4bac5;
+}
+
+.error-placeholder:-ms-input-placeholder { /* IE 10+ */
+  color: #b4bac5;
+}
+
+.error-placeholder:-moz-placeholder { /* Firefox 18- */
+  color: #b4bac5;
 }

@@ -9,3 +9,4 @@ shortcuts.txt
 /uploads
 travis_rsa
 deploy-key
+/core/init.php

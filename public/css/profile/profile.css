@@ -11,22 +11,29 @@
 /** Primary Colours. TODO: Temporary color, don't freak out pls. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
+.post {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
 .profile-area {
   margin-top: 35px; }
 
 .left-tab {
   padding-top: 30px;
-  text-align: right; }
+  text-align: center; }
   .left-tab h4 {
     margin-top: 3px;
     margin-bottom: 3px; }
 
+@media (min-width: 992px) {
+  .left-tab {
+    text-align: right; } }
 .right-tab {
   padding-top: 30px; }
 
 .profile-pic {
   border-radius: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 20px; }
 
 .post-pic {
   border-radius: 10px; }

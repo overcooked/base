@@ -10,16 +10,16 @@ $errors = null;
 $image_error = null;
 
 // If a flash success message exists, print the message.
-if(Session::exists('errors')) {
-  $errors = Session::flash('errors');
+if (Session::exists('errors')) {
+    $errors = Session::flash('errors');
 }
 
 // If a flash success message exists, print the message.
-if(Session::exists('image_error')) {
-  $image_error = Session::flash('image_error');
-  if($image_error === '') {
-    $image_error = null;
-  }
+if (Session::exists('image_error')) {
+    $image_error = Session::flash('image_error');
+    if ($image_error === '') {
+        $image_error = null;
+    }
 }
 ?>
 
@@ -38,14 +38,14 @@ if(Session::exists('image_error')) {
             <!-- Display Input Form Errors -->
             <div class="form-group has-error">
               <?php
-              if(isset($errors)) {
-                foreach ($errors as $error) {
-                  echo '<span class="help-block">* ' . $error . '</span>';
-                }
+              if (isset($errors)) {
+                  foreach ($errors as $error) {
+                      echo '<span class="help-block">* ' . $error . '</span>';
+                  }
               }
 
-              if(isset($image_error)) {
-                echo '<span class="help-block">* ' . $image_error . '</span>';
+              if (isset($image_error)) {
+                  echo '<span class="help-block">* ' . $image_error . '</span>';
               }
               ?>
             </div>

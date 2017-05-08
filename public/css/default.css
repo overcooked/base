@@ -19,13 +19,26 @@
 * {
   box-sizing: border-box; }
 
-blockquote, body, dd, dl,
-figure, h1, h2, h3, h4,
-h5, h6, ol, p, pre, ul {
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+pre,
+ul {
   margin: 0;
   padding: 0; }
 
-ol, ul {
+ol,
+ul {
   list-style: none; }
 
 a {
@@ -46,7 +59,7 @@ a {
   display: none; }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0 1000px white inset;
   -webkit-text-fill-color: #738a94; }
 
 input {
@@ -94,6 +107,6 @@ body {
   height: 1px;
   width: 30px;
   background-color: #eee;
-  margin: 10px 0 10px 0; }
+  margin: 10px 0; }
 
 /*# sourceMappingURL=default.css.map */

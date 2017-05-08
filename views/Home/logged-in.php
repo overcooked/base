@@ -68,30 +68,30 @@ $user = new User();
         <div class="col-md-10 col-md-offset-1">
 
           <?php /** Check whether the user had a successful post. */
-          if(Session::exists('successful_post'))
-          { // Start
+          if (Session::exists('successful_post')) { // Start
           ?>
               <div class="alert alert-success alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <?php echo Session::flash('successful_post'); ?>
               </div>
           <?php
+
           } // End
           ?>
 
           <?php
           $postings = DB::getInstance()->query("SELECT * FROM posts ORDER BY post_date DESC");
 
-          if($postings->count()) {
-            foreach ($postings->results() as $post) {
+          if ($postings->count()) {
+              foreach ($postings->results() as $post) {
 
               // Get the image for the post.
               $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
-              $image = '';
+                  $image = '';
 
               // Save into a variable.
-              if($post_image->count()) {
-                $image = $post_image->first();
+              if ($post_image->count()) {
+                  $image = $post_image->first();
               }
 
               // Format the description.
@@ -99,12 +99,12 @@ $user = new User();
 
               // Convert the date.
               $post_date = strtotime($post->post_date);
-              $post_date = date('Y-m-d', $post_date);
+                  $post_date = date('Y-m-d', $post_date);
 
               // Get the ID for the posting.
               $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
 
-              echo "
+                  echo "
               <div class='col-md-6'>
                 <div class='thumbnail'>
                   <img src='{$image->post_image_url}' class='img-responsive' alt='Post Image'>
@@ -124,9 +124,9 @@ $user = new User();
                 </div>
               </div>
               ";
-            }
+              }
           } else {
-            echo 'There are no posts available.';
+              echo 'There are no posts available.';
           }
           ?>
 

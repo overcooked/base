@@ -59,33 +59,18 @@ $user = new User();
 
             </form>
 
-    <!-- Main Content // Start -->
-    <section class="main">
-      <div class="container login-area">
-        <h2 class="center">Login</h2>
-        <hr />
-        <form action="" method="post">
-          <div class="field">
-            <input type="text" name="user_email" class="form-control" placeholder="Email" id="user_email" autocomplete="off">
-          </div>
-          <div class="field">
-            <input type="password" name="user_password" class="form-control" placeholder="Password" id="user_password" autocomplete="off">
-          </div>
-        </div>
-    </section>
-
     <!-- Form Error Display -->
     <?php
 
-      if(Session::exists('form_errors')) {
-        $form_errors = Session::flash('form_errors');
+      if (Session::exists('form_errors')) {
+          $form_errors = Session::flash('form_errors');
 
-        foreach ($form_errors as $error) {
-          $error = explode('/', $error);
-          $error_form = $error[0];
-          $error_message = $error[1];
+          foreach ($form_errors as $error) {
+              $error = explode('/', $error);
+              $error_form = $error[0];
+              $error_message = $error[1];
 
-          echo "
+              echo "
           <script type='text/javascript'>
             var error_form = '$error_form';
             var error_message = '{$error_message}';
@@ -112,7 +97,7 @@ $user = new User();
             }
           </script>
           ";
-        }
+          }
       }
 
     ?>

@@ -10,7 +10,7 @@
   </div>
 
   <div class="field">
-    <label for="new_password_again">New Password Again</label>
+    <label for="new_password_again">Confirm Password</label>
     <input type="password" name="new_password_again" id="new_password_again">
   </div>
 

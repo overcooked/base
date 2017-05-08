@@ -59,21 +59,6 @@ $user = new User();
 
             </form>
 
-    <!-- Main Content // Start -->
-    <section class="main">
-      <div class="container login-area">
-        <h2 class="center">Login</h2>
-        <hr />
-        <form action="" method="post">
-          <div class="field">
-            <input type="text" name="user_email" class="form-control" placeholder="Email" id="user_email" autocomplete="off">
-          </div>
-          <div class="field">
-            <input type="password" name="user_password" class="form-control" placeholder="Password" id="user_password" autocomplete="off">
-          </div>
-        </div>
-    </section>
-
     <!-- Form Error Display -->
     <?php
 

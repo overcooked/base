@@ -31,6 +31,8 @@ $user = new User();
     <!-- Main Content -->
     <section class="main">
        <div class="contact-area container">
+         <h2 class="center">Contact Us</h2>
+         <hr />
           <form name="contactform" method="post" action="forms/contact.php">
              <table width="450px">
                 <tr>

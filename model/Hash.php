@@ -23,7 +23,7 @@ class Hash {
    */
 
   public static function salt() {
-    return utf8_encode(openssl_random_pseudo_bytes(32));
+    return mcrypt_create_iv(32, MCRYPT_DEV_URANDOM);
   }
 
   /**

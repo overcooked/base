@@ -123,6 +123,33 @@ $user = new User();
                     </div>
                 </div>
                 
+                <br><br>
+                <hr>
+                <br><br>
+                
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-1">
+                        <div class="panel-heading">Reputation</div>
+                        <div class="panel-body">
+                            All users will have a rating and an ability to rate other users from which they have taken listings from.
+                            <br><br>
+                            Ratings help with deciding whether or not a post is trustworthy.
+                        </div>
+                        <div class="panel-heading">Past Posts</div>
+                        <div class="panel-body">
+                            All users will also be able to see the past postings of a user.
+                            <br><br>
+                            This can help further with deciding whether or not the post is legitimate.
+                        </div>
+                    </div>
+                    <div class="col-md-5" style="margin-left: 40px;">
+                        <h1 style="font-size: 48px; font-family: proximanova-bold; letter-spacing: 3px;">
+                            PROFILE
+                        </h1>
+                    </div>
+                </div>
+                
+                <br><br>
                 <hr>
             </div>
         </section>

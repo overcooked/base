@@ -62,15 +62,15 @@ $user = new User();
     <!-- Form Error Display -->
     <?php
 
-      if(Session::exists('form_errors')) {
-        $form_errors = Session::flash('form_errors');
+      if (Session::exists('form_errors')) {
+          $form_errors = Session::flash('form_errors');
 
-        foreach ($form_errors as $error) {
-          $error = explode('/', $error);
-          $error_form = $error[0];
-          $error_message = $error[1];
+          foreach ($form_errors as $error) {
+              $error = explode('/', $error);
+              $error_form = $error[0];
+              $error_message = $error[1];
 
-          echo "
+              echo "
           <script type='text/javascript'>
             var error_form = '$error_form';
             var error_message = '{$error_message}';
@@ -97,7 +97,7 @@ $user = new User();
             }
           </script>
           ";
-        }
+          }
       }
 
     ?>

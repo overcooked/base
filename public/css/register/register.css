@@ -1,7 +1,8 @@
 /**
- * The styling for the change password page.
+ * The styling for the register page.
  * @author Team point.
  */
+/** Import The Global Variables. */
 /**
  * Global scss variables.
  * @author Team point.
@@ -10,18 +11,15 @@
 /** Primary Colours. TODO: Temporary color, don't freak out pls. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
-.password-change-area {
+.register-area {
   margin-top: 50px;
   max-width: 500px;
   width: 80%; }
 
-.password-change-area input {
-  margin-top: 15px;
+.register-area input {
   margin-bottom: 15px; }
 
-.password-change-button {
-  width: 40vw; }
+.register-submit {
+  margin-top: 15px; }
 
-/*# sourceMappingURL=login.css.map */
-
-/*# sourceMappingURL=changepassword.css.map */
+/*# sourceMappingURL=register.css.map */

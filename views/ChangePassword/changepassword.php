@@ -56,7 +56,7 @@ $user = new User();
     </section>
 
     <!-- Header Section -->
-    <?php // View::footer(); ?>
+    <?php // View::footer();?>
 
   </body>
 </html>

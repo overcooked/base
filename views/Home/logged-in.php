@@ -19,35 +19,11 @@ $user = new User();
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
 
+    <!-- Style Files. -->
+    <link rel="stylesheet" href="/public/css/home-in/home-in.css">
+
     <!-- Script Files -->
-    <script src="/public/js/libraries/typing.js" type="text/javascript"></script>
-
-    <style media="screen">
-
-    body {
-      background: #f9f8f7;
-    }
-    .main .container {
-      border-radius: 3px;
-      padding-left: 25px;
-      padding-right: 25px;
-      background: #fff;
-      padding-top: 25px;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    }
-    .thumbnail {
-      padding-left: 20px;
-      padding-right: 20px;
-      border: none;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    }
-    .thumbnail img {
-        margin-top: 10px;
-        width: 370px;
-        height: 250px;
-        display: block;
-    }
-    </style>
+    <script src="/public/js/post-resize.js" type="text/javascript"></script>
 
   </head>
   <body>
@@ -57,10 +33,9 @@ $user = new User();
 
     <!-- Main Content -->
     <section class="main">
-      <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <h3>Welcome, <b><?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?></b>!</h3>
+            <h3 class="lead-title">Welcome, <b><?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?></b>!</h3>
             <hr>
           </div>
         </div>
@@ -105,20 +80,18 @@ $user = new User();
               $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
 
                   echo "
-              <div class='col-md-6'>
+              <div class='col-md-4 post'>
                 <div class='thumbnail'>
                   <img src='{$image->post_image_url}' class='img-responsive' alt='Post Image'>
                   <div class='caption'>
-                    <p style='padding-top: 10px; padding-bottom: 6px; font-size: 19px; font-family: proximanova-semibold; text-transform: capitalize;'>
+                    <p class='title'>
                     {$post->post_title}
                     </p>
-                    <div style='height: 1px; width: 50px; background-color: #eee; margin-bottom: 10px;'></div>
-                    <p style='color: #7b7b7b; line-height: 19px; font-size: 14px; padding-bottom: 10px;'>{$description}</p>
-                    <div style='height: 1px; width: 50px; background-color: #eee; margin-bottom: 10px;'></div>
-                    <small style='color: #666; font-family: proximanova-regularitalic'><b>Type: </b>{$post->post_tag} &nbsp;|&nbsp; <b>Posted: </b> {$post_date}</small>
+                    <p class='description'>{$description}</p>
+                    <small class='stats-text'><b>Type: </b>{$post->post_tag} &nbsp;|&nbsp; <b>Posted: </b> {$post_date}</small>
                     <hr>
                     <p class='text-center'>
-                      <a href='{$post_listing_url}' class='btn btn-primary' style='font-family: proximanova-bold, Helvetica, Arial, sans-serif; margin-top: -7px; padding: 8px 14px 7px; background-color: #50ba4a; color: #fff; font-size: 13px; border: none; border-radius: 3px; text-transform: uppercase; letter-spacing: 1px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;' role='button'>View Listing</a>
+                      <a href='{$post_listing_url}' class='btn btn-primary view-btn' role='button'>View Listing</a>
                     </p>
                   </div>
                 </div>
@@ -126,13 +99,20 @@ $user = new User();
               ";
               }
           } else {
-              echo 'There are no posts available.';
+              echo 'There are no posts available. It seems that something has gone wrong.';
           }
           ?>
 
+          <!--
+          Used to resize posts to the height of the
+          tallest post. Do not modify.
+          -->
+          <script type="text/javascript">
+              resize();
+          </script>
+
           </div>
 
-      </div>
     </section>
 
   </body>

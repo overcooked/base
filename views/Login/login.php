@@ -40,12 +40,12 @@ $user = new User();
 
               <div class="input-group input-group-sm margin-bottom-15">
                 <span class="input-group-addon addon-left" id="login-addon"><span class="ss-icon">email</span></span>
-                <input type="email" name="user_email" class="input-centered" placeholder="Email Address" id="user_email">
+                <input required="true" type="email" name="user_email" class="input-centered" placeholder="Email Address" id="user_email">
               </div>
 
               <div class="input-group input-group-sm margin-bottom-20">
                 <span class="input-group-addon addon-left" id="password-addon-1"><span class="ss-icon">lock</span></span>
-                <input type="password" name="user_password" placeholder="Password" id="user_password">
+                <input required="true" type="password" name="user_password" placeholder="Password" id="user_password">
                 <a class="input-group-addon addon-right" href="index.php" id="password-addon-2">
                   <span id="password-divider">|</span>
                   <span id="password-forgot">Forgot?</span>
@@ -91,9 +91,6 @@ $user = new User();
               $('#user_password').addClass('error-placeholder');
               $('#password-addon-1').css('border-color', '#ff9b9b');
               $('#password-addon-1').css('color', '#ff9b9b');
-              $('#password-addon-2').css('border-color', '#ff9b9b');
-              $('#password-addon-2').css('color', '#ff9b9b');
-              $('#password-divider').css('color', '#ff9b9b');
             }
           </script>
           ";

@@ -42,6 +42,10 @@ a {
     text-decoration: none;
 }
 
+button:focus {
+  outline:0 !important;
+}
+
 .coloredlinks a {
     color: $primary-color;
 }
@@ -180,6 +184,7 @@ body {
 .form-group label {
   color: #565857;
   letter-spacing: 0.4px;
+  padding-left: 3px;
 }
 
 input {
@@ -199,6 +204,10 @@ textarea {
 
 .form-control {
   color: #919395;
+}
+
+.require {
+  color: #d47373 !important;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

@@ -31,61 +31,69 @@ $user = new User();
     <section class="main">
       <div class="container update-area">
 
-        <div class="col-sm-6 col-sm-offset-3" id="update-info-form">
-          <h2 class="center" id="update-page-title">Update Your Profile</h2>
-          <hr>
+        <!-- Update Form Header -->
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3" id="update-form-header">
+            <h3 class="center" id="update-page-title">Update Your Profile</h3>
+          </div>
+        </div>
 
-          <?php
-          /** Check whether the user had a information update. */
-          if (Session::exists('updated')) { // Start
-          ?>
-              <div class="alert alert-success alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <span class="ss-icon" id="update-success-icon">check</span> <?php echo Session::flash('updated'); ?>
+        <!-- Update Form -->
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3" id="update-info-form">
+
+            <?php
+            /** Check whether the user had a information update. */
+            if (Session::exists('updated')) { // Start
+            ?>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <span class="ss-icon" id="update-success-icon">check</span> <?php echo Session::flash('updated'); ?>
+                </div>
+            <?php
+
+            } // End
+            ?>
+
+            <form method="post" enctype="multipart/form-data">
+
+              <!-- First Name -->
+              <div class="form-group">
+                <label for="user_first">First Name</label>
+                <input type="text" name="user_first" class="form-control" id="user_first" placeholder="First Name" value="<?php echo escape($user->data()->user_first); ?>">
               </div>
-          <?php
 
-          } // End
-          ?>
+              <hr>
 
-          <form method="post" enctype="multipart/form-data">
+              <!-- Last Name -->
+              <div class="form-group">
+                <label for="user_last">Last Name</label>
+                <input type="text" name="user_last" class="form-control" id="user_last" placeholder="Last Name" value="<?php echo escape($user->data()->user_last); ?>">
+              </div>
 
-            <!-- First Name -->
-            <div class="form-group">
-              <label for="user_first">First Name</label>
-              <input type="text" name="user_first" class="form-control" id="user_first" placeholder="First Name" value="<?php echo escape($user->data()->user_first); ?>">
-            </div>
+              <hr>
 
-            <hr>
+              <!-- Email Address -->
+              <div class="form-group">
+                <label for="user_email">Email Address</label>
+                <input type="text" name="user_email" class="form-control" id="user_email" placeholder="Email Address" value="<?php echo escape($user->data()->user_email); ?>">
+              </div>
 
-            <!-- Last Name -->
-            <div class="form-group">
-              <label for="user_last">Last Name</label>
-              <input type="text" name="user_last" class="form-control" id="user_last" placeholder="Last Name" value="<?php echo escape($user->data()->user_last); ?>">
-            </div>
+              <hr>
 
-            <hr>
+              <!-- Profile Description -->
+              <div class="form-group">
+                <label for="profile_description">Profile Description</label>
+                <textarea rows="4" class="form-control post_input" name="profile_description" placeholder="Profile Description" class="form-control" id="profile_description" placeholder="Profile Description"></textarea>
+              </div>
 
-            <!-- Email Address -->
-            <div class="form-group">
-              <label for="user_email">Email Address</label>
-              <input type="text" name="user_email" class="form-control" id="user_email" placeholder="Email Address" value="<?php echo escape($user->data()->user_email); ?>">
-            </div>
+              <hr>
 
-            <hr>
-
-            <!-- Profile Description -->
-            <div class="form-group">
-              <label for="profile_description">Profile Description</label>
-              <textarea rows="4" class="form-control post_input" name="profile_description" placeholder="Profile Description" class="form-control" id="profile_description" placeholder="Profile Description"></textarea>
-            </div>
-
-            <hr>
-
-            <!-- Submit Buttons -->
-            <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-            <input type="submit" class="btn btn-default update-btn" id="update-btn" name="submit" value="Update">
-          </form>
+              <!-- Submit Buttons -->
+              <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+              <input type="submit" class="btn btn-default update-btn" id="update-btn" name="submit" value="Update">
+            </form>
+          </div>
         </div>
 
       </div>

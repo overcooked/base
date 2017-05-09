@@ -49,7 +49,7 @@ $user = new User();
 				<li>
 					<a href="post.php" class="side-bar-link">
 						<span class="ss-icon">compose</span>
-						<span class="side-bar-link-text">NEW POST</span>
+						<span class="side-bar-link-text">NEW LISTING</span>
 					</a>
 				</li>
 
@@ -88,7 +88,7 @@ $user = new User();
 			<ul class="nav navbar-nav navbar-right hidden-xs">
 
 				<li id="navbar-post-button-wrapper">
-					<a href="post.php" id="navbar-post-button">NEW POST</a>
+					<a href="post.php" id="navbar-post-button">NEW LISTING</a>
 				</li>
 
 				<li class="dropdown">

@@ -33,5 +33,8 @@ $user = new User();
     <!-- Main Content -->
     <?php View::component('Post/post-form.php'); ?>
 
+    <!-- Mobile Footer Menu -->
+    <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
+
   </body>
 </html>

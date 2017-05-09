@@ -29,7 +29,8 @@ $user = new User();
           <div class="col-lg-4 col-lg-offset-4">
 
             <!-- Sign In Form -->
-            <form method="post" class="absolute-center-form">
+            <div class="absolute-center-form">
+            <form method="post">
 
               <!-- Brand Logo -->
               <a href="/index.php">
@@ -57,7 +58,14 @@ $user = new User();
               <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
               <input type="submit" class="btn btn-submit" value="Sign In">
 
+              <div class="divider" style="margin-top: 15px;"></div>
             </form>
+
+            <a class="sub-text-link" href="register.php">
+              <p class="sub-text">Register</p>
+            </a>
+
+          </div>
 
     <!-- Form Error Display -->
     <?php

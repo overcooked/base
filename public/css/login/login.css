@@ -11,7 +11,8 @@
 /** Primary Colours. TODO: Temporary color, don't freak out pls. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
-html, body {
+body,
+html {
   width: 100%;
   height: 100%; }
 
@@ -92,7 +93,7 @@ html, body {
   border-top-left-radius: 0;
   text-rendering: optimizeLegibility;
   transition: border-color,box-shadow;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   -ms-appearance: textfield;
@@ -119,7 +120,7 @@ html, body {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   color: #b6bac5;
-  padding: 4px 10px 0 10px; }
+  padding: 4px 10px 0; }
 
 .absolute-center-form .addon-right {
   border: 1px solid #e9ebec;
@@ -130,11 +131,23 @@ html, body {
   border-top-left-radius: 0;
   color: #bcc0cb;
   text-decoration: none;
-  padding: 4px 10px 0 10px;
+  padding: 4px 10px 0;
   font-size: proximanova-light, Helvetica, Arial, sans-serif;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease; }
+
+.sub-text {
+  font-size: 80%; }
+
+.sub-text-link {
+  text-decoration: none; }
+
+.sub-text-link:hover {
+  text-decoration: none; }
+
+.sub-text-link:link {
+  text-decoration: none; }
 
 #password-forgot {
   position: relative;
@@ -146,7 +159,8 @@ html, body {
   font-size: 20px;
   color: #d2d6e3; }
 
-#password-forgot:hover, #password-divider:hover {
+#password-divider:hover,
+#password-forgot:hover {
   opacity: 0.8; }
 
 .absolute-center-form .btn-submit {

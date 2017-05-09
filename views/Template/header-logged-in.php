@@ -1,3 +1,6 @@
+<?php
+$user = new User();
+?>
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
 
@@ -38,8 +41,8 @@
 				</li>
 
 				<li>
-					<img src="https://www.flamedomain.com/images/justin.jpg" id="side-bar-profile-image" alt="Profile Image">
-					<p id="side-bar-name">Justin Leung</p>
+					<img src="https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg" id="side-bar-profile-image" alt="Profile Image">
+					<p id="side-bar-name"><?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?></p>
 					<a href="/profile.php" id="side-bar-profile">view profile</a>
 				</li>
 
@@ -51,21 +54,21 @@
 				</li>
 
 				<li>
-					<a href="post.php" class="side-bar-link">
-						<span class="ss-icon">adduser</span>
+					<a href="update.php" class="side-bar-link">
+						<span class="ss-icon">userfile</span>
 						<span class="side-bar-link-text">UPDATE PROFILE</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="post.php" class="side-bar-link">
-						<span class="ss-icon">unlock</span>
+					<a href="changepassword.php" class="side-bar-link">
+						<span class="ss-icon">lock</span>
 						<span class="side-bar-link-text">CHANGE PASSWORD</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="post.php" class="side-bar-link">
+					<a href="contact.php" class="side-bar-link">
 						<span class="ss-icon">send</span>
 						<span class="side-bar-link-text">CONTACT US</span>
 					</a>
@@ -84,26 +87,41 @@
 			<!-- Large view items -->
 			<ul class="nav navbar-nav navbar-right hidden-xs">
 
-				<li>
-					<a href="post.php">POST</a>
+				<li id="navbar-post-button-wrapper">
+					<a href="post.php" id="navbar-post-button">NEW POST</a>
 				</li>
 
 				<li class="dropdown">
 
-					<a class="dropdown-toggle" data-toggle="dropdown" href="">Profile <span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
+					<li>
+						<img src="https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg" id="navbar-profile-image" alt="Profile Image">
+					</li>
+
+					<a class="dropdown-toggle" data-toggle="dropdown" id="navbar-profile-dropdown" href=""><?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?><span id="navbar-caret" class="caret"></span></a>
+					<ul class="dropdown-menu" id="navbar-dropdown" role="menu">
+						<div class="arrow-up"></div>
 						<li>
-							<a href="#">Action</a>
+							<a href="profile.php">
+								<span class="ss-icon">user</span>
+								Profile
+							</a>
 						</li>
 						<li>
-							<a href="#">Another action</a>
+							<a href="update.php">
+								<span class="ss-icon">userfile</span>
+								Update Info
+							</a>
 						</li>
 						<li>
-							<a href="#">Something else here</a>
+							<a href="/changepassword.php">
+								<span class="ss-icon">lock</span>
+								Change Password
+							</a>
 						</li>
-						<li class="divider"></li>
-						<li>
-							<a href="#">Separated link</a>
+						<li id="navbar-dropdown-logout-button">
+							<a href="/logout.php">
+								LOGOUT
+							</a>
 						</li>
 					</ul>
 

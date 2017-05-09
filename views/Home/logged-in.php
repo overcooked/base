@@ -99,7 +99,7 @@ $user = new User();
               ";
               }
           } else {
-              echo 'There are no posts available. It seems that something has gone wrong.';
+              echo 'There are no posts available.';
           }
           ?>
 

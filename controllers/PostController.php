@@ -72,8 +72,8 @@ if(Input::exists() && Token::check(Input::get('token'))) {
   			$image->getMime(),
   			$image->getWidth(),
   			$image->getHeight(),
-  			600,
-  			450,
+  			1024,
+  			768,
         true
   	  );
 

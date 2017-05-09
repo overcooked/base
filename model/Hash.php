@@ -26,7 +26,13 @@ class Hash
 
   public static function salt()
   {
-      return utf8_encode(openssl_random_pseudo_bytes(32));
+      if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+          // is windows
+        return mcrypt_create_iv(32, MCRYPT_DEV_URANDOM);
+      } else {
+          // isn't windows (presumably unix)
+        return utf8_encode(openssl_random_pseudo_bytes(32));
+      }
   }
 
   /**

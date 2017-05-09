@@ -143,8 +143,8 @@ class User {
    * @param  array  $fields - The fields and values to be updated.
    * @throws exception      - Problem updating the information.
    */
-  public function update($fields = array()) {
-    if(!$this->_db->update('users', $this->data()->user_id, $fields)) {
+  public function update($table, $fields = array()) {
+    if(!$this->_db->update($table, $this->data()->user_id, $fields)) {
       throw new Exception("There Was A Problem Updating");
     }
   }

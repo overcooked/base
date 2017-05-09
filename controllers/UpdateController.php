@@ -5,47 +5,72 @@
  * @author Team Point.
  */
 
+/*
+
+TODO:
+- Profile Description
+- Users location with a dropdown for metro vancouver locations.
+
+*/
+
 /** User to check logged in and get user data. */
 $user = new User();
 
 // If user is logged in, redirect them to index.
 $user->not_logged_in_redirect();
 
-// If a flash success message exists, print the message.
-if(Session::exists('updated')) {
-  echo Session::flash('updated');
-}
-
 // Check if input exists, and the form token is valid.
 if(Input::exists() && Token::check(Input::get('token'))) {
+
   $validate = new Validate();
   $validation = $validate->check($_POST, array(
+    'user_first' => array(
+      'field_name' => 'First name',
+      'max' => 50
+    ),
+    'user_last' => array(
+      'field_name' => 'Last name',
+      'max' => 50
+    ),
     'user_email' => array(
       'field_name' => 'Email',
-      'required' => true,
       'max' => 255,
       'unique' => 'users'
+    ),
+    'profile_description' => array(
+      'field_name' => 'Description',
+      'max' => 500
     )
   ));
 
+  // If validation passed.
   if($validation->passed()) {
 
     $user = new User();
 
+    // TODO: Array of pre-defined things to be updated. FLASH THE INFORMATION.
     try {
-      $user->update(array(
-        'user_email' => Input::get('user_email')
-      ));
+
+      // Update table ID.
+      if(isset($_POST['user_first']) || isset($_POST['user_last']) || isset($_POST['user_email'])) {
+        $user->update('users', array(
+          'user_first' => Input::get('user_first'),
+          'user_last' => Input::get('user_last'),
+          'user_email' => Input::get('user_email')
+        ));
+      }
+
     } catch(Exception $e) {
       die($e->getMessage());
     }
 
+    // Redirect to page and inform that information was updated.
     Session::flash('updated', 'Your information has been updated.');
     Redirect::to('update.php');
   } else {
-    foreach ($validation->errors() as $error) {
-      echo $error . '</br>';
-    }
+    // Errors with validation, redirect to other page.
+    Session::flash('validation_errors', $validation->errors());
+    Redirect::to('update.php');
   }
 }
 ?>

@@ -115,8 +115,9 @@ $user = new User();
             <img src="/public/assets/icons/city.svg" alt="">
 
             <h1 class="font-light" style="padding-top: 15px;">
-              reducing waste in <span class="font-bold">metro</span> vancouver
+              Reducing Waste In <span class="font-bold">Metro</span> Vancouver
             </h1>
+            <p>Hello world</p>
           </div>
 
           <div class="col-sm-12 text-center">

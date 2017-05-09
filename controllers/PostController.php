@@ -41,7 +41,6 @@ if(Input::exists() && Token::check(Input::get('token'))) {
     'post_title' => array(
       'field_name' => 'Post title',
       'required' => true,
-      //'min' => 2,
       'max' => 50
     ),
     'post_pickup_location' => array(
@@ -51,7 +50,6 @@ if(Input::exists() && Token::check(Input::get('token'))) {
     'post_description' => array(
       'field_name' => 'Description',
       'required' => true,
-      //'min' => 50,
       'max' => 1000
     ),
     'post_image' => array(

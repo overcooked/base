@@ -50,7 +50,7 @@ if(Input::exists() && Token::check(Input::get('token'))) {
       try {
         // Update the new password using a new salt.
         $salt = Hash::salt(32);
-        $user->update(array(
+        $user->update('users', array(
           'user_password' => Hash::make(Input::get('new_password'), $salt),
           'user_salt' => $salt
         ));

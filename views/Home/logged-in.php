@@ -23,7 +23,7 @@ $user = new User();
     <link rel="stylesheet" href="/public/css/home-in/home-in.css">
 
     <!-- Script Files -->
-    <script src="/public/js/post-resize.js" type="text/javascript"></script>
+    <script src="/public/js/masonry.js" type="text/javascript"></script>
 
   </head>
   <body>
@@ -54,6 +54,9 @@ $user = new User();
           } // End
           ?>
 
+
+          <div class="grid">
+
           <?php
           $postings = DB::getInstance()->query("SELECT * FROM posts ORDER BY post_date DESC");
 
@@ -80,8 +83,8 @@ $user = new User();
               $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
 
                   echo "
-              <div class='col-md-4 post'>
-                <div class='thumbnail'>
+
+                <div class='thumbnail grid-item'>
                   <img src='{$image->post_image_url}' class='img-responsive' alt='Post Image'>
                   <div class='caption'>
                     <p class='title'>
@@ -95,25 +98,31 @@ $user = new User();
                     </p>
                   </div>
                 </div>
-              </div>
+
               ";
               }
           } else {
               echo 'There are no posts available.';
           }
           ?>
-
-          <!--
-          Used to resize posts to the height of the
-          tallest post. Do not modify.
-          -->
-          <script type="text/javascript">
-              resize();
-          </script>
-
+        </div>
           </div>
 
     </section>
+    <script>
+    var elem = document.querySelector('.grid');
+    var msnry = new Masonry( elem, {
+      // options
+      itemSelector: '.grid-item',
+      columnWidth: 250
+    });
+
+    // element argument can be a selector string
+    //   for an individual element
+    var msnry = new Masonry( '.grid', {
+      // options
+    });
+    </script>
 
   </body>
 </html>

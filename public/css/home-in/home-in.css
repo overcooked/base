@@ -59,4 +59,35 @@ body {
   font-family: proximanova-semibold;
   text-transform: capitalize; }
 
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .grid-item {
+    width: 80vw;
+    margin-left: 15px;
+    margin-right: 15px; } }
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .grid-item {
+    width: 80vw;
+    margin-left: 15px;
+    margin-right: 15px; } }
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .grid-item {
+    width: 40vw;
+    margin-left: 15px;
+    margin-right: 15px; } }
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .grid-item {
+    width: 40vw;
+    margin-left: 15px;
+    margin-right: 15px; } }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .grid-item {
+    width: 25vw;
+    margin-left: 15px;
+    margin-right: 15px; } }
+
 /*# sourceMappingURL=home-in.css.map */

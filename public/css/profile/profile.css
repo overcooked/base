@@ -11,31 +11,101 @@
 /** Primary Colours. TODO: Temporary color, don't freak out pls. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
-.post {
+html {
+  background-color: #f2f5f7; }
+
+.split {
   margin-top: 15px;
-  margin-bottom: 15px; }
+  height: 40px;
+  width: 100vw;
+  margin-left: 0;
+  background-color: white;
+  text-align: center;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2), 0 -8px 6px -6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2), 0 -8px 6px -6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2), 0 -8px 6px -6px rgba(0, 0, 0, 0.2); }
+
+.split-text {
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 .profile-area {
-  margin-top: 35px; }
+  margin-top: 20px; }
+
+.posts-area {
+  background-color: #f2f5f7;
+  padding-bottom: 30px; }
 
 .left-tab {
-  padding-top: 30px;
   text-align: center; }
   .left-tab h4 {
     margin-top: 3px;
     margin-bottom: 3px; }
 
-@media (min-width: 992px) {
-  .left-tab {
-    text-align: right; } }
 .right-tab {
-  padding-top: 30px; }
+  padding-top: 15px; }
 
 .profile-pic {
-  border-radius: 10px;
-  margin-bottom: 20px; }
+  padding: 5px;
+  border-radius: 1000px;
+  margin-bottom: 20px;
+  border: 2px solid #50ba4a; }
 
-.post-pic {
-  border-radius: 10px; }
+.morecontent span {
+  display: none; }
+
+.morelink {
+  display: block; }
+
+.profile-content {
+  max-width: 500px; }
+
+.bio-text a {
+  letter-spacing: 2.2px; }
+
+.view-btn {
+  font-family: proximanova-bold, Helvetica, Arial, sans-serif;
+  padding: 8px 14px 7px;
+  background-color: #50ba4a;
+  color: #fff;
+  font-size: 13px;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.divider {
+  height: 1px;
+  width: 50px;
+  background-color: #eee;
+  margin-bottom: 10px; }
+
+.stats-text {
+  color: #666;
+  font-family: proximanova-regularitalic;
+  margin-bottom: 10px; }
+
+.description {
+  color: #7b7b7b;
+  line-height: 19px;
+  font-size: 14px;
+  padding-bottom: 5px; }
+
+.title {
+  padding-top: 0;
+  padding-bottom: 6px;
+  font-size: 19px;
+  font-family: proximanova-semibold;
+  text-transform: capitalize; }
+
+.item {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: white;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); }
 
 /*# sourceMappingURL=profile.css.map */

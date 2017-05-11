@@ -57,13 +57,13 @@ $user = new User();
 
               <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
               <input type="submit" class="btn btn-submit" value="Sign In">
-
-              <div class="divider" style="margin-top: 15px;"></div>
+              <div class="divider" style="margin-top: 15px; margin-bottom: 15px;"></div>
             </form>
 
-            <a class="sub-text-link" href="register.php">
-              <p class="sub-text">Register</p>
-            </a>
+            <p class="dont-have-account-link text-center">
+              Don't have an account?
+              <a href="/register.php">Sign Up</a>
+            </p>
 
           </div>
 

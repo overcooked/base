@@ -85,6 +85,7 @@ if (Session::exists('image_error')) {
               </label>
             </div>
 
+            <!-- Changes the name of the post image upload form when image is selected -->
             <script type="text/javascript">
             $(document).on('change', ':file', function() {
               var input = $(this),

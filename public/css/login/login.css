@@ -46,7 +46,7 @@ html {
 .absolute-center-form {
   border: 1px solid #f4f4f4;
   margin: 30px auto 20px;
-  padding: 32px 30px 33px;
+  padding: 32px 30px 16px;
   max-width: 360px;
   background: #fff;
   border-radius: 8px;
@@ -137,17 +137,12 @@ html {
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease; }
 
-.sub-text {
-  font-size: 80%; }
+.dont-have-account-link {
+  color: #b5b8c1;
+  font-size: 13px; }
 
-.sub-text-link {
-  text-decoration: none; }
-
-.sub-text-link:hover {
-  text-decoration: none; }
-
-.sub-text-link:link {
-  text-decoration: none; }
+.dont-have-account-link a {
+  color: #9bd098; }
 
 #password-forgot {
   position: relative;

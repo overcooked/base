@@ -76,7 +76,7 @@ $user = new User();
               <!-- Email Address -->
               <div class="form-group">
                 <label for="user_email">Email Address</label>
-                <input type="text" name="user_email" class="form-control" id="user_email" placeholder="Email Address" value="<?php echo escape($user->data()->user_email); ?>">
+                <input type="email" name="user_email" class="form-control" id="user_email" placeholder="Email Address" value="<?php echo escape($user->data()->user_email); ?>">
               </div>
 
               <hr>

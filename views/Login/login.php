@@ -62,7 +62,7 @@ $user = new User();
 
             <p class="dont-have-account-link text-center">
               Don't have an account?
-              <a href="/register.php">Sign Up</a>
+              <a target="_blank" href="/register.php">Sign Up</a>
             </p>
 
           </div>
@@ -106,6 +106,10 @@ $user = new User();
       }
 
     ?>
+
+        </div>
+      </div>
+    </section>
 
   </body>
 </html>

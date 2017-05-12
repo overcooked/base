@@ -11,3 +11,4 @@ You can reduce the amount of waste you create by choosing what food you throw aw
 ## Community
 
 Our organization takes donations in the form of fresh-made, leftover, or perishable foods and uploads them online for those in need.
+

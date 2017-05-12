@@ -71,7 +71,7 @@ $user = new User();
           ?>
 
           <div class="col-md-10 col-md-offset-1 grid">
-            
+
                 <?php
                 $postings = DB::getInstance()->query("SELECT * FROM posts ORDER BY post_date DESC");
 
@@ -135,18 +135,20 @@ $user = new User();
 
     <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 
-    <script>
-    var elem = document.querySelector('.grid');
-    var msnry = new Masonry( elem, {
-      // options
-      itemSelector: '.grid-item',
-      columnWidth: 250
-    });
+    <script type="text/javascript">
+    $( document ).ready(function() {
+      var elem = document.querySelector('.grid');
+      var msnry = new Masonry( elem, {
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: 250
+      });
 
-    // element argument can be a selector string
-    //   for an individual element
-    var msnry = new Masonry( '.grid', {
-      // options
+      // element argument can be a selector string
+      //   for an individual element
+      var msnry = new Masonry( '.grid', {
+        // options
+      });
     });
     </script>
 

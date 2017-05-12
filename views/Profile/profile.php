@@ -5,6 +5,9 @@
  */
 
 /** User to check logged in and get user data. */
+$user_current = new User();
+
+/** For the current user on the profile. */
 $user = new User();
 
 // Error message if user doesn't exist.
@@ -128,11 +131,61 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
       <div class="container-fluid" id="users-posts-divider">
         <!-- Middle Divider -->
         <div class="row text-center" id="user-posts-divider">
-          <p id="users-posts-title">Users Posts</p>
+          <p id="users-posts-title">
+            <span class="ss-icon" style="position: relative; top: 3px; right: 1px;">compose</span>
+            Users Posts
+          </p>
         </div>
       </div>
 
+      <!-- All Of The Users Postings -->
       <div class="container" id="users-posts-content">
+
+        <?php
+        $postings = DB::getInstance()->get('posts', array('user_id', '=', $user_current->data()->user_id));
+
+        if ($postings->count()) {
+            foreach ($postings->results() as $post) {
+
+              // $post->post_title;
+              // $post->post_description;
+              // Convert the date.
+              $post_date = strtotime($post->post_date);
+              $post_date = date('Y-m-d', $post_date);
+              // Get the ID for the posting.
+              $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
+
+              echo "
+              <!-- User Post -->
+              <div class='row'>
+                <div class='col-md-12'>
+                  <div class='user-post-display'>
+                    <a href='{$post_listing_url}'>
+                      <h3>{$post->title}</h3>
+                      <div class='form-divider' style='margin: 10px 0 10px;'></div>
+                      <p id='post_description'>{$post->post_description}</p>
+                      <div class='form-divider' style='margin: 10px 0 10px;'></div>
+                      <p id='post-date'>Posted On {$post_date}</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              ";
+
+            }
+        } else {
+          echo "
+          <!-- User Post -->
+          <div class='row'>
+            <div class='col-md-12 text-center'>
+              <div class='user-post-display' style='padding-bottom: 25px;'>
+                <h3>There are no postings by this user!</h3>
+              </div>
+            </div>
+          </div>
+          ";
+        }
+        ?>
 
       </div>
     </section>

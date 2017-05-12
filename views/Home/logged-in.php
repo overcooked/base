@@ -127,8 +127,9 @@ $user = new User();
     </section>
 
     <!-- Footer Section -->
-    <!-- <?php View::footer(); ?> -->
+    <?php View::footer(); ?>
 
+    <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 
     <script>
     var elem = document.querySelector('.grid');

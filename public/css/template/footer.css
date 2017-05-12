@@ -12,7 +12,20 @@
 /** Primary Colours. TODO: Temporary color, don't freak out pls. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
+#footer footer {
+  background: #343c40 !important; }
+
 .footer-area {
-  margin-bottom: 20px; }
+  margin-top: 38px;
+  padding-top: 35px;
+  padding-bottom: 30px; }
+
+.text-muted {
+  color: #b7b7b7;
+  letter-spacing: 0.4px; }
+
+#footer a {
+  color: #d9e0d9;
+  letter-spacing: 0.4px; }
 
 /*# sourceMappingURL=footer.css.map */

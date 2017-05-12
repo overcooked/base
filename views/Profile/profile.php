@@ -160,11 +160,11 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
 
               echo "
               <!-- User Post -->
-              <div class='row'>
-                <div class='col-md-12'>
+              <div class='row' style='margin-bottom: 20px;'>
+                <div class='col-md-8 col-md-offset-2'>
                   <div class='user-post-display'>
                     <a href='{$post_listing_url}'>
-                      <h3>{$post->post_title}</h3>
+                      <h3 style='text-transform: capitalize;'>{$post->post_title}</h3>
                       <div class='form-divider' style='margin: 10px 0 10px;'></div>
                       <p id='post_description'>{$post->post_description}</p>
                       <div class='form-divider' style='margin: 10px 0 10px;'></div>
@@ -192,6 +192,8 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
 
       </div>
     </section>
+
+    <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 
   </body>
 </html>

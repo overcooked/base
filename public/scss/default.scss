@@ -99,6 +99,13 @@ body {
     font-family: $font-regular, Helvetica, Arial, sans-serif;
 }
 
+.form-divider {
+    height: 2px;
+    width: 130px;
+    background-color: #f7f7f7;
+    margin: 5px auto 18px;
+}
+
 .center {
     text-align: center;
 }

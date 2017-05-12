@@ -6,11 +6,9 @@
  */
 
 /*
-
 TODO:
 - Profile Description
 - Users location with a dropdown for metro vancouver locations.
-
 */
 
 /** User to check logged in and get user data. */
@@ -26,15 +24,18 @@ if(Input::exists() && Token::check(Input::get('token'))) {
   $validation = $validate->check($_POST, array(
     'user_first' => array(
       'field_name' => 'First name',
-      'max' => 50
+      'max' => 50,
+      'min' => 2
     ),
     'user_last' => array(
       'field_name' => 'Last name',
-      'max' => 50
+      'max' => 50,
+      'min' => 2
     ),
     'user_email' => array(
       'field_name' => 'Email',
       'max' => 255,
+      'min' => 6,
       'unique' => 'users'
     ),
     'profile_description' => array(
@@ -52,10 +53,15 @@ if(Input::exists() && Token::check(Input::get('token'))) {
     try {
 
       // Update table ID.
-      if(isset($_POST['user_first']) || isset($_POST['user_last']) || isset($_POST['user_email'])) {
+      if(isset($_POST['user_first']) || isset($_POST['user_last'])) {
         $user->update('users', array(
           'user_first' => Input::get('user_first'),
-          'user_last' => Input::get('user_last'),
+          'user_last' => Input::get('user_last')
+        ));
+      }
+
+      if(isset($_POST['user_email']) && $user->data()->user_email !== Input::get('user_email')) {
+        $user->update('users', array(
           'user_email' => Input::get('user_email')
         ));
       }

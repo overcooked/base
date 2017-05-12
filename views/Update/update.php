@@ -53,9 +53,26 @@ $user = new User();
             <?php
 
             } // End
+
+            if (Session::exists('validation_errors')) {
+                $form_errors = Session::flash('validation_errors');
+
+                foreach ($form_errors as $error) {
+                    $error = explode('/', $error);
+                    $error_message = $error[1];
+
+                    echo "
+                    <div class='alert alert-danger alert-dismissible' role='alert' style='padding-top: 6px; padding-bottom: 5px;'>
+                      <span class='ss-icon' style='position: relative; top: 2px; right: 2px;'>Alert</span>
+                      <span class='sr-only'>Error:</span>
+                      {$error_message}
+                    </div>
+                    ";
+                }
+            }
             ?>
 
-            <form method="post" enctype="multipart/form-data">
+            <form method="post">
 
               <!-- First Name -->
               <div class="form-group">
@@ -98,26 +115,6 @@ $user = new User();
 
       </div>
     </section>
-
-    <?php
-      if (Session::exists('validation_errors')) {
-          $form_errors = Session::flash('validation_errors');
-
-          foreach ($form_errors as $error) {
-              $error = explode('/', $error);
-              $error_form = $error[0];
-              $error_message = $error[1];
-
-              echo "
-              <script type='text/javascript'>
-                $('#{$error_form}').css('border-color', '#ff9b9b');
-                $('#{$error_form}').attr('placeholder', '{$error_message}');
-              </script>
-            ";
-          }
-      }
-
-    ?>
 
     <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 

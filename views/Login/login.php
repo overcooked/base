@@ -39,11 +39,13 @@ $user = new User();
 
               <div class="divider"></div>
 
+              <!-- User Email -->
               <div class="input-group input-group-sm margin-bottom-15">
                 <span class="input-group-addon addon-left" id="login-addon"><span class="ss-icon">email</span></span>
                 <input required="true" type="email" name="user_email" class="input-centered" placeholder="Email Address" id="user_email">
               </div>
 
+              <!-- User Password -->
               <div class="input-group input-group-sm margin-bottom-20">
                 <span class="input-group-addon addon-left" id="password-addon-1"><span class="ss-icon">lock</span></span>
                 <input required="true" type="password" name="user_password" placeholder="Password" id="user_password">

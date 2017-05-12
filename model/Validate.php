@@ -85,7 +85,7 @@ class Validate {
 
           // Checks if two field match or not.
           if ($rule === 'matches' && $value != $input[$rule_value]) {
-            $this->add_error("{$form_name}/{$rule_value} must match {$field_name}");
+            $this->add_error("New passwords must match.");
           }
 
           // Checks if the value is unique within the database.

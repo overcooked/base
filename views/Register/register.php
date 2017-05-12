@@ -21,7 +21,6 @@ $user = new User();
     <!-- Style Files. -->
     <link rel="stylesheet" href="/public/css/register/register.css">
 
-
   </head>
   <body>
 
@@ -44,12 +43,14 @@ $user = new User();
                 <!-- First and Last Name. -->
                 <div class="row margin-bottom-15">
 
+                  <!-- First Name -->
                   <div class="col-xs-6" style="padding-right: 6px;">
                     <div class="field">
                       <input required="true" type="text" name="user_first" class="form-control" placeholder="First Name" value="<?php echo escape(Input::get('user_first')); ?>" id="user_first">
                     </div>
                   </div>
 
+                  <!-- Last Name -->
                   <div class="col-xs-6" style="padding-left: 6px;">
                     <div class="field">
                       <input required="true" type="text" name="user_last" class="form-control" placeholder="Last Name" value="<?php echo escape(Input::get('user_last')); ?>" id="user_last">
@@ -58,20 +59,24 @@ $user = new User();
 
                 </div>
 
+                <!-- Email -->
                 <div class="field margin-bottom-15">
                   <input required="true" type="email" name="user_email" class="form-control" placeholder="Email" id="user_email" value="<?php echo escape(Input::get('user_email')); ?>" autocomplete="off">
                 </div>
 
+                <!-- Password  -->
                 <div class="field margin-bottom-15">
                   <input required="true" type="password" name="user_password" class="form-control" placeholder="Password" id="user_password">
                 </div>
 
+                <!-- Password Again -->
                 <div class="field margin-bottom-15">
                   <input required="true" type="password" name="password_again" class="form-control" placeholder="Repeat Password" id="password_again">
                 </div>
 
                 <div class="divider"></div>
 
+                <!-- Submit Button -->
                 <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
                 <input type="submit" class="btn btn-submit" value="Register">
 

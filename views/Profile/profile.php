@@ -41,6 +41,8 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
       }
   }
 
+} else {
+  Redirect::to('404.php');
 }
 
 ?>
@@ -152,7 +154,7 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
               // Convert the date.
               $post_date = strtotime($post->post_date);
               $post_date = date('Y-m-d', $post_date);
-              
+
               // Get the ID for the posting.
               $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
 

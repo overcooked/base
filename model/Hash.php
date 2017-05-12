@@ -14,16 +14,15 @@ class Hash {
    * @return string         - The hash value that was made.
    */
   public static function make($string, $salt = '') {
-     return hash('sha256', $string . $salt);
+      return hash('sha256', $string . $salt);
   }
 
   /**
    * Generates a salt value with a length of 32.
    * @return string - The value of the generated salt.
    */
-
   public static function salt() {
-    return utf8_encode(openssl_random_pseudo_bytes(32));
+      return utf8_encode(openssl_random_pseudo_bytes(32));
   }
 
   /**
@@ -31,9 +30,7 @@ class Hash {
    * @return string - The value of the random value.
    */
   public static function unique() {
-    return self::make(uniqid());
+      return self::make(uniqid());
   }
-
+  
 }
-
-?>

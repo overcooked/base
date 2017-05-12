@@ -12,13 +12,26 @@
 /** Primary Colours. TODO: Temporary color, don't freak out pls. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
-footer a {
-  color: #fa7600; }
-
-footer a:hover {
-  color: #c75e00; }
+#footer footer {
+  background: #343c40 !important;
+  box-shadow: 0 1px 11px rgba(0, 0, 0, 0.25); }
 
 .footer-area {
-  margin-bottom: 20px; }
+  margin-top: 38px;
+  padding-top: 35px;
+  padding-bottom: 30px; }
+
+.text-muted {
+  color: #b7b7b7;
+  letter-spacing: 0.4px; }
+
+#footer a {
+  color: #d9e0d9;
+  letter-spacing: 0.4px; }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 768px) {
+  #footer {
+    margin-bottom: 53px !important; } }
 
 /*# sourceMappingURL=footer.css.map */

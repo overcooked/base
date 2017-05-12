@@ -23,12 +23,11 @@ if(Input::exists() && Token::check(Input::get('token'))) {
     if($user->login(Input::get('user_email'), Input::get('user_password'))) {
       Redirect::to('index.php');
     } else {
-      echo 'Incorrect Login Details';
+      Session::flash('login_failed', 'Incorrect Login Details.');
+      Redirect::to('login.php');
     }
   } else {
-    foreach($validation->errors() as $error) {
-      echo $error, '<br>';
-    }
+    Session::flash('form_errors', $validation->errors());
   }
 
 }

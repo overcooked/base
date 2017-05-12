@@ -13,7 +13,8 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://overcooked.ca/">
-<link rel="shortcut icon" href="/public/assets/favicon.ico">
+<link rel="shortcut icon" href="/public/assets/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="robots" content="noodp">
 
 <!-- Open Graph Meta Tags. -->
@@ -48,7 +49,6 @@
 <link rel="stylesheet" href="/public/css/default.css">
 <link rel="stylesheet" href="/public/css/template/header.css">
 <link rel="stylesheet" href="/public/css/template/footer.css">
-
 
 <!-- Icons -->
 <link rel="stylesheet" href="/public/assets/fonts/ss-pika/ss-pika.css"/>

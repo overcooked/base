@@ -61,9 +61,6 @@ class DB {
    */
   public function query($sql, $params = array()) {
 
-    // Escape the SQL query to ensure its secure.
-    $sql = escape($sql);
-
     // Prepare the SQL query and check if it was valid.
     if ($this->_query = $this->_pdo->prepare($sql)) {
       $x = 1;
@@ -242,6 +239,14 @@ class DB {
    */
   public function count() {
     return $this->_count;
+  }
+
+  /**
+   * Returns the previous query executed.
+   * @return string - The executed SQL query.
+   */
+  public function get_query() {
+    return $this->_query;
   }
 
   /**

@@ -17,6 +17,13 @@ $user = new User();
 
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
+
+    <!-- Style Files. -->
+    <link rel="stylesheet" href="/public/css/post/post.css">
+
+    <!-- Script Files -->
+    <script src="/public/js/post/post.js" type="text/javascript"></script>
+
   </head>
   <body>
 
@@ -25,6 +32,9 @@ $user = new User();
 
     <!-- Main Content -->
     <?php View::component('Post/post-form.php'); ?>
+
+    <!-- Mobile Footer Menu -->
+    <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 
   </body>
 </html>

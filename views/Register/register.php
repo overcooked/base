@@ -12,58 +12,127 @@ $user = new User();
 <html lang="en">
   <head>
     <!-- General. -->
-    <title>Overcooked: Feed those in need with your extra food.</title>
+    <title>Sign Up | Overcooked</title>
     <meta name="description" content="Overcooked lets you give your extra food to people who really need it.">
 
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
 
     <!-- Style Files. -->
-    <link rel="stylesheet" href="/public/css/login/login.css">
-
+    <link rel="stylesheet" href="/public/css/register/register.css">
 
   </head>
   <body>
 
-    <!-- Header Section -->
-    <?php View::header_logged_out(); ?>
+      <!-- Register Area -->
+      <section class="absolute-center">
+        <div class="text-vertical-center">
+          <div class="col-lg-4 col-lg-offset-4">
+            <div class="absolute-center-form">
 
-    <!-- Main Content // Start -->
-    <section class="main">
-      <div class="container login-area">
-        <h2 class="center">Register</h2>
-        <form action="" method="post">
+              <!-- Register Form -->
+              <form method="post">
 
-          <div class="field">
-            <input type="text" name="user_first" class="form-control" placeholder="First Name" value="<?php echo escape(Input::get('user_first')); ?>" id="user_first">
+                <!-- Brand Logo -->
+                <a href="/index.php">
+                  <img class="img-responsive" id="logo" src="/public/assets/images/overcooked-logo.svg" alt="Overcooked Logo">
+                </a>
+
+                <div class="divider"></div>
+
+                <!-- First and Last Name. -->
+                <div class="row margin-bottom-15">
+
+                  <!-- First Name -->
+                  <div class="col-xs-6" style="padding-right: 6px;">
+                    <div class="field">
+                      <input required="true" type="text" name="user_first" class="form-control" placeholder="First Name" value="<?php echo escape(Input::get('user_first')); ?>" id="user_first">
+                    </div>
+                  </div>
+
+                  <!-- Last Name -->
+                  <div class="col-xs-6" style="padding-left: 6px;">
+                    <div class="field">
+                      <input required="true" type="text" name="user_last" class="form-control" placeholder="Last Name" value="<?php echo escape(Input::get('user_last')); ?>" id="user_last">
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Email -->
+                <div class="field margin-bottom-15">
+                  <input required="true" type="email" name="user_email" class="form-control" placeholder="Email" id="user_email" value="<?php echo escape(Input::get('user_email')); ?>" autocomplete="off">
+                </div>
+
+                <!-- Password  -->
+                <div class="field margin-bottom-15">
+                  <input required="true" type="password" name="user_password" class="form-control" placeholder="Password" id="user_password">
+                </div>
+
+                <!-- Password Again -->
+                <div class="field margin-bottom-15">
+                  <input required="true" type="password" name="password_again" class="form-control" placeholder="Repeat Password" id="password_again">
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Submit Button -->
+                <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+                <input type="submit" class="btn btn-submit" value="Register">
+
+                <div class="divider" style="margin-top: 15px; margin-bottom: 15px;"></div>
+              </form>
+
+            <p class="dont-have-account-link text-center">
+              By registering, you agree to our
+              <a target="_blank" href="/tos.php">Terms and Services</a>
+            </p>
+
           </div>
 
-          <div class="field">
-            <input type="text" name="user_last" class="form-control" placeholder="Last Name" value="<?php echo escape(Input::get('user_last')); ?>" id="user_last">
-          </div>
+          <!-- Form Error Display -->
+          <?php
 
-          <div class="field">
-            <input type="text" name="user_email" class="form-control" placeholder="Email" id="user_email" value="<?php echo escape(Input::get('user_email')); ?>" autocomplete="off">
-          </div>
+            if (Session::exists('form_errors')) {
+                $form_errors = Session::flash('form_errors');
 
-          <div class="field">
-            <input type="password" name="user_password" class="form-control" placeholder="Password" id="user_password">
-          </div>
+                foreach ($form_errors as $error) {
+                    $error = explode('/', $error);
+                    $error_form = $error[0];
+                    $error_message = $error[1];
 
-          <div class="field">
-            <input type="password" name="password_again" class="form-control" placeholder="Repeat Password" id="password_again">
-          </div>
+                    echo "
+                <script type='text/javascript'>
+                  var error_form = '$error_form';
+                  var error_message = '{$error_message}';
 
-          <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-          <input type="submit" class="btn btn-default login-btn" value="Register">
-        </form>
+                  // Add/check for error on email input.
+                  if(error_form === 'user_email') {
+                    $('#user_email').css('border-color', '#ff9b9b');
+                    $('#user_email').attr('placeholder', error_message);
+                    $('#user_email').addClass('error-placeholder');
+                    $('#login-addon').css('border-color', '#ff9b9b');
+                    $('#login-addon').css('color', '#ff9b9b');
+                  }
+
+                  // Add/check for error on password input.
+                  if(error_form === 'user_password') {
+                    $('#user_password').css('border-color', '#ff9b9b');
+                    $('#user_password').attr('placeholder', error_message);
+                    $('#user_password').addClass('error-placeholder');
+                    $('#password-addon-1').css('border-color', '#ff9b9b');
+                    $('#password-addon-1').css('color', '#ff9b9b');
+                  }
+                </script>
+                ";
+                }
+            }
+
+          ?>
+
+        </div>
       </div>
     </section>
-
-
-
-    <!-- Header Section -->
-    <?php // View::footer(); ?>
 
   </body>
 </html>

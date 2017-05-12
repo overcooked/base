@@ -11,11 +11,6 @@ $user = new User();
 // If the user isn't logged in, redirect to index.
 $user->not_logged_in_redirect();
 
-// If a flash success message exists, print the message.
-if(Session::exists('changed')) {
-  echo Session::flash('changed');
-}
-
 // Check if input exists, and the form token is valid.
 if(Input::exists() && Token::check(Input::get('token'))) {
 
@@ -50,7 +45,7 @@ if(Input::exists() && Token::check(Input::get('token'))) {
       try {
         // Update the new password using a new salt.
         $salt = Hash::salt(32);
-        $user->update(array(
+        $user->update('users', array(
           'user_password' => Hash::make(Input::get('new_password'), $salt),
           'user_salt' => $salt
         ));
@@ -64,14 +59,14 @@ if(Input::exists() && Token::check(Input::get('token'))) {
 
     } else {
       // Password change failed.
-      Session::flash('changed', 'Your current password is not correct.');
+      Session::flash('validation_errors', 'Your current password is not correct.');
       Redirect::to('changepassword.php');
     }
 
   } else {
-    foreach($validation->errors() as $error) {
-      echo $error . '</br>';
-    }
+    // Errors with validation, redirect to other page.
+    Session::flash('validation_errors', 'Your new passwords much match.');
+    Redirect::to('changepassword.php');
   }
 
 }

@@ -24,8 +24,8 @@ class User {
 
   /**
    * Constructor for the User class. Has ability to
-   * create a user if passed in a valid user ID number.
-   * @param int $user - User ID to create a specific user.
+   * create a user if passed in a valid user ID.
+   * @param int $user_id - User ID to create a specific user.
    */
   public function __construct($user_id = null) {
 
@@ -71,14 +71,20 @@ class User {
   public function find($user) {
 
     // Choose whether to check id or email.
-    $field = (is_numeric($user)) ? 'user_id' : 'user_email';
+    $field = null;
+
+    if (strpos($user, '@') !== false) {
+      $field = 'user_email';
+    } else {
+      $field = 'user_id';
+    }
 
     // Search for user in database.
     $data = $this->_db->get('users', array($field, '=', $user));
 
     // If user exists, save data into current user object.
     if($data->count()) {
-      $this->_data = $data->results()[0];
+      $this->_data = $data->first();
       return true;
     }
 
@@ -143,8 +149,8 @@ class User {
    * @param  array  $fields - The fields and values to be updated.
    * @throws exception      - Problem updating the information.
    */
-  public function update($fields = array()) {
-    if(!$this->_db->update('users', $this->data()->user_id, $fields)) {
+  public function update($table, $fields = array()) {
+    if(!$this->_db->update($table, '\'' . $this->data()->user_id . '\'', $fields)) {
       throw new Exception("There Was A Problem Updating");
     }
   }

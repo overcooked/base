@@ -1,0 +1,30 @@
+/**
+ * The styling for the contact page.
+ * @author Team point.
+ */
+
+ /** Import The Global Variables. */
+ @import 'variables';
+
+ /* ========== ========== ========== ========== */
+
+ .legal-area {
+   margin-top: 50px;
+   max-width: 700px;
+   width: 80%;
+ }
+
+.legal-bold {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+/* Fixes bootstrap messing with <ol> */
+.legal-list {
+  list-style: decimal inside;
+  margin-left: 50px;
+}
+
+.legal-list-item {
+    display: list-item;
+}

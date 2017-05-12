@@ -1,0 +1,233 @@
+/**
+ * The styling for the register page.
+ * @author Team point.
+ */
+/** Import The Global Variables. */
+@import 'variables';
+/* ========== ========== ========== ========== */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.login-area {
+    margin-top: 50px;
+    max-width: 500px;
+    width: 80%;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.absolute-center h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 3.5em;
+    font-weight: 700;
+}
+
+.absolute-center {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('/public/assets/images/food-background-colour.svg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.absolute-center-form {
+    border: 1px solid #f4f4f4;
+    margin: 30px auto 20px;
+    padding: 32px 30px 16px;
+    max-width: 360px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.margin-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.absolute-center-form #logo {
+    width: 85%;
+    margin: -7px auto 15px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+}
+
+.absolute-center-form #logo:hover {
+    opacity: 0.9;
+}
+
+.absolute-center-form .divider {
+    height: 2px;
+    width: 130px;
+    background-color: #f7f7f7;
+    margin: 5px auto 18px;
+}
+
+.absolute-center-form input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 0 11px 4px;
+    border: 1px solid #e9ebec;
+    border-radius: 5px;
+    padding-left: 12px;
+    color: #738a94;
+    outline: 0;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    transition: border-color,box-shadow;
+    transition-duration: 0.4s;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    -ms-appearance: textfield;
+    appearance: textfield;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+}
+
+#user_password {
+    border-right: none;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+/*
+.absolute-center-form input:focus {
+  border-color: #a6daa2;
+}
+*/
+.absolute-center-form .addon-left {
+    border: 1px solid #e9ebec;
+    background: #fff;
+    border-right: none;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    color: #b6bac5;
+    padding: 4px 10px 0;
+}
+
+.absolute-center-form .addon-right {
+    border: 1px solid #e9ebec;
+    background: #fff;
+    border-left: none;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    color: #bcc0cb;
+    text-decoration: none;
+    padding: 4px 10px 0;
+    font-size: $font-light;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+}
+
+.dont-have-account-link {
+  color: #b5b8c1;
+  font-size: 13px;
+}
+
+.dont-have-account-link a {
+  color: #9bd098;
+}
+
+#password-forgot {
+    position: relative;
+    bottom: 3px;
+    font-size: 11px;
+}
+
+#password-divider {
+    padding-right: 8px;
+    font-size: 20px;
+    color: #d2d6e3;
+}
+
+#password-divider:hover,
+#password-forgot:hover {
+    opacity: 0.8;
+}
+
+.absolute-center-form .btn-submit {
+    font-family: $font-bold;
+    padding: 10px 14px 9px 16px;
+    background-color: #50ba4a !important;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top-left-radius: 3px !important;
+    border-bottom-left-radius: 3px !important;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #b4bac5;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #b4bac5;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #b4bac5;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #b4bac5;
+}
+
+.error-placeholder::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #ff9b9b;
+}
+
+.error-placeholder::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ff9b9b;
+}
+
+.error-placeholder:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #ff9b9b;
+}
+
+.error-placeholder:-moz-placeholder {
+    /* Firefox 18- */
+    color: #ff9b9b;
+}
+
+.absolute-center-form .btn-submit:hover {
+    opacity: 0.99;
+    transform: translateY(-0.5px);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
+}

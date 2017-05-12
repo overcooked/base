@@ -1,0 +1,220 @@
+/**
+ * The styling for the profile page.
+ * @author Team point.
+ */
+/** Import The Global Variables. */
+@import 'variables';
+/* ========== ========== ========== ========== */
+
+body {
+  background-color: #f2f5f7;
+}
+
+#user-profile-image img {
+  height: 115px;
+  width: auto;
+  border-radius: 100px;
+  display: block;
+  margin: auto;
+  margin-bottom: 13px;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-top {
+  padding: 30px 0;
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(/public/assets/images/food-background.svg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#user-full-name {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.7px;
+  font-family: proximanova-semibold;
+  color: #626673;
+}
+
+#user-location {
+  text-align: center;
+  color: #88bb85;
+  font-size: 14px;
+  font-family: proximanova-regular;
+}
+
+#user-posts-divider {
+  background: #343c40;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+}
+
+#profile-description {
+  width: 320px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-top: -10px;
+  color: #7f8084;
+  font-size: 14px;
+}
+
+#users-posts-title {
+  padding: 9px 0 8px;
+  color: #fff;
+  letter-spacing: 0.8px;
+  font-family: proximanova-semibold;
+  font-size: 18px;
+}
+
+#users-posts-content {
+  margin-top: 25px;
+}
+
+.user-post-display {
+  padding: 25px 25px 20px 25px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05);
+  border-top: 3px solid #515e65;
+  border-bottom: 3px solid #515e65;
+  transition: all .3s ease;
+}
+
+.user-post-display a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.user-post-display:hover {
+  opacity: 0.95;
+  transform: translateY(-0.8px);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+#post-date {
+  font-size: 13px;
+  color: #cecece;
+  letter-spacing: 0.3px;
+}
+
+/*
+
+.split {
+    margin-top: 15px;
+    height: 40px;
+    width: 100vw;
+    margin-left: 0;
+    background-color: white;
+    text-align: center;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2), 0 -8px 6px -6px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2), 0 -8px 6px -6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2), 0 -8px 6px -6px rgba(0, 0, 0, 0.2);
+}
+
+.split-text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.profile-area {
+    margin-top: 20px;
+}
+
+.posts-area {
+    background-color: #f2f5f7;
+    padding-bottom: 30px;
+}
+
+.left-tab {
+    text-align: center;
+
+    h4 {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+}
+
+.right-tab {
+    padding-top: 15px;
+}
+
+.profile-pic {
+    padding: 5px;
+    border-radius: 1000px;
+    margin-bottom: 20px;
+    border: 2px solid $primary-color;
+}
+// bio
+
+.morecontent span {
+    display: none;
+}
+
+.morelink {
+    display: block;
+}
+
+.profile-content {
+    max-width: 500px;
+}
+
+.bio-text a {
+    letter-spacing: 2.2px;
+}
+
+.view-btn {
+    font-family: proximanova-bold, Helvetica, Arial, sans-serif;
+    padding: 8px 14px 7px;
+    background-color: #50ba4a;
+    color: #fff;
+    font-size: 13px;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.divider {
+    height: 1px;
+    width: 50px;
+    background-color: #eee;
+    margin-bottom: 10px;
+}
+
+.stats-text {
+    color: #666;
+    font-family: proximanova-regularitalic;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #7b7b7b;
+    line-height: 19px;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.title {
+    padding-top: 0;
+    padding-bottom: 6px;
+    font-size: 19px;
+    font-family: proximanova-semibold;
+    text-transform: capitalize;
+}
+
+.item {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: white;
+    border: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+*/

@@ -1,0 +1,25 @@
+/**
+ * The styling for the contact page.
+ * @author Team point.
+ */
+/** Import The Global Variables. */
+/**
+ * Global scss variables.
+ * @author Team point.
+ */
+/* ========== ========== ========== ========== */
+/** Primary Colours. TODO: Temporary color, don't freak out pls. */
+/** Typography Styling. */
+/* ========== ========== ========== ========== */
+.contact-area {
+  margin-top: 50px;
+  max-width: 500px;
+  width: 80%; }
+
+.contact-area input {
+  margin-bottom: 15px; }
+
+.contact-submit {
+  margin-top: 15px; }
+
+/*# sourceMappingURL=contact.css.map */

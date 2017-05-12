@@ -59,7 +59,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 				<li>
 					<a href="update.php" class="side-bar-link">
 						<span class="ss-icon">userfile</span>
-						<span class="side-bar-link-text">UPDATE PROFILE</span>
+						<span class="side-bar-link-text">EDIT PROFILE</span>
 					</a>
 				</li>
 
@@ -100,7 +100,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 						<img src="https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg" id="navbar-profile-image" alt="Profile Image">
 					</li>
 
-					<a class="dropdown-toggle" data-toggle="dropdown" id="navbar-profile-dropdown" href=""><?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?><span id="navbar-caret" class="caret"></span></a>
+					<a class="dropdown-toggle" data-toggle="dropdown" id="navbar-profile-dropdown" href=""><?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?><span class="ss-icon" style="font-size: 11px; position: relative; top: 1px; color: #68707b; left: 4px;">dropdown</span></a>
 					<ul class="dropdown-menu" id="navbar-dropdown" role="menu">
 						<div class="arrow-up"></div>
 						<li>
@@ -112,7 +112,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 						<li>
 							<a href="update.php">
 								<span class="ss-icon">userfile</span>
-								Update Profile
+								Edit Profile
 							</a>
 						</li>
 						<li>

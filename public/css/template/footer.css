@@ -13,7 +13,8 @@
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
 #footer footer {
-  background: #343c40 !important; }
+  background: #343c40 !important;
+  box-shadow: 0 1px 11px rgba(0, 0, 0, 0.25); }
 
 .footer-area {
   margin-top: 38px;
@@ -27,5 +28,10 @@
 #footer a {
   color: #d9e0d9;
   letter-spacing: 0.4px; }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 768px) {
+  #footer {
+    margin-bottom: 53px !important; } }
 
 /*# sourceMappingURL=footer.css.map */

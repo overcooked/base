@@ -57,22 +57,21 @@ $user = new User();
       <div class="container-fluid">
         <!-- Recent Posts. -->
         <div class="row" id="listing-rows">
-          <div class="col-md-10 col-md-offset-1">
 
-              <?php /** Check whether the user had a successful post. */
-              if (Session::exists('successful_post')) { // Start
-              ?>
-                  <div class="alert alert-success alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <?php echo Session::flash('successful_post'); ?>
-                  </div>
-              <?php
+          <?php /** Check whether the user had a successful post. */
+          if (Session::exists('successful_post')) { // Start
+          ?>
+              <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <?php echo Session::flash('successful_post'); ?>
+              </div>
+          <?php
 
-              } // End
-              ?>
+          } // End
+          ?>
 
-              <div class="grid">
-
+          <div class="col-md-10 col-md-offset-1 grid">
+            
                 <?php
                 $postings = DB::getInstance()->query("SELECT * FROM posts ORDER BY post_date DESC");
 
@@ -89,7 +88,7 @@ $user = new User();
                     }
 
                     // Format the description.
-                    $description = substr($post->post_description, 0, 100) . '..';
+                    $description = substr($post->post_description, 0, 100) . '...';
 
                     // Convert the date.
                     $post_date = strtotime($post->post_date);
@@ -100,18 +99,23 @@ $user = new User();
 
                       echo "
                       <div class='thumbnail grid-item'>
-                        <img src='{$image->post_image_url}' class='img-responsive' alt='Post Image'>
-                        <div class='caption'>
-                          <p class='title'>
-                          {$post->post_title}
-                          </p>
-                          <p class='description'>{$description}</p>
-                          <small class='stats-text'><b>Type: </b>{$post->post_tag} &nbsp;|&nbsp; <b>Posted: </b> {$post_date}</small>
-                          <hr>
-                          <p class='text-center'>
-                            <a href='{$post_listing_url}' class='btn btn-primary view-btn' role='button'>View Listing</a>
-                          </p>
-                        </div>
+                        <a href='{$post_listing_url}'>
+                          <img src='{$image->post_image_url}' class='img-responsive' alt='Post Image'>
+                          <div class='caption'>
+                            <p class='title'>
+                            {$post->post_title}
+                            </p>
+                            <p class='description'>
+                              {$description}
+                              <a href='{$post_listing_url}' style='color: #50ba4a !important; font-family: proximanova-regular; letter-spacing: 0.5px;'>read more</a>
+                            </p>
+                            <div class='form-divider' style='margin: 5px 0 9px;'></div>
+                            <small class='stats-text'>
+                                <b>Type: </b>{$post->post_tag} &nbsp;|&nbsp; <b>Posted: </b> {$post_date}
+                                <img id='user-post-profile-image' src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg' />
+                            </small>
+                          </div>
+                        </a>
                       </div>
 
                     ";
@@ -120,7 +124,7 @@ $user = new User();
                     echo 'There are no posts available.';
                 }
                 ?>
-              </div>
+
             </div>
         </div>
       </div>

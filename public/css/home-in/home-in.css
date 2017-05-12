@@ -56,13 +56,19 @@ body {
   border: none;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); }
 
+.thumbnail .caption {
+  padding: 17px 19px 11px 19px;
+  color: #333; }
+
 .thumbnail img {
   border-top: 8px solid #343c40;
   display: block;
   object-fit: cover;
   width: 100%;
   border-radius: 5px;
-  height: 200px; }
+  height: 200px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
 
 .lead-title {
   margin-left: 30px; }
@@ -88,7 +94,7 @@ body {
   margin-bottom: 10px; }
 
 .stats-text {
-  color: #666;
+  color: #adadad;
   font-family: proximanova-regularitalic; }
 
 .description {
@@ -100,7 +106,7 @@ body {
 .title {
   padding-top: 0;
   padding-bottom: 6px;
-  font-size: 19px;
+  font-size: 17px;
   font-family: proximanova-semibold;
   text-transform: capitalize; }
 
@@ -188,5 +194,24 @@ input[name=search-2] {
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
   padding-top: 50px;
   padding-bottom: 37px; }
+
+#user-post-profile-image {
+  border-top: none;
+  border-radius: 100px;
+  height: 44px;
+  width: 44px;
+  display: inline;
+  float: right;
+  position: relative;
+  bottom: 14px;
+  right: 11px; }
+
+.thumbnail a {
+  color: inherit !important;
+  text-decoration: none;
+  transition: all .3s ease; }
+
+.thumbnail a:hover {
+  opacity: 0.6; }
 
 /*# sourceMappingURL=home-in.css.map */

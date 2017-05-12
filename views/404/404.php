@@ -23,13 +23,11 @@ $user = new User();
   <body>
 
     <!-- Header Section -->
-    <?php View::header_logged_out(); ?>
+    <?php View::header_logged_in(); ?>
 
     <!-- Main Content // Start -->
     <section class="main">
-      <div class="container">
-        <h1>asdf</h1>
-      </div>
+      
     </section>
 
 

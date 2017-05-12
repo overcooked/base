@@ -95,7 +95,7 @@
   border-color: #e3e4e6;
   color: #a29c99;
   font-size: 13px;
-  padding: 6px 0px 0 13px;
+  padding: 6px 0 0 13px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px; }
 
@@ -172,7 +172,9 @@
 .navbar-default .navbar-nav > li > a:hover {
   color: #4aaf44; }
 
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
   color: #4aaf44;
   background-color: #fff; }
 
@@ -274,6 +276,11 @@
 .dropdown-menu > li > a {
   padding: 0; }
 
+@media only screen and (min-width: 1445px) {
+  #navbar-dropdown {
+    position: absolute;
+    top: 80px;
+    right: 90px; } }
 @media only screen and (min-width: 1650px) {
   #navbar-dropdown {
     position: absolute;
@@ -300,7 +307,7 @@
   border-radius: 100px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: block;
-  margin: 50px auto 10px auto;
+  margin: 50px auto 10px;
   position: relative;
   left: 28px; }
 
@@ -427,10 +434,10 @@
     right: -260px; }
 
   .cbp-spmenu-left.cbp-spmenu-open {
-    left: 0px; }
+    left: 0; }
 
   .cbp-spmenu-right.cbp-spmenu-open {
-    right: 0px; }
+    right: 0; }
 
   /* Horizontal menu that slides from the top or bottom */
   .cbp-spmenu-top {
@@ -440,10 +447,10 @@
     bottom: -150px; }
 
   .cbp-spmenu-top.cbp-spmenu-open {
-    top: 0px; }
+    top: 0; }
 
   .cbp-spmenu-bottom.cbp-spmenu-open {
-    bottom: 0px; }
+    bottom: 0; }
 
   /* Push classes applied to the body */
   .cbp-spmenu-push {

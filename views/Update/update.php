@@ -123,7 +123,7 @@ if ($user_description->count()) {
               <div class="form-group">
                 <label for="user_location">Vancouver Location:</label>
                 <select class="form-control" name="user_location" id="user_location">
-                  <option <?php if($location === 'N/A') { echo 'selected'; } ?> disabled value="">Choose Location</option>
+                  <option <?php if($location === null) { echo 'selected'; } ?> disabled>Choose Location</option>
                   <option <?php if($location === 'Downtown Vancouver') { echo 'selected'; } ?> value="Downtown Vancouver">Downtown Vancouver</option>
                   <option <?php if($location === 'East Side') { echo 'selected'; } ?> value="East Side">East Side</option>
                   <option <?php if($location === 'Burnaby') { echo 'selected'; } ?> value="Burnaby">Burnaby</option>

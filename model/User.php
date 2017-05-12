@@ -71,7 +71,13 @@ class User {
   public function find($user) {
 
     // Choose whether to check id or email.
-    $field = (is_numeric($user)) ? 'user_id' : 'user_email';
+    $field = null;
+
+    if (strpos($user, '@') !== false) {
+      $field = 'user_email';
+    } else {
+      $field = 'user_id';
+    }
 
     // Search for user in database.
     $data = $this->_db->get('users', array($field, '=', $user));
@@ -144,7 +150,7 @@ class User {
    * @throws exception      - Problem updating the information.
    */
   public function update($table, $fields = array()) {
-    if(!$this->_db->update($table, $this->data()->user_id, $fields)) {
+    if(!$this->_db->update($table, '\'' . $this->data()->user_id . '\'', $fields)) {
       throw new Exception("There Was A Problem Updating");
     }
   }

@@ -71,7 +71,6 @@ if(Input::exists() && Token::check(Input::get('token'))) {
 
     try {
 
-      // U
       if(isset($_POST['user_first']) || isset($_POST['user_last'])) {
         $user->update('users', array(
           'user_first' => Input::get('user_first'),

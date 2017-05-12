@@ -15,7 +15,7 @@ $user = new User();
 
 			<!-- Navigation Bar Logo -->
       <a class="navbar-brand hidden-xs" href="/index.php">
-        <img class="img-responsive" id="header-logo" src="/public/assets/images/overcooked-logo.svg" alt="Overcooked Logo">
+        <img class="img-responsive" id="header-logo" src="/public/assets/images/overcooked-logo.svg" style="border:none;" alt="Overcooked Logo">
       </a>
 
 			<!-- Navigation Bar Logo -->

@@ -90,9 +90,9 @@ class Validate {
 
           // Checks if the value is unique within the database.
           if ($rule === 'unique') {
-            $check = $this->_db->get($rule_value, array($form_name, '=', $value));
+            $check = $this->_db->get('users', array($form_name, '=', $value));
 
-            if($check->count() && $value !== $check->first()->user_email) {
+            if($check->count()) {
               $this->add_error("user_email/Please use a different email.");
             }
 

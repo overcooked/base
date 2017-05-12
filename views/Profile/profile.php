@@ -80,9 +80,10 @@ $user = new User();
           Mackenzie Craig
         </h3>
         <h4>Port Coquitlam</h4>
+
         <span class="bio-content more">
           Enjoys long walks on the beach. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
+        </span>
 
         </div>
       </div>
@@ -91,6 +92,7 @@ $user = new User();
         <div class="posts-area">
 
         <div class="container">
+          
           <?php
           $postings = DB::getInstance()->get('posts', array('user_id', '=', $user->data()->user_id));
 

@@ -109,7 +109,7 @@ $user = new User();
 						<li>
 							<a href="update.php">
 								<span class="ss-icon">userfile</span>
-								Update Info
+								Update Profile
 							</a>
 						</li>
 						<li>

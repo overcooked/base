@@ -61,6 +61,9 @@ if (Input::exists() && Token::check(Input::get('token'))) {
       ));
 
       $user->login(Input::get('user_email'), Input::get('user_password'));
+      DB::getInstance()->insert('users_profile', array(
+        'user_id' => $user->data()->user_id
+      ));
       Redirect::to('index.php');
     } Catch(Exception $e) {
       // Registering user failed.

@@ -5,6 +5,12 @@
  */
 
 $user = new User();
+$user_description = DB::getInstance()->get('users_profile', array('user_id', '=', $user->data()->user_id));
+$description = '';
+
+if ($user_description->count()) {
+  $description = $user_description->first()->profile_description;
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +40,10 @@ $user = new User();
         <!-- Update Form Header -->
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3" id="update-form-header">
-            <h3 class="center" id="update-page-title">Update Your Profile</h3>
+            <h3 class="center" id="update-page-title">
+              <span class="ss-icon" style="position: relative; top: 3px; right: 1px;">user</span>
+              Update Your Profile
+            </h3>
           </div>
         </div>
 
@@ -101,7 +110,30 @@ $user = new User();
               <!-- Profile Description -->
               <div class="form-group">
                 <label for="profile_description">Profile Description</label>
-                <textarea rows="4" class="form-control post_input" name="profile_description" placeholder="Profile Description" class="form-control" id="profile_description" placeholder="Profile Description"></textarea>
+                <textarea rows="4" class="form-control post_input" name="profile_description" placeholder="Profile Description" class="form-control" id="profile_description" placeholder="Profile Description"><?php echo escape($description); ?></textarea>
+              </div>
+
+              <hr>
+
+              <?php
+                // Get the location of the user.
+                $location = $user->data()->user_location;
+              ?>
+
+              <div class="form-group">
+                <label for="user_location">Vancouver Location:</label>
+                <select class="form-control" name="user_location" id="user_location">
+                  <option <?php if($location === 'N/A') { echo 'selected'; } ?> disabled value="">Choose Location</option>
+                  <option <?php if($location === 'Downtown Vancouver') { echo 'selected'; } ?> value="Downtown Vancouver">Downtown Vancouver</option>
+                  <option <?php if($location === 'East Side') { echo 'selected'; } ?> value="East Side">East Side</option>
+                  <option <?php if($location === 'Burnaby') { echo 'selected'; } ?> value="Burnaby">Burnaby</option>
+                  <option <?php if($location === 'New Westminster') { echo 'selected'; } ?> value="New Westminster">New Westminster</option>
+                  <option <?php if($location === 'Richmond') { echo 'selected'; } ?> value="Richmond">Richmond</option>
+                  <option <?php if($location === 'North Shore') { echo 'selected'; } ?> value="North Shore">North Shore</option>
+                  <option <?php if($location === 'Tri-Cities') { echo 'selected'; } ?> value="Tri-Cities">Tri-Cities</option>
+                  <option <?php if($location === 'Delta') { echo 'selected'; } ?> value="Delta">Delta</option>
+                  <option <?php if($location === 'Surrey') { echo 'selected'; } ?> value="Surrey">Surrey</option>
+                </select>
               </div>
 
               <hr>

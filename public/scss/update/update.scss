@@ -69,3 +69,11 @@ body {
   text-decoration: none;
   transition: all .15s ease;
 }
+
+#user_location {
+  background-color: #ddd !important;
+  border: none;
+  box-shadow: none;
+  color: #777;
+  background-image: none !important; /* Firefox Android Fix */
+}

@@ -21,38 +21,57 @@ $user->not_logged_in_redirect();
 if(Input::exists() && Token::check(Input::get('token'))) {
 
   $validate = new Validate();
-  $validation = $validate->check($_POST, array(
-    'user_first' => array(
-      'field_name' => 'First name',
-      'max' => 50,
-      'min' => 2
-    ),
-    'user_last' => array(
-      'field_name' => 'Last name',
-      'max' => 50,
-      'min' => 2
-    ),
-    'user_email' => array(
-      'field_name' => 'Email',
-      'max' => 255,
-      'min' => 6,
-      'unique' => 'users'
-    ),
-    'profile_description' => array(
-      'field_name' => 'Description',
-      'max' => 500
-    )
-  ));
+
+  if(isset($_POST['user_email']) && $_POST['user_email'] !== $user->data()->user_email) {
+    $validation = $validate->check($_POST, array(
+      'user_first' => array(
+        'field_name' => 'First name',
+        'max' => 50,
+        'min' => 2
+      ),
+      'user_last' => array(
+        'field_name' => 'Last name',
+        'max' => 50,
+        'min' => 2
+      ),
+      'user_email' => array(
+        'field_name' => 'Email',
+        'max' => 255,
+        'min' => 6,
+        'unique' => 'users'
+      ),
+      'profile_description' => array(
+        'field_name' => 'Description',
+        'max' => 500
+      )
+    ));
+  } else {
+    $validation = $validate->check($_POST, array(
+      'user_first' => array(
+        'field_name' => 'First name',
+        'max' => 50,
+        'min' => 2
+      ),
+      'user_last' => array(
+        'field_name' => 'Last name',
+        'max' => 50,
+        'min' => 2
+      ),
+      'profile_description' => array(
+        'field_name' => 'Description',
+        'max' => 500
+      )
+    ));
+  }
 
   // If validation passed.
   if($validation->passed()) {
 
     $user = new User();
 
-    // TODO: Array of pre-defined things to be updated. FLASH THE INFORMATION.
     try {
 
-      // Update table ID.
+      // U
       if(isset($_POST['user_first']) || isset($_POST['user_last'])) {
         $user->update('users', array(
           'user_first' => Input::get('user_first'),
@@ -60,9 +79,24 @@ if(Input::exists() && Token::check(Input::get('token'))) {
         ));
       }
 
+      // Update the users email.
       if(isset($_POST['user_email']) && $user->data()->user_email !== Input::get('user_email')) {
         $user->update('users', array(
           'user_email' => Input::get('user_email')
+        ));
+      }
+
+      // Update the users location in vancouver.
+      if(isset($_POST['user_location'])) {
+        $user->update('users', array(
+          'user_location' => Input::get('user_location')
+        ));
+      }
+
+      // Update the profile description for the user.
+      if(isset($_POST['profile_description'])) {
+        $user->update('users_profile', array(
+          'profile_description' => Input::get('profile_description')
         ));
       }
 

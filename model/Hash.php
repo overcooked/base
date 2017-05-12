@@ -5,8 +5,7 @@
  * @author Team Point.
  * @version 1.0
  */
-class Hash
-{
+class Hash {
 
   /**
    * Creates a hash value encrypted with sha256.
@@ -14,8 +13,7 @@ class Hash
    * @param  string $salt   - The salt to be included in the hash.
    * @return string         - The hash value that was made.
    */
-  public static function make($string, $salt = '')
-  {
+  public static function make($string, $salt = '') {
       return hash('sha256', $string . $salt);
   }
 
@@ -23,22 +21,16 @@ class Hash
    * Generates a salt value with a length of 32.
    * @return string - The value of the generated salt.
    */
-
-  public static function salt()
-  {
-      if (strtoupper(substr(PHP_OS, 0, 3)) === 'DAR') {
-          return utf8_encode(openssl_random_pseudo_bytes(32));
-      } else {
-          return mcrypt_create_iv(32, MCRYPT_DEV_URANDOM);
-      }
+  public static function salt() {
+      return utf8_encode(openssl_random_pseudo_bytes(32));
   }
 
   /**
    * Generates a unique random hash with no salt.
    * @return string - The value of the random value.
    */
-  public static function unique()
-  {
+  public static function unique() {
       return self::make(uniqid());
   }
+  
 }

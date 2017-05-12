@@ -11,7 +11,7 @@ $user = new User();
 $not_found = 'User does not exist!';
 
 // Variable for the profile image URL.
-$image = null;
+$profile = null;
 
 // Default Profile Image
 $default_image = 'https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg';
@@ -30,11 +30,11 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
       $user = $users->first();
 
       // Get the profile image for the user.
-      $profile_image = DB::getInstance()->get('users_profile', array('user_id', '=', $user->user_id));
+      $user_profile = DB::getInstance()->get('users_profile', array('user_id', '=', $user->user_id));
 
       // Save image URL into a variable.
-      if($profile_image->count()) {
-          $image = $profile_image->first();
+      if($user_profile->count()) {
+          $profile = $user_profile->first();
       }
   }
 
@@ -65,11 +65,74 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
     <!-- Header Section -->
     <?php View::header_logged_in(); ?>
 
-    <!-- Main Content -->
-    <section class="main">
-      <div class="container">
+    <!-- Profile Top // Start -->
+    <section class="profile-top">
+      <div class="container profile-area">
 
-        <?php echo $user->user_id; ?>
+        <!-- Display Users Information -->
+        <div class="row">
+
+          <!-- Profile Image -->
+          <?php
+          if($profile->profile_image_url !== '') {
+            echo "
+            <div id='user-profile-image'>
+              <img src='{$profile->profile_image_url}' alt='Profile Image'>
+            </div>
+            ";
+          } else {
+            echo "
+            <div id='user-profile-image'>
+              <img src='{$default_image}' alt='Profile Image'>
+            </div>
+            ";
+          }
+          ?>
+
+          <!-- Users Full Name -->
+          <div id="user-full-name">
+            <?php echo $user->user_first . ' ' . $user->user_last; ?>
+          </div>
+
+          <!-- Users Location -->
+          <?php
+          if($user->user_location !== '') {
+            echo "
+            <div id='user-location'>
+              <p>{$user->user_location}</p>
+            </div>
+            ";
+          }
+          ?>
+
+          <div class="form-divider" style="width: 35px; background-color: #ececec; border-radius: 16px;"></div>
+
+          <!-- Profile Description -->
+          <?php
+          if($profile->profile_description !== '') {
+            echo "
+            <div id='profile-description'>
+              <p>{$profile->profile_description}</p>
+            </div>
+            ";
+          }
+          ?>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="users-posts">
+      <div class="container-fluid" id="users-posts-divider">
+        <!-- Middle Divider -->
+        <div class="row text-center" id="user-posts-divider">
+          <p id="users-posts-title">Users Posts</p>
+        </div>
+      </div>
+
+      <div class="container" id="users-posts-content">
 
       </div>
     </section>

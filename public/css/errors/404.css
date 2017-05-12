@@ -23,34 +23,29 @@ body {
   margin-top: 5px;
   margin-bottom: 70px; }
 
-#update-form-header {
+#error-form-header {
   font-family: proximanova-semibold, Helvetica, Arial, sans-serif;
   letter-spacing: 0.5px;
   background: #343c40;
   color: #fff;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
   margin-top: 23px;
-  padding: 24px 20px 20px 20px;
+  padding: 24px 20px 20px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   text-align: center;
   font-size: 25px; }
 
-#update-info-form {
+#error-info-form {
   background: #fff; }
 
-#update-success-icon {
-  position: relative;
-  top: 2px;
-  font-size: 14px; }
-
-#update-info-form {
+#error-info-form {
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
   padding: 30px 20px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px; }
 
-#update-btn {
+#error-btn {
   white-space: nowrap;
   display: inline-block;
   height: 40px;
@@ -66,6 +61,6 @@ body {
   letter-spacing: 0.07em;
   color: #fff;
   text-decoration: none;
-  transition: all .15s ease; }
+  transition: all 0.15s ease; }
 
 /*# sourceMappingURL=404.css.map */

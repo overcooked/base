@@ -47,6 +47,8 @@ $user = new User();
         <div class="row" id="search-bar-area">
           <div class="col-md-10 col-md-offset-1">
             <input type="text" class="main-search" placeholder="Search For Food.." id="search-2" name="search-2" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No Stores found" autocomplete="off">
+            <span class="ss-icon search-icon">search</span>
+
           </div>
         </div>
 
@@ -112,7 +114,7 @@ $user = new User();
                             <div class='form-divider' style='margin: 5px 0 9px;'></div>
                             <small class='stats-text'>
                                 <b>Type: </b>{$post->post_tag} &nbsp;|&nbsp; <b>Posted: </b> {$post_date}
-                                <img id='user-post-profile-image' src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg' />
+                                <img class='hidden-xs' id='user-post-profile-image' src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg' />
                             </small>
                           </div>
                         </a>

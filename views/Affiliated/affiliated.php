@@ -30,7 +30,7 @@ $user = new User();
   <body>
 
     <!-- Header Section -->
-    <?php View::header_logged_out(); ?>
+    <?php View::header_logged_in(); ?>
 
     <!-- Main Content -->
     <section id="lander-top">

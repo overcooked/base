@@ -14,6 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://overcooked.ca/">
 <link rel="shortcut icon" href="/public/assets/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="robots" content="noodp">
 
 <!-- Open Graph Meta Tags. -->

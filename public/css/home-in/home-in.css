@@ -115,19 +115,37 @@ body {
   .grid-item {
     width: 82vw;
     margin-left: 15px;
-    margin-right: 15px; } }
+    margin-right: 15px; }
+
+  #find-food, #listing, #finding {
+    line-height: 32px;
+    font-size: 26px;
+    padding-right: 30px;
+    padding-left: 30px; } }
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 480px) {
   .grid-item {
     width: 84vw;
     margin-left: 15px;
-    margin-right: 15px; } }
+    margin-right: 15px; }
+
+  #find-food, #listing, #finding {
+    line-height: 32px;
+    font-size: 26px;
+    padding-right: 30px;
+    padding-left: 30px; } }
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
   .grid-item {
     width: 44vw;
     margin-left: 15px;
-    margin-right: 15px; } }
+    margin-right: 15px; }
+
+  #find-food, #listing, #finding {
+    line-height: 32px;
+    font-size: 26px;
+    padding-right: 30px;
+    padding-left: 30px; } }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
   .grid-item {
@@ -141,6 +159,15 @@ body {
     margin-left: 15px;
     margin-right: 15px; } }
 /* Justins CSS */
+.search-icon {
+  position: absolute;
+  z-index: 9999;
+  bottom: 0px;
+  color: #c7c7c7;
+  font-size: 17px;
+  left: 27px;
+  padding: 14px 16px 11px 16px; }
+
 #search-bar-area {
   font-family: proximanova-semibold, Helvetica, Arial, sans-serif;
   letter-spacing: 0.5px;
@@ -156,13 +183,14 @@ body {
 
 input[name=search-2] {
   color: #50ba4a !important;
-  font-size: 19px !important; }
+  font-size: 17px !important; }
 
 .main-search {
   display: block !important;
-  padding-left: 40px;
+  padding-left: 58px;
   width: 100%;
-  padding-top: 16px;
+  font-family: proximanova-light;
+  padding-top: 14px;
   padding-bottom: 13px;
   border-radius: 35px !important;
   outline-color: transparent;

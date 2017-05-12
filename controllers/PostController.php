@@ -21,11 +21,7 @@ $upload = null;
 if(Input::exists() && Token::check(Input::get('token'))) {
 
   // Pass name (and optional chmod) to create folder for storage
-
   $image->setLocation(getcwd() . "/uploads/post_images");
-
-  // Define allowed mime types to upload
-  $image->setMime(array("jpeg", "jpg", "png"));
 
   // Define the min/max image upload size (size in bytes)
   $image->setSize(1, 9000000);
@@ -100,7 +96,7 @@ if(Input::exists() && Token::check(Input::get('token'))) {
         // Insert the image into the post_images table.
         $post->add_post_image(array(
           'post_id' => $post_id,
-          'post_image_url' => '/uploads/' . $image->getName() . '.' . $image->getMime()
+          'post_image_url' => '/uploads/post_images/' . $image->getName() . '.' . $image->getMime()
         ));
 
         // Post was successfully created.

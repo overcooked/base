@@ -81,11 +81,11 @@ if (Session::exists('image_error')) {
               <label for="post_image">Post Image <span class="require">*</span></label>
               <label class="btn btn-default btn-file">
                   <span class="ss-icon" style="position: relative; top: 2px; right: 2px;">upload</span> Upload Image
-                  <input class="form-control post_input" type="file" style="display: none;" name="post_image" id="post_image" required="true" accept="image/jpeg,image/x-png,image/png,/image/jpg"/>
+                  <input class="form-control post_input" type="file" name="post_image" id="post_image" required="true" accept="image/jpeg,image/x-png,image/png,/image/jpg"/>
               </label>
             </div>
 
-            <!-- Changes the name of the post image upload form when image is selected -->
+            <!-- Changes the name of the post image upload form when image is selected
             <script type="text/javascript">
             $(document).on('change', ':file', function() {
               var input = $(this),
@@ -99,6 +99,7 @@ if (Session::exists('image_error')) {
                 });
             });
             </script>
+             -->
 
             <hr>
 

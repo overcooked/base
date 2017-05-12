@@ -152,6 +152,7 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
               // Convert the date.
               $post_date = strtotime($post->post_date);
               $post_date = date('Y-m-d', $post_date);
+              
               // Get the ID for the posting.
               $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
 
@@ -161,7 +162,7 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
                 <div class='col-md-12'>
                   <div class='user-post-display'>
                     <a href='{$post_listing_url}'>
-                      <h3>{$post->title}</h3>
+                      <h3>{$post->post_title}</h3>
                       <div class='form-divider' style='margin: 10px 0 10px;'></div>
                       <p id='post_description'>{$post->post_description}</p>
                       <div class='form-divider' style='margin: 10px 0 10px;'></div>

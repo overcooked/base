@@ -23,9 +23,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
 
       <ul class="nav navbar-nav" id="logged-out-links">
-        <li><a href="index.php#lander-section-four">About</a></li>
-        <li><a href="index.php#lander-section-five">How It Works</a></li>
-        <li><a href="index.php#lander-section-six">Contact</a></li>
+        <li><a href="index#lander-section-four">About</a></li>
+        <li><a href="index#lander-section-five">How It Works</a></li>
+        <li><a href="index#lander-section-six">Contact</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">

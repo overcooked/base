@@ -146,6 +146,8 @@ $user = new User();
         columnWidth: 250
       });
 
+      window.dispatchEvent(new Event('resize'));
+
       // element argument can be a selector string
       //   for an individual element
       var msnry = new Masonry( '.grid', {

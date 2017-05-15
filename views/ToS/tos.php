@@ -5,7 +5,6 @@
  */
 
 /** User to check logged in and get user data. */
-$user = new User();
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +12,7 @@ $user = new User();
   <head>
 
     <!-- General. -->
-    <title>Contact Us | Overcooked</title>
+    <title>Terms of Service | Overcooked</title>
     <meta name="description" content="Overcooked: Feed those in need, with your extra food.">
 
     <!-- Boiler Plate Tags. -->
@@ -25,8 +24,17 @@ $user = new User();
   </head>
   <body>
 
-    <!-- Header Section -->
-    <?php View::header_logged_out(); ?>
+    <?php
+
+    /** User to check logged in and get user data. */
+    $user = new User();
+
+    if ($user->is_logged_in()) {
+        View::header_logged_in();
+    } else {
+        View::header_logged_out();
+    }
+    ?>
 
     <!-- Main Content -->
     <section class="main">

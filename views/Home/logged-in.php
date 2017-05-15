@@ -63,7 +63,7 @@ $user = new User();
           <?php /** Check whether the user had a successful post. */
           if (Session::exists('successful_post')) { // Start
           ?>
-              <div class="alert alert-success alert-dismissible" role="alert">
+              <div class="alert alert-success alert-dismissible col-lg-10 col-lg-offset-1" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <?php echo Session::flash('successful_post'); ?>
               </div>
@@ -82,7 +82,7 @@ $user = new User();
 
                     // Get the image for the post.
                     $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
-                    $image = '';
+                        $image = '';
 
                     // Save into a variable.
                     if ($post_image->count()) {
@@ -94,12 +94,12 @@ $user = new User();
 
                     // Convert the date.
                     $post_date = strtotime($post->post_date);
-                    $post_date = date('Y-m-d', $post_date);
+                        $post_date = date('Y-m-d', $post_date);
 
                     // Get the ID for the posting.
                     $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
 
-                      echo "
+                        echo "
                       <div class='thumbnail grid-item'>
                         <a href='{$post_listing_url}'>
                           <img src='{$image->post_image_url}' class='img-responsive' alt='Post Image'>
@@ -135,7 +135,7 @@ $user = new User();
     <!-- Footer Section -->
     <?php View::footer(); ?>
 
-    <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
+    <?php require_once(getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 
     <script type="text/javascript">
     $( document ).ready(function() {

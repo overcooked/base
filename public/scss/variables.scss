@@ -3,22 +3,19 @@
  * @author Team point.
  */
 /* ========== ========== ========== ========== */
-
-/** Primary Colours. TODO: Temporary color, don't freak out pls. */
+/** Primary Colours. */
 $primary-color: #50ba4a;
 $secondary-color: #4aaf44;
 $primary-light-grey: #e3e4e6;
 $logo-text-color: #4f4f4f;
-
 $header-bar-link-color: #7c827f;
 $background-light-grey: #f9f8f7;
-
 /** Typography Styling. */
-$fallback:        Helvetica, Arial, sans-serif;
-$font-logo:       whitney-black, $fallback;
-$font-light:      proximanova-light, $fallback;
-$font-regular:    proximanova-regular, $fallback;
-$font-italic:     proximanova-regularitalic, $fallback;
-$font-bold:       proximanova-bold, $fallback;
-$font-semibold:   proximanova-semibold, $fallback;
-$font-black:      proximanova-black, $fallback;
+$fallback: Helvetica, Arial, sans-serif;
+$font-logo: whitney-black, $fallback;
+$font-light: proximanova-light, $fallback;
+$font-regular: proximanova-regular, $fallback;
+$font-italic: proximanova-regularitalic, $fallback;
+$font-bold: proximanova-bold, $fallback;
+$font-semibold: proximanova-semibold, $fallback;
+$font-black: proximanova-black, $fallback;

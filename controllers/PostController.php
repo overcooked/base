@@ -18,7 +18,7 @@ $image = new Bulletproof\Image($_FILES);
 $upload = null;
 
 // If the inputs exists and the token is valid.
-if(Input::exists() && Token::check(Input::get('token'))) {
+if (Input::exists() && Token::check(Input::get('token'))) {
 
   // Pass name (and optional chmod) to create folder for storage
   $image->setLocation(getcwd() . "/uploads/post_images");
@@ -54,24 +54,24 @@ if(Input::exists() && Token::check(Input::get('token'))) {
   ));
 
   // Check if validation passed.
-  if($validation->passed()) {
+  if ($validation->passed()) {
 
     // Try uploading the image.
     $upload = $image->upload();
 
     // Check if the upload was successful.
-    if($upload) {
+    if ($upload) {
 
       // Resize the image.
       $resize = Bulletproof\resize(
-  			$image->getFullPath(),
-  			$image->getMime(),
-  			$image->getWidth(),
-  			$image->getHeight(),
-  			1024,
-  			768,
+            $image->getFullPath(),
+            $image->getMime(),
+            $image->getWidth(),
+            $image->getHeight(),
+            1024,
+            768,
         true
-  	  );
+      );
 
       // Create a new post object.
       $post = new Post();
@@ -101,19 +101,15 @@ if(Input::exists() && Token::check(Input::get('token'))) {
 
         // Post was successfully created.
         Session::flash('successful_post', 'Your new post was successfully created.');
-        Redirect::to('index.php');
-      } catch(Exception $e) {
-        // Creating post failed.
+          Redirect::to('index.php');
+      } catch (Exception $e) {
+          // Creating post failed.
         Session::flash('errors', $e->getMessage());
       }
-
     } else {
-      Session::flash('image_error', $image['error']);
+        Session::flash('image_error', $image['error']);
     }
-
   } else {
-    Session::flash('errors', $validation->errors());
+      Session::flash('errors', $validation->errors());
   }
-
 }
-?>

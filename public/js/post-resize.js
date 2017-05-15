@@ -2,6 +2,7 @@
  * Script to set all posts to the height of
  * the post with the largest height.
  * @author Team Point.
+ * TODO: Remove this in future versions, will not be used.
  */
 
 function resize() {

@@ -6,32 +6,29 @@
 /** Import The Global Variables. */
 @import 'variables';
 /* ========== ========== ========== ========== */
-
 #footer footer {
-  background: #343c40 !important;
-  box-shadow: 0 1px 11px rgba(0, 0, 0, 0.25);
+    background: #343c40 !important;
+    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.25);
 }
 
 .footer-area {
-  margin-top: 38px;
-  padding-top: 35px;
-  padding-bottom: 30px;
+    margin-top: 38px;
+    padding-top: 35px;
+    padding-bottom: 30px;
 }
 
 .text-muted {
-  color: #b7b7b7;
-  letter-spacing: 0.4px;
+    color: #b7b7b7;
+    letter-spacing: 0.4px;
 }
 
 #footer a {
-  color: #d9e0d9;
-  letter-spacing: 0.4px;
+    color: #d9e0d9;
+    letter-spacing: 0.4px;
 }
-
-
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 768px) {
     #footer {
-      margin-bottom: 53px !important;
+        margin-bottom: 53px !important;
     }
 }

@@ -24,18 +24,6 @@ $user = new User();
 
             <!-- Script Files -->
             <script src="/public/js/libraries/typing.js" type="text/javascript"></script>
-        
-            <!--
-            <script>
-                $(document).on('click', 'a', function (event) {
-                    event.preventDefault();
-                    
-                    $('html, body').animate({
-                        scrollTop: $($.attr(this, 'href')).offset().top
-                    }, 2000);
-                });
-            </script>
-            -->
 
     </head>
 
@@ -131,8 +119,8 @@ $user = new User();
                             <img src="/public/assets/icons/city.svg" alt="">
 
                             <h1 class="font-light" style="padding-top: 15px;">
-              Reducing Waste In <span class="font-bold">Metro</span> Vancouver
-            </h1>
+                              Reducing Waste In <span class="font-bold">Metro</span> Vancouver
+                            </h1>
                         </div>
 
                         <div class="col-sm-12 text-center">
@@ -167,38 +155,16 @@ $user = new User();
 
                 </div>
             </section>
-
+        
+        <div id="underground-background" style="position: absolute; left: 0; width: 100%; height: 100px; background-image: url(../../public/assets/images/UnderGrounder.png)"></div>
+        
             <!-- Lander section three -->
-            <section id="lander-section-four">
+            <section id="lander-section-four" style="margin-top: 70px; padding-top: 10px; color: ; background-color: #50ba4a;">
                 <div class="container-fluid">
-                    <div class="container">
-                        <div class="col-sm-12 text-center">
-                            <span>Section three</span>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                        </div>
+                    <div class="col-sm-12 text-center">
+                        <h1 id="about-header" style="top 40px;">About</h1>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
                     </div>
                 </div>
             </section>
@@ -208,31 +174,9 @@ $user = new User();
                 <div class="container-fluid">
                     <div class="container">
                         <div class="col-sm-12 text-center">
-                            <span>Section four</span>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+                            <h1>How it works</h1>
+                            <br><br><br><br><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br><br><br><br><br>
                         </div>
                     </div>
                 </div>
@@ -245,7 +189,7 @@ $user = new User();
                         <div class="col-sm-12 text-center">
                             <span>Section five</span>
                             <div class="contact-area container">
-                                <h2 class="center">Contact Us</h2>
+                                <h2>Contact Us</h2>
                                 <hr />
                                 <form name="contactform" method="post" action="#nothing">
                                     <table width="450px">

@@ -24,6 +24,7 @@ $user = new User();
 
     <!-- Script Files -->
     <script src="/public/js/masonry.js" type="text/javascript"></script>
+    <script src="/public/js/home-in/home-in.js" type="text/javascript"></script>
 
   </head>
   <body>
@@ -43,13 +44,29 @@ $user = new User();
       </p>
 
       <div class="container">
-        <!-- Search Bar -->
         <div class="row" id="search-bar-area">
-          <div class="col-md-10 col-md-offset-1">
-            <input type="text" class="main-search" placeholder="Search For Food.." id="search-2" name="search-2" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No Stores found" autocomplete="off">
-            <span class="ss-icon search-icon">search</span>
 
+          <!-- Search Bar -->
+          <div class="col-md-10 col-md-offset-1">
+            <input type="text" class="main-search" placeholder="Search For Food.." id="main-search-input" name="search-2" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No Stores found" autocomplete="off">
+            <span class="ss-icon search-icon">search</span>
           </div>
+
+          <!-- Help Menu Starts Hidden -->
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="what-to-search">
+
+                <div class="recent-search">
+                  <a href="">
+                    <p>Canned Goods</p>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>

@@ -90,6 +90,12 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 			<!-- Large view items -->
 			<ul class="nav navbar-nav navbar-right hidden-xs">
 
+				<ul class="nav navbar-nav hidden-sm" id="logged-in-links">
+	        <li><a href="about.php">About</a></li>
+	        <li><a href="howitworks.php">How It Works</a></li>
+	        <li><a href="contact.php">Contact</a></li>
+	      </ul>
+
 				<li id="navbar-post-button-wrapper">
 					<a href="post.php" id="navbar-post-button">NEW LISTING</a>
 				</li>

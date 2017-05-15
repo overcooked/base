@@ -52,3 +52,6 @@
 
 <!-- Icons -->
 <link rel="stylesheet" href="/public/assets/fonts/ss-pika/ss-pika.css"/>
+
+<!-- Script files -->
+<script src="../../public/js/default.js"></script>

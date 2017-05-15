@@ -1,7 +1,7 @@
 // Prepare posting page for onload.
-$(document).ready(function () {
+$(document).ready(function() {
     var $root = $('html, body');
-    $(document).on('click', 'a', function (event) {
+    $(document).on('click', 'a.move-link', function(event) {
         event.preventDefault();
 
         $root.animate({

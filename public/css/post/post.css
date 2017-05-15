@@ -29,7 +29,7 @@ body {
   color: #fff;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
   margin-top: 23px;
-  padding: 24px 20px 20px 20px;
+  padding: 24px 20px 20px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   text-align: center;
@@ -38,8 +38,7 @@ body {
 #post-form {
   background: #fff;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px 20px;
-  padding: 12px 20px 30px 20px;
+  padding: 12px 20px 30px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px; }
 
@@ -72,13 +71,16 @@ body {
 .btn-group .active {
   background-color: #fff; }
 
-.btn.active, .btn:active {
+.btn.active,
+.btn:active {
   background-image: none;
   outline: 0 !important;
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-.btn.active, .btn:checked, .btn:focus {
+.btn.active,
+.btn:checked,
+.btn:focus {
   background-image: none;
   outline: 0 !important;
   -webkit-box-shadow: none;
@@ -94,7 +96,7 @@ body {
   border-color: #ddd !important;
   color: #7a7e88 !important;
   height: 40px;
-  line-height: 37px;
+  line-height: 40px;
   padding: 0 12px;
   background: #ddd !important;
   border-radius: 4px;
@@ -106,7 +108,7 @@ body {
   color: #fff;
   text-decoration: none;
   cursor: grab;
-  transition: all .15s ease; }
+  transition: all 0.15s ease; }
 
 .btn-file input[type=file] {
   position: absolute;
@@ -141,11 +143,17 @@ body {
   color: #fff;
   text-decoration: none;
   cursor: grab;
-  transition: all .15s ease; }
+  transition: all 0.15s ease; }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   #post-form-div {
     margin-left: 0; } }
+.disclaimer {
+  color: #b5b8c1;
+  font-size: 13px; }
+
+.disclaimer a {
+  color: #9bd098; }
 
 /*# sourceMappingURL=post.css.map */

@@ -5,7 +5,6 @@
  */
 
 /** User to check logged in and get user data. */
-$user = new User();
 ?>
 
 <!DOCTYPE html>
@@ -25,48 +24,48 @@ $user = new User();
   </head>
   <body>
 
-    <!-- Header Section -->
-    <?php View::header_logged_out(); ?>
+    <?php
+
+    /** User to check logged in and get user data. */
+    $user = new User();
+
+    if ($user->is_logged_in()) {
+        View::header_logged_in();
+    } else {
+        View::header_logged_out();
+    }
+    ?>
 
     <!-- Main Content -->
     <section class="main">
        <div class="contact-area container">
-         <h2 class="center">Contact Us</h2>
-         <hr />
+
+         <div class="row">
+           <div class="col-sm-6 col-sm-offset-3" id="contact-form-header">
+             <h3 class="center" id="contact-page-title">
+               <span class="ss-icon" style="position: relative; top: 3px; right: 1px;">mail</span>
+               Contact Us
+             </h3>
+           </div>
+         </div>
+
+         <div class="row">
+           <div class="col-sm-6 col-sm-offset-3" id="contact-info-form">
           <form name="contactform" method="post" action="forms/contact.php">
-             <table width="450px">
-                <tr>
-                   <td valign="top">
                       <input  type="text" name="first_name" class="form-control" placeholder="First Name" maxlength="50" size="30">
-                   </td>
-                </tr>
-                <tr>
-                   <td valign="top">
+                      <hr>
                       <input  type="text" name="last_name" class="form-control" placeholder="Last Name" maxlength="50" size="30">
-                   </td>
-                </tr>
-                <tr>
-                   <td valign="top">
+                      <hr>
                       <input  type="text" name="email" class="form-control" placeholder="Email" maxlength="80" size="30">
-                   </td>
-                </tr>
-                <tr>
-                   <td valign="top">
+                      <hr>
                       <input  type="text" name="telephone" class="form-control" placeholder="Phone Number" maxlength="30" size="30">
-                   </td>
-                </tr>
-                <tr>
-                   <td valign="top">
+                      <hr>
                       <textarea  name="comments" class="form-control" placeholder="Message" maxlength="1000" cols="25" rows="6"></textarea>
-                   </td>
-                </tr>
-                <tr>
-                   <td colspan="2" style="text-align: left;">
-                      <input type="submit" class="contact-submit btn btn-default" value="Submit">
-                   </td>
-                </tr>
-             </table>
+                      <hr>
+                      <input type="submit" class="btn btn-default contact-btn" id="contact-btn" value="Submit">
           </form>
+        </div>
+      </div>
        </div>
     </section>
   </body>

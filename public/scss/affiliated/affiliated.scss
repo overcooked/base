@@ -2,113 +2,110 @@
  * The styling for the home page.
  * @author Team point.
  */
-
 /* ========== ========== ========== ========== */
-
 /**
  * General Layout.
  */
-
 .jumbotron {
-  margin-bottom: 0;
-  display: block;
-  width: 100%;
-  text-align: center;
-  height: auto;
-  opacity: 1;
-  background: url("/public/assets/images/tree-background.svg") no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+    margin-bottom: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    opacity: 1;
+    background: url("/public/assets/images/tree-background.svg") no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 #lander-section-two {
-  padding-top: 30px;
-  padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 #lander-section-three {
-  margin-top: 106px;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  color: #4e4e4e;
-  background-color: #f2f5f7;
+    margin-top: 106px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: #4e4e4e;
+    background-color: #f2f5f7;
 }
 
 #section-one-skyline {
-  margin-top: 41px;
-  position: absolute;
-  width: 100%;
-  height: 115px;
-  left: 0;
-  background-repeat: no-repeat,repeat-x;
-  background-position: top,bottom;
-  background-size: 1280px 126px,1280px 50px;
+    margin-top: 41px;
+    position: absolute;
+    width: 100%;
+    height: 115px;
+    left: 0;
+    background-repeat: no-repeat,repeat-x;
+    background-position: top,bottom;
+    background-size: 1280px 126px,1280px 50px;
 }
 
 .hr-divider {
-  border-width: 2px;
-  border-color: #eee;
-  width: 30px;
-  margin-top: 12px;
-  margin-bottom: 12px;
+    border-width: 2px;
+    border-color: #eee;
+    width: 30px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 #section-two-city-title {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .step {
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-width: 175px;
-  margin: 0 20px;
-  text-align: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 175px;
+    margin: 0 20px;
+    text-align: center;
 }
 
 .line {
-  top: 39px;
-  bottom: auto;
-  left: 80px;
-  right: 80px;
-  width: auto;
-  height: 2px;
-  background-color: #707070;
-  position: absolute;
+    top: 39px;
+    bottom: auto;
+    left: 80px;
+    right: 80px;
+    width: auto;
+    height: 2px;
+    background-color: #707070;
+    position: absolute;
 }
 
 .timeline {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  margin-top: 70px;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    margin-top: 70px;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
 }
 
 .home-icon {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #fcf7de;
-  background-position: 50%;
-  background-repeat: no-repeat;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fcf7de;
+    background-position: 50%;
+    background-repeat: no-repeat;
 }
 
 .icon-container {
-  display: flex;
-  position: relative;
-  margin: 0 auto 15px;
-  bottom: 11px;
-  left: 57px;
+    display: flex;
+    position: relative;
+    margin: 0 auto 15px;
+    bottom: 11px;
+    left: 57px;
 }

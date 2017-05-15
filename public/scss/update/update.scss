@@ -5,75 +5,75 @@
 /** Import The Global Variables. */
 @import 'variables';
 /* ========== ========== ========== ========== */
-
 body {
-  background: #f2f5f7;
+    background: #f2f5f7;
 }
 
 .row {
-  margin-left: 0;
-  margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .main {
-  margin-top: 5px;
-  margin-bottom: 70px;
+    margin-top: 5px;
+    margin-bottom: 70px;
 }
 
 #update-form-header {
-  font-family: $font-semibold;
-  letter-spacing: 0.5px;
-  background: #343c40;
-  color: #fff;
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
-  margin-top: 23px;
-  padding: 24px 20px 20px 20px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  text-align: center;
-  font-size: 25px;
+    font-family: $font-semibold;
+    letter-spacing: 0.5px;
+    background: #343c40;
+    color: #fff;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 23px;
+    padding: 24px 20px 20px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    text-align: center;
+    font-size: 25px;
 }
 
 #update-info-form {
-  background: #fff;
+    background: #fff;
 }
 
 #update-success-icon {
-  position: relative;
-  top: 2px;
-  font-size: 14px;
+    position: relative;
+    top: 2px;
+    font-size: 14px;
 }
 
 #update-info-form {
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px 20px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 #update-btn {
-  white-space: nowrap;
-  display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 14px;
-  background: $primary-color !important;
-  border-radius: 4px;
-  font-size: 15px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10) !important;
-  font-weight: 600;
-  width: 100%;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: #fff;
-  text-decoration: none;
-  transition: all .15s ease;
+    white-space: nowrap;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+    background: $primary-color !important;
+    border-radius: 4px;
+    font-size: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10) !important;
+    font-weight: 600;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.15s ease;
 }
 
 #user_location {
-  background-color: #ddd !important;
-  border: none;
-  box-shadow: none;
-  color: #777;
-  background-image: none !important; /* Firefox Android Fix */
+    background-color: #ddd !important;
+    border: none;
+    box-shadow: none;
+    color: #777;
+    background-image: none !important;
+    /* Firefox Android Fix */
 }

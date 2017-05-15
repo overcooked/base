@@ -5,103 +5,100 @@
 /** Import The Global Variables. */
 @import 'variables';
 /* ========== ========== ========== ========== */
-
 body {
-  background-color: #f2f5f7;
+    background-color: #f2f5f7;
 }
 
 #user-profile-image img {
-  height: 115px;
-  width: auto;
-  border-radius: 100px;
-  display: block;
-  margin: auto;
-  margin-bottom: 13px;
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+    height: 115px;
+    width: auto;
+    border-radius: 100px;
+    display: block;
+    margin: auto auto 13px;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
 }
 
 .profile-top {
-  padding: 30px 0;
-  display: table;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: url(/public/assets/images/food-background.svg) no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+    padding: 30px 0;
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("/public/assets/images/food-background.svg") no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 #user-full-name {
-  text-align: center;
-  font-size: 30px;
-  letter-spacing: 0.7px;
-  font-family: proximanova-semibold;
-  color: #626673;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 0.7px;
+    font-family: proximanova-semibold;
+    color: #626673;
 }
 
 #user-location {
-  text-align: center;
-  color: #88bb85;
-  font-size: 14px;
-  font-family: proximanova-regular;
+    text-align: center;
+    color: #88bb85;
+    font-size: 14px;
+    font-family: proximanova-regular;
 }
 
 #user-posts-divider {
-  background: #343c40;
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+    background: #343c40;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
 }
 
 #profile-description {
-  width: 320px;
-  display: block;
-  margin: auto;
-  text-align: center;
-  margin-top: -10px;
-  color: #7f8084;
-  font-size: 14px;
+    width: 320px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: -10px;
+    color: #7f8084;
+    font-size: 14px;
 }
 
 #users-posts-title {
-  padding: 9px 0 8px;
-  color: #fff;
-  letter-spacing: 0.8px;
-  font-family: proximanova-semibold;
-  font-size: 18px;
+    padding: 9px 0 8px;
+    color: #fff;
+    letter-spacing: 0.8px;
+    font-family: proximanova-semibold;
+    font-size: 18px;
 }
 
 #users-posts-content {
-  margin-top: 25px;
+    margin-top: 25px;
 }
 
 .user-post-display {
-  padding: 25px 25px 20px 25px;
-  background-color: #fff;
-  border-radius: 3px;
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05);
-  border-top: 3px solid #515e65;
-  border-bottom: 3px solid #515e65;
-  transition: all .3s ease;
+    padding: 25px 25px 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05);
+    border-top: 3px solid #515e65;
+    border-bottom: 3px solid #515e65;
+    transition: all 0.3s ease;
 }
 
 .user-post-display a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 .user-post-display:hover {
-  opacity: 0.95;
-  transform: translateY(-0.8px);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0.95;
+    transform: translateY(-0.8px);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
 }
 
 #post-date {
-  font-size: 13px;
-  color: #cecece;
-  letter-spacing: 0.3px;
+    font-size: 13px;
+    color: #cecece;
+    letter-spacing: 0.3px;
 }
-
 /*
 
 .split {

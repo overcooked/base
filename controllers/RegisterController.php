@@ -12,8 +12,8 @@ $user = new User();
 $user->logged_in_redirect();
 
 if (Input::exists() && Token::check(Input::get('token'))) {
-  $validate = new Validate();
-  $validation = $validate->check($_POST, array(
+    $validate = new Validate();
+    $validation = $validate->check($_POST, array(
     'user_first' => array(
       'field_name' => 'First name',
       'required' => true,
@@ -45,15 +45,14 @@ if (Input::exists() && Token::check(Input::get('token'))) {
     )
   ));
 
-  if($validation->passed()) {
-
-    $user = new User();
-    $salt = Hash::salt(32);
+    if ($validation->passed()) {
+        $user = new User();
+        $salt = Hash::salt(32);
 
     // Create a unique post ID.
     $user_id = uniqid('user_');
 
-    try {
+        try {
 
       // Try creating a new user.
       $user->create(array(
@@ -74,15 +73,13 @@ if (Input::exists() && Token::check(Input::get('token'))) {
         'user_id' => $user_id
       ));
 
-      Redirect::to('index.php');
-    } Catch(Exception $e) {
-      die($e->getMessage());
+            Redirect::to('index.php');
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    } else {
+        foreach ($validation->errors() as $error) {
+            echo $error . '<br>';
+        }
     }
-  } else {
-    foreach($validation->errors() as $error) {
-      echo $error . '<br>';
-    }
-  }
 }
-
-?>

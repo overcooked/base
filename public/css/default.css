@@ -10,7 +10,7 @@
  * @author Team point.
  */
 /* ========== ========== ========== ========== */
-/** Primary Colours. TODO: Temporary color, don't freak out pls. */
+/** Primary Colours. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
 /**
@@ -78,7 +78,7 @@ textarea {
 
 /* Change the white to any color ;) */
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #f5f5f5 inset !important; }
+  -webkit-box-shadow: 0 0 0 1000px #f5f5f5 inset !important; }
 
 body {
   background: #fff;

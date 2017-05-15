@@ -5,7 +5,6 @@
 /** Import The Global Variables. */
 @import 'variables';
 /* ========== ========== ========== ========== */
-
 body,
 html {
     width: 100%;
@@ -142,12 +141,12 @@ html {
 }
 
 .dont-have-account-link {
-  color: #b5b8c1;
-  font-size: 13px;
+    color: #b5b8c1;
+    font-size: 13px;
 }
 
 .dont-have-account-link a {
-  color: #9bd098;
+    color: #9bd098;
 }
 
 #password-forgot {

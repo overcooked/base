@@ -1,3 +1,9 @@
+/**
+ * Script to show/hide bio text.
+ * @author Team Point.
+ * TODO: Remove this in future versions, will not be used.
+ */
+
 $(".show-more a").each(function() {
     var $link = $(this);
     var $content = $link.parent().prev("div.text-content");

@@ -8,7 +8,7 @@
  * @author Team point.
  */
 /* ========== ========== ========== ========== */
-/** Primary Colours. TODO: Temporary color, don't freak out pls. */
+/** Primary Colours. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
 body {
@@ -19,8 +19,7 @@ body {
   width: auto;
   border-radius: 100px;
   display: block;
-  margin: auto;
-  margin-bottom: 13px;
+  margin: auto auto 13px;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1); }
 
 .profile-top {
@@ -29,7 +28,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url(/public/assets/images/food-background.svg) no-repeat center center scroll;
+  background: url("/public/assets/images/food-background.svg") no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -72,13 +71,13 @@ body {
   margin-top: 25px; }
 
 .user-post-display {
-  padding: 25px 25px 20px 25px;
+  padding: 25px 25px 20px;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05);
   border-top: 3px solid #515e65;
   border-bottom: 3px solid #515e65;
-  transition: all .3s ease; }
+  transition: all 0.3s ease; }
 
 .user-post-display a {
   color: inherit;

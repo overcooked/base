@@ -18,12 +18,11 @@ $user = new User();
 $user->not_logged_in_redirect();
 
 // Check if input exists, and the form token is valid.
-if(Input::exists() && Token::check(Input::get('token'))) {
+if (Input::exists() && Token::check(Input::get('token'))) {
+    $validate = new Validate();
 
-  $validate = new Validate();
-
-  if(isset($_POST['user_email']) && $_POST['user_email'] !== $user->data()->user_email) {
-    $validation = $validate->check($_POST, array(
+    if (isset($_POST['user_email']) && $_POST['user_email'] !== $user->data()->user_email) {
+        $validation = $validate->check($_POST, array(
       'user_first' => array(
         'field_name' => 'First name',
         'max' => 50,
@@ -45,8 +44,8 @@ if(Input::exists() && Token::check(Input::get('token'))) {
         'max' => 500
       )
     ));
-  } else {
-    $validation = $validate->check($_POST, array(
+    } else {
+        $validation = $validate->check($_POST, array(
       'user_first' => array(
         'field_name' => 'First name',
         'max' => 50,
@@ -62,54 +61,50 @@ if(Input::exists() && Token::check(Input::get('token'))) {
         'max' => 500
       )
     ));
-  }
+    }
 
   // If validation passed.
-  if($validation->passed()) {
+  if ($validation->passed()) {
+      $user = new User();
 
-    $user = new User();
-
-    try {
-
-      if(isset($_POST['user_first']) || isset($_POST['user_last'])) {
-        $user->update('users', array(
+      try {
+          if (isset($_POST['user_first']) || isset($_POST['user_last'])) {
+              $user->update('users', array(
           'user_first' => Input::get('user_first'),
           'user_last' => Input::get('user_last')
         ));
-      }
+          }
 
       // Update the users email.
-      if(isset($_POST['user_email']) && $user->data()->user_email !== Input::get('user_email')) {
-        $user->update('users', array(
+      if (isset($_POST['user_email']) && $user->data()->user_email !== Input::get('user_email')) {
+          $user->update('users', array(
           'user_email' => Input::get('user_email')
         ));
       }
 
       // Update the users location in vancouver.
-      if(isset($_POST['user_location'])) {
-        $user->update('users', array(
+      if (isset($_POST['user_location'])) {
+          $user->update('users', array(
           'user_location' => Input::get('user_location')
         ));
       }
 
       // Update the profile description for the user.
-      if(isset($_POST['profile_description'])) {
-        $user->update('users_profile', array(
+      if (isset($_POST['profile_description'])) {
+          $user->update('users_profile', array(
           'profile_description' => Input::get('profile_description')
         ));
       }
-
-    } catch(Exception $e) {
-      die($e->getMessage());
-    }
+      } catch (Exception $e) {
+          die($e->getMessage());
+      }
 
     // Redirect to page and inform that information was updated.
     Session::flash('updated', 'Your information has been updated.');
-    Redirect::to('update.php');
+      Redirect::to('update.php');
   } else {
-    // Errors with validation, redirect to other page.
+      // Errors with validation, redirect to other page.
     Session::flash('validation_errors', $validation->errors());
-    Redirect::to('update.php');
+      Redirect::to('update.php');
   }
 }
-?>

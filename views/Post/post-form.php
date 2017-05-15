@@ -175,6 +175,10 @@ if (Session::exists('image_error')) {
               <input type="hidden" name="token" value="<?php echo escape(Token::generate()); ?>">
               <button type="submit" value="upload" id="post-btn" class="btn btn-primary">Create Listing</button>
             </div>
+            <p class="disclaimer text-center">
+              By posting, you agree to our
+              <a href="/tos.php">Terms and Services</a>
+            </p>
         </form>
 
       </div>

@@ -1,0 +1,65 @@
+/**
+ * The styling for the listings page.
+ * @author Team point.
+ */
+/** Import The Global Variables. */
+/**
+ * Global scss variables.
+ * @author Team point.
+ */
+/* ========== ========== ========== ========== */
+/** Primary Colours. */
+/** Typography Styling. */
+/* ========== ========== ========== ========== */
+body {
+  background: #f2f5f7; }
+
+/* Top Image. */
+#listing-image img {
+  height: 200px;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease; }
+
+#listing-image img:hover {
+  cursor: pointer !important;
+  cursor: hand !important;
+  opacity: 0.9; }
+
+/* Main Posting Information Wrapper */
+.main {
+  margin-top: 0;
+  padding-top: 15px;
+  background-color: #fff; }
+
+/* Posts Wrapper */
+#post-information {
+  padding-left: 8px;
+  padding-right: 8px; }
+
+/* Title Wrapper */
+#listing-title {
+  margin-top: 13px; }
+
+/* Title */
+#listing-title h3 {
+  font-family: proximanova-semibold, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.4px; }
+
+/* Posted By Wrapper */
+#listing-poster-info {
+  margin-top: 15px; }
+
+#listing-poster-info #profile-img {
+  height: 55px;
+  border-radius: 100px; }
+
+#listing-poster-info #posted-by {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  left: 10px; }
+
+/*# sourceMappingURL=listing.css.map */

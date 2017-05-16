@@ -3,17 +3,23 @@
  * The listing page displays information
  * about a specific post given a post id.
  * @author Team Point.
- * @version 1.0
+ * @version 2.0
  */
 
 /** User to check logged in and get user data. */
 $user = new User();
 
-// Error message if posting doesn't exist.
-$not_found = 'Post does not exist!';
+/* The posters information. */
+$poster = null;
 
-// Boolean for if post exists or not.
-$post_exists = false;
+// Variable for the profile image URL.
+$profile = null;
+
+// Image variable.
+$image = null;
+
+// Get the link to a users profile.
+$user_profile_url = null;
 
 // Checks if post exists, all numbers/letters, and is 13 characters long.
 if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) == 13) {
@@ -26,9 +32,37 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
   // If the post exists.
   if ($posting->count()) {
-      $post_exists = true;
-      $post = $posting->first();
+    $post = $posting->first();
+
+    // Get the image for the post.
+    $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
+
+    // Save into a variable.
+    $image = $post_image->first();
+
+    // Get the profile image for the user.
+    $user_profile = DB::getInstance()->get('users_profile', array('user_id', '=', $post->user_id));
+
+    // Save image URL into a variable.
+    $profile = $user_profile->first();
+
+    if($profile->profile_image_url !== '') {
+      $profile = $profile->profile_image_url;
+    } else {
+      $profile = 'https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg';
+    }
+
+    // Get the user that the post belongs to.
+    $poster = DB::getInstance()->get('users', array('user_id', '=', $post->user_id));
+    $poster = $poster->first();
+
+    // Get the link to a users profile.
+    $user_profile_url = '/profile.php?user=' . substr($poster->user_id, 5);
   }
+
+} else {
+  // No posting found, redirect.
+  Redirect::to('404.php');
 }
 
 ?>
@@ -44,20 +78,8 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
 
-    <style media="screen">
-
-    body {
-      background: #f9f8f7;
-    }
-    .main .container {
-      border-radius: 3px;
-      padding-left: 25px;
-      padding-right: 25px;
-      background: #fff;
-      padding-top: 25px;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    }
-    </style>
+    <!-- Styling Sheets. -->
+    <link rel="stylesheet" href="/public/css/listing/listing.css">
 
   </head>
   <body>
@@ -65,39 +87,40 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     <!-- Header Section -->
     <?php View::header_logged_in(); ?>
 
-    <!-- Main Content -->
+    <!-- Listing Image Section -->
+    <section id="listing-image-header">
+
+      <!-- The postings image -->
+      <div id="listing-image">
+        <img src="<?php echo $image->post_image_url ?>">
+      </div>
+
+    </section>
+
+    <!-- Main Posting Content -->
     <section class="main">
       <div class="container">
 
         <!-- Posting Information -->
         <div class="col-md-10 col-md-offset-1">
 
-          <p class='text-center'>
-            <a href='index.php' class='btn btn-primary' style='font-family: proximanova-bold, Helvetica, Arial, sans-serif; margin-top: -7px; padding: 8px 14px 7px; background-color: #fa7600; color: #fff; font-size: 13px; border: none; border-radius: 3px; text-transform: uppercase; letter-spacing: 1px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;' role='button'>RETURN</a>
-          </p>
-
-          <hr>
-
           <?php
 
-            if ($post_exists) {
-                // Get the image for the post.
-              $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
-                $image = '';
-
-              // Save into a variable.
-              if ($post_image->count()) {
-                  $image = $post_image->first();
-              }
-
-                echo "
+              echo "
               <!-- Post Listing -->
               <div class='col-md-8 col-md-offset-2' id='post-information'>
 
-                <img class='img-responsive' src='{$image->post_image_url}' alt=''>
+                <div id='listing-title'>
+                  <h3>{$post->post_title}</h3>
+                </div>
 
-                <br>
-                <h3>{$post->post_title}</h3>
+                <div id='listing-poster-info'>
+                  <img src='{$profile}' id='profile-img' alt='Profile Image'/>
+                  <p id='posted-by'>Posted By
+                  <a href='{$user_profile_url}'>{$poster->user_first} {$poster->user_last}</a>
+                  </p>
+                </div>
+
                 <hr>
 
                 <p>{$post->post_description}</p>
@@ -123,7 +146,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
               </div>
               ";
-            }
+
           ?>
         </div>
 

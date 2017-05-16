@@ -7,7 +7,6 @@ $(document).ready(function() {
 
             var msnry = new Masonry('.grid', {
                 transitionDuration: '0'
-
             });
 
             // g - global match

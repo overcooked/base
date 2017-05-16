@@ -18,7 +18,7 @@ if ($user_description->count()) {
   <head>
 
     <!-- General. -->
-    <title>Update Profile | Overcooked.ca</title>
+    <title>Edit Profile | Overcooked.ca</title>
     <meta name="description" content="Overcooked lets you give your extra food to people who really need it.">
 
     <!-- Boiler Plate Tags. -->
@@ -42,7 +42,7 @@ if ($user_description->count()) {
           <div class="col-sm-6 col-sm-offset-3" id="update-form-header">
             <h3 class="center" id="update-page-title">
               <span class="ss-icon" style="position: relative; top: 3px; right: 1px;">user</span>
-              Update Your Profile
+              Edit Your Profile
             </h3>
           </div>
         </div>
@@ -123,7 +123,7 @@ if ($user_description->count()) {
               <div class="form-group">
                 <label for="user_location">Vancouver Location:</label>
                 <select class="form-control" name="user_location" id="user_location">
-                  <option <?php if($location === null) { echo 'selected'; } ?> disabled>Choose Location</option>
+                  <option <?php if($location === 'Vancouver') { echo 'selected'; } ?> disabled>Choose Location</option>
                   <option <?php if($location === 'Downtown Vancouver') { echo 'selected'; } ?> value="Downtown Vancouver">Downtown Vancouver</option>
                   <option <?php if($location === 'East Side') { echo 'selected'; } ?> value="East Side">East Side</option>
                   <option <?php if($location === 'Burnaby') { echo 'selected'; } ?> value="Burnaby">Burnaby</option>

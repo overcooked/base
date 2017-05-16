@@ -36,8 +36,14 @@ body {
 
 /* Posts Wrapper */
 #post-information {
-  padding-left: 8px;
-  padding-right: 8px; }
+  padding-left: 5px;
+  padding-right: 5px; }
+
+/* Posts Wrapper */
+#post-information .form-divider {
+  margin-top: 18px;
+  margin-left: 0;
+  width: 100%; }
 
 /* Title Wrapper */
 #listing-title {
@@ -45,12 +51,14 @@ body {
 
 /* Title */
 #listing-title h3 {
-  font-family: proximanova-semibold, Helvetica, Arial, sans-serif;
-  letter-spacing: 0.4px; }
+  font-family: proximanova-bold, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-size: 26px; }
 
 /* Posted By Wrapper */
 #listing-poster-info {
-  margin-top: 15px; }
+  margin-top: 13px; }
 
 #listing-poster-info #profile-img {
   height: 55px;
@@ -59,7 +67,15 @@ body {
 #listing-poster-info #posted-by {
   display: inline-block;
   position: relative;
-  top: 3px;
-  left: 10px; }
+  top: 14px;
+  left: 10px;
+  font-size: 0.9em; }
+
+/* Where Poster Lives Details. */
+#listing-poster-info #posted-by small {
+  color: #cacbcc;
+  font-family: proximanova-light, Helvetica, Arial, sans-serif;
+  position: relative;
+  bottom: 1px; }
 
 /*# sourceMappingURL=listing.css.map */

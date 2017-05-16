@@ -21,6 +21,9 @@ $image = null;
 // Get the link to a users profile.
 $user_profile_url = null;
 
+// Variable to store the psters location.
+$posters_location = null;
+
 // Checks if post exists, all numbers/letters, and is 13 characters long.
 if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) == 13) {
 
@@ -114,14 +117,18 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                   <h3>{$post->post_title}</h3>
                 </div>
 
+                <div class='form-divider'></div>
+
                 <div id='listing-poster-info'>
                   <img src='{$profile}' id='profile-img' alt='Profile Image'/>
-                  <p id='posted-by'>Posted By
-                  <a href='{$user_profile_url}'>{$poster->user_first} {$poster->user_last}</a>
+                  <p id='posted-by'>
+                  Posted By
+                  <a href='{$user_profile_url}'>{$poster->user_first} {$poster->user_last}</a><br>
+                  <small>Lives In {$poster->user_location}</small>
                   </p>
                 </div>
 
-                <hr>
+                <div class='form-divider'></div>
 
                 <p>{$post->post_description}</p>
                 <hr>

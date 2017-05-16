@@ -161,7 +161,7 @@ body {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
   .grid-item {
-    width: 25vw;
+    width: 24vw;
     margin-left: 15px;
     margin-right: 15px; } }
 /* Justins CSS */

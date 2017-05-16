@@ -68,5 +68,9 @@
       </div>
        </div>
     </section>
+
+    <!-- Footer Section -->
+    <?php View::footer(); ?>
+    
   </body>
 </html>

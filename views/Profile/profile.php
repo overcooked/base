@@ -36,13 +36,12 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
       $user_profile = DB::getInstance()->get('users_profile', array('user_id', '=', $user->user_id));
 
       // Save image URL into a variable.
-      if($user_profile->count()) {
+      if ($user_profile->count()) {
           $profile = $user_profile->first();
       }
   }
-
 } else {
-  Redirect::to('404.php');
+    Redirect::to('404.php');
 }
 
 ?>
@@ -79,14 +78,14 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
 
           <!-- Profile Image -->
           <?php
-          if($profile->profile_image_url !== '') {
-            echo "
+          if ($profile->profile_image_url !== '') {
+              echo "
             <div id='user-profile-image'>
               <img src='{$profile->profile_image_url}' alt='Profile Image'>
             </div>
             ";
           } else {
-            echo "
+              echo "
             <div id='user-profile-image'>
               <img src='{$default_image}' alt='Profile Image'>
             </div>
@@ -101,8 +100,8 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
 
           <!-- Users Location -->
           <?php
-          if($user->user_location !== '') {
-            echo "
+          if ($user->user_location !== '') {
+              echo "
             <div id='user-location'>
               <p>{$user->user_location}</p>
             </div>
@@ -114,8 +113,8 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
 
           <!-- Profile Description -->
           <?php
-          if($profile->profile_description !== '') {
-            echo "
+          if ($profile->profile_description !== '') {
+              echo "
             <div id='profile-description'>
               <p>{$profile->profile_description}</p>
             </div>
@@ -153,12 +152,12 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
               // $post->post_description;
               // Convert the date.
               $post_date = strtotime($post->post_date);
-              $post_date = date('Y-m-d', $post_date);
+                $post_date = date('Y-m-d', $post_date);
 
               // Get the ID for the posting.
               $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
 
-              echo "
+                echo "
               <!-- User Post -->
               <div class='row' style='margin-bottom: 20px;'>
                 <div class='col-md-8 col-md-offset-2'>
@@ -174,10 +173,9 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
                 </div>
               </div>
               ";
-
             }
         } else {
-          echo "
+            echo "
           <!-- User Post -->
           <div class='row'>
             <div class='col-md-12 text-center'>
@@ -193,7 +191,10 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
       </div>
     </section>
 
-    <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
+    <!-- Footer Section -->
+    <?php View::footer(); ?>
+
+    <?php require_once(getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 
   </body>
 </html>

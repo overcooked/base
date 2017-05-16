@@ -55,6 +55,7 @@ $user = new User();
                   <span class="ss-icon" id="update-success-icon">check</span> <?php echo Session::flash('changed'); ?>
                 </div>
             <?php
+
             }
 
             if (Session::exists('validation_errors')) {
@@ -105,7 +106,10 @@ $user = new User();
       </div>
     </section>
 
-    <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
+    <!-- Footer Section -->
+    <?php View::footer(); ?>
+
+    <?php require_once(getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 
   </body>
 </html>

@@ -107,7 +107,7 @@
 
 
     <!-- Footer Section -->
-    <!-- <?php View::footer(); ?> -->
+    <?php View::footer(); ?>
 
   </body>
 </html>

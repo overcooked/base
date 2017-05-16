@@ -155,9 +155,9 @@ $user = new User();
 
                 </div>
             </section>
-        
+
         <div id="underground-background" style="position: absolute; left: 0; width: 100%; height: 100px; background-image: url(../../public/assets/images/UnderGrounder.png)"></div>
-        
+
             <!-- Lander section three -->
             <section id="lander-section-four" style="margin-top: 70px; padding-top: 10px; color: ; background-color: #50ba4a;">
                 <div class="container-fluid">
@@ -230,6 +230,9 @@ $user = new User();
                     </div>
                 </div>
             </section>
+
+            <!-- Footer Section -->
+            <?php View::footer(); ?>
 
     </body>
 

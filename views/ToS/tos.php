@@ -101,5 +101,9 @@ loss, and expense (e.g. legal fees) arising from claims related to your Overcook
          <br><br>
       </div>
     </section>
+
+    <!-- Footer Section -->
+    <?php View::footer(); ?>
+
   </body>
 </html>

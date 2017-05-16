@@ -92,7 +92,7 @@ class Validate
           }
 
           // Checks if a field is all alphabet characters.
-          if ($rule === 'alpha' && ctype_alpha($value)) {
+          if ($rule === 'alpha' && !ctype_alpha($value)) {
               $this->add_error("Must be only alphabet characters");
           }
 

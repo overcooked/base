@@ -5,9 +5,7 @@
  */
 
 /** REQUIRED Import For App Initialization. */
-require_once (getcwd() . "/core/init.php");
+require_once(getcwd() . "/core/init.php");
 
 /** Load the pages view. */
-View::load('Tos');
-
-?>
+View::load('ToS');

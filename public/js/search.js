@@ -5,12 +5,10 @@ $(document).ready(function() {
         if ($('#search-2').val() != lastentry) {
             lastentry = $('#search-2').val()
 
-            var msnry = new Masonry('.grid', {});
+            var msnry = new Masonry('.grid', {
+                transitionDuration: '0'
 
-            setInterval(function() {
-                msnry.layout();
-                console.log("run masonry");
-            }, 1000);
+            });
 
             // g - global match
             // i - case insensitive
@@ -28,4 +26,4 @@ $(document).ready(function() {
             });
         }
     });
-});
+});;

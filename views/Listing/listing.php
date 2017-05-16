@@ -130,5 +130,8 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
       </div>
     </section>
 
+    <!-- Footer Section -->
+    <?php View::footer(); ?>
+
   </body>
 </html>

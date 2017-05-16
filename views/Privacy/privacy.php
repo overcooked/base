@@ -85,11 +85,15 @@
          </ol>
          <br>
          <p><span class="legal-bold">International Users</span> - By accessing Overcooked© or providing us data, you agree we may use and disclose data we collect as described here or as communicated to you, transmit it outside your resident authority, and store it on servers in Canada. For more information please contact our privacy officer at privacy@overcooked.ca.</p>
-
+<br><br>
 
          <hr>
 
       </div>
     </section>
+
+    <!-- Footer Section -->
+    <?php View::footer(); ?>
+
   </body>
 </html>

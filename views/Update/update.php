@@ -9,7 +9,7 @@ $user_description = DB::getInstance()->get('users_profile', array('user_id', '='
 $description = '';
 
 if ($user_description->count()) {
-  $description = $user_description->first()->profile_description;
+    $description = $user_description->first()->profile_description;
 }
 ?>
 
@@ -123,16 +123,36 @@ if ($user_description->count()) {
               <div class="form-group">
                 <label for="user_location">Vancouver Location:</label>
                 <select class="form-control" name="user_location" id="user_location">
-                  <option <?php if($location === null) { echo 'selected'; } ?> disabled>Choose Location</option>
-                  <option <?php if($location === 'Downtown Vancouver') { echo 'selected'; } ?> value="Downtown Vancouver">Downtown Vancouver</option>
-                  <option <?php if($location === 'East Side') { echo 'selected'; } ?> value="East Side">East Side</option>
-                  <option <?php if($location === 'Burnaby') { echo 'selected'; } ?> value="Burnaby">Burnaby</option>
-                  <option <?php if($location === 'New Westminster') { echo 'selected'; } ?> value="New Westminster">New Westminster</option>
-                  <option <?php if($location === 'Richmond') { echo 'selected'; } ?> value="Richmond">Richmond</option>
-                  <option <?php if($location === 'North Shore') { echo 'selected'; } ?> value="North Shore">North Shore</option>
-                  <option <?php if($location === 'Tri-Cities') { echo 'selected'; } ?> value="Tri-Cities">Tri-Cities</option>
-                  <option <?php if($location === 'Delta') { echo 'selected'; } ?> value="Delta">Delta</option>
-                  <option <?php if($location === 'Surrey') { echo 'selected'; } ?> value="Surrey">Surrey</option>
+                  <option <?php if ($location === null) {
+                  echo 'selected';
+              } ?> disabled>Choose Location</option>
+                  <option <?php if ($location === 'Downtown Vancouver') {
+                  echo 'selected';
+              } ?> value="Downtown Vancouver">Downtown Vancouver</option>
+                  <option <?php if ($location === 'East Side') {
+                  echo 'selected';
+              } ?> value="East Side">East Side</option>
+                  <option <?php if ($location === 'Burnaby') {
+                  echo 'selected';
+              } ?> value="Burnaby">Burnaby</option>
+                  <option <?php if ($location === 'New Westminster') {
+                  echo 'selected';
+              } ?> value="New Westminster">New Westminster</option>
+                  <option <?php if ($location === 'Richmond') {
+                  echo 'selected';
+              } ?> value="Richmond">Richmond</option>
+                  <option <?php if ($location === 'North Shore') {
+                  echo 'selected';
+              } ?> value="North Shore">North Shore</option>
+                  <option <?php if ($location === 'Tri-Cities') {
+                  echo 'selected';
+              } ?> value="Tri-Cities">Tri-Cities</option>
+                  <option <?php if ($location === 'Delta') {
+                  echo 'selected';
+              } ?> value="Delta">Delta</option>
+                  <option <?php if ($location === 'Surrey') {
+                  echo 'selected';
+              } ?> value="Surrey">Surrey</option>
                 </select>
               </div>
 
@@ -148,7 +168,10 @@ if ($user_description->count()) {
       </div>
     </section>
 
-    <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
+    <!-- Footer Section -->
+    <?php View::footer(); ?>
+
+    <?php require_once(getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 
   </body>
 </html>

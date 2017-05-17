@@ -18,6 +18,9 @@ $user = new User();
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
 
+    <!-- Script Files -->
+    <script src="/public/js/register-validate.js" type="text/javascript"></script>
+
     <!-- Style Files. -->
     <link rel="stylesheet" href="/public/css/register/register.css">
 

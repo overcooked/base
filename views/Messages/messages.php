@@ -29,50 +29,74 @@ $user = new User();
 
     <!-- Messaging // Start -->
     <section class="main">
-      <div class="container message-area">
+      <div class="container" id="message-area">
 
-        <!-- Message Header Area -->
+        <!-- Update Form Header -->
         <div class="row">
-          <div class="col-sm-12">
-
-            <h3>Recent Messages</h3>
-
+          <div class="col-sm-10 col-sm-offset-1" id="message-area-header">
+            <h3 class="center" id="message-header-title">
+              Recent Messages
+            </h3>
           </div>
         </div>
 
-        <hr>
-
-        <!-- Recent Messages -->
+        <!-- Message Area Content and Input -->
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-10 col-sm-offset-1" id="message-area-content">
 
-          </div>
-        </div>
+            <!-- Update Form -->
+            <div class="row">
 
-        <hr>
+                <!-- Recent Conversations -->
+                <div class="col-sm-5" id="recent-conversation-area">
+                  <h1>Recent Messages</h1>
 
-        <!-- Message Form Area -->
-        <div class="row">
-          <div class="col-sm-12" id="message-form">
+                  <div class="recent-conversation">
 
-            <!-- Message Form -->
-            <form method="post">
+                    <!-- Profile Image -->
+                    <div id="profile-image-wrapper">
+                      <img id="profile-image" src="https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg">
+                    </div>
 
-              <!-- Message Send -->
-              <div class="input-group" id="message-input-group">
-                <textarea name="name" class="form-control" id="message-input" placeholder="Type a message..." rows="1"></textarea>
-                <input type="submit" class="btn btn-default" id="send-message-btn" name="submit" value="Send">
-              </div>
+                    <!-- Conversation Details -->
+                    <p id="conversation-details">
+                      <span id="fullname">Justin Leung</span><br>
+                      <span id="related-post">Unwanted Fruits/Deformed Can't Sell..</span>
+                    </p>
 
-              <!-- Submit Buttons -->
-              <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-            </form>
+                  </div>
+
+                </div>
+
+                <!-- Recent / Current Chats. -->
+                <div class="col-sm-7" id="current-chat">
+                  <h3>Current Chat</h3>
+                </div>
+
+            </div>
+
+            <!-- Footer/Input Form -->
+            <div class="row">
+
+                <!-- Bottom Navigation. -->
+                <div class="col-sm-4 hidden-xs" id="desktop-">
+                  <h3>Shortcut Icons</h3>
+                </div>
+
+                <!-- Input Form. -->
+                <div class="col-sm-8" id="current-chat">
+                  <h3>Input Form And Send Button.</h3>
+                </div>
+
+            </div>
+
           </div>
         </div>
 
       </div>
     </section>
 
+    <!-- Mobile Bottom Navigation. -->
     <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 
   </body>

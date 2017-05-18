@@ -11,20 +11,112 @@
 /** Primary Colours. */
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
-/* Make the message and send button inline. */
-#message-form .input-group {
-  display: inline-flex !important; }
+/******************************************************
+ * Main Styling/Resets
+ ******************************************************/
+/* Set background color */
+body {
+  background: #f2f5f7; }
 
-/* The send message button */
-#send-message-btn {
-  margin-left: 5px;
-  background-color: #50ba4a !important;
+/* Reset main margins */
+.main {
+  margin-top: 5px;
+  margin-bottom: 70px; }
+
+/******************************************************
+ * Main Message Area Styling
+ ******************************************************/
+/* Styling for the main message area. */
+#message-area-content {
+  background-color: #fff;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+/* Styling for the message area header */
+#message-area-header {
+  font-family: proximanova-semibold, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.9px;
+  background: -moz-linear-gradient(262deg, #343c40 0%, #171717 71%, #171717 100%);
+  /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #343c40), color-stop(71%, #171717), color-stop(100%, #171717));
+  /* safari4+,chrome */
+  background: -webkit-linear-gradient(262deg, #343c40 0%, #171717 71%, #171717 100%);
+  /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(262deg, #343c40 0%, #171717 71%, #171717 100%);
+  /* opera 11.10+ */
+  background: -ms-linear-gradient(262deg, #343c40 0%, #171717 71%, #171717 100%);
+  /* ie10+ */
+  background: linear-gradient(188deg, #343c40 0%, #171717 71%, #171717 100%);
+  /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343c40', endColorstr='#171717',GradientType=0 );
+  /* ie6-9 */
   color: #fff;
-  border-radius: 23px !important; }
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 23px;
+  padding: 14px 20px 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  text-align: center; }
 
-/* Round the message input */
-#message-input {
-  border-radius: 23px !important;
-  padding-left: 20px; }
+/******************************************************
+ * Recent Conversations
+ ******************************************************/
+/* Recent Conversation Header Area. */
+#recent-conversation-area {
+  padding: inherit;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); }
+
+/* Recent Conversation Area Element Styling. */
+#recent-conversation-area {
+  /* Section Title. */ }
+  #recent-conversation-area h1 {
+    color: #adadad;
+    font-size: 17px;
+    padding-top: 25px;
+    padding-bottom: 19px;
+    text-align: center;
+    letter-spacing: -0.2px;
+    -webkit-font-smoothing: antialiased; }
+
+/* The recent conversations on the sidebar desktop/mobile. */
+.recent-conversation {
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  display: inline-block;
+  padding: 16px 5px 10px 22px;
+  width: 100%; }
+
+/* Recent Conversation element styling. */
+.recent-conversation {
+  /* Wrapper For The Conversation Details */
+  /* Profile Image */
+  /* Users Conversation Name */
+  /* Last Sent Message */ }
+  .recent-conversation #conversation-details {
+    display: inherit; }
+  .recent-conversation #profile-image-wrapper {
+    display: inline-grid; }
+  .recent-conversation #profile-image {
+    width: 42px;
+    height: auto;
+    border-radius: 100px; }
+  .recent-conversation #fullname {
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    color: #626673;
+    position: relative;
+    bottom: 2px;
+    left: 5px; }
+  .recent-conversation #related-post {
+    font-size: 12px;
+    color: #abaeaf;
+    letter-spacing: 0.4px;
+    position: relative;
+    bottom: 7px;
+    left: 5px;
+    -webkit-font-smoothing: antialiased; }
 
 /*# sourceMappingURL=messages.css.map */

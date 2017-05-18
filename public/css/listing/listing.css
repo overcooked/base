@@ -54,11 +54,12 @@ body {
   font-family: proximanova-bold, Helvetica, Arial, sans-serif;
   letter-spacing: 0.5px;
   text-align: center;
-  font-size: 26px; }
+  font-size: 27px;
+  text-transform: capitalize; }
 
 /* Posted By Wrapper */
 #listing-poster-info {
-  margin-top: 13px; }
+  margin-top: 7px; }
 
 #listing-poster-info #profile-img {
   height: 55px;

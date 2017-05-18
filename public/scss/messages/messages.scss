@@ -1,0 +1,28 @@
+/**
+ * The styling for the messages page.
+ * @author Team point.
+ */
+
+/** Import The Global Variables. */
+
+@import 'variables';
+/* ========== ========== ========== ========== */
+
+/* Make the message and send button inline. */
+#message-form .input-group {
+  display: inline-flex !important;
+}
+
+/* The send message button */
+#send-message-btn {
+  margin-left: 5px;
+  background-color: #50ba4a !important;
+  color: #fff;
+  border-radius: 23px !important;
+}
+
+/* Round the message input */
+#message-input {
+  border-radius: 23px !important;
+  padding-left: 20px;
+}

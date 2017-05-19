@@ -20,7 +20,7 @@ body {
 
 /* Reset main margins */
 .main {
-  margin-top: 5px;
+  margin-top: 17px;
   margin-bottom: 70px; }
 
 /******************************************************
@@ -30,42 +30,26 @@ body {
 #message-area-content {
   background-color: #fff;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px; }
+  border-top: 8px solid #343c40;
+  border-radius: 4px; }
 
-/* Styling for the message area header */
-#message-area-header {
-  font-family: proximanova-semibold, Helvetica, Arial, sans-serif;
-  letter-spacing: 0.9px;
-  background: -moz-linear-gradient(262deg, #343c40 0%, #171717 71%, #171717 100%);
-  /* ff3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #343c40), color-stop(71%, #171717), color-stop(100%, #171717));
-  /* safari4+,chrome */
-  background: -webkit-linear-gradient(262deg, #343c40 0%, #171717 71%, #171717 100%);
-  /* safari5.1+,chrome10+ */
-  background: -o-linear-gradient(262deg, #343c40 0%, #171717 71%, #171717 100%);
-  /* opera 11.10+ */
-  background: -ms-linear-gradient(262deg, #343c40 0%, #171717 71%, #171717 100%);
-  /* ie10+ */
-  background: linear-gradient(188deg, #343c40 0%, #171717 71%, #171717 100%);
-  /* w3c */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343c40', endColorstr='#171717',GradientType=0 );
-  /* ie6-9 */
-  color: #fff;
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
-  margin-top: 23px;
-  padding: 14px 20px 10px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  text-align: center; }
+/* Main Content Area Row */
+#middle-section {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex; }
 
+@media only screen and (max-width: 768px) {
+  #middle-section {
+    display: block; } }
 /******************************************************
  * Recent Conversations
  ******************************************************/
 /* Recent Conversation Header Area. */
 #recent-conversation-area {
   padding: inherit;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); }
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  z-index: 100; }
 
 /* Recent Conversation Area Element Styling. */
 #recent-conversation-area {
@@ -92,7 +76,8 @@ body {
   /* Wrapper For The Conversation Details */
   /* Profile Image */
   /* Users Conversation Name */
-  /* Last Sent Message */ }
+  /* Post Tag Beside Related Post Name */
+  /* Post Name Attached To Convo */ }
   .recent-conversation #conversation-details {
     display: inherit; }
   .recent-conversation #profile-image-wrapper {
@@ -100,7 +85,8 @@ body {
   .recent-conversation #profile-image {
     width: 42px;
     height: auto;
-    border-radius: 100px; }
+    border-radius: 100px;
+    box-shadow: inset 0px 0px 37px rgba(0, 0, 0, 0.18); }
   .recent-conversation #fullname {
     font-size: 13px;
     letter-spacing: 0.7px;
@@ -108,15 +94,61 @@ body {
     -webkit-font-smoothing: antialiased;
     color: #626673;
     position: relative;
-    bottom: 2px;
-    left: 5px; }
-  .recent-conversation #related-post {
+    bottom: 3px;
+    left: 6px; }
+  .recent-conversation #post {
     font-size: 12px;
-    color: #abaeaf;
+    color: #dcdde0;
     letter-spacing: 0.4px;
     position: relative;
-    bottom: 7px;
+    bottom: 8px;
+    left: 6px;
+    -webkit-font-smoothing: antialiased; }
+  .recent-conversation #related-post-name {
+    font-size: 12px;
+    color: #a4a4a5;
+    letter-spacing: 0.4px;
+    position: relative;
+    bottom: 8px;
     left: 5px;
     -webkit-font-smoothing: antialiased; }
+
+/* Where The Current Conversations Messages Are Displayed */
+#messaging-area {
+  background: #fafafa;
+  padding: 22px 30px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 14px; }
+
+/* Fill Message Area Completely With Messages. */
+#messages {
+  height: 100%; }
+
+/* Styling For A Messages Elements. */
+.message {
+  margin-bottom: 10px;
+  /* Message From User Styling */
+  /* Triangle Icon Pointing To/From User Who Sent Message. */
+  /* The Text Of The Message. */ }
+  .message .from {
+    background: #e8eaf0;
+    border-radius: 4px;
+    padding-top: 7px;
+    padding-bottom: 7px; }
+  .message .from .ss-icon {
+    position: absolute;
+    margin-left: -12px;
+    display: inline-flex;
+    color: #e8eaf0;
+    -ms-transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(91deg);
+    font-size: 15px; }
+  .message .from .text {
+    display: inline-block;
+    color: #9098ad;
+    padding-left: 15px;
+    padding-right: 15px; }
 
 /*# sourceMappingURL=messages.css.map */

@@ -14,7 +14,7 @@
 
       <!-- Navigation Bar Logo -->
       <a class="navbar-brand" href="/index.php">
-        <img class="img-responsive" id="header-logo" src="/public/assets/images/overcooked-logo.svg" alt="Overcooked Logo">
+        <img class="img-responsive" id="header-logo" src="/public/assets/images/overcooked-logo-logged-out.svg" alt="Overcooked Logo">
       </a>
 
     </div>
@@ -23,13 +23,14 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
 
       <ul class="nav navbar-nav" id="logged-out-links">
-        <li><a class="move-link" href="#lander-section-four">About</a></li>
-        <li><a class="move-link" href="#lander-section-five">How It Works</a></li>
-        <li><a class="move-link" href="#lander-section-six">Contact</a></li>
+        <li><a class="move-link" href="#start-here">Start Here</a></li>
+        <li><a class="move-link" href="#about">About</a></li>
+        <li><a class="move-link" href="#partners">Partners</a></li>
+        <li><a class="move-link hidden-sm" href="#support">Contact Us</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/login.php" id="header-sign-in">Sign In</a></li>
+        <li><a href="/login.php" id="header-sign-in">Sign In <span class="ss-icon">navigateright</span></a></li>
         <li>
           <a href="register.php" class="btn btn-default navbar-btn" id="header-get-started">Get Started</a>
         </li>

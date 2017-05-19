@@ -52,16 +52,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-#logged-out-links {
-    padding-top: 2px;
-    margin-left: 3px;
-}
-
-#logged-out-links {
-    padding-top: 2px;
-    margin-left: 3px;
-}
-
 #header-post-btn {
     margin-top: 12px;
     color: #737373;
@@ -167,7 +157,7 @@
     box-shadow: 0 1px 5px rgba(0,0,0,0.05);
 }
 /** Navbar Link Styling. */
-.navbar-default .navbar-nav > li > a {
+#logged-in-links > li > a {
     color: $header-bar-link-color;
     font-size: 0.85em;
     text-transform: uppercase;

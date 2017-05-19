@@ -99,6 +99,20 @@ hr {
   padding-bottom: 20px; }
 
 .bottomtext {
-  margin-bottom: 200px; }
+  margin-bottom: 140px; }
+
+.bottom-btn {
+  margin-top: 12px;
+  color: #ffffff;
+  background-color: #FA8C4A;
+  font-size: 13px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  display: block;
+  margin: auto;
+  width: 170px; }
 
 /*# sourceMappingURL=what.css.map */

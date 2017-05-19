@@ -117,7 +117,10 @@
       </div>
     </div>
     <hr>
-    <h3 class="bottomtext"><span class="highlight">$31 BILLION</span> WORTH OF FOOD IS WASTED <span class="highlight">EACH YEAR</span> IN CANADA.</h3>
+    <h3><span class="highlight">$31 BILLION</span> WORTH OF FOOD IS WASTED <span class="highlight">EACH YEAR</span> IN CANADA.</h3>
+    <h3 style="margin-top:20px; margin-bottom: 20px;"><span class="highlight">YOU</span> CAN MAKE A <span class="highlight">DIFFERENCE</span></h3>
+    <a href="/" class="btn btn-default bottom-btn">GET STARTED</a>
+    <p class="bottomtext"></p>
     <body>
 
 

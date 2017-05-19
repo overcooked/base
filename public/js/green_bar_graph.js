@@ -27,7 +27,7 @@ canvas.selectAll('rect')
     })
     .attr("width", rectWidth - barPadding)
     .attr("fill", function(d) {
-        return "rgb(0, " + Math.floor(256 - d / d3.max(dataSet) * 100) + ", 0)";
+        return "rgb(250, " + Math.floor(230 - d / d3.max(dataSet) * 100) + ", 74)";
     });
 
 //Animate the chart

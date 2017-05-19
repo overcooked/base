@@ -74,6 +74,38 @@ $user = new User();
                     </p>
                   </div>
 
+                  <!-- Conversation -->
+                  <div class="recent-conversation">
+
+                    <!-- Profile Image -->
+                    <div id="profile-image-wrapper">
+                      <img id="profile-image" src="https://www.digitalocean.com/assets/media/employees/mike_jennings-a7c68dde.png">
+                    </div>
+
+                    <!-- Conversation Details -->
+                    <p id="conversation-details">
+                      <span id="fullname">Mike Jennings</span><br>
+                      <span id="post">Post:</span>
+                      <span id="related-post-name">Unwanted Fruits/Deformed Can't Sel...</span>
+                    </p>
+
+                  </div>
+
+                  <!-- Conversation -->
+                  <div class="recent-conversation">
+                    <!-- Profile Image -->
+                    <div id="profile-image-wrapper">
+                      <img id="profile-image" src="http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg">
+                    </div>
+
+                    <!-- Conversation Details -->
+                    <p id="conversation-details">
+                      <span id="fullname">Daniel Barney</span><br>
+                      <span id="post">Post:</span>
+                      <span id="related-post-name">Unwanted Fruits/Deformed Can't Sel...</span>
+                    </p>
+                  </div>
+
                 </div>
 
                 <!-- Recent / Current Chats. -->
@@ -82,29 +114,9 @@ $user = new User();
                   <!-- Message Display -->
                   <div id="messages">
 
-                    <!-- Message -->
-                    <div class="message">
-                      <div class="from message-size">
-                        <span class="ss-icon">dropdown</span>
-                        <p class="text">
-                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- Message -->
-                    <div class="message">
-                      <div class="from message-size">
-                        <span class="ss-icon">dropdown</span>
-                        <p class="text">Hey man!</p>
-                      </div>
-                    </div>
-
-                    <!-- Message -->
-                    <div class="message">
-                      <div class="to message-size">
-                        <span>Whats Up Bro!</span>
-                      </div>
+                    <!-- Starting Message -->
+                    <div id="start-of-conversation">
+                      <p>Start of Conversation</p>
                     </div>
 
                   </div>
@@ -136,7 +148,20 @@ $user = new User();
 
     <!-- To Size The Message Area -->
     <script type="text/javascript">
-      $(document).ready(function(){
+
+    $(document).ready(function(){
+      $("#messaging-area").css("height", $("#middle-section").height());
+      load_messages();
+    });
+
+      function load_messages() {
+        for (var i = 0; i < 30; i++) {
+          $("#messages").append('<!-- Message --> <div class="message"> <div class="from message-size"> <span class="ss-icon">dropdown</span> <p class="text"> This is a message. Now go fuck your own face. </p> </div> </div>');
+          $("#messages").append('<!-- Message --> <div class="message"> <div class="to message-size"> <span class="ss-icon">dropdown</span> <p class="text"> Well that was rude! </p> </div> </div>');
+        }
+      }
+
+      $(document).ready(function() {
         /* Corrects Message Sizing. */
         $('.message').each(function(index, obj){
           if($(this).children('.message-size').height() <= 20) {

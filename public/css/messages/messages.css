@@ -116,9 +116,8 @@ body {
 /* Where The Current Conversations Messages Are Displayed */
 #messaging-area {
   background: #fafafa;
-  padding: 22px 30px;
+  padding: 20px 30px;
   overflow-y: scroll;
-  overflow-x: hidden;
   font-size: 14px; }
 
 /* Fill Message Area Completely With Messages. */
@@ -127,9 +126,13 @@ body {
 
 /* Styling For A Messages Elements. */
 .message {
+  /* Spacing between sent messages. */
   margin-bottom: 10px;
   /* Message From User Styling */
-  /* Triangle Icon Pointing To/From User Who Sent Message. */
+  /* Triangle Icon Pointing From User Who Sent Message. */
+  /* The Text of The From Message. */
+  /* Message To User Styling */
+  /* Triangle Icon Pointing To User Who Sent Message. */
   /* The Text Of The Message. */ }
   .message .from {
     background: #e8eaf0;
@@ -150,5 +153,41 @@ body {
     color: #9098ad;
     padding-left: 15px;
     padding-right: 15px; }
+  .message .to {
+    margin-left: auto;
+    background: #4c5a61;
+    border-radius: 4px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 10px; }
+  .message .to .ss-icon {
+    position: absolute;
+    display: inline-flex;
+    color: #4c5a61;
+    right: 19px;
+    -ms-transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(-91deg);
+    font-size: 15px; }
+  .message .to .text {
+    display: inline-block;
+    color: #fefefe;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+/* Fix For When Using Mobile. */
+@media only screen and (max-width: 992px) {
+  .message .message-size {
+    width: 100% !important; } }
+/* Beginning Of Conversation Text. */
+#start-of-conversation p {
+  text-align: center;
+  font-size: 12.4px;
+  font-family: proximanova-light;
+  letter-spacing: 0.5px;
+  color: #d2d6dc;
+  border-bottom: 1px dashed #f2f2f2;
+  padding-bottom: 7px;
+  margin-bottom: 12px; }
 
 /*# sourceMappingURL=messages.css.map */

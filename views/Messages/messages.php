@@ -150,7 +150,10 @@ $user = new User();
     <script type="text/javascript">
 
     $(document).ready(function(){
-      $("#messaging-area").css("height", $("#middle-section").height());
+      if($("#middle-section").height() > 550) {
+        $("#messaging-area").css("height", $("#middle-section").height());
+      }
+
       load_messages();
     });
 

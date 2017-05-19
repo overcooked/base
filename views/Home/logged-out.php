@@ -22,15 +22,25 @@ $user = new User();
     <!-- Style Files -->
     <link rel="stylesheet" href="/public/css/home/home.css">
 
-    <!-- Script Files -->
-    <script src="/public/js/libraries/typing.js" type="text/javascript"></script>
-
 </head>
 <body>
 
     <!-- Header Section -->
     <?php View::header_logged_out(); ?>
 
+    <!-- Main Lander Title Section -->
+    <section id="title-section">
+      <div class="container">
+        <h1 class="font-light">
+            <span class="font-bold" id="typing-text">
+              <span id="home-type-text">Give </span>away
+            </span>
+            your extra food!
+        </h1>
+      </div>
+    </section>
+
+    <!-- Background Design -->
     <section class="globalContent">
       <header class="Header">
 
@@ -46,6 +56,13 @@ $user = new User();
         </div>
 
       </header>
+    </section>
+
+    <!-- Food Waste In Metro Vancouver. -->
+    <section id="title-section">
+      <div class="container">
+        <h1 class="text-center" style="color: #eee;">City Landscape</h1>
+      </div>
     </section>
 
 </body>

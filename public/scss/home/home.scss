@@ -33,7 +33,7 @@ body {
 .Header {
     margin: 0 auto;
     position: relative;
-    padding-top: 50px;
+    padding-top: 35px;
 }
 
 /* Remove from navbar. */
@@ -91,7 +91,7 @@ body {
 }
 
 .StripeBackground #stripe-3 {
-  bottom: -290px;
+  bottom: -228px;
   width: 30%;
   opacity: .40;
   left: 73%;
@@ -302,6 +302,24 @@ body {
     box-shadow: none;
 }
 
+/* Move navbar up when collapsing. */
+@media only screen and (max-width : 768px) {
+  .navbar-default {
+      margin-top: -11px;
+  }
+
+  #title-section {
+    top: 70px;
+  }
+}
+
+/* Make sure the navbar doesn't break, prematurely. */
+@media only screen and (max-width : 850px) {
+  #logged-out-links {
+      margin-left: -20px;
+  }
+}
+
 /* Links on the navbar. */
 .navbar-default .navbar-nav > li > a {
   color: #0a7261;
@@ -322,7 +340,6 @@ body {
 /* Center align the logged out links. */
 #logged-out-links {
     margin-top: 8px;
-    margin-left: 6px;
 }
 
 /* Resize logo. */
@@ -352,4 +369,36 @@ body {
   top: 1px;
   left: 2px;
   font-size: 12px;
+}
+
+/* Title Section. */
+#title-section {
+  position: relative;
+  z-index: 10;
+  top: 90px;
+
+  .container {
+    position: absolute;
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 42px;
+    color: #fff;
+  }
+
+  #typing-text {
+    color: #fff;
+  }
+
+}
+
+/* The arrow for the Start Here link. */
+#moving-arrow {
+  position: absolute;
+  bottom: -8px;
+  opacity: 0.24;
+  left: 47px;
+  font-size: 16px;
 }

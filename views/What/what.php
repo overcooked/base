@@ -22,9 +22,8 @@
     <link rel="stylesheet" href="/public/css/what/what.css">
 
     <!-- Script Files -->
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
 
-    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     <script src="/public/js/liquidFillGauge.js" language="JavaScript"></script>
 
 
@@ -118,7 +117,7 @@
     <body>
 
 
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="/public/js/pie_graph.js" type="text/javascript"></script>
     <script src="/public/js/orange_bar_graph.js" type="text/javascript"></script>
     <script src="/public/js/green_bar_graph.js" type="text/javascript"></script>

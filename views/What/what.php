@@ -45,6 +45,10 @@
 
     <!-- Main Content -->
     <section class="main">
+      <div class="hidden-lg hidden-md">
+        <p style="margin-top: 50px; text-align: center">This is a special easter egg page.<br>Sadly, your device is too small to view the detailed graphs and statistics on this page.<br>Please try again on a device with a larger screen.</p>
+      </div>
+      <div class="hidden-xs hidden-sm">
       <div class="row">
         <h3 class="top">FOOD THROWN AWAY <span class="highlight">EVERY DAY</span> IN METRO VANCOUVER</h3>
 
@@ -121,6 +125,7 @@
     <script src="/public/js/pie_graph.js" type="text/javascript"></script>
     <script src="/public/js/orange_bar_graph.js" type="text/javascript"></script>
     <script src="/public/js/green_bar_graph.js" type="text/javascript"></script>
+  </div>
     </section>
 
     <!-- Footer Section -->

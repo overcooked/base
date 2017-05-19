@@ -18,6 +18,9 @@ $user = new User();
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
 
+    <!-- Script Files -->
+    <script src="/public/js/register-validate.js" type="text/javascript"></script>
+
     <!-- Style Files. -->
     <link rel="stylesheet" href="/public/css/register/register.css">
 
@@ -74,20 +77,23 @@ $user = new User();
                   <input required="true" type="password" name="password_again" class="form-control" placeholder="Repeat Password" id="password_again">
                 </div>
 
-                <div class="divider"></div>
-
                 <!-- Submit Button -->
                 <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
                 <input type="submit" class="btn btn-submit" value="Register">
 
-                <div class="divider" style="margin-top: 15px; margin-bottom: 15px;"></div>
+
+
               </form>
 
-            <p class="dont-have-account-link text-center">
+            <p class="dont-have-account-link text-center" style="margin-top: 15px;">
               By registering, you agree to our
               <a target="_blank" href="/tos.php">Terms and Services</a>
             </p>
-
+                <div class="divider" style="margin-top: 15px;"></div>
+                <p class="dont-have-account-link text-center" style="margin-top: 15px; margin-bottom: 15px;">
+                  Already have an account?
+                  <a target="_blank" href="/login.php">Log In</a>
+                </p>
           </div>
 
           <!-- Form Error Display -->

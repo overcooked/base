@@ -12,7 +12,6 @@
 }
 
 .footer-area {
-    margin-top: 38px;
     padding-top: 35px;
     padding-bottom: 30px;
 }
@@ -31,4 +30,31 @@
     #footer {
         margin-bottom: 53px !important;
     }
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 4rem;
+    min-height: 100%;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
 }

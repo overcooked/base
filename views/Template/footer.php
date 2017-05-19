@@ -1,5 +1,6 @@
 <section id="footer">
   <footer>
+
     <div class="footer-area container">
 
         <div class="row">

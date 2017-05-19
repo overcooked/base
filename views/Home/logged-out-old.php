@@ -156,5 +156,84 @@ $user = new User();
                 </div>
             </section>
 
+        <div id="underground-background" style="position: absolute; left: 0; width: 100%; height: 100px; background-image: url(../../public/assets/images/UnderGrounder.png)"></div>
+
+            <!-- Lander section three -->
+            <section id="lander-section-four" style="margin-top: 70px; padding-top: 10px; color: ; background-color: #50ba4a;">
+                <div class="container-fluid">
+                    <div class="col-sm-12 text-center">
+                        <h1 id="about-header" style="top 40px;">About</h1>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lander section four -->
+            <section id="lander-section-five">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="col-sm-12 text-center">
+                            <h1>How it works</h1>
+                            <br><br><br><br><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br><br><br><br><br>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lander section five -->
+            <section id="lander-section-six">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="col-sm-12 text-center">
+                            <span>Section five</span>
+                            <div class="contact-area container">
+                                <h2>Contact Us</h2>
+                                <hr />
+                                <form name="contactform" method="post" action="#nothing">
+                                    <table width="450px">
+                                        <tr>
+                                            <td valign="top">
+                                                <input type="text" name="first_name" class="form-control" placeholder="First Name" maxlength="50" size="30">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top">
+                                                <input type="text" name="last_name" class="form-control" placeholder="Last Name" maxlength="50" size="30">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top">
+                                                <input type="text" name="email" class="form-control" placeholder="Email" maxlength="80" size="30">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top">
+                                                <input type="text" name="telephone" class="form-control" placeholder="Phone Number" maxlength="30" size="30">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top">
+                                                <textarea name="comments" class="form-control" placeholder="Message" maxlength="1000" cols="25" rows="6"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="text-align: left;">
+                                                <input type="submit" class="contact-submit btn btn-default" value="Submit">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <?php View::footer(); ?>
+
     </body>
+
     </html>

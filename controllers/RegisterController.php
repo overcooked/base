@@ -18,13 +18,17 @@ if (Input::exists() && Token::check(Input::get('token'))) {
       'field_name' => 'First name',
       'required' => true,
       'min' => 2,
-      'max' => 50
+      'max' => 50,
+      'alpha' => true,
+      'has_no_bad_words' => true
     ),
     'user_last' => array(
       'field_name' => 'Last name',
       'required' => true,
       'min' => 2,
-      'max' => 50
+      'max' => 50,
+      'alpha' => true,
+      'has_no_bad_words' => true
     ),
     'user_email' => array(
       'field_name' => 'Email',

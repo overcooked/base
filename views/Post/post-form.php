@@ -185,3 +185,6 @@ if (Session::exists('image_error')) {
     </div>
   </div>
 </section>
+
+<!-- Footer Section -->
+<?php View::footer(); ?>

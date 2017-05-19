@@ -2,11 +2,21 @@ $(document).ready(function() {
     var lastentry = "";
 
     $('#search-2').keyup(function(event) {
+        if ($('#search-2').val().toLowerCase() == "food fall") {
+            window.location.replace("http://foodfall.ca/game.html");
+        }
+        if ($('#search-2').val().toLowerCase() == "what is food waste") {
+            window.location.replace("/what.php");
+        }
         if ($('#search-2').val() != lastentry) {
             lastentry = $('#search-2').val()
 
             var msnry = new Masonry('.grid', {
                 transitionDuration: '0'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a999c5fe63450006081ad91c305ea96383c7045
             });
 
             // g - global match

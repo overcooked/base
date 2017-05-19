@@ -1,0 +1,140 @@
+/**
+ * The styling for the hidden "What is food waste?" page.
+ * @author Team point.
+ */
+/** Import The Global Variables. */
+@import 'variables';
+/* ========== ========== ========== ========== */
+#pie-holder {
+    height: 550px;
+    width: 100vw;
+}
+
+#pie-holder svg {
+    width: 850px;
+    height: 700px;
+}
+
+#water svg {
+    height: 400px;
+    margin: auto auto 30px;
+}
+
+#water text {
+    font-size: 30px;
+}
+
+#pie-holder text {
+    font-size: 13px;
+}
+
+#bar-holder {
+    height: 340px;
+}
+
+svg {
+    display: block;
+    margin: auto;
+}
+
+path.slice {
+    stroke-width: 2px;
+}
+
+polyline {
+    opacity: 0.3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+
+.labelValue {
+    font-size: 60%;
+    opacity: 0.5;
+}
+
+.toolTip {
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
+}
+
+.highlight {
+    color: #FA8C4A;
+}
+
+h3 {
+    text-align: center;
+}
+
+.chart-container {}
+// top bar graph
+
+.chart rect {
+    fill: #FA8C4A;
+}
+
+.axis line,
+.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-size: 12px;
+}
+
+.chart .current {
+    fill: green;
+    cursor: pointer;
+}
+
+.liquidFillGaugeText {
+    font-weight: bold;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.top {
+    margin-top: 40px;
+}
+
+hr {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.subtitles {
+    //text-align: center;
+}
+
+.bottomtext {
+    margin-bottom: 140px;
+}
+
+.bottom-btn {
+    margin-top: 12px;
+    color: #ffffff;
+    background-color: #FA8C4A;
+    font-size: 13px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    display: block;
+    margin: auto;
+    width: 170px;
+}

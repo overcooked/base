@@ -37,16 +37,19 @@ if (Input::exists() && Token::check(Input::get('token'))) {
     'post_title' => array(
       'field_name' => 'Post title',
       'required' => true,
-      'max' => 50
+      'max' => 50,
+      'has_no_bad_words' => true
     ),
     'post_pickup_location' => array(
       'field_name' => 'Pickup location',
       'required' => true,
+      'has_no_bad_words' => true
     ),
     'post_description' => array(
       'field_name' => 'Description',
       'required' => true,
-      'max' => 1000
+      'max' => 1000,
+      'has_no_bad_words' => true
     ),
     'post_image' => array(
       'required' => true

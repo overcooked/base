@@ -38,7 +38,7 @@ $user = new User();
             <!-- Recent Convos and Open Convo -->
             <div class="row" id="middle-section">
 
-                <!-- Recent Conversations -->
+                <!-- Recently Talked To People -->
                 <div class="col-sm-5" id="recent-conversation-area">
                   <h1>Recent Messages</h1>
 
@@ -75,7 +75,7 @@ $user = new User();
                   </div>
 
                   <!-- Conversation -->
-                  <div class="recent-conversation">
+                  <div class="recent-conversation" id="active-chat">
 
                     <!-- Profile Image -->
                     <div id="profile-image-wrapper">
@@ -126,16 +126,16 @@ $user = new User();
             </div>
 
             <!-- Footer/Input Form -->
-            <div class="row" style="padding: 15px; text-align: center; color: #eee;">
-
-                <!-- Bottom Navigation. -->
-                <div class="col-sm-5 hidden-xs" id="desktop-">
-                  <h5>Shortcut Icons</h5>
-                </div>
+            <div class="row" id="create-message-area">
 
                 <!-- Input Form. -->
-                <div class="col-sm-7" id="current-chat">
-                  <h5>Input Form And Send Button.</h5>
+                <div class="col-sm-7 col-sm-offset-5" id="current-chat">
+                  <div class="col-sm-10">
+                    <input id="create-message-input" type="text" name="" value="" placeholder="type a message...">
+                  </div>
+                  <div class="col-sm-2" id="send-wrapper">
+                    <a href="" id="send-message-button">Send</a>
+                  </div>
                 </div>
 
             </div>
@@ -155,20 +155,27 @@ $user = new User();
     });
 
       function load_messages() {
-        for (var i = 0; i < 30; i++) {
+        for (var i = 0; i < 20; i++) {
           $("#messages").append('<!-- Message --> <div class="message"> <div class="from message-size"> <span class="ss-icon">dropdown</span> <p class="text"> This is a message. Now go fuck your own face. </p> </div> </div>');
           $("#messages").append('<!-- Message --> <div class="message"> <div class="to message-size"> <span class="ss-icon">dropdown</span> <p class="text"> Well that was rude! </p> </div> </div>');
         }
       }
 
       $(document).ready(function() {
+
         /* Corrects Message Sizing. */
         $('.message').each(function(index, obj){
           if($(this).children('.message-size').height() <= 20) {
             var message_width = $(this).children('.message-size').children('.text').width() + 30;
-            $(this).children('.message-size').css("width", message_width);
+            if(message_width < 300) {
+                $(this).children('.message-size').attr('style', 'width: ' + message_width + 'px !important');
+            } else {
+              $(this).children('.message-size').css("width", message_width);
+            }
           }
         });
+
+        $('#messaging-area').scrollTop($('#messaging-area')[0].scrollHeight);
       });
     </script>
 

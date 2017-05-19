@@ -17,6 +17,10 @@ body {
   background: #f2f5f7;
 }
 
+::-webkit-scrollbar {
+    display: block;
+}
+
 /* Reset main margins */
 .main {
     margin-top: 17px;
@@ -55,8 +59,8 @@ body {
 /* Recent Conversation Header Area. */
 #recent-conversation-area {
     padding: inherit;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-    z-index: 100;
+    box-shadow: 5px 1px 5px -5px rgba(0, 0, 0, 0.05);
+    z-index: 1;
 }
 
 /* Recent Conversation Area Element Styling. */
@@ -71,6 +75,18 @@ body {
     text-align: center;
     letter-spacing: -0.2px;
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* The Open Chat */
+  #active-chat {
+    border: none;
+    border-left: 2px solid #b7dcb5;
+    position: relative;
+    right: 0px;
+    top: 1px;
+    padding: 19px 10px 10px 22px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.14);
+    border-radius: 1px;
   }
 
 }
@@ -148,6 +164,20 @@ body {
   font-size: 14px;
 }
 
+#messaging-area::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.02);
+}
+
+#messaging-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+#messaging-area::-webkit-scrollbar-thumb {
+    background-color: #f9f9f9;
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,.05);
+}
+
 /* Fill Message Area Completely With Messages. */
 #messages {
   height: 100%;
@@ -157,7 +187,7 @@ body {
 .message {
 
   /* Spacing between sent messages. */
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 
   /* Message From User Styling */
   .from {
@@ -194,7 +224,7 @@ body {
     border-radius: 4px;
     padding-top: 7px;
     padding-bottom: 7px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   /* Triangle Icon Pointing To User Who Sent Message. */
@@ -236,4 +266,51 @@ body {
   border-bottom: 1px dashed #f2f2f2;
   padding-bottom: 7px;
   margin-bottom: 12px;
+}
+
+/* Current Chat Window Open. */
+#current-chat {
+  border-left: 1px solid #f7f7f7;
+  padding-left: 0;
+}
+
+#create-message-area {
+  height: 45px;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+#create-message-input {
+  outline: none !important;
+  color: #a9afb1;
+  background: #fff !important;
+  box-shadow: none !important;
+  padding-left: 8px;
+  width: 100%;
+  font-size: 13px;
+  font-family: proximanova-light;
+  letter-spacing: 0.6px;
+  height: 43px;
+  padding-top: 3px;
+}
+
+/* Wrapper For The Send Button */
+#send-wrapper {
+  text-align: center;
+  padding-top: 13px;
+}
+
+/* Send Button Design. */
+#send-message-button {
+  text-decoration: none;
+  font-size: 14.5px;
+  color: #50ba4a;
+  letter-spacing: 0.6px;
+  -webkit-transition: all 0.3s ease;
+}
+
+/* Send Button Design. */
+#send-message-button:hover {
+  color: #fff;
 }

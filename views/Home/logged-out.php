@@ -22,6 +22,9 @@ $user = new User();
     <!-- Style Files -->
     <link rel="stylesheet" href="/public/css/home/home.css">
 
+    <!-- Script Files -->
+    <script src="/public/js/libraries/typing.js" type="text/javascript"></script>
+
 </head>
 <body>
 
@@ -35,8 +38,13 @@ $user = new User();
             <span class="font-bold" id="typing-text">
               <span id="home-type-text">Give </span>away
             </span>
-            your extra food!
+            your extra food
         </h1>
+        <h2 id="title-message">While helping someone who could really use it</h2>
+
+        <div id="action-button-wrapper">
+          <a href="" id="title-action-button">Start Now</a>
+        </div>
       </div>
     </section>
 

@@ -55,7 +55,7 @@ body {
 .StripeBackground #header-background-gradient {
     height: 3000px;
     background: linear-gradient(90deg,#5bd486,#b3e895);
-    bottom: -325px;
+    bottom: -310px;
 }
 
 /* Stripe Styling */
@@ -302,24 +302,6 @@ body {
     box-shadow: none;
 }
 
-/* Move navbar up when collapsing. */
-@media only screen and (max-width : 768px) {
-  .navbar-default {
-      margin-top: -11px;
-  }
-
-  #title-section {
-    top: 70px;
-  }
-}
-
-/* Make sure the navbar doesn't break, prematurely. */
-@media only screen and (max-width : 850px) {
-  #logged-out-links {
-      margin-left: -20px;
-  }
-}
-
 /* Links on the navbar. */
 .navbar-default .navbar-nav > li > a {
   color: #0a7261;
@@ -335,6 +317,22 @@ body {
   color: #0a7261;
   opacity: 0.8;
   transform: translateY(-0.35px);
+}
+
+/* Sidebar Button When Navbar is collapsed. */
+.navbar-default .navbar-toggle .icon-bar {
+    background: #0a8b75;
+    -webkit-transition: all 1.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggle {
+  padding-top: 25px;
+  padding-right: 28px;
+  padding-left: 10px;
+  padding-bottom: 40px;
+  margin: 0;
 }
 
 /* Center align the logged out links. */
@@ -375,7 +373,7 @@ body {
 #title-section {
   position: relative;
   z-index: 10;
-  top: 90px;
+  top: 111px;
 
   .container {
     position: absolute;
@@ -401,4 +399,74 @@ body {
   opacity: 0.24;
   left: 47px;
   font-size: 16px;
+}
+
+/* The message under the title. */
+#title-message {
+  text-align: center;
+  padding-top: 9px;
+  opacity: 0.90;
+  font-size: 28px;
+  letter-spacing: 0.4px;
+}
+
+#title-action-button {
+  color: #0a806c;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  background-color: #fff;
+  padding: 12px 33px 11px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#action-button-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Move navbar up when collapsing. */
+@media only screen and (max-width : 768px) {
+  .navbar-default {
+      margin-top: -7px;
+  }
+
+  #title-message {
+    font-size: 25px;
+  }
+
+  #title-section h1 {
+    font-size: 38px;
+  }
+}
+
+/* Make sure the navbar doesn't break, prematurely. */
+@media only screen and (max-width : 850px) {
+  #logged-out-links {
+      margin-left: -20px;
+  }
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  #title-section h1 {
+    line-height: 36px;
+    padding-bottom: 5px;
+  }
+
+  #title-section {
+    top: 68px;
+  }
+
+  #typing-text {
+    display: block;
+  }
+
+  #title-message {
+    font-size: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }

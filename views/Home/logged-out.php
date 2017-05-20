@@ -31,27 +31,11 @@ $user = new User();
     <!-- Header Section -->
     <?php View::header_logged_out(); ?>
 
-    <!-- Main Lander Title Section -->
-    <section id="title-section">
-      <div class="container">
-        <h1 class="font-light">
-            <span class="font-bold" id="typing-text">
-              <span id="home-type-text">Give </span>away
-            </span>
-            your extra food
-        </h1>
-        <h2 id="title-message">While helping someone who could really use it</h2>
-
-        <div id="action-button-wrapper">
-          <a href="" id="title-action-button">Start Now</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Background Design -->
-    <section class="globalContent">
-      <header class="Header">
+    <section class="main-content">
 
+      <!-- Header Green Stripes. -->
+      <header class="Header">
         <div class="StripeBackground">
           <div class="stripe" id="header-background-gradient"></div>
           <div class="stripe large-stripe"></div>
@@ -62,15 +46,92 @@ $user = new User();
           <div class="stripe" id="stripe-5"></div>
           <div class="stripe s1"></div>
         </div>
-
       </header>
-    </section>
 
-    <!-- Food Waste In Metro Vancouver. -->
-    <section id="title-section">
-      <div class="container">
-        <h1 class="text-center" style="color: #eee;">City Landscape</h1>
-      </div>
+      <!-- Main Lander Title Section -->
+      <section id="title-section">
+        <div class="container">
+          <h1 class="font-light">
+              <span class="font-bold" id="typing-text">
+                <span id="home-type-text">Give </span>away
+              </span>
+              your extra food
+          </h1>
+          <h2 id="title-message">While helping someone who could really use it</h2>
+          <div id="action-button-wrapper">
+            <a href="" id="title-action-button">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Food Waste In Metro Vancouver. -->
+      <section id="problem-statement">
+        <div class="container">
+
+          <!-- Main Message -->
+          <div class="col-md-6" class="problem-statement-header">
+            <h3>Food waste in</h3>
+            <h1>
+              <img src="/public/assets/icons/city.svg" id="city-icon" alt="">
+              <span class="font-bold">Metro</span>
+              <span class="sem-bold">Vancouver</span>
+            </h1>
+            <p>
+              In Metro Vancouver, over half of all household food waste could, at some point, have been eaten – things like uneaten leftovers or ingredients that spoiled before they were used. That’s over 100,000 tonnes of avoidable food waste per year!
+            </p>
+          </div>
+
+          <div class="col-md-6" id="stats" style="display: none;">
+            <div class="stats-area stats-area--vertical">
+              <div class="stats-area-photo stats-area-photo-food"></div>
+              <blockquote class="Quote Quote--kickstarter">
+                Wasted food this year in vancouver:
+                <h2>
+                  <span id="wasted-food-count"></span>kg
+                </h2>
+                <p>Kickstarter switched to Stripe to accelerate their support for international creators. Since partnering with Stripe to navigate international payment methods and compliance, Kickstarter’s phenomenally successful platform for creative projects is now available to creators in 18 countries.</p>
+              </blockquote>
+            </div>
+
+          </div>
+
+          <script type="text/javascript">
+
+          function formatNumber(number) {
+              number = number.toFixed(0) + '';
+              x = number.split('.');
+              x1 = x[0];
+              x2 = x.length > 1 ? '.' + x[1] : '';
+              var rgx = /(\d+)(\d{3})/;
+              while (rgx.test(x1)) {
+                  x1 = x1.replace(rgx, '$1' + ',' + '$2');
+              }
+              return x1 + x2;
+          }
+
+          /* Get Current Day Number. */
+          var now = new Date();
+          var start = new Date(now.getFullYear(), 0, 0);
+          var diff = now - start;
+          var oneDay = 1000 * 60 * 60 * 24;
+          var day = Math.floor(diff / oneDay);
+          var secs = now.getSeconds() + (60 * now.getMinutes()) + (60 * 60 * now.getHours());
+          var total_seconds = (day * 86400) + secs;
+          var total_kg_wasted = (total_seconds * 3.16231532).toFixed(0);
+          $("#wasted-food-count").text(total_kg_wasted);
+          $("#stats").fadeIn(1300);
+
+          /* Update Wasted Food Value */
+          setInterval(function(){
+            total_kg_wasted++;
+            $("#wasted-food-count").text(formatNumber(total_kg_wasted));
+          }, 333);
+
+          </script>
+
+        </div>
+      </section>
+
     </section>
 
 </body>

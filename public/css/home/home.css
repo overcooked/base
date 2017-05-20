@@ -25,10 +25,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-feature-settings: "pnum";
-  font-variant-numeric: proportional-nums; }
+  font-variant-numeric: proportional-nums;
+  transition: all 0.45s ease; }
 
 /* Global Content. */
-.globalContent {
+.main-content {
   -ms-flex-positive: 1;
   flex-grow: 1; }
 
@@ -101,6 +102,7 @@ body {
   height: 230px;
   background: linear-gradient(90deg, #4dc076 20%, #b3e895); }
 
+/* Right side stripe.   */
 .StripeBackground #stripe-5 {
   bottom: 80px;
   width: 375px;
@@ -116,13 +118,15 @@ body {
   height: 230px;
   background: linear-gradient(90deg, #4dc076 20%, #b3e895); }
 
+/* Grey stripe below header. */
 .StripeBackground .s1 {
-  bottom: -555px;
+  bottom: -430px;
   width: 100%;
   opacity: .75;
-  height: 230px;
+  height: 125px;
   background: linear-gradient(90deg, #fff 20%, #f1f4f7); }
 
+/* Default stripe styling */
 .StripeBackground .stripe {
   position: absolute;
   top: auto;
@@ -228,20 +232,6 @@ body {
 #header-get-started {
   font-family: proximanova-bold, Helvetica, Arial, sans-serif;
   margin-top: 13px;
-  padding: 8px 14px 7px 16px;
-  background-color: #fff;
-  color: #11927d;
-  font-size: 13px;
-  border: none;
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-#header-get-started {
-  font-family: proximanova-bold, Helvetica, Arial, sans-serif;
-  margin-top: 13px;
   padding: 8px 14px 6px 16px;
   background-color: #fff;
   color: #11927d;
@@ -304,7 +294,8 @@ body {
 
 /* Center align the logged out links. */
 #logged-out-links {
-  margin-top: 8px; }
+  margin-top: 8px;
+  transition: all 0.45s ease; }
 
 /* Resize logo. */
 #header-logo {
@@ -333,11 +324,9 @@ body {
 
 /* Title Section. */
 #title-section {
-  position: relative;
-  z-index: 10;
-  top: 111px; }
+  margin-top: 75px; }
   #title-section .container {
-    position: absolute;
+    position: relative;
     width: 100%; }
   #title-section h1 {
     text-align: center;
@@ -362,15 +351,23 @@ body {
   font-size: 28px;
   letter-spacing: 0.4px; }
 
+/* Main intent button on the landing page. */
 #title-action-button {
   color: #0a806c;
-  font-weight: bold;
+  font-family: proximanova-semibold, Helvetica, Arial, sans-serif;
   letter-spacing: 1.2px;
   background-color: #fff;
   padding: 12px 33px 11px;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.45s ease; }
+
+#title-action-button:hover {
+  color: #0a7261;
+  opacity: 0.8;
+  transform: translateY(-0.35px); }
 
 #action-button-wrapper {
   margin-top: 30px;
@@ -389,7 +386,10 @@ body {
 /* Make sure the navbar doesn't break, prematurely. */
 @media only screen and (max-width: 850px) {
   #logged-out-links {
-    margin-left: -20px; } }
+    margin-left: -20px; }
+
+  #header-get-started {
+    font-size: 13px; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   #title-section h1 {
@@ -397,7 +397,7 @@ body {
     padding-bottom: 5px; }
 
   #title-section {
-    top: 68px; }
+    margin-top: 42px; }
 
   #typing-text {
     display: block; }
@@ -406,5 +406,93 @@ body {
     font-size: 20px;
     padding-left: 35px;
     padding-right: 35px; } }
+/* ======================================== */
+/* Problem Statement Section
+/* ======================================== */
+/* Problem Statement Section Elements */
+#problem-statement {
+  margin-top: 320px; }
+  #problem-statement h3 {
+    font-size: 19.5px;
+    opacity: 0.83;
+    padding-bottom: 6px;
+    color: #b4bac3; }
+  #problem-statement h1 {
+    font-size: 44px;
+    padding-bottom: 4px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #f1f7fb; }
+  #problem-statement p {
+    line-height: 30px;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    padding: 0 15px 0 7px; }
+  #problem-statement #city-icon {
+    height: 40px;
+    margin-bottom: 6px;
+    margin-right: 2px; }
+
+/******
+Section Quote
+******/
+.stats-area {
+  background: #f4f4f4;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  margin: 30px 0 60px;
+  top: -165px; }
+
+.stats-area-photo-food {
+  background-image: url(/public/assets/images/food-background-colour.svg);
+  opacity: 0.7;
+  background-position: 10% 30%;
+  min-height: 200px; }
+
+.stats-area-photo {
+  width: 100%;
+  min-height: 160px;
+  background-position: 139% 354%; }
+
+.Quote {
+  padding: 66px; }
+
+blockquote {
+  border: none; }
+
+.Quote {
+  margin: 0;
+  padding: 40px;
+  position: relative;
+  z-index: 5;
+  color: #fff; }
+
+.Quote h2 {
+  margin: 0 0 10px -2px; }
+
+.Quote p {
+  position: relative;
+  font-style: italic;
+  font-size: 2.1em;
+  line-height: 1.6em;
+  margin-bottom: 0; }
+
+.Quote--kickstarter {
+  position: relative;
+  padding-top: 36px;
+  background: linear-gradient(90deg, #5bd486, #7edd76); }
+
+.Quote--kickstarter:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 95px;
+  background: url(/public/assets/images/stats.svg);
+  opacity: 0.3;
+  background-size: 100% 100%;
+  position: absolute;
+  top: -95px;
+  left: 0; }
 
 /*# sourceMappingURL=home.css.map */

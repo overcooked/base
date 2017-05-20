@@ -126,6 +126,14 @@ body {
   height: 125px;
   background: linear-gradient(90deg, #fff 20%, #f1f4f7); }
 
+/* Grey stripe below header. */
+.StripeBackground .s2 {
+  bottom: -550px;
+  width: 100%;
+  opacity: 0.85;
+  height: 155px;
+  background: linear-gradient(90deg, #fdfdfd 20%, #f1f4f7); }
+
 /* Default stripe styling */
 .StripeBackground .stripe {
   position: absolute;
@@ -373,39 +381,6 @@ body {
   margin-top: 30px;
   text-align: center; }
 
-/* Move navbar up when collapsing. */
-@media only screen and (max-width: 768px) {
-  .navbar-default {
-    margin-top: -7px; }
-
-  #title-message {
-    font-size: 25px; }
-
-  #title-section h1 {
-    font-size: 38px; } }
-/* Make sure the navbar doesn't break, prematurely. */
-@media only screen and (max-width: 850px) {
-  #logged-out-links {
-    margin-left: -20px; }
-
-  #header-get-started {
-    font-size: 13px; } }
-/* Extra Small Devices, Phones */
-@media only screen and (max-width: 480px) {
-  #title-section h1 {
-    line-height: 36px;
-    padding-bottom: 5px; }
-
-  #title-section {
-    margin-top: 42px; }
-
-  #typing-text {
-    display: block; }
-
-  #title-message {
-    font-size: 20px;
-    padding-left: 35px;
-    padding-right: 35px; } }
 /* ======================================== */
 /* Problem Statement Section
 /* ======================================== */
@@ -469,7 +444,9 @@ blockquote {
   color: #fff; }
 
 .Quote h2 {
-  margin: 0 0 10px -2px; }
+  margin: 2px 0 8px 0px;
+  font-family: proximanova-semibold, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.4px; }
 
 .Quote p {
   position: relative;
@@ -494,5 +471,62 @@ blockquote {
   position: absolute;
   top: -95px;
   left: 0; }
+
+#wasted-title {
+  opacity: 0.6;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+  display: block;
+  margin: auto;
+  text-align: center; }
+
+/* Move navbar up when collapsing. */
+@media only screen and (max-width: 768px) {
+  .navbar-default {
+    margin-top: -7px; }
+
+  #title-message {
+    font-size: 25px; }
+
+  #title-section h1 {
+    font-size: 38px; }
+
+  .stats-area {
+    top: inherit; }
+
+  #problem-statement {
+    margin-top: 187px; }
+
+  .s2 {
+    height: 0 !important; } }
+/* Make sure the navbar doesn't break, prematurely. */
+@media only screen and (max-width: 850px) {
+  #logged-out-links {
+    margin-left: -20px; }
+
+  #header-get-started {
+    font-size: 13px; }
+
+  #problem-statement h1 {
+    font-size: 35px; } }
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  #title-section h1 {
+    line-height: 36px;
+    padding-bottom: 5px; }
+
+  #title-section {
+    margin-top: 42px; }
+
+  #typing-text {
+    display: block; }
+
+  #title-message {
+    font-size: 20px;
+    padding-left: 35px;
+    padding-right: 35px; }
+
+  #problem-statement h1 {
+    font-size: 29px; } }
 
 /*# sourceMappingURL=home.css.map */

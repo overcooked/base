@@ -45,6 +45,7 @@ $user = new User();
           <div class="stripe" id="stripe-4"></div>
           <div class="stripe" id="stripe-5"></div>
           <div class="stripe s1"></div>
+          <div class="stripe s2"></div>
         </div>
       </header>
 
@@ -69,7 +70,7 @@ $user = new User();
         <div class="container">
 
           <!-- Main Message -->
-          <div class="col-md-6" class="problem-statement-header">
+          <div class="col-sm-6" class="problem-statement-header">
             <h3>Food waste in</h3>
             <h1>
               <img src="/public/assets/icons/city.svg" id="city-icon" alt="">
@@ -81,15 +82,17 @@ $user = new User();
             </p>
           </div>
 
-          <div class="col-md-6" id="stats" style="display: none;">
+          <div class="col-sm-6" id="stats" style="display: none;">
             <div class="stats-area stats-area--vertical">
               <div class="stats-area-photo stats-area-photo-food"></div>
               <blockquote class="Quote Quote--kickstarter">
-                Wasted food this year in vancouver:
-                <h2>
-                  <span id="wasted-food-count"></span>kg
+                <span  class="text-center" id="wasted-title">Amount wasted this year alone:</span>
+                <h2 class="text-center">
+                  <span id="wasted-food-count"></span> kg
                 </h2>
-                <p>Kickstarter switched to Stripe to accelerate their support for international creators. Since partnering with Stripe to navigate international payment methods and compliance, Kickstarter’s phenomenally successful platform for creative projects is now available to creators in 18 countries.</p>
+                <p>
+                  It takes water, energy, fuel and packaging to produce the food we all love. Does it really belong in the bin? Because more than half of the food we throw away can be eaten, keeping it out of the bin is good for our pockets and the planet combined.
+                </p>
               </blockquote>
             </div>
 

@@ -120,7 +120,7 @@ if (Input::exists() && Token::check(Input::get('token'))) {
         ));
 
         // Post was successfully created.
-        Session::flash('successful_post', 'Your new post was successfully created.' . $tags);
+        Session::flash('successful_post', 'Your new post was successfully created.');
         Redirect::to('index.php');
       } catch (Exception $e) {
           // Creating post failed.

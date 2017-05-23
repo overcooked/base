@@ -25,11 +25,6 @@ $user = new User();
     <!-- Script Files -->
     <script src="/public/js/masonry.js" type="text/javascript"></script>
     <script src="/public/js/search.js" type="text/javascript"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-      crossorigin="anonymous">
-    </script>
 
   </head>
   <body>
@@ -54,15 +49,16 @@ $user = new User();
           <div class="col-md-10 col-md-offset-1">
             <input type="text" class="main-search" placeholder="Search For Food.." id="search-2" name="search-2" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No Stores found" autocomplete="off">
             <span class="ss-icon search-icon">search</span>
-
           </div>
         </div>
 
       </div>
     </section>
 
+    <!-- Display Listings -->
     <section class="listings">
       <div class="container-fluid">
+
         <!-- Recent Posts. -->
         <div class="row" id="listing-rows">
 
@@ -78,6 +74,7 @@ $user = new User();
           } // End
           ?>
 
+          <!-- Display Grid For Posts. -->
           <div class="col-md-10 col-md-offset-1 grid">
 
                 <?php
@@ -88,7 +85,7 @@ $user = new User();
 
                     // Get the image for the post.
                     $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
-                        $image = '';
+                    $image = '';
 
                     // Save into a variable.
                     if ($post_image->count()) {
@@ -119,13 +116,13 @@ $user = new User();
                             </p>
                             <div class='form-divider' style='margin: 5px 0 9px;'></div>
                             <small class='stats-text'>
-                                <b>Type: </b>{$post->post_tag} &nbsp;|&nbsp; <b>Posted: </b> {$post_date}
+                                <b>Posted: </b> {$post_date}
                                 <img class='hidden-xs' id='user-post-profile-image' src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg' />
                             </small>
+                            <tags style='display: none;'>{$post->post_tag}</tags>
                           </div>
                         </a>
                       </div>
-
                     ";
                     }
                 } else {

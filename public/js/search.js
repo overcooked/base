@@ -27,9 +27,11 @@ $(document).ready(function() {
                     msnry.layout();
                 } else {
                     $(this).hide();
+                    msnry.layout();
                 }
             } else {
                 $(this).hide();
+                msnry.layout();
             }
             msnry.layout();
         });

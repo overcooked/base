@@ -156,4 +156,9 @@ body {
 .disclaimer a {
   color: #9bd098; }
 
+/* Reset the margin styling to have a bit less margin. */
+hr {
+  margin-top: 12px;
+  margin-bottom: 16px; }
+
 /*# sourceMappingURL=post.css.map */

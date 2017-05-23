@@ -59,6 +59,7 @@ if (Session::exists('image_error')) {
             <div class="form-group">
               <label for="post_title">Title <span class="require">*</span></label>
               <input required="true" tabindex="0" type="text" class="form-control post_input" name="post_title" id="post_title" autocomplete="off" placeholder="Ramen, pasta, chicken, etc.." />
+              <small id="title-count" class="form-count-display"><span id="title-counter">0</span>/50</small>
             </div>
             <hr>
 
@@ -66,6 +67,7 @@ if (Session::exists('image_error')) {
             <div class="form-group">
               <label for="post_pickup_location">Pickup Location <span class="require">*</span></label>
               <input required="true" tabindex="0" type="text" class="form-control post_input" name="post_pickup_location" id="post_pickup_location" placeholder="2132 Dominic Ave." />
+              <small id="pickup-count" class="form-count-display"><span id="pickup-counter">0</span>/80</small>
             </div>
             <hr>
 
@@ -73,6 +75,7 @@ if (Session::exists('image_error')) {
             <div class="form-group">
               <label for="post_description">Description <span class="require">*</span></label>
               <textarea required="true" tabindex="0" rows="5" class="form-control post_input" name="post_description" id="post_description" placeholder="Describe your food."></textarea>
+              <small id="description-count" class="form-count-display"><span id="description-counter">0</span>/500</small>
             </div>
             <hr>
 

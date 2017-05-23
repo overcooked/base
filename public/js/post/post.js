@@ -1,94 +1,86 @@
 // Prepare posting page for onload.
-$(document).ready(function() {});
+$(document).ready(function() {
 
-/**
- * Controls the helper dialog on the
- * post page by calculating pixel height.
- * @return void
- */
-(function() {
-    $(document).on("click", ":focus", function() {
+  var post_title_max = 50;
+  var post_pickup_max = 80;
+  var post_description_max = 500;
 
-        // Ignore the search input on the header bar.
-        if (this.id !== "header-search-input") {
+  /* Checks the amount of letters typed for the title form. */
+  $('#post_title').keyup( function(event) {
 
-            // Distance from top - post title y coordinate.
-            var main = $("#new-post-title").offset().top;
-            var description = $("#" + this.id).offset().top;
-            var padding = (description - main - 17);
+      // Check if the title is over the limit.
+      if($(this).val().length >= post_title_max) {
 
-            // Save the id into a variable.
-            var title = this.id;
+        // Set text to limit, and text colour red.
+        $("#title-count").css("color", "#d67979");
+        $('#title-counter').text(post_title_max);
+      } else {
+        var cs = $(this).val().length;
+        $('#title-counter').text(cs);
+        $("#title-count").css("color", "#d7dade");
+      }
 
-            /* Helper texts/description. */
-            // Change the title text.
-            $("#help-title").fadeOut(function() {
+    }
+  ).keydown( function(event){
+    if(event.keyCode == 9 || event.keyCode == 46 || event.keyCode == 8) {
+      return true;
+    } else if($(this).val().length >= post_title_max) {
+      return false;
+    } else {
+      return true;
+    }
+  });
 
-                /* Helper texts/description. */
-                // Title.
-                if (title === "post_title") {
-                    $("#help-title").html("Title Is <span class='font-black text-uppercase'>Everything</span>").fadeIn();
-                    return;
-                }
+  /* Checks the amount of letters typed for the description form. */
+  $('#post_description').keyup( function(event) {
 
-                // Location.
-                if (title === "post_pickup_location") {
-                    $("#help-title").html("Do I Meetup <span class='font-bold h4'>OR</span> Pickup?").fadeIn();
-                    return;
-                }
+      // Check if the title is over the limit.
+      if($(this).val().length >= post_description_max) {
 
-                // Title Description.
-                if (title === "post_description") {
-                    $("#help-title").html("Description").fadeIn();
-                    return;
-                }
+        // Set text to limit, and text colour red.
+        $("#description-count").css("color", "#d67979");
+        $('#description-counter').text(post_description_max);
+      } else {
+        var cs = $(this).val().length;
+        $('#description-counter').text(cs);
+        $("#description-count").css("color", "#d7dade");
+      }
 
-                // Image Upload.
-                if (title === "post_image") {
-                    $("#help-title").html("Post Image").fadeIn();
-                    id = "help-text"
-                    return;
-                }
+    }
+  ).keydown( function(event){
+    if(event.keyCode == 9 || event.keyCode == 46 || event.keyCode == 8) {
+      return true;
+    } else if($(this).val().length >= post_description_max) {
+      return false;
+    } else {
+      return true;
+    }
+  });
 
-            });
+  /* Checks the amount of letters typed for the pickup form. */
+  $('#post_pickup_location').keyup( function(event) {
 
-            // Change the body text.
-            $("#help-text").fadeOut(function() {
+      // Check if the title is over the limit.
+      if($(this).val().length >= post_pickup_max) {
 
-                /* Helper texts/description. */
-                // Title.
-                if (title === "post_title") {
-                    $("#help-text").html(
-                        "The title is the most important part of the post. Make sure it explains clearly what food you're giving away. Typically people decide after the title."
-                    ).fadeIn();
-                    return;
-                }
+        // Set text to limit, and text colour red.
+        $("#pickup-count").css("color", "#d67979");
+        $('#pickup-counter').text(post_pickup_max);
+      } else {
+        var cs = $(this).val().length;
+        $('#pickup-counter').text(cs);
+        $("#pickup-count").css("color", "#d7dade");
+      }
 
-                // Location.
-                if (title === "post_pickup_location") {
-                    $("#help-text").html("Tell everyone the location of where you want to meet-up, or have the food be picked up. You can also choose the <kbd>decide later option.</kbd>").fadeIn();
-                    return;
-                }
+    }
+  ).keydown( function(event){
+    if(event.keyCode == 9 || event.keyCode == 46 || event.keyCode == 8) {
+      return true;
+    } else if($(this).val().length >= post_pickup_max) {
+      return false;
+    } else {
+      return true;
+    }
+  });
 
-                // Title Description.
-                if (title === "post_description") {
-                    $("#help-text").html("Description").fadeIn();
-                    return;
-                }
-
-                // Image Upload.
-                if (title === "post_image") {
-                    $("#help-text").html("Post Image").fadeIn();
-                    return;
-                }
-
-            });
-
-            // Add margin and smoothly push it up/down.
-            $("#help-block").animate({
-                marginTop: padding + "px"
-            }, 770);
-        }
-
-    })
-})();
+});

@@ -11,8 +11,14 @@ $(document).ready(function() {
         // $('#search-2').val() != lastentry
         lastentry = $('#search-2').val()
 
-        var msnry = new Masonry('.grid', {
-            transitionDuration: '0'
+        //var msnry = new Masonry('.grid', {
+        //    transitionDuration: '0'
+        //});
+
+        var $grid = $('.grid').imagesLoaded(function() {
+            $grid.masonry({
+                transitionDuration: '0'
+            });
         });
 
         // g - global match
@@ -24,14 +30,18 @@ $(document).ready(function() {
             if (ptrn.test($(this).text())) {
                 if (fltr.test($(this).text())) {
                     $(this).show();
-                    msnry.layout();
                 } else {
                     $(this).hide();
                 }
             } else {
                 $(this).hide();
             }
-            msnry.layout();
+            $grid.imagesLoaded().progress(function() {
+                $grid.masonry('layout');
+            });
+        });
+        $grid.imagesLoaded().progress(function() {
+            $grid.masonry('layout');
         });
     });
 });;

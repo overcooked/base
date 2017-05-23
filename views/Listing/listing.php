@@ -76,7 +76,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     <!-- General. -->
     <title>Welcome, <?php echo escape($user->data()->user_first) ?> | Overcooked</title>
     <meta name="description" content="Overcooked: <?php $post->post_title ?>">
-    
+
     <!-- TODO: Echo tags here -->
     <!-- <meta name="keywords" content=""> -->
 
@@ -104,7 +104,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
     <!-- Main Posting Content -->
     <section class="main">
-      <div class="container">
+      <div class="container" id="area">
 
         <!-- Posting Information -->
         <div class="col-md-10 col-md-offset-1">
@@ -151,7 +151,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                   <b>Post Date:</b>
                   {$post->post_date}
                 </small>
-                <br><br><br>
+                <br><br><br><br><br><br><br>
 
               </div>
               ";

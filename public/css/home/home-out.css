@@ -504,10 +504,60 @@ blockquote {
   margin: auto;
   text-align: center; }
 
+/**
+ * About Section
+ */
+#about-section {
+  margin-bottom: -110px;
+  background-color: #f2f5f7; }
+
+section.flow {
+  padding-top: 20px;
+  background: #605ea1;
+  background-image: -webkit-radial-gradient(circle farthest-corner at right bottom, #ffffff 0, #fbfbfb 28%, #f1f4f6 57%, #ffffff 100%);
+  background-image: radial-gradient(circle farthest-corner at right bottom, #ffffff 0, #fbfbfb 28%, #f1f4f6 57%, #ffffff 100%); }
+
+section.flow .content {
+  max-width: 1000px !important;
+  padding-bottom: 75px; }
+
+.flow .content {
+  position: relative;
+  max-width: 952px;
+  margin: 0 auto; }
+
+.flow header {
+  margin-bottom: 35px;
+  position: relative;
+  padding: 0 40px 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  text-align: center; }
+
+.flow .text-center p {
+  color: #848f91;
+  letter-spacing: 0.4px; }
+
+.flow header p {
+  font-size: 17px;
+  letter-spacing: 0.4px;
+  color: #acb2b7; }
+
+section.flow header {
+  border-bottom-style: none !important; }
+
+.steps-next-icon {
+  right: -3%;
+  top: 55px;
+  position: absolute;
+  color: #e0e4e8; }
+
 /* Move navbar up when collapsing. */
 @media only screen and (max-width: 768px) {
   .navbar-default {
     margin-top: -7px; }
+
+  .flow header {
+    margin-bottom: 10px; }
 
   #title-message {
     font-size: 25px; }
@@ -522,7 +572,30 @@ blockquote {
     margin-top: 187px; }
 
   .s2 {
-    height: 0 !important; } }
+    height: 0 !important; }
+
+  .flow img {
+    margin-bottom: 15px !important;
+    margin-top: 80px !important; }
+
+  .flow header {
+    margin-bottom: -80px; }
+
+  #first-step {
+    right: 48%;
+    top: 360px !important;
+    margin: auto;
+    position: absolute;
+    color: #e0e4e8;
+    font-size: 20px; }
+
+  #second-step {
+    right: 48%;
+    top: 375px !important;
+    margin: auto;
+    position: absolute;
+    color: #e0e4e8;
+    font-size: 20px; } }
 /* Make sure the navbar doesn't break, prematurely. */
 @media only screen and (max-width: 850px) {
   #logged-out-links {
@@ -553,50 +626,28 @@ blockquote {
   #problem-statement h1 {
     font-size: 29px; }
 
+  .flow p {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  #first-image {
+    margin-bottom: 5px !important; }
+
+  #about-summary {
+    padding-top: 7px;
+    padding-left: initial;
+    padding-right: initial; }
+
   #stats {
     height: 575px; }
 
   #logged-out-links li {
-    padding: 0 0; } }
-/**
- * About Section
- */
-#about-section {
-  margin-bottom: -110px;
-  background-color: #f2f5f7; }
+    padding: 0 0; }
 
-section.flow {
-  padding-top: 20px;
-  background: #605ea1;
-  background-image: -webkit-radial-gradient(circle farthest-corner at right bottom, #ffffff 0, #fbfbfb 28%, #f1f4f6 57%, #ffffff 100%);
-  background-image: radial-gradient(circle farthest-corner at right bottom, #ffffff 0, #fbfbfb 28%, #f1f4f6 57%, #ffffff 100%); }
+  #first-step {
+    top: 375px !important; }
 
-section.flow .content {
-  max-width: 1000px !important;
-  padding-bottom: 75px; }
-
-.flow .content {
-  position: relative;
-  max-width: 952px;
-  margin: 0 auto; }
-
-.flow header {
-  margin-bottom: 20px;
-  position: relative;
-  padding: 0 40px 35px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  text-align: center; }
-
-.flow .text-center p {
-  color: #848f91;
-  letter-spacing: 0.4px; }
-
-.flow header p {
-  font-size: 17px;
-  letter-spacing: 0.4px;
-  color: #acb2b7; }
-
-section.flow header {
-  border-bottom-style: none !important; }
+  #second-step {
+    top: 395px !important; } }
 
 /*# sourceMappingURL=home-out.css.map */

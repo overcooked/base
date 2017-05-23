@@ -35,28 +35,28 @@
 				<li style="margin-top: 10px;">
 					<a href="#problem-statement" class="side-bar-link" style="margin-left: -12px;">
 						<span class="ss-icon">right</span>
-						<span class="side-bar-link-text">START HERE</span>
+						<span class="side-bar-link-text move-link">START HERE</span>
 					</a>
 				</li>
 
 				<li>
 					<a href="#about-section" class="side-bar-link" style="margin-left: -12px;">
 						<span class="ss-icon">cook</span>
-						<span class="side-bar-link-text">ABOUT</span>
+						<span class="side-bar-link-text move-link">ABOUT</span>
 					</a>
 				</li>
 
 				<li>
 					<a href="#partners-section" class="side-bar-link" style="margin-left: -12px;">
 						<span class="ss-icon">usergroup</span>
-						<span class="side-bar-link-text">PARTNERS</span>
+						<span class="side-bar-link-text move-link">PARTNERS</span>
 					</a>
 				</li>
 
 				<li>
 					<a href="#contact-section" class="side-bar-link" style="margin-left: -12px;">
 						<span class="ss-icon">mail</span>
-						<span class="side-bar-link-text">CONTACT US</span>
+						<span class="side-bar-link-text move-link">CONTACT US</span>
 					</a>
 				</li>
 
@@ -184,4 +184,12 @@
   closeOnClickLink: true
   };
   })(jQuery);
+
+  var $root = $('html, body');
+  $(document).on('click', 'a.move-link', function(event) {
+      event.preventDefault();
+      $root.animate({
+          scrollTop: $($.attr(this, 'href')).offset().top - 300
+      }, 1200, 'swing');
+  });
 </script>

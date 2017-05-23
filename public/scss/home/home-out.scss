@@ -582,84 +582,6 @@ blockquote {
   text-align: center;
 }
 
-/* Move navbar up when collapsing. */
-@media only screen and (max-width : 768px) {
-  .navbar-default {
-      margin-top: -7px;
-  }
-
-  #title-message {
-    font-size: 25px;
-  }
-
-  #title-section h1 {
-    font-size: 38px;
-  }
-
-  .stats-area {
-    top: inherit;
-  }
-
-  #problem-statement {
-    margin-top: 187px;
-  }
-
-  .s2 {
-    height: 0 !important;
-  }
-}
-
-/* Make sure the navbar doesn't break, prematurely. */
-@media only screen and (max-width : 850px) {
-  #logged-out-links {
-      margin-left: -20px;
-  }
-
-  #header-get-started {
-    font-size: 13px;
-  }
-
-  #problem-statement h1 {
-    font-size: 35px;
-  }
-}
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
-  #title-section h1 {
-    line-height: 36px;
-    padding-bottom: 5px;
-  }
-
-  #title-section {
-    margin-top: 42px;
-  }
-
-  #typing-text {
-    display: block;
-  }
-
-  #title-message {
-    font-size: 20px;
-    padding-left: 35px;
-    padding-right: 35px;
-  }
-
-  #problem-statement h1 {
-    font-size: 29px;
-  }
-
-  #stats {
-    height: 575px;
-  }
-
-  #logged-out-links li {
-    padding: 0 0;
-  }
-}
-
-
 /**
  * About Section
  */
@@ -688,7 +610,7 @@ section.flow .content {
 }
 
 .flow header {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     position: relative;
     padding: 0 40px 35px;
     border-bottom: 1px solid rgba(0,0,0,.07);
@@ -708,4 +630,143 @@ section.flow .content {
 
 section.flow header {
     border-bottom-style: none!important;
+}
+
+.steps-next-icon {
+  right: -3%;
+  top: 55px;
+  position: absolute;
+  color: #e0e4e8;
+}
+
+/* Move navbar up when collapsing. */
+@media only screen and (max-width : 768px) {
+  .navbar-default {
+      margin-top: -7px;
+  }
+
+  .flow header {
+    margin-bottom: 10px;
+  }
+
+  #title-message {
+    font-size: 25px;
+  }
+
+  #title-section h1 {
+    font-size: 38px;
+  }
+
+  .stats-area {
+    top: inherit;
+  }
+
+  #problem-statement {
+    margin-top: 187px;
+  }
+
+  .s2 {
+    height: 0 !important;
+  }
+
+  .flow img {
+    margin-bottom: 15px !important;
+    margin-top: 80px !important;
+  }
+
+  .flow header {
+    margin-bottom: -80px;
+  }
+
+  #first-step {
+    right: 48%;
+    top: 360px !important;
+    margin: auto;
+    position: absolute;
+    color: #e0e4e8;
+    font-size: 20px;
+  }
+
+  #second-step {
+    right: 48%;
+    top: 375px !important;
+    margin: auto;
+    position: absolute;
+    color: #e0e4e8;
+    font-size: 20px;
+  }
+
+}
+
+/* Make sure the navbar doesn't break, prematurely. */
+@media only screen and (max-width : 850px) {
+  #logged-out-links {
+      margin-left: -20px;
+  }
+
+  #header-get-started {
+    font-size: 13px;
+  }
+
+  #problem-statement h1 {
+    font-size: 35px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  #title-section h1 {
+    line-height: 36px;
+    padding-bottom: 5px;
+  }
+
+  #title-section {
+    margin-top: 42px;
+  }
+
+  #typing-text {
+    display: block;
+  }
+
+  #title-message {
+    font-size: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  #problem-statement h1 {
+    font-size: 29px;
+  }
+
+  .flow p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #first-image {
+    margin-bottom: 5px !important;
+  }
+
+  #about-summary {
+    padding-top: 7px;
+    padding-left: initial;
+    padding-right: initial;
+  }
+
+  #stats {
+    height: 575px;
+  }
+
+  #logged-out-links li {
+    padding: 0 0;
+  }
+
+  #first-step {
+    top: 375px !important;
+  }
+
+  #second-step {
+    top: 395px !important;
+  }
+
 }

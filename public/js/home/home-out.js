@@ -46,5 +46,4 @@ $(document).ready(function(){
     $("#wasted-food-count").text(formatNumber(total_kg_wasted));
   }, 333);
 
-
 });

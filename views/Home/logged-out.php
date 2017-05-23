@@ -125,38 +125,43 @@ $user = new User();
       </section>
 
       <!-- How We Help Section -->
-      <section class="flow nav-animation-element">
+      <section class="flow nav-animation-element" id="about-section">
         <div class="content clearfix">
 
           <!-- Title / Sub message -->
           <header>
             <h1 class="font-light" style="padding-bottom: 2px;"><br>How <span class="font-bold">We</span> Help?</h1>
-            <p>Overcooked provides the opportunity for restaurants, grocery stores, charities, or anyone to give away their excess food away to help feed their communities while also reducing waste in Metro Vancouver.</p>
+            <p id="about-summary">Overcooked provides the opportunity for restaurants, grocery stores, charities, or anyone to give away their excess to help feed their communities while also reducing waste in Metro Vancouver.</p>
           </header>
 
           <!-- Step #1 -->
           <div class="col-sm-4 text-center">
-            <img src="/public/assets/images/home/step-one.png" style="width: 200px; height: auto; margin-bottom: 15px;" alt="">
+            <span class="hidden-xs ss-icon steps-next-icon">navigateright</span>
+            <img id="first-image" src="/public/assets/images/home/step-one.png" style="width: 200px; height: auto; margin-bottom: 15px;" alt="">
             <h3>Have extra food</h3>
             <hr style="width: 60px; margin-top: 8px; margin-bottom: 8px;">
             <p>Businesses or charities looking to give away their extra food can come here instead of throwing it out.</p>
+            <span id="first-step" class="visible-xs ss-icon steps-next-icon">navigatedown</span>
           </div>
 
           <!-- Step #2 -->
           <div class="col-sm-4 text-center">
-            <img src="/public/assets/images/home/step-one.png" style="width: 200px; height: auto; margin-bottom: 15px;" alt="">
+            <span class="hidden-xs ss-icon steps-next-icon">navigateright</span>
+            <img src="/public/assets/images/home/step-two.png" style="width: 200px; height: auto; margin-top: -35px; margin-bottom: 27px;" alt="">
             <h3>Create an account</h3>
             <hr style="width: 60px; margin-top: 8px; margin-bottom: 8px;">
             <p>Create an account which will give you access to many hungry mouths who will benefit from your extra food.</p>
+            <span id="second-step" class="visible-xs ss-icon steps-next-icon">navigatedown</span>
           </div>
 
           <!-- Step #3 -->
           <div class="col-sm-4 text-center">
-            <img src="/public/assets/images/home/step-one.png" style="width: 200px; height: auto; margin-bottom: 15px;" alt="">
+            <img src="/public/assets/images/home/step-three.png" style="width: 200px; height: auto; margin-top: -37px; margin-bottom: 19px;" alt="">
             <h3>List the food</h3>
             <hr style="width: 60px; margin-top: 8px; margin-bottom: 8px;">
             <p>Create a listing or giveaway on the website. This way people can contact you and pickup the extra foods.</p>
           </div>
+
         </div>
       </section>
 

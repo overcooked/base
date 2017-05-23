@@ -26,7 +26,8 @@ $user = new User();
     <script src="/public/js/masonry.js" type="text/javascript"></script>
     <script src="/public/js/search.js" type="text/javascript"></script>
     <script src="/public/js/filter.js" type="text/javascript"></script>
-    
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
   </head>
   <body>
 

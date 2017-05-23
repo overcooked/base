@@ -30,8 +30,12 @@ $(document).ready(function() {
             } else {
                 $(this).hide();
             }
+            $msnry.imagesLoaded().progress(function() {
+                msnry.layout();
+            });
+        });
+        $msnry.imagesLoaded().progress(function() {
             msnry.layout();
         });
-        msnry.layout();
     });
 });;

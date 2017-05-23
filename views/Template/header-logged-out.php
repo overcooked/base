@@ -24,7 +24,7 @@
 			<ul class="nav navbar-nav visible-xs">
 
 				<li>
-					<button class="navbar-toggle toggle-menu menu-right push-body pull-right" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+					<button class="navbar-toggle toggle-menu menu-right push-body pull-right" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button" style="opacity: 0.67; padding-top: 24px; padding-right: 22px; padding-left: 30px; padding-bottom: 30px; z-index: 1000;">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar top-bar"></span>
 						<span class="icon-bar middle-bar"></span>
@@ -32,30 +32,30 @@
 					</button>
 				</li>
 
-				<li>
-					<a href="post.php" class="side-bar-link">
-						<span class="ss-icon">compose</span>
-						<span class="side-bar-link-text">NEW LISTING</span>
+				<li style="margin-top: 10px;">
+					<a href="#problem-statement" class="side-bar-link" style="margin-left: -12px;">
+						<span class="ss-icon">right</span>
+						<span class="side-bar-link-text">START HERE</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="update.php" class="side-bar-link">
-						<span class="ss-icon">userfile</span>
-						<span class="side-bar-link-text">EDIT PROFILE</span>
+					<a href="#about-section" class="side-bar-link" style="margin-left: -12px;">
+						<span class="ss-icon">cook</span>
+						<span class="side-bar-link-text">ABOUT</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="changepassword.php" class="side-bar-link">
-						<span class="ss-icon">lock</span>
-						<span class="side-bar-link-text">CHANGE PASSWORD</span>
+					<a href="#partners-section" class="side-bar-link" style="margin-left: -12px;">
+						<span class="ss-icon">usergroup</span>
+						<span class="side-bar-link-text">PARTNERS</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="contact.php" class="side-bar-link">
-						<span class="ss-icon">send</span>
+					<a href="#contact-section" class="side-bar-link" style="margin-left: -12px;">
+						<span class="ss-icon">mail</span>
 						<span class="side-bar-link-text">CONTACT US</span>
 					</a>
 				</li>
@@ -71,9 +71,9 @@
 			<!-- Large view items -->
       <ul class="nav navbar-nav hidden-xs" id="logged-out-links">
         <li><a class="move-link" href="#problem-statement"><span id="moving-arrow" class="ss-icon">up</span>Start Here</a></li>
-        <li><a class="move-link" href="#about">About</a></li>
-        <li><a class="move-link" href="#partners">Partners</a></li>
-        <li><a class="move-link hidden-sm" href="#support">Contact Us</a></li>
+        <li><a class="move-link" href="#about-section">About</a></li>
+        <li><a class="move-link" href="#partners-section">Partners</a></li>
+        <li><a class="move-link hidden-sm" href="#contact-section">Contact Us</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right hidden-xs">

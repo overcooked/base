@@ -151,19 +151,10 @@ $user = new User();
 
     <script type="text/javascript">
     $( document ).ready(function() {
-      var elem = document.querySelector('.grid');
-      var msnry = new Masonry( elem, {
-        // options
+      var $grid = $('.grid').imagesLoaded( function() {
+      $grid.masonry({
         itemSelector: '.grid-item',
-        columnWidth: 250
-      });
-
-      window.dispatchEvent(new Event('resize'));
-
-      // element argument can be a selector string
-      //   for an individual element
-      var msnry = new Masonry( '.grid', {
-        // options
+        });
       });
     });
     </script>

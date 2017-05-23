@@ -85,6 +85,23 @@ if (Input::exists() && Token::check(Input::get('token'))) {
         // Create a unique post ID.
         $post_id = uniqid('post_');
 
+        // Collect the tags for the post.
+        $tags = '';
+        $count = 1;
+
+        // Checks if tags were selected and ads them up..
+        if(!empty($_POST["post_tag"])) {
+          foreach($_POST["post_tag"] as $tag) {
+            $tags .= $tag;
+
+            // Add a comma to the end of the string.
+            if ($count < count($_POST["post_tag"])) {
+              $tags .= ', ';
+            }
+            $count++;
+          }
+        }
+
         // Create new posting.
         $post->create(array(
           'post_id' => $post_id,
@@ -92,7 +109,7 @@ if (Input::exists() && Token::check(Input::get('token'))) {
           'post_title' => Input::get('post_title'),
           'post_description' => Input::get('post_description'),
           'post_pickup_location' => Input::get('post_pickup_location'),
-          'post_tag' => 'Food',
+          'post_tag' => $tags,
           'post_date' => date('Y-m-d H:i:s')
         ), $post_id);
 
@@ -103,8 +120,8 @@ if (Input::exists() && Token::check(Input::get('token'))) {
         ));
 
         // Post was successfully created.
-        Session::flash('successful_post', 'Your new post was successfully created.');
-          Redirect::to('index.php');
+        Session::flash('successful_post', 'Your new post was successfully created.' . $tags);
+        Redirect::to('index.php');
       } catch (Exception $e) {
           // Creating post failed.
         Session::flash('errors', $e->getMessage());

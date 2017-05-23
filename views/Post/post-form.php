@@ -1,7 +1,7 @@
 <?php
 /**
  * The post form is used to get
- *  the data to create a new post.
+ * the data to create a new post.
  * @author Team Point.
  */
 
@@ -85,78 +85,60 @@ if (Session::exists('image_error')) {
               </label>
             </div>
 
-            <!-- Changes the name of the post image upload form when image is selected
-            <script type="text/javascript">
-            $(document).on('change', ':file', function() {
-              var input = $(this),
-                  numFiles = input.get(0).files ? input.get(0).files.length : 1,
-                  label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-              input.trigger('fileselect', [numFiles, label]);
-            });
-            $(document).ready( function() {
-                $(':file').on('fileselect', function(event, numFiles, label) {
-                    $('.btn-file').text(label);
-                });
-            });
-            </script>
-             -->
-
             <hr>
 
-            <!-- Food Tags TODO: ADD VALIDATION SO VALUES AREN'T CHANGED HERE -->
+            <!-- Food Tags -->
             <div class="form-group">
               <label for="post_tag" style="padding-bottom: 5px;">Select All That Apply</label>
               <br>
               <div class="btn-group col-md-12" data-toggle="buttons">
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Fresh">Fresh
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Fresh">Fresh
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Packaged">Packaged
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Packaged">Packaged
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Fruits">Fruits
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Fruits">Fruits
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Expires Soon">Expires Soon
-                  </label>
-
-                  <!-- NEW -->
-
-                  <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Opened">Opened
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Expires Soon">Expires Soon
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Closed">Closed
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Opened">Opened
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Frozen">Frozen
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Closed">Closed
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Breads">Bread
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Frozen">Frozen
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Meats">Meat
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Breads">Bread
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Poultry">Poultry
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Meats">Meat
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Wheat">Wheat
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Poultry">Poultry
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag" id="post_tag" value="Vegetables">Vegetables
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Wheat">Wheat
+                  </label>
+
+                  <label class="btn btn-default post-tags">
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Vegetables">Vegetables
                   </label>
 
               </div>
@@ -185,6 +167,3 @@ if (Session::exists('image_error')) {
     </div>
   </div>
 </section>
-
-<!-- Footer Section -->
-<?php View::footer(); ?>

@@ -164,7 +164,6 @@ class DB {
 
   /**
    * Update a table given a user ID.
-   * TODO: Change to update given some other value.
    * @param  String $table   - The table where the value will be updated.
    * @param  int    $user_id - The id of the row to be updated.
    * @param  array  $fields  - The fields and values to be updated.

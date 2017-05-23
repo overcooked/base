@@ -1,7 +1,7 @@
 $(document).ready(function() {
     window.filter = "";
     $("#rad1").click(function() {
-        filter = "meat";
+        filter = "meats";
         $('#search-2').trigger('keyup');
     });
     $("#rad2").click(function() {

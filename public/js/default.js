@@ -4,8 +4,17 @@ $(document).ready(function() {
     $(document).on('click', 'a.move-link', function(event) {
         event.preventDefault();
 
+        var offset = 300;
+        if(isMobile()) {
+          offset = 45;
+        }
         $root.animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 2000);
+            scrollTop: $($.attr(this, 'href')).offset().top - offset
+        }, 1200, 'swing');
     });
+
+    function isMobile() {
+      try { document.createEvent("TouchEvent"); return true; }
+      catch(e){ return false; }
+    }
 });

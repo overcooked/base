@@ -13,17 +13,18 @@ $user = new User();
 <head>
 
     <!-- General. -->
-    <title>Overcooked | Feed those in need with your extra food.</title>
+    <title>Overcooked: Feed those in need with your extra food.</title>
     <meta name="description" content="Overcooked lets you give your extra food to people who really need it.">
 
     <!-- Boiler Plate Tags -->
     <?php View::head(); ?>
 
     <!-- Style Files -->
-    <link rel="stylesheet" href="/public/css/home/home.css">
+    <link rel="stylesheet" href="/public/css/home/home-out.css">
 
     <!-- Script Files -->
     <script src="/public/js/libraries/typing.js" type="text/javascript"></script>
+    <script src="/public/js/home/home-out.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -46,6 +47,8 @@ $user = new User();
           <div class="stripe" id="stripe-5"></div>
           <div class="stripe s1"></div>
           <div class="stripe s2"></div>
+          <div class="stripe s3"></div>
+          <div class="stripe s4"></div>
         </div>
       </header>
 
@@ -82,6 +85,7 @@ $user = new User();
             </p>
           </div>
 
+          <!-- Statistics Area -->
           <div class="col-sm-6" id="stats" style="display: none;">
             <div class="stats-area stats-area--vertical">
               <div class="stats-area-photo stats-area-photo-food"></div>
@@ -95,43 +99,66 @@ $user = new User();
                 </p>
               </blockquote>
             </div>
-
           </div>
 
-          <script type="text/javascript">
+        </div>
+      </section>
 
-          function formatNumber(number) {
-              number = number.toFixed(0) + '';
-              x = number.split('.');
-              x1 = x[0];
-              x2 = x.length > 1 ? '.' + x[1] : '';
-              var rgx = /(\d+)(\d{3})/;
-              while (rgx.test(x1)) {
-                  x1 = x1.replace(rgx, '$1' + ',' + '$2');
-              }
-              return x1 + x2;
-          }
+      <section>
 
-          /* Get Current Day Number. */
-          var now = new Date();
-          var start = new Date(now.getFullYear(), 0, 0);
-          var diff = now - start;
-          var oneDay = 1000 * 60 * 60 * 24;
-          var day = Math.floor(diff / oneDay);
-          var secs = now.getSeconds() + (60 * now.getMinutes()) + (60 * 60 * now.getHours());
-          var total_seconds = (day * 86400) + secs;
-          var total_kg_wasted = (total_seconds * 3.16231532).toFixed(0);
-          $("#wasted-food-count").text(total_kg_wasted);
-          $("#stats").fadeIn(1300);
+        <div id="section-one-skyline"></div>
 
-          /* Update Wasted Food Value */
-          setInterval(function(){
-            total_kg_wasted++;
-            $("#wasted-food-count").text(formatNumber(total_kg_wasted));
-          }, 333);
 
-          </script>
+      </section>
 
+      <!-- About Section
+      <section id="about-section">
+        <div class="container-fluid">
+
+          <div class="row">
+          </div>
+
+          <div class="row">
+            <h1>Hi</h1>
+          </div>
+
+        </div>
+      </section>
+      -->
+
+      <!-- How We Help -->
+      <section class="flow nav-animation-element">
+        <div class="content clearfix">
+
+          <!-- Title / Sub message -->
+          <header>
+            <h1 class="font-light" style="padding-bottom: 2px;"><br>How <span class="font-bold">We</span> Help?</h1>
+            <p>Overcooked gives anyone with excess food an option to help feed their communities and reduce waste.</p>
+          </header>
+
+          <!-- Step #1 -->
+          <div class="col-sm-4 text-center">
+            <img src="/public/assets/images/home/step-one.png" style="width: 200px; height: auto; margin-bottom: 15px;" alt="">
+            <h3>Have extra food</h3>
+            <hr style="width: 60px; margin-top: 8px; margin-bottom: 8px;">
+            <p>Businesses or charities looking to give away their extra food can come here instead of throwing it out.</p>
+          </div>
+
+          <!-- Step #2 -->
+          <div class="col-sm-4 text-center">
+            <img src="/public/assets/images/home/step-one.png" style="width: 200px; height: auto; margin-bottom: 15px;" alt="">
+            <h3>Create an account</h3>
+            <hr style="width: 60px; margin-top: 8px; margin-bottom: 8px;">
+            <p>Create an account which will give you access to many hungry mouths who will benefit from your extra food.</p>
+          </div>
+
+          <!-- Step #3 -->
+          <div class="col-sm-4 text-center">
+            <img src="/public/assets/images/home/step-one.png" style="width: 200px; height: auto; margin-bottom: 15px;" alt="">
+            <h3>List the food</h3>
+            <hr style="width: 60px; margin-top: 8px; margin-bottom: 8px;">
+            <p>Create a listing or giveaway on the website. This way people can contact you and pickup the extra foods.</p>
+          </div>
         </div>
       </section>
 

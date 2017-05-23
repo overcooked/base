@@ -23,25 +23,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
 
       <ul class="nav navbar-nav" id="logged-out-links">
-        <li><a class="move-link" href="#start-here"><span id="moving-arrow" class="ss-icon">up</span>Start Here</a></li>
+        <li><a class="move-link" href="#problem-statement"><span id="moving-arrow" class="ss-icon">up</span>Start Here</a></li>
         <li><a class="move-link" href="#about">About</a></li>
         <li><a class="move-link" href="#partners">Partners</a></li>
         <li><a class="move-link hidden-sm" href="#support">Contact Us</a></li>
       </ul>
-
-      <script type="text/javascript">
-      function loop() {
-        $('#moving-arrow').animate({'top': '37'}, {
-          duration: 450,
-          complete: function() {
-              $('#moving-arrow').animate({top: 41}, {
-                  duration: 450,
-                  complete: loop});
-        }});
-      }
-
-      loop();
-      </script>
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/login.php" id="header-sign-in">Sign In <span class="ss-icon">navigateright</span></a></li>

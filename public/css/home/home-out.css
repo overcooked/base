@@ -134,6 +134,22 @@ body {
   height: 155px;
   background: linear-gradient(90deg, #fdfdfd 20%, #f1f4f7); }
 
+/* Grey stripe below header. */
+.StripeBackground .s3 {
+  bottom: -1500px;
+  width: 100%;
+  opacity: 0.55;
+  height: 255px;
+  background: linear-gradient(70deg, #fdfdfd 33%, #f1f4f7); }
+
+/* Grey stripe below header. */
+.StripeBackground .s4 {
+  bottom: -1580px;
+  width: 100%;
+  opacity: 0.65;
+  height: 105px;
+  background: linear-gradient(90deg, #fdfdfd 33%, #f1f4f7); }
+
 /* Default stripe styling */
 .StripeBackground .stripe {
   position: absolute;
@@ -166,15 +182,14 @@ body {
   background-color: #f2f5f7; }
 
 #section-one-skyline {
-  margin-top: 41px;
-  position: absolute;
   width: 100%;
-  height: 115px;
+  height: 100px;
+  opacity: 0.8;
   left: 0;
   background-image: url("/public/assets/images/home/skyline-landmarks.png"), url("/public/assets/images/home/skyline-generic.png");
   background-repeat: no-repeat,repeat-x;
   background-position: top,bottom;
-  background-size: 1280px 126px,1280px 50px; }
+  background-size: 1280px 126px,1280px 55px; }
 
 .hr-divider {
   border-width: 2px;
@@ -430,6 +445,10 @@ Section Quote
   min-height: 160px;
   background-position: 139% 354%; }
 
+/* Wrapper for the stats blockquote. */
+#stats {
+  height: 440px; }
+
 .Quote {
   padding: 66px; }
 
@@ -527,6 +546,49 @@ blockquote {
     padding-right: 35px; }
 
   #problem-statement h1 {
-    font-size: 29px; } }
+    font-size: 29px; }
 
-/*# sourceMappingURL=home.css.map */
+  #stats {
+    height: 575px; } }
+/**
+ * About Section
+ */
+#about-section {
+  margin-bottom: -110px;
+  background-color: #f2f5f7; }
+
+section.flow {
+  padding-top: 20px;
+  background: #605ea1;
+  background-image: -webkit-radial-gradient(circle farthest-corner at right bottom, #ffffff 0, #fbfbfb 28%, #f1f4f6 57%, #ffffff 100%);
+  background-image: radial-gradient(circle farthest-corner at right bottom, #ffffff 0, #fbfbfb 28%, #f1f4f6 57%, #ffffff 100%); }
+
+section.flow .content {
+  max-width: 1000px !important;
+  padding-bottom: 75px; }
+
+.flow .content {
+  position: relative;
+  max-width: 952px;
+  margin: 0 auto; }
+
+.flow header {
+  margin-bottom: 20px;
+  position: relative;
+  padding: 0 40px 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  text-align: center; }
+
+.flow .text-center p {
+  color: #848f91;
+  letter-spacing: 0.4px; }
+
+.flow header p {
+  font-size: 17px;
+  letter-spacing: 0.4px;
+  color: #acb2b7; }
+
+section.flow header {
+  border-bottom-style: none !important; }
+
+/*# sourceMappingURL=home-out.css.map */

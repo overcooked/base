@@ -54,9 +54,9 @@ $user = new User();
         </div>
         <div style="background-color: #343C40; color: white" class="row" id="filters">
           <div class="radio">
-            <label class="radio-inline"><input id="rad1" type="radio" name="optradio">vafa</label>
-            <label class="radio-inline"><input id="rad2" type="radio" name="optradio">chicken</label>
-            <label class="radio-inline"><input id="rad3" type="radio" name="optradio">tasty</label>
+            <label class="radio-inline"><input id="rad1" type="radio" name="optradio">Meat</label>
+            <label class="radio-inline"><input id="rad2" type="radio" name="optradio">Vegetables</label>
+            <label class="radio-inline"><input id="rad3" type="radio" name="optradio">Fruit</label>
         </div>
       </div>
 

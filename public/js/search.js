@@ -36,8 +36,12 @@ $(document).ready(function() {
             } else {
                 $(this).hide();
             }
-            msnry.layout();
+            $grid.imagesLoaded().progress(function() {
+                $grid.masonry('layout');
+            });
         });
-        msnry.layout();
+        $grid.imagesLoaded().progress(function() {
+            $grid.masonry('layout');
+        });
     });
 });;

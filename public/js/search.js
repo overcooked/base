@@ -24,18 +24,14 @@ $(document).ready(function() {
             if (ptrn.test($(this).text())) {
                 if (fltr.test($(this).text())) {
                     $(this).show();
-                    msnry.layout();
                 } else {
                     $(this).hide();
-                    msnry.layout();
                 }
             } else {
                 $(this).hide();
-                msnry.layout();
             }
             msnry.layout();
         });
-        console.log("layout");
         msnry.layout();
     });
 });;

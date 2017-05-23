@@ -91,33 +91,52 @@
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
+
 /* Get started button for logged out header-bar. */
 #header-get-started {
-    font-family: proximanova-bold, Helvetica, Arial, sans-serif;
-    margin-top: 13px;
-    padding: 8px 14px 7px 16px;
-    background-color: #50ba4a;
-    color: #fff;
-    font-size: 13px;
-    border: none;
-    border-radius: 3px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: $font-bold;
+  margin-top: 13px;
+  padding: 8px 14px 7px 16px;
+  background-color: #50ba4a;
+  color: #fff;
+  font-size: 13px;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Get Started for the pushout navigation. */
+#pushout-get-started {
+  font-family: $font-bold;
+  padding: 7px 14px 6px 16px;
+  background: #3ecf8e;
+  text-shadow: 0 1px 3px rgba(36, 180, 126, 0.4);
+  color: #ffffff;
+  margin: 0 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-shadow: 0 4px 6px rgba(50,50,93,.08), 0 1px 3px rgba(0,0,0,.08);
 }
 
 #push-menu {
-    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
-    border: none;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
+  border: none;
 }
 
 #navbar-post-button-wrapper {
-    margin-top: 12px;
-    padding-right: 22px;
-    border-right: 2px solid #f7f7f7;
-    padding-left: 22px;
-    border-left: 2px solid #f7f7f7;
+  margin-top: 12px;
+  padding-right: 22px;
+  border-right: 2px solid #f7f7f7;
+  padding-left: 22px;
+  border-left: 2px solid #f7f7f7;
 }
 
 #navbar-post-button {
@@ -527,6 +546,7 @@
         -moz-transition: all 0.3s ease;
         transition: all 0.3s ease;
     }
+
 }
 
 .navbar-toggle {

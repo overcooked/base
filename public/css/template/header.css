@@ -105,6 +105,23 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+/* Get Started for the pushout navigation. */
+#pushout-get-started {
+  font-family: proximanova-bold, Helvetica, Arial, sans-serif;
+  padding: 7px 14px 6px 16px;
+  background: #3ecf8e;
+  text-shadow: 0 1px 3px rgba(36, 180, 126, 0.4);
+  color: #ffffff;
+  margin: 0 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.08); }
+
 #push-menu {
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
   border: none; }

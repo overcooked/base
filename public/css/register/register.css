@@ -151,7 +151,8 @@ html {
 .absolute-center-form .btn-submit {
   font-family: proximanova-bold, Helvetica, Arial, sans-serif;
   padding: 10px 14px 9px 16px;
-  background: linear-gradient(90deg, #78de9c, #afe8ae);
+  background: linear-gradient(90deg, #78de9c, #91e097);
+  text-shadow: 0 1px 5px rgba(36, 180, 126, 0.4);
   color: #fff;
   font-size: 14px;
   letter-spacing: 0.5px;

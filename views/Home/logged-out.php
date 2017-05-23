@@ -59,8 +59,8 @@ $user = new User();
           <!-- Setup Typing Variables. -->
           <script>
               var strings = new Array("Throw ", "Give ");
-              var typingSpeed = 150;
-              var deleteSpeed = 130;
+              var typingSpeed = 105;
+              var deleteSpeed = 105;
               var waitTime = 700;
               var exists_text = true;
               var isLoop = false;
@@ -68,6 +68,7 @@ $user = new User();
               var b = starting_text.length;
           </script>
 
+          <!-- Main landing title and message. -->
           <h1 class="font-light">
               <span class="font-bold" id="typing-text">
                 <span id="home-type-text">Throw </span>away
@@ -78,6 +79,7 @@ $user = new User();
           <div id="action-button-wrapper">
             <a href="" id="title-action-button">Learn More</a>
           </div>
+
         </div>
       </section>
 
@@ -117,36 +119,19 @@ $user = new User();
         </div>
       </section>
 
+      <!-- Top Skyline Divider -->
       <section>
-
         <div id="section-one-skyline"></div>
-
-
       </section>
 
-      <!-- About Section
-      <section id="about-section">
-        <div class="container-fluid">
-
-          <div class="row">
-          </div>
-
-          <div class="row">
-            <h1>Hi</h1>
-          </div>
-
-        </div>
-      </section>
-      -->
-
-      <!-- How We Help -->
+      <!-- How We Help Section -->
       <section class="flow nav-animation-element">
         <div class="content clearfix">
 
           <!-- Title / Sub message -->
           <header>
             <h1 class="font-light" style="padding-bottom: 2px;"><br>How <span class="font-bold">We</span> Help?</h1>
-            <p>Overcooked gives anyone with excess food an option to help feed their communities and reduce waste.</p>
+            <p>Overcooked provides the opportunity for restaurants, grocery stores, charities, or anyone to give away their excess food away to help feed their communities while also reducing waste in Metro Vancouver.</p>
           </header>
 
           <!-- Step #1 -->

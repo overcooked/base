@@ -55,9 +55,22 @@ $user = new User();
       <!-- Main Lander Title Section -->
       <section id="title-section">
         <div class="container">
+
+          <!-- Setup Typing Variables. -->
+          <script>
+              var strings = new Array("Throw ", "Give ");
+              var typingSpeed = 150;
+              var deleteSpeed = 130;
+              var waitTime = 700;
+              var exists_text = true;
+              var isLoop = false;
+              var starting_text = "Throw ";
+              var b = starting_text.length;
+          </script>
+
           <h1 class="font-light">
               <span class="font-bold" id="typing-text">
-                <span id="home-type-text">Give </span>away
+                <span id="home-type-text">Throw </span>away
               </span>
               your extra food
           </h1>

@@ -11,9 +11,10 @@ $user = new User();
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <!-- General. -->
-    <title>Sign Up | Overcooked</title>
-    <meta name="description" content="Overcooked lets you give your extra food to people who really need it.">
+    <title>Overcooked: Register</title>
+    <meta name="description" content="Register for an account on Overcooked and begin browsing listings or posting your excess foods!">
 
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
@@ -89,11 +90,10 @@ $user = new User();
               By registering, you agree to our
               <a target="_blank" href="/tos.php">Terms and Services</a>
             </p>
-                <div class="divider" style="margin-top: 15px;"></div>
-                <p class="dont-have-account-link text-center" style="margin-top: 15px; margin-bottom: 15px;">
-                  Already have an account?
-                  <a target="_blank" href="/login.php">Log In</a>
-                </p>
+            <div class="divider" style="margin-top: 10px; margin-bottom: 3px;"></div>
+            <p class="dont-have-account-link text-center" style="margin-top: 15px; margin-bottom: 15px;">
+              Already have an account? <a target="_blank" href="/login.php">Log In</a>
+            </p>
           </div>
 
           <!-- Form Error Display -->

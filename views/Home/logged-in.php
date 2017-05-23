@@ -26,7 +26,7 @@ $user = new User();
     <script src="/public/js/masonry.js" type="text/javascript"></script>
     <script src="/public/js/search.js" type="text/javascript"></script>
     <script src="/public/js/filter.js" type="text/javascript"></script>
-
+    
   </head>
   <body>
 

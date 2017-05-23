@@ -12,7 +12,8 @@
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
 body {
-  background: #f2f5f7; }
+  background: #f2f5f7;
+  padding-bottom: 80px; }
 
 .main {
   margin-bottom: -3px;

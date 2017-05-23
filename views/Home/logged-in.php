@@ -25,6 +25,7 @@ $user = new User();
     <!-- Script Files -->
     <script src="/public/js/masonry.js" type="text/javascript"></script>
     <script src="/public/js/search.js" type="text/javascript"></script>
+    <script src="/public/js/filter.js" type="text/javascript"></script>
 
   </head>
   <body>
@@ -51,6 +52,13 @@ $user = new User();
             <span class="ss-icon search-icon">search</span>
           </div>
         </div>
+        <div style="background-color: #343C40; color: white" class="row" id="filters">
+          <div class="radio">
+            <label class="radio-inline"><input id="rad1" type="radio" name="optradio">Meat</label>
+            <label class="radio-inline"><input id="rad2" type="radio" name="optradio">Vegetables</label>
+            <label class="radio-inline"><input id="rad3" type="radio" name="optradio">Fruit</label>
+        </div>
+      </div>
 
       </div>
     </section>
@@ -85,7 +93,7 @@ $user = new User();
 
                     // Get the image for the post.
                     $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
-                    $image = '';
+                        $image = '';
 
                     // Save into a variable.
                     if ($post_image->count()) {
@@ -97,12 +105,12 @@ $user = new User();
 
                     // Convert the date.
                     $post_date = strtotime($post->post_date);
-                    $post_date = date('Y-m-d', $post_date);
+                        $post_date = date('Y-m-d', $post_date);
 
                     // Get the ID for the posting.
                     $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
 
-                    echo "
+                        echo "
                       <div class='thumbnail grid-item'>
                         <a href='{$post_listing_url}'>
                           <img src='{$image->post_image_url}' class='img-responsive' alt='Post Image'>

@@ -19,8 +19,7 @@ body {
   margin-right: 0; }
 
 .main {
-  margin-top: 5px;
-  margin-bottom: 70px; }
+  margin-top: 5px; }
 
 #post-form-header {
   font-family: proximanova-semibold, Helvetica, Arial, sans-serif;
@@ -40,7 +39,8 @@ body {
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
   padding: 12px 20px 30px;
   border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px; }
+  border-bottom-left-radius: 5px;
+  margin-bottom: 120px; }
 
 #help-block-arrow {
   width: 0;

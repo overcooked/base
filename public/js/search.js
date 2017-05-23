@@ -15,6 +15,10 @@ $(document).ready(function() {
             transitionDuration: '0'
         });
 
+        setInterval(function() {
+            msnry.layout();
+        }, 1000);
+
         // g - global match
         // i - case insensitive
         // m - multi line

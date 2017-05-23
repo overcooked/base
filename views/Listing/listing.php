@@ -35,7 +35,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
   // If the post exists.
   if ($posting->count()) {
-    $post = $posting->first();
+      $post = $posting->first();
 
     // Get the image for the post.
     $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
@@ -49,22 +49,21 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     // Save image URL into a variable.
     $profile = $user_profile->first();
 
-    if($profile->profile_image_url !== '') {
-      $profile = $profile->profile_image_url;
-    } else {
-      $profile = 'https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg';
-    }
+      if ($profile->profile_image_url !== '') {
+          $profile = $profile->profile_image_url;
+      } else {
+          $profile = 'https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg';
+      }
 
     // Get the user that the post belongs to.
     $poster = DB::getInstance()->get('users', array('user_id', '=', $post->user_id));
-    $poster = $poster->first();
+      $poster = $poster->first();
 
     // Get the link to a users profile.
     $user_profile_url = '/profile.php?user=' . substr($poster->user_id, 5);
   }
-
 } else {
-  // No posting found, redirect.
+    // No posting found, redirect.
   Redirect::to('404.php');
 }
 
@@ -76,7 +75,10 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
     <!-- General. -->
     <title>Welcome, <?php echo escape($user->data()->user_first) ?> | Overcooked</title>
-    <meta name="description" content="Overcooked: Feed those in need, with your extra food.">
+    <meta name="description" content="Overcooked: <?php $post->post_title ?>">
+    
+    <!-- TODO: Echo tags here -->
+    <!-- <meta name="keywords" content=""> -->
 
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>

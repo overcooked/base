@@ -13,10 +13,6 @@ $(document).ready(function() {
 
             var msnry = new Masonry('.grid', {
                 transitionDuration: '0'
-<<<<<<< HEAD
-=======
-
->>>>>>> 2a999c5fe63450006081ad91c305ea96383c7045
             });
 
             // g - global match

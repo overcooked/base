@@ -35,5 +35,6 @@ $(document).ready(function() {
             }
             msnry.layout();
         });
+        msnry.layout();
     });
 });;

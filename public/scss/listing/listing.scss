@@ -2,88 +2,77 @@
  * The styling for the listings page.
  * @author Team point.
  */
-
 /** Import The Global Variables. */
 @import 'variables';
-
 /* ========== ========== ========== ========== */
-
 body {
-  background: #f2f5f7;
+    background: #f2f5f7;
 }
-
 /* Top Image. */
 #listing-image img {
-  height: 200px;
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-  transition: all 0.3s ease;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
 }
 
 #listing-image img:hover {
-  cursor: pointer !important;
-  cursor: hand !important;
-  opacity: 0.9;
+    cursor: pointer !important;
+    cursor: hand !important;
+    opacity: 0.9;
 }
-
 /* Main Posting Information Wrapper */
 .main {
-  margin-top: 0;
-  padding-top: 15px;
-  background-color: #fff;
+    margin-top: 0;
+    padding-top: 15px;
+    background-color: #fff;
 }
-
 /* Posts Wrapper */
 #post-information {
-  padding-left: 5px;
-  padding-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
-
 /* Posts Wrapper */
-#post-information .form-divider{
-  margin-top: 18px;
-  margin-left: 0;
-  width: 100%;
+#post-information .form-divider {
+    margin-top: 18px;
+    margin-left: 0;
+    width: 100%;
 }
-
 /* Title Wrapper */
 #listing-title {
-  margin-top: 13px;
+    margin-top: 13px;
 }
-
 /* Title */
 #listing-title h3 {
-  font-family: $font-bold;
-  letter-spacing: 0.5px;
-  text-align: center;
-  font-size: 27px;
-  text-transform: capitalize;
+    font-family: $font-bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-size: 27px;
+    text-transform: capitalize;
 }
-
 /* Posted By Wrapper */
 #listing-poster-info {
-  margin-top: 7px;
+    margin-top: 7px;
 }
 
 #listing-poster-info #profile-img {
-  height: 55px;
-  border-radius: 100px;
+    height: 55px;
+    border-radius: 100px;
 }
 
 #listing-poster-info #posted-by {
-  display: inline-block;
-  position: relative;
-  top: 14px;
-  left: 10px;
-  font-size: 0.9em;
+    display: inline-block;
+    position: relative;
+    top: 14px;
+    left: 10px;
+    font-size: 0.9em;
 }
-
 /* Where Poster Lives Details. */
 #listing-poster-info #posted-by small {
-  color: #cacbcc;
-  font-family: $font-light;
-  position: relative;
-  bottom: 1px;
+    color: #cacbcc;
+    font-family: $font-light;
+    position: relative;
+    bottom: 1px;
 }

@@ -79,12 +79,27 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     <title>Overcooked: <?php echo $post->post_title ?></title>
     <meta name="description" content="Overcooked: <?php echo $post->post_title ?>">
 
-    <!-- Facebook specific -->
-    <meta property="og:url"                content="<?php echo $post_listing_url ?>" />
-    <meta property="og:type"               content="article" />
-    <meta property="og:title"              content="<?php echo $post->post_title ?>" />
-    <meta property="og:description"        content="<?php echo $post->post_description ?>" />
-    <meta property="og:image"              content="<?php echo $post_listing_url ?>" />
+
+    <!-- Open Graph Meta Tags. -->
+    <meta property="og:url" content="<?php echo $post_listing_url ?>">
+    <meta property="og:title" content="<?php echo $post->post_title ?>">
+    <meta property="og:description" content="<?php echo $post->post_description ?>">
+    <meta property="og:site_name" content="Overcooked">
+    <meta property="og:image" content="https://overcooked.ca/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Display Meta Tags. -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Overcooked.ca">
+    <meta name="twitter:title" content="<?php echo $post->post_title ?>">
+    <meta name="twitter:creator" content="@Overcooked.ca">
+    <meta name="twitter:description" content="<?php echo $post->post_description ?>">
+    <meta name="twitter:image:src" content="https://overcooked.ca/">
+
+    <!-- Google Plus Meta Tags. -->
+    <meta itemprop="name" content="<?php echo $post->post_title ?>">
+    <meta itemprop="description" content="<?php echo $post->post_description ?>">
+    <meta itemprop="image" content="https://overcooked.ca/">
 
     <!-- TODO: Echo tags here -->
     <!-- <meta name="keywords" content=""> -->

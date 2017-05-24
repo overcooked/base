@@ -120,7 +120,7 @@ $user = new User();
       </section>
 
       <!-- Top Skyline Divider -->
-      <section>
+      <section id="skyline-wrapper">
         <div id="section-one-skyline"></div>
       </section>
 
@@ -160,6 +160,27 @@ $user = new User();
             <h3>List the food</h3>
             <hr style="width: 60px; margin-top: 8px; margin-bottom: 8px;">
             <p>Create a listing or giveaway on the website. This way people can contact you and pickup the extra foods.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Benefits Section. -->
+      <section id="benefits-section">
+        <div class="container">
+
+          <!-- Less Waste -->
+          <div class="col-sm-6" id="first-benefit">
+            <img src="/public/assets/icons/leaf.svg" style="height: 46px;">
+            <h3 class="font-bold" style="text-transform: uppercase; padding-top: 16px; padding-left:4px; color: #24b47e;">Help The Environment</h3>
+            <p style="padding-left: 4px; padding-top: 9px; letter-spacing: 0.2px; line-height: 27px; opacity: 0.96; padding-right: 8%;">Our organization takes donations in the form of fresh-made, leftover, or perishable foods and uploads them online for those in need. This helps reduce the amount of food wasted in Vancouver because food is being eaten instead of thrown away.</p>
+          </div>
+
+          <!-- Feed Others -->
+          <div class="col-sm-6" id="second-benefit" style="padding-left: 65px;">
+            <img src="/public/assets/icons/platforms.svg" style="height: 46px;">
+            <h3 class="font-bold" style="text-transform: uppercase; padding-top: 16px; padding-left:4px; color: #24b47e;">Help Your Community</h3>
+            <p style="padding-left: 4px; padding-top: 9px; letter-spacing: 0.2px; line-height: 27px; opacity: 0.96;">Overcooked allows users to meet each other face-to-face for meal pickups. All meals posted are free of charge to help promote giving. This helps connect hungry students, families, or anyone to people who have excess foods.</p>
           </div>
 
         </div>

@@ -191,6 +191,9 @@ body {
   background-position: top,bottom;
   background-size: 1280px 126px,1280px 55px; }
 
+#skyline-wrapper {
+  margin-top: -150px; }
+
 .hr-divider {
   border-width: 2px;
   border-color: #eee;
@@ -450,10 +453,6 @@ Section Quote
   min-height: 160px;
   background-position: 139% 354%; }
 
-/* Wrapper for the stats blockquote. */
-#stats {
-  height: 440px; }
-
 .Quote {
   padding: 66px; }
 
@@ -551,8 +550,30 @@ section.flow header {
   position: absolute;
   color: #e0e4e8; }
 
+/**
+ * Benefits Section
+ */
+#benefits-section {
+  position: relative;
+  top: 55px; }
+  #benefits-section div {
+    padding-top: 55px; }
+  #benefits-section #first-benefit {
+    border-right: 2px solid #f6f7f8;
+    padding-bottom: 70px; }
+  #benefits-section #second-benefit {
+    padding-bottom: 70px; }
+
 /* Move navbar up when collapsing. */
 @media only screen and (max-width: 768px) {
+  #second-benefit {
+    border-top: 2px solid #f6f7f8;
+    padding-left: 15px !important;
+    padding-right: 8%; }
+
+  #first-benefit {
+    border: none !important; }
+
   .navbar-default {
     margin-top: -7px; }
 
@@ -582,7 +603,7 @@ section.flow header {
     margin-bottom: -80px; }
 
   #first-step {
-    right: 48%;
+    right: 49%;
     top: 360px !important;
     margin: auto;
     position: absolute;
@@ -590,7 +611,7 @@ section.flow header {
     font-size: 20px; }
 
   #second-step {
-    right: 48%;
+    right: 49%;
     top: 375px !important;
     margin: auto;
     position: absolute;
@@ -617,6 +638,9 @@ section.flow header {
 
   #typing-text {
     display: block; }
+
+  .Quote {
+    padding: 28px; }
 
   #title-message {
     font-size: 20px;
@@ -649,5 +673,31 @@ section.flow header {
 
   #second-step {
     top: 395px !important; } }
+@media only screen and (max-width: 330px) {
+  /* Quote padding changed to fit smaller screens. */
+  .Quote {
+    padding: 18px !important;
+    text-align: center; }
+
+  /* Fix metro vancouver title. */
+  #problem-statement h1 {
+    font-size: 26px; }
+
+  #first-step {
+    top: 395px !important;
+    right: 47%; }
+
+  #second-step {
+    top: 415px !important;
+    right: 47%; }
+
+  /* Resize the wasted title in the blockquote. */
+  #wasted-title {
+    font-size: 15px; }
+
+  /* Resize the updating stats title. */
+  .Quote--kickstarter h2 {
+    font-size: 24px;
+    margin-bottom: 3px; } }
 
 /*# sourceMappingURL=home-out.css.map */

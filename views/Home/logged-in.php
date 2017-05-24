@@ -111,7 +111,7 @@ $user = new User();
                     // Get the ID for the posting.
                     $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
 
-                        echo "
+                    echo "
                       <div class='thumbnail grid-item'>
                         <a href='{$post_listing_url}'>
                           <img src='{$image->post_image_url}' class='img-responsive' alt='Post Image'>

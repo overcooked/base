@@ -79,4 +79,55 @@ body {
   position: relative;
   bottom: 1px; }
 
+.share-buttons {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  border-top: 1px solid #ddd; }
+  .share-buttons ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .share-buttons ul li {
+      display: inline-block;
+      margin-right: 0.5em; }
+      .share-buttons ul li span {
+        display: inline;
+        margin: 0.5em; }
+
+.twitter {
+  background-color: #77bcf1;
+  color: #ffffff;
+  border-color: #77bcf1; }
+  .twitter:visited {
+    color: #ffffff;
+    border-color: #77bcf1; }
+  .twitter:hover {
+    background-color: #ffffff;
+    color: #77bcf1;
+    border-color: #77bcf1; }
+
+.facebook {
+  background-color: #627aac;
+  color: #ffffff;
+  border-color: #627aac; }
+  .facebook:visited {
+    color: #ffffff;
+    border-color: #627aac; }
+  .facebook:hover {
+    background-color: #ffffff;
+    color: #627aac;
+    border-color: #627aac; }
+
+.google-plus {
+  background-color: #e36f60;
+  color: #ffffff;
+  border-color: #e36f60; }
+  .google-plus:visited {
+    color: #ffffff;
+    border-color: #e36f60; }
+  .google-plus:hover {
+    background-color: #ffffff;
+    color: #e36f60;
+    border-color: #e36f60; }
+
 /*# sourceMappingURL=listing.css.map */

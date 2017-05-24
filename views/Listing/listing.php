@@ -61,6 +61,8 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
     // Get the link to a users profile.
     $user_profile_url = '/profile.php?user=' . substr($poster->user_id, 5);
+
+      $post_listing_url = 'https://overcooked.ca/listing.php?post=' . substr($post->post_id, 5);
   }
 } else {
     // No posting found, redirect.
@@ -73,15 +75,39 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 <html lang="en">
   <head>
 
-    <!-- General. -->
-    <title>Welcome, <?php echo escape($user->data()->user_first) ?> | Overcooked</title>
-    <meta name="description" content="Overcooked: <?php $post->post_title ?>">
-
     <!-- TODO: Echo tags here -->
     <!-- <meta name="keywords" content=""> -->
 
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
+
+    <!-- General. -->
+    <title>Overcooked: <?php echo $post->post_title ?></title>
+    <meta name="description" content="Overcooked: <?php echo $post->post_title ?>">
+
+
+    <!-- Open Graph Meta Tags. -->
+    <meta property="og:url" content="<?php echo $post_listing_url ?>">
+    <meta property="og:title" content="<?php echo $post->post_title ?>">
+    <meta property="og:description" content="<?php echo $post->post_description ?>">
+    <meta property="og:site_name" content="Overcooked">
+    <meta property="og:image" content="https://overcooked.ca/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Display Meta Tags. -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Overcooked.ca">
+    <meta name="twitter:title" content="<?php echo $post->post_title ?>">
+    <meta name="twitter:creator" content="@Overcooked.ca">
+    <meta name="twitter:description" content="<?php echo $post->post_description ?>">
+    <meta name="twitter:image:src" content="https://overcooked.ca/">
+
+    <!-- Google Plus Meta Tags. -->
+    <meta itemprop="name" content="<?php echo $post->post_title ?>">
+    <meta itemprop="description" content="<?php echo $post->post_description ?>">
+    <meta itemprop="image" content="https://overcooked.ca/">
+
+
 
     <!-- Styling Sheets. -->
     <link rel="stylesheet" href="/public/css/listing/listing.css">
@@ -110,6 +136,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
         <div class="col-md-10 col-md-offset-1">
 
           <?php
+
 
               echo "
               <!-- Post Listing -->
@@ -151,7 +178,21 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                   <b>Post Date:</b>
                   {$post->post_date}
                 </small>
-                <br><br><br><br><br><br><br>
+                <div class='share-buttons'>
+                  <h6 style='padding-bottom: 10px;'>Share on: </h6>
+                  <ul>
+                    <li>
+                      <a href='https://twitter.com/intent/tweet?text={$post_listing_url}' class='twitter btn' title='Share on Twitter'><i class='fa fa-twitter'></i><span> Twitter</span></a>
+                    </li>
+                    <li>
+                      <a href='https://www.facebook.com/sharer/sharer.php?u={$post_listing_url}' class='facebook btn' title='Share on Facebook'><i class='fa fa-facebook'></i><span> Facebook</span></a>
+                    </li>
+                    <li>
+                      <a href='https://plus.google.com/share?url={$post_listing_url}' class='google-plus btn' title='Share on Google Plus'><i class='fa fa-google-plus'></i><span> Google+</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <br><br><br><br><br>
 
               </div>
               ";

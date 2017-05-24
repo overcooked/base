@@ -564,6 +564,15 @@ section.flow header {
   #benefits-section #second-benefit {
     padding-bottom: 70px; }
 
+/**
+ * Footer/Partner section.
+ */
+#footer-section {
+  background: #f6f9fc;
+  position: relative;
+  top: 54px;
+  padding-bottom: 50px; }
+
 /* Move navbar up when collapsing. */
 @media only screen and (max-width: 768px) {
   #second-benefit {
@@ -616,7 +625,20 @@ section.flow header {
     margin: auto;
     position: absolute;
     color: #e0e4e8;
-    font-size: 20px; } }
+    font-size: 20px; }
+
+  #meal-io {
+    padding-top: 10px;
+    padding-bottom: 15px; }
+
+  #meal-io img {
+    top: 0px !important; }
+
+  #food-fall {
+    padding-bottom: 10px; }
+
+  #refigidate {
+    padding-bottom: 7px; } }
 /* Make sure the navbar doesn't break, prematurely. */
 @media only screen and (max-width: 850px) {
   #logged-out-links {
@@ -629,6 +651,15 @@ section.flow header {
     font-size: 35px; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  #footer-links {
+    text-align: center; }
+
+  #footer-links hr {
+    display: none; }
+
+  #footer-links .footer-heading {
+    padding-bottom: 6px; }
+
   #title-section h1 {
     line-height: 36px;
     padding-bottom: 5px; }

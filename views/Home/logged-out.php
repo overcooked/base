@@ -77,7 +77,7 @@ $user = new User();
           </h1>
           <h2 id="title-message">While helping someone who could really use it</h2>
           <div id="action-button-wrapper">
-            <a href="" id="title-action-button">Learn More</a>
+            <a href="#problem-statement" id="title-action-button">Learn More</a>
           </div>
 
         </div>
@@ -184,6 +184,94 @@ $user = new User();
           </div>
 
         </div>
+      </section>
+
+      <!-- Footer Section. -->
+      <section id="footer-section">
+        <div class="container-fluid" id="partners-section">
+
+          <a href="/affiliated.php">
+            <!-- Partner -->
+            <div class="row" id="partner-images" style="padding-top: 25px; padding-bottom: 44px; border-bottom: 2px solid rgba(207,215,223,.25); margin-bottom: 55px;">
+
+              <!-- Meal.io -->
+              <div class="col-sm-2 col-sm-offset-3" id="meal-io">
+                <img src="/public/assets/images/meal.png" style="height: 35px; opacity: 0.5; display: block; margin: auto; position: relative; top: 35px;">
+              </div>
+
+              <!-- Food Fall -->
+              <div class="col-sm-2" id="food-fall">
+                <img src="/public/assets/images/food-fall.png" style="height: 80px; opacity: 0.4; display: block; margin: auto;">
+              </div>
+
+              <!-- Refigidate -->
+              <div class="col-sm-2" id="refigidate">
+                <img src="/public/assets/images/refd.png" style="height: 65px; opacity: 0.40; display: block; margin: auto; position: relative; top: 21px;">
+              </div>
+
+            </div>
+          </a>
+        </div>
+
+        <div class="container">
+          <!-- Footer Links -->
+          <div class="row" id="footer-links">
+
+            <!-- About Section -->
+            <div class="col-sm-3">
+
+              <!-- Overcooked Title -->
+              <h3 class="font-black" style="color: #cfd7df; padding-bottom: 10px;">© Overcooked</h3>
+
+              <!--  About/Description. -->
+              <p style="color: #cfd7df; padding-bottom: 25px;">Give your extra food to people who really need it.</p>
+
+            </div>
+
+            <!-- General Links -->
+            <div class="col-sm-2 col-sm-offset-1">
+
+              <h4 class="footer-heading" style="text-transform: uppercase; color: #8898aa; font-family: proximanova-semibold; letter-spacing: 0.55px; font-size: 16px;">General</h4>
+              <hr / style="width: 43px; margin-top: 10px; margin-bottom: 8px; margin-left: 0;">
+
+              <ul style="line-height: 28px; padding-bottom: 25px;">
+                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Sign In</a></li>
+                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Get Started</a></li>
+                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Affiliates</a></li>
+              </ul>
+
+            </div>
+
+            <!-- Affiliated Links -->
+            <div class="col-sm-3">
+
+              <h4 class="footer-heading" style="text-transform: uppercase; color: #8898aa; font-family: proximanova-semibold; letter-spacing: 0.55px; font-size: 16px;">Legal</h4>
+              <hr / style="width: 43px; margin-top: 10px; margin-bottom: 8px; margin-left: 0;">
+
+              <ul style="line-height: 28px; padding-bottom: 25px;">
+                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Privacy Policy</a></li>
+                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Terms &amp; Conditions</a></li>
+                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Support</a></li>
+              </ul>
+
+            </div>
+
+            <!-- Location -->
+            <div class="col-sm-3">
+
+              <!-- -->
+              <h5 class="font-bold" style="color: #cfd7df; padding-bottom: 10px;">LOCATION</h5>
+
+              <!--  About/Description. -->
+              <p style="color: #cfd7df;">3700 Willingdon Ave, Burnaby, BC V5G 3H2</p>
+              <p style="color: #cfd7df;">Phone: +1 (778)-402-3214</p>
+              <p style="color: #cfd7df;">Email: hello@overcooked.ca</p>
+
+            </div>
+
+          </div>
+        </div>
+
       </section>
 
     </section>

@@ -61,6 +61,8 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
     // Get the link to a users profile.
     $user_profile_url = '/profile.php?user=' . substr($poster->user_id, 5);
+
+      $post_listing_url = 'https://overcooked.ca/listing.php?post=' . substr($post->post_id, 5);
   }
 } else {
     // No posting found, redirect.
@@ -74,8 +76,15 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
   <head>
 
     <!-- General. -->
-    <title>Welcome, <?php echo escape($user->data()->user_first) ?> | Overcooked</title>
-    <meta name="description" content="Overcooked: <?php $post->post_title ?>">
+    <title>Overcooked: <?php echo $post->post_title ?></title>
+    <meta name="description" content="Overcooked: <?php echo $post->post_title ?>">
+
+    <!-- Facebook specific -->
+    <meta property="og:url"                content="<?php echo $post_listing_url ?>" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="<?php echo $post->post_title ?>" />
+    <meta property="og:description"        content="<?php echo $post->post_description ?>" />
+    <meta property="og:image"              content="<?php echo $post_listing_url ?>" />
 
     <!-- TODO: Echo tags here -->
     <!-- <meta name="keywords" content=""> -->
@@ -111,7 +120,6 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
           <?php
 
-          $post_listing_url = 'https://overcooked.ca/listing.php?post=' . substr($post->post_id, 5);
 
               echo "
               <!-- Post Listing -->
@@ -167,7 +175,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                     </li>
                   </ul>
                 </div>
-                <br><br><br><br><br><br><br>
+                <br><br><br><br><br>
 
               </div>
               ";

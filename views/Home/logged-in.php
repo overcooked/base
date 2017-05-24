@@ -31,6 +31,13 @@ $user = new User();
   </head>
   <body>
 
+    <div class="stripe" id="stripe-one"></div>
+    <div class="stripe" id="stripe-two"></div>
+    <div class="stripe" id="stripe-three"></div>
+    <div class="stripe" id="stripe-four"></div>
+    <div class="stripe" id="stripe-five"></div>
+    <div class="stripe" id="stripe-six"></div>
+
     <?php
     $user = new User();
 
@@ -184,8 +191,11 @@ $user = new User();
             <span class="ss-icon search-icon">search</span>
           </div>
         </div>
-        <div style="background-color: #343C40; color: white" class="row" id="filters">
+        <div style="margin-top: 11px; background-color: #ebeff3; color: #898c90; border-top-right-radius: 2px; border-top-left-radius: 2px; border-top: 4px solid #d6dee4;" class="row" id="filters">
           <div class="radio">
+            <label class="radio-inline"><input id="rad1" type="radio" name="optradio">Meat</label>
+            <label class="radio-inline"><input id="rad2" type="radio" name="optradio">Vegetables</label>
+            <label class="radio-inline"><input id="rad3" type="radio" name="optradio">Fruit</label>
             <label class="radio-inline"><input id="rad1" type="radio" name="optradio">Meat</label>
             <label class="radio-inline"><input id="rad2" type="radio" name="optradio">Vegetables</label>
             <label class="radio-inline"><input id="rad3" type="radio" name="optradio">Fruit</label>

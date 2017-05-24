@@ -75,6 +75,12 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 <html lang="en">
   <head>
 
+    <!-- TODO: Echo tags here -->
+    <!-- <meta name="keywords" content=""> -->
+
+    <!-- Boiler Plate Tags. -->
+    <?php View::head(); ?>
+
     <!-- General. -->
     <title>Overcooked: <?php echo $post->post_title ?></title>
     <meta name="description" content="Overcooked: <?php echo $post->post_title ?>">
@@ -101,11 +107,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     <meta itemprop="description" content="<?php echo $post->post_description ?>">
     <meta itemprop="image" content="https://overcooked.ca/">
 
-    <!-- TODO: Echo tags here -->
-    <!-- <meta name="keywords" content=""> -->
 
-    <!-- Boiler Plate Tags. -->
-    <?php View::head(); ?>
 
     <!-- Styling Sheets. -->
     <link rel="stylesheet" href="/public/css/listing/listing.css">

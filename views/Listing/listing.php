@@ -111,6 +111,8 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
           <?php
 
+          $post_listing_url = 'https://overcooked.ca/listing.php?post=' . substr($post->post_id, 5);
+
               echo "
               <!-- Post Listing -->
               <div class='col-md-8 col-md-offset-2' id='post-information'>
@@ -151,6 +153,20 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                   <b>Post Date:</b>
                   {$post->post_date}
                 </small>
+                <div class='share-buttons'>
+                  <h6 style='padding-bottom: 10px;'>Share on: </h6>
+                  <ul>
+                    <li>
+                      <a href='https://twitter.com/intent/tweet?text={$post_listing_url}' class='twitter btn' title='Share on Twitter'><i class='fa fa-twitter'></i><span> Twitter</span></a>
+                    </li>
+                    <li>
+                      <a href='https://www.facebook.com/sharer/sharer.php?u={$post_listing_url}' class='facebook btn' title='Share on Facebook'><i class='fa fa-facebook'></i><span> Facebook</span></a>
+                    </li>
+                    <li>
+                      <a href='https://plus.google.com/share?url={$post_listing_url}' class='google-plus btn' title='Share on Google Plus'><i class='fa fa-google-plus'></i><span> Google+</span></a>
+                    </li>
+                  </ul>
+                </div>
                 <br><br><br><br><br><br><br>
 
               </div>

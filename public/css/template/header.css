@@ -93,7 +93,7 @@
 /* Get started button for logged out header-bar. */
 #header-get-started {
   font-family: proximanova-bold, Helvetica, Arial, sans-serif;
-  margin-top: 13px;
+  margin-top: 12px;
   padding: 8px 14px 7px 16px;
   background-color: #50ba4a;
   color: #fff;
@@ -127,18 +127,19 @@
   border: none; }
 
 #navbar-post-button-wrapper {
-  margin-top: 12px;
+  margin-top: 14px;
   padding-right: 22px;
-  border-right: 2px solid #f7f7f7;
+  border-right: 2px solid #edf1f3;
   padding-left: 22px;
-  border-left: 2px solid #f7f7f7; }
+  border-left: 2px solid #edf1f3; }
 
 #navbar-post-button {
   font-family: proximanova-bold, Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif;
-  padding: 8px 14px 7px;
-  background-color: #50ba4a;
+  padding: 6px 14px 5px;
+  background-color: #98ca86;
+  text-shadow: 0 0px 3px rgba(36, 180, 126, 0.1);
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
   border: none;
   border-radius: 3px;
   text-transform: uppercase;
@@ -169,7 +170,7 @@
   font-size: 0.85em;
   text-transform: uppercase;
   letter-spacing: 0.7px;
-  padding-top: 20px;
+  padding-top: 21px;
   font-family: proximanova-bold;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -231,7 +232,7 @@
   width: 40px;
   height: auto;
   border-radius: 100px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   margin-top: 10px;
   margin-left: 20px;
   margin-right: 12px;
@@ -244,8 +245,10 @@
 
 #navbar-profile-dropdown {
   position: relative;
-  color: #565857;
-  top: 21px;
+  color: #7e9098;
+  top: 20px;
+  letter-spacing: 0.6px;
+  font-size: 14px;
   text-decoration: none;
   -webkit-transition: all 1.3s ease;
   -moz-transition: all 0.3s ease;

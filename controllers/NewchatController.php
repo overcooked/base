@@ -20,12 +20,31 @@ if(!isset($_GET["user"])) {
 $user_to_id = 'user_' . $_GET["user"];
 $user_from_id = $user->data()->user_id;
 
-// Get all inboxes from the current user.
-$inboxes = DB::getInstance()->get('inbox', array('user_from', '=', $user_from_id));
-
 // No chat between two people exists yet.
 $previous_chat = false;
 $previous_inbox_id = '';
+
+// Get all inboxes from the current user.
+$inboxes = DB::getInstance()->get('inbox', array('user_from', '=', $user_from_id));
+
+// Check if any inboxes exist.
+if ($inboxes->count()) {
+    foreach ($inboxes->results() as $inbox) {
+
+      // Check if a previous chat exists with this user.
+      if($inbox->user_to == $user_to_id) {
+        $previous_chat = true;
+        $previous_inbox_id = $inbox->inbox_id;
+      }
+
+    }
+} else {
+  // No previous chat exists.
+  $previous_chat = false;
+}
+
+// Get all inboxes from the current user.
+$inboxes = DB::getInstance()->get('inbox', array('user_to', '=', $user_from_id));
 
 // Check if any inboxes exist.
 if ($inboxes->count()) {
@@ -46,7 +65,7 @@ if ($inboxes->count()) {
 // If previous chat exist, redirect.
 if($previous_chat) {
   // Redirect to previous chat.
-  Redirect::to("/chat.php?inbox=" . substr($previous_inbox_id, 6));
+  Redirect::to("/messages.php?inbox=" . substr($previous_inbox_id, 6));
 }
 
 // Create a unique inbox ID.
@@ -63,4 +82,4 @@ $fields = array(
 DB::getInstance()->insert('inbox', $fields);
 
 // Redirect to new chat.
-Redirect::to("/chat.php?inbox=" . substr($inbox_id, 6));
+Redirect::to("/messages.php?inbox=" . substr($inbox_id, 6));

@@ -21,6 +21,9 @@ $image = null;
 // Get the link to a users profile.
 $user_profile_url = null;
 
+// Link for the new chat link.
+$user_chat_url = null;
+
 // Variable to store the psters location.
 $posters_location = null;
 
@@ -62,7 +65,10 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     // Get the link to a users profile.
     $user_profile_url = '/profile.php?user=' . substr($poster->user_id, 5);
 
-      $post_listing_url = 'https://overcooked.ca/listing.php?post=' . substr($post->post_id, 5);
+    // Get the link to a users profile.
+    $user_chat_url = '/newchat.php?user=' . substr($poster->user_id, 5);
+
+    $post_listing_url = 'https://overcooked.ca/listing.php?post=' . substr($post->post_id, 5);
   }
 } else {
     // No posting found, redirect.
@@ -161,6 +167,8 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
                 <p>{$post->post_description}</p>
                 <hr>
+
+                <a href='{$user_chat_url}'>Message User About Posting</a>
 
                 <small>
                   <b>Pickup Location:</b>

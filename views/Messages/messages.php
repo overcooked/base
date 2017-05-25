@@ -22,9 +22,10 @@ $user_to = '';
 // Inbox ID exists.
 if(isset($_GET["inbox"])) {
 
+  $current_inbox_id = "inbox_" . $_GET["inbox"];
+
   // Get all inboxes from the current user.
   $inboxes = DB::getInstance()->get('inbox', array('user_from', '=', $user->data()->user_id));
-  $current_inbox_id = "inbox_" . $_GET["inbox"];
 
   // Check if any inboxes exist.
   if ($inboxes->count()) {
@@ -40,6 +41,27 @@ if(isset($_GET["inbox"])) {
     }
   }
 
+  if(!$previous_chat) {
+    // Get all inboxes from the current user.
+    $inboxes = DB::getInstance()->get('inbox', array('user_to', '=', $user->data()->user_id));
+
+    // Check if any inboxes exist.
+    if ($inboxes->count()) {
+      foreach ($inboxes->results() as $inbox) {
+
+        // See if a chat exists for this user with the current ID.
+        if($inbox->inbox_id == $current_inbox_id) {
+          $previous_chat = true;
+          $user_from = $inbox->user_from;
+          $user_to = $inbox->user_to;
+        }
+
+      }
+    }
+  }
+
+
+
 }
 ?>
 
@@ -48,7 +70,7 @@ if(isset($_GET["inbox"])) {
   <head>
 
     <!-- General. -->
-    <title>Messages | Overcooked.ca</title>
+    <title>Overcooked: Messages</title>
     <meta name="description" content="Overcooked lets you give your extra food to people who really need it.">
 
     <!-- Boiler Plate Tags. -->
@@ -289,7 +311,7 @@ if(isset($_GET["inbox"])) {
                 console.log(response);
               },
               error: function(jqXHR, textStatus, errorThrown) {
-                 console.log(textStatus, errorThrown);
+                console.log(textStatus, errorThrown);
               }
             });
 
@@ -298,6 +320,56 @@ if(isset($_GET["inbox"])) {
         });
 
       });
+    </script>
+
+    <script type="text/javascript">
+
+     $(document).ready(function() {
+
+       var time = 0;
+       setInterval(function() {
+
+         time++;
+         $.ajax({
+           url: "newmessages.php",
+           type: "post",
+           data: {
+           'inbox_id': '<?php echo $current_inbox_id; ?>',
+           'current_time': time
+           },
+           success: function (response) {
+
+             // If message was successful.
+             if(response) {
+               time = 0;
+               var message = response.split("//////////////");
+
+               if(message[1] !== '<?php echo $user->data()->user_id; ?>') {
+                 $("#messages").append('<div class="message"> <div class="from message-size"> <span class="ss-icon">dropdown</span> <p class="text"> ' + message[0] + ' </p> </div> </div>');
+               }
+
+               /* Corrects Message Sizing. */
+               $('.message').each(function(index, obj) {
+                 if($(this).children('.message-size').height() <= 20) {
+                   var message_width = $(this).children('.message-size').children('.text').width() + 30;
+                   if(message_width < 300) {
+                       $(this).children('.message-size').attr('style', 'width: ' + message_width + 'px !important');
+                   } else {
+                     $(this).children('.message-size').css("width", message_width);
+                   }
+                 }
+               });
+
+               $('#messaging-area').scrollTop($('#messaging-area')[0].scrollHeight);
+             }
+
+           }
+         });
+
+       }, 1000);
+
+     });
+
     </script>
 
   </body>

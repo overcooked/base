@@ -91,43 +91,6 @@ if(isset($_GET["inbox"])) {
 
       </div>
     </div>
-
-    <!-- Chat Code. -->
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-        console.log($('.message').length);
-
-        $("#send-button").on("click",function() {
-
-          // Get the input message.
-          var message = $("#message-input").val();
-
-          // As long as it isn't an empty message.
-          if(message !== '') {
-            $("#messages").append("<p class='message' style='text-align: right;'>" + message + "<p>");
-            $.ajax({
-              url: "send.php",
-              type: "post",
-              data: {
-              'inbox_id': '<?php echo $current_inbox_id; ?>',
-              'user_from': '<?php echo $user->data()->user_id; ?>',
-              'inbox_message': message,
-              },
-              success: function (response) {
-                console.log(response);
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                 console.log(textStatus, errorThrown);
-              }
-            });
-
-            $("#message-input").val('');
-          }
-        });
-
-      });
-    </script>
-
+    
   </body>
 </html>

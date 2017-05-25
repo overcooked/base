@@ -309,9 +309,5 @@ body {
   color: #50ba4a;
   letter-spacing: 0.6px;
   -webkit-transition: all 0.3s ease;
-}
-
-/* Send Button Design. */
-#send-message-button:hover {
-  color: #fff;
+  cursor: pointer;
 }

@@ -18,7 +18,7 @@ if ($user_description->count()) {
   <head>
 
     <!-- General. -->
-    <title>Edit Profile | Overcooked.ca</title>
+    <title>Overcooked: Edit Profile</title>
     <meta name="description" content="Overcooked lets you give your extra food to people who really need it.">
 
     <!-- Boiler Plate Tags. -->

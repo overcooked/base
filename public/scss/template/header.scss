@@ -167,7 +167,7 @@
 .navbar-default {
     background-color: #fff;
     height: 72px;
-    padding-top: 8px;
+    padding-top: 7px;
     border: none;
     border-radius: 0;
     box-shadow: 0 1px 5px rgba(0,0,0,0.05);
@@ -282,7 +282,11 @@
 }
 
 #navbar-dropdown li a {
-    color: $primary-color;
+    color: #73ca8b;
+}
+
+#navbar-profile-dropdown:hover {
+    color: #7bd694 !important;
 }
 
 #navbar-dropdown .ss-icon {

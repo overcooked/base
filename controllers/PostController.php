@@ -23,8 +23,11 @@ if (Input::exists() && Token::check(Input::get('token'))) {
   // Pass name (and optional chmod) to create folder for storage
   $image->setLocation(getcwd() . "/uploads/post_images");
 
-  // Define the min/max image upload size (size in bytes)
-  $image->setSize(1, 9000000);
+   // Define allowed mime types to upload
+   $image->setMime(array("jpeg", "jpg", "png"));
+
+   // Define the min/max image upload size (size in bytes)
+   $image->setSize(1, 9000000);
 
   // Validate the input form data.
   $validate = new Validate();
@@ -63,7 +66,7 @@ if (Input::exists() && Token::check(Input::get('token'))) {
     $upload = $image->upload();
 
     // Check if the upload was successful.
-    if ($upload) {
+    if($upload) {
 
       // Resize the image.
       $resize = Bulletproof\resize(

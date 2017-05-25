@@ -46,16 +46,6 @@ class Validate
 
         // If the form name is post_image.
         if ($form_name === 'post_image') {
-
-          // Check if the image exists.
-          $image = new Bulletproof\Image($_FILES);
-
-            if ($_SESSION['image_check'] === 0) {
-                $this->add_error("post_image/Image is required.");
-            }
-
-            unset($_SESSION['image_check']);
-
           // Move to the next validation.
           continue;
         } else {

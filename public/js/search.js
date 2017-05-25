@@ -45,10 +45,7 @@ $(document).ready(function() {
                 $(this).removeClass("item masonry-brick grid-item");
             }
         });
-        var delayMillis = 1000; //1 second
 
-        setTimeout(function() {
-            $grid.masonry('layout');
-        }, delayMillis);
+        $grid.masonry('layout');
     });
 });;

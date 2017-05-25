@@ -2,6 +2,7 @@ $(document).ready(function() {
     var $grid = $('.grid').imagesLoaded(function() {
         $grid.masonry({
             transitionDuration: '0'
+            columnWidth: 69
         });
     });
 

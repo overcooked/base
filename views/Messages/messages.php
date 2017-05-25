@@ -269,14 +269,14 @@ if(isset($_GET["inbox"])) {
             </div>
 
             <!-- Footer/Input Form -->
-            <div class="row" id="create-message-area">
+            <div class="row" id="create-message-area hidden-x">
 
                 <!-- Input Form. -->
                 <div class="col-sm-7 col-sm-offset-5" id="current-chat">
-                  <div class="col-sm-10">
+                  <div class="col-xs-10">
                     <input id="create-message-input" type="text" name="" value="" placeholder="type a message...">
                   </div>
-                  <div class="col-sm-2" id="send-wrapper">
+                  <div class="col-xs-2" id="send-wrapper">
                     <a id="send-message-button">Send</a>
                   </div>
                 </div>

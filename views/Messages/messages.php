@@ -16,8 +16,8 @@ $previous_chat = false;
 // Current Inbox ID.
 $current_inbox_id = '';
 
-$user_from = '';
-$user_to = '';
+$user_from = null;
+$user_to = null;
 
 // Inbox ID exists.
 if(isset($_GET["inbox"])) {
@@ -60,8 +60,6 @@ if(isset($_GET["inbox"])) {
     }
   }
 
-
-
 }
 ?>
 
@@ -100,40 +98,63 @@ if(isset($_GET["inbox"])) {
                 <div class="col-sm-5" id="recent-conversation-area">
                   <h1>Recent Messages</h1>
 
+                  <?php
+                  // Current Conversation.
+                  if($user_from) {
+                    // Get all inboxes from the current user.
+                    $user_from_account = DB::getInstance()->get('users', array('user_id', '=', $user_from));
+                    $user_from_account = $user_from_account->first();
+
+                    // Get the link to a users profile.
+                    $user_profile_url = '/profile.php?user=' . substr($user_from_account->user_id, 5);
+
+                    echo "
+                    <!-- Conversation -->
+                    <div id='active-chat' class='recent-conversation'>
+                        <!-- Profile Image -->
+                        <div id='profile-image-wrapper'>
+                          <img id='profile-image' src='http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg'>
+                        </div>
+
+                        <!-- Conversation Details -->
+                        <a href='{$user_profile_url}' id='conversation-details' style='text-decoration: none;'>
+                          <span id='fullname'>{$user_from_account->user_first} {$user_from_account->user_last}</span><br>
+                          <span id='related-post-name'>View Profile</span>
+                        </a>
+                    </div>
+                    ";
+                  }
+
+                  // Get all inboxes from the current user.
+                  $inboxes = DB::getInstance()->get('inbox', array('user_from', '=', $user->data()->user_id));
+
+                  /*
+
+                  Inbox ID for inbox link.
+                  Persons first and last name.
+                  If none then print "NO CONVERSATIONS." above in the header.
+
+                   */
+
+                  // Check if any inboxes exist.
+                  if ($inboxes->count()) {
+                    foreach ($inboxes->results() as $inbox) {
+
+                      // See if a chat exists for this user with the current ID.
+                      if($inbox->inbox_id == $current_inbox_id) {
+                        $previous_chat = true;
+                        $user_from = $inbox->user_from;
+                        $user_to = $inbox->user_to;
+                      }
+
+                    }
+                  }
+
+
+                  ?>
+
                   <!-- Conversation -->
                   <div class="recent-conversation">
-
-                    <!-- Profile Image -->
-                    <div id="profile-image-wrapper">
-                      <img id="profile-image" src="https://www.digitalocean.com/assets/media/employees/mike_jennings-a7c68dde.png">
-                    </div>
-
-                    <!-- Conversation Details -->
-                    <p id="conversation-details">
-                      <span id="fullname">Mike Jennings</span><br>
-                      <span id="post">Post:</span>
-                      <span id="related-post-name">Unwanted Fruits/Deformed Can't Sel...</span>
-                    </p>
-
-                  </div>
-
-                  <!-- Conversation -->
-                  <div class="recent-conversation">
-                    <!-- Profile Image -->
-                    <div id="profile-image-wrapper">
-                      <img id="profile-image" src="http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg">
-                    </div>
-
-                    <!-- Conversation Details -->
-                    <p id="conversation-details">
-                      <span id="fullname">Daniel Barney</span><br>
-                      <span id="post">Post:</span>
-                      <span id="related-post-name">Unwanted Fruits/Deformed Can't Sel...</span>
-                    </p>
-                  </div>
-
-                  <!-- Conversation -->
-                  <div class="recent-conversation" id="active-chat">
 
                     <!-- Profile Image -->
                     <div id="profile-image-wrapper">

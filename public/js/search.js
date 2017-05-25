@@ -38,12 +38,11 @@ $(document).ready(function() {
             } else {
                 $(this).hide();
             }
-            $grid.imagesLoaded().progress(function() {
-                $grid.masonry('layout');
-            });
         });
-        $grid.imagesLoaded().progress(function() {
+        var delayMillis = 1000; //1 second
+
+        setTimeout(function() {
             $grid.masonry('layout');
-        });
+        }, delayMillis);
     });
 });;

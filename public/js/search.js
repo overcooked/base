@@ -1,11 +1,13 @@
 $(document).ready(function() {
     var $grid = $('.grid').imagesLoaded(function() {
+        $(".grid").show();
         $grid.masonry({
             itemSelector: '.grid-item',
             transitionDuration: '0.1',
             columnWidth: '.grid-sizer',
             percentPosition: true
         });
+        $(".spinner").hide();
     });
 
     var lastentry = "";
@@ -48,4 +50,4 @@ $(document).ready(function() {
 
         $grid.masonry('layout');
     });
-});;
+});;;

@@ -197,9 +197,14 @@ $user = new User();
             <label class="radio-inline"><input id="rad1" type="radio" name="optradio">Meat</label>
             <label class="radio-inline"><input id="rad2" type="radio" name="optradio">Vegetables</label>
             <label class="radio-inline"><input id="rad3" type="radio" name="optradio">Fruit</label>
-            <label class="radio-inline"><input id="rad1" type="radio" name="optradio">Meat</label>
-            <label class="radio-inline"><input id="rad2" type="radio" name="optradio">Vegetables</label>
-            <label class="radio-inline"><input id="rad3" type="radio" name="optradio">Fruit</label>
+            <label class="radio-inline"><input id="rad4" type="radio" name="optradio">Bread</label>
+            <span class="hidden-xs">
+            <label class="radio-inline"><input id="rad5" type="radio" name="optradio">Poultry</label>
+            <label class="radio-inline"><input id="rad6" type="radio" name="optradio">Frozen</label>
+            <label class="radio-inline"><input id="rad7" type="radio" name="optradio">Fresh</label>
+            <label class="radio-inline"><input id="rad8" type="radio" name="optradio">Packaged</label>
+            <label class="radio-inline"><input id="rad9" type="radio" name="optradio">Expires Soon</label>
+          </span>
         </div>
       </div>
 

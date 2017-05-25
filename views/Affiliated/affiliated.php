@@ -7,7 +7,6 @@
  */
 
 /** User to check logged in and get user data. */
-$user = new User();
 ?>
 
 <!DOCTYPE html>
@@ -29,8 +28,17 @@ $user = new User();
   </head>
   <body>
 
-    <!-- Header Section -->
-    <?php View::header_logged_in(); ?>
+    <?php
+
+    /** User to check logged in and get user data. */
+    $user = new User();
+
+    if ($user->is_logged_in()) {
+        View::header_logged_in();
+    } else {
+        View::header_logged_out();
+    }
+    ?>
 
     <!-- Main Content -->
     <section id="lander-top">

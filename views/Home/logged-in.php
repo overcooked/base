@@ -138,7 +138,7 @@ $user = new User();
     	      </ul>
 
     				<li id="navbar-post-button-wrapper">
-              <a href="post.php" id="navbar-post-button">new post<span class="ss-icon" style="padding-left: 7px; position: relative; top: 2px; left: 1px; font-size: 12px;">textfile</span></a>
+              <a href="post.php" id="navbar-post-button">new listing<span class="ss-icon" style="padding-left: 7px; position: relative; top: 2px; left: 1px; font-size: 12px;">textfile</span></a>
     				</li>
 
     				<li class="dropdown">

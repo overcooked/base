@@ -97,7 +97,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 	      </ul>
 
 				<li id="navbar-post-button-wrapper">
-					<a href="post.php" id="navbar-post-button">NEW LISTING</a>
+					<a href="post.php" id="navbar-post-button">new listing<span class="ss-icon" style="padding-left: 7px; position: relative; top: 2px; left: 1px; font-size: 12px;">textfile</span></a>
 				</li>
 
 				<li class="dropdown">

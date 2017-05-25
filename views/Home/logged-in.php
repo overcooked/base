@@ -132,7 +132,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
     				</li>
 
     				<li>
-    					<a href="contact.php" class="side-bar-link">
+    					<a href="mailto:hello@maccraig.net" class="side-bar-link">
     						<span class="ss-icon">send</span>
     						<span class="side-bar-link-text">CONTACT US</span>
     					</a>

@@ -44,27 +44,27 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 				</li>
 
 				<?php
-				$profile_image = DB::getInstance()->get('users_profile', array('user_id', '=', $user->data()->user_id));
-				$profile_image = $profile_image->first();
+                $profile_image = DB::getInstance()->get('users_profile', array('user_id', '=', $user->data()->user_id));
+                $profile_image = $profile_image->first();
 
-				if($profile_image->profile_image_url) {
-					echo '
+                if ($profile_image->profile_image_url) {
+                    echo '
 					<li>
 						<img src=" ' . $profile_image->profile_image_url . '" id="side-bar-profile-image" alt="Profile Image">
 						<p id="side-bar-name">' . escape($user->data()->user_first) . ' ' . escape($user->data()->user_last) . '</p>
 						<a href="' . escape($user_profile_url) . '" id="side-bar-profile">view profile</a>
 					</li>
 					';
-				} else {
-					echo '
+                } else {
+                    echo '
 					<li>
 						<img src="https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg" id="side-bar-profile-image" alt="Profile Image">
 						<p id="side-bar-name">' . escape($user->data()->user_first) . ' ' . escape($user->data()->user_last) . '</p>
 						<a href="' . escape($user_profile_url) . '" id="side-bar-profile">view profile</a>
 					</li>
 					';
-				}
-				?>
+                }
+                ?>
 
 				<li>
 					<a href="post.php" class="side-bar-link">
@@ -88,7 +88,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 				</li>
 
 				<li>
-					<a href="contact.php" class="side-bar-link">
+					<a href="mailto:hello@maccraig.net" class="side-bar-link">
 						<span class="ss-icon">send</span>
 						<span class="side-bar-link-text">CONTACT US</span>
 					</a>
@@ -121,12 +121,12 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 
 					<li>
 					<?php
-					if($profile_image->profile_image_url) {
-						echo "<img style='position: relative; top: -1px;' src='{$profile_image->profile_image_url}' id='navbar-profile-image' alt='Profile Image'>";
-					} else {
-						echo "<img style='position: relative; top: -1px;' src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg' id='navbar-profile-image' alt='Profile Image'>";
-					}
-					?>
+                    if ($profile_image->profile_image_url) {
+                        echo "<img style='position: relative; top: -1px;' src='{$profile_image->profile_image_url}' id='navbar-profile-image' alt='Profile Image'>";
+                    } else {
+                        echo "<img style='position: relative; top: -1px;' src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg' id='navbar-profile-image' alt='Profile Image'>";
+                    }
+                    ?>
 					</li>
 
 					<a class="dropdown-toggle" data-toggle="dropdown" id="navbar-profile-dropdown" href=""><?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?><span class="ss-icon" style="font-size: 11px; position: relative; top: 1px; color: #68707b; left: 4px;">dropdown</span></a>

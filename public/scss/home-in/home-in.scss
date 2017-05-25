@@ -19,32 +19,31 @@ body {
 .main .container {
     border-radius: 3px;
 }
-
 /* Stripe Pattern Background. */
 .stripe {
-  z-index: -1;
-  position: absolute;
-  top: auto;
-  left: 0;
-  right: 0;
-  transform: skewY(-9deg);
+    z-index: -1;
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    transform: skewY(-9deg);
 }
 
 #stripe-one {
-  top: -13px;
-  width: 100%;
-  opacity: 0.5;
-  height: 255px;
-  background: linear-gradient(70deg, #fdfdfd 33%, #f1f4f7);
+    top: -13px;
+    width: 100%;
+    opacity: 0.5;
+    height: 255px;
+    background: linear-gradient(70deg, #fdfdfd 33%, #f1f4f7);
 }
 
 #stripe-two {
-  top: 120px;
-  left: 50%;
-  width: 50%;
-  opacity: 0.1;
-  height: 155px;
-  background: linear-gradient(70deg, #e4e4e4 33%, #afcbe6);
+    top: 120px;
+    left: 50%;
+    width: 50%;
+    opacity: 0.1;
+    height: 155px;
+    background: linear-gradient(70deg, #e4e4e4 33%, #afcbe6);
 }
 
 .post {
@@ -149,7 +148,8 @@ body {
 // hack stuff starts here
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
-    .grid-item {
+    .grid-item,
+    .grid-sizer {
         width: 82vw;
         margin-left: 15px;
         margin-right: 15px;
@@ -166,7 +166,8 @@ body {
 }
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-    .grid-item {
+    .grid-item,
+    .grid-sizer {
         width: 84vw;
         margin-left: 15px;
         margin-right: 15px;
@@ -183,7 +184,8 @@ body {
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-    .grid-item {
+    .grid-item,
+    .grid-sizer {
         width: 44vw;
         margin-left: 15px;
         margin-right: 15px;
@@ -200,7 +202,8 @@ body {
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-    .grid-item {
+    .grid-item,
+    .grid-sizer {
         width: 37vw;
         margin-left: 15px;
         margin-right: 15px;
@@ -208,13 +211,13 @@ body {
 }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-    .grid-item {
+    .grid-item,
+    .grid-sizer {
         width: 24vw;
         margin-left: 15px;
         margin-right: 15px;
     }
 }
-
 /* Justins CSS */
 .search-icon {
     position: absolute;
@@ -242,39 +245,41 @@ input[name=search-2] {
     font-size: 17px !important;
 }
 
-.checkbox, .radio {
-  margin-left: 15px;
-  margin-right: 15px;
+.checkbox,
+.radio {
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
-.checkbox label, .radio label {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.checkbox label,
+.radio label {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .main-search {
-  background-color: #fff !important;
-  border: 1px solid #e4e9ec !important;
-  display: block !important;
-  padding-left: 58px;
-  width: 100%;
-  font-family: proximanova-light;
-  padding-top: 14px;
-  padding-bottom: 13px;
-  border-radius: 35px !important;
-  outline-color: transparent;
-  outline-style: none;
-  transition: all 0.3s ease;
+    background-color: #fff !important;
+    border: 1px solid #e4e9ec !important;
+    display: block !important;
+    padding-left: 58px;
+    width: 100%;
+    font-family: proximanova-light;
+    padding-top: 14px;
+    padding-bottom: 13px;
+    border-radius: 35px !important;
+    outline-color: transparent;
+    outline-style: none;
+    transition: all 0.3s ease;
 }
 
 .main-search:focus {
-  border-color: #adeda8 !important;
-  box-shadow: 0 2px 4px rgba(50,50,93,.1);
+    border-color: #adeda8 !important;
+    box-shadow: 0 2px 4px rgba(50,50,93,.1);
 }
 
 .thumbnail {
-  padding: 0;
-  box-shadow: 0 1px 7px rgba(50,50,93,.13);
+    padding: 0;
+    box-shadow: 0 1px 7px rgba(50,50,93,.13);
 }
 
 #drop-down-menu {
@@ -323,16 +328,14 @@ input[name=search-2] {
 .thumbnail a:hover {
     opacity: 0.6;
 }
-
 /**
  * Navigation Bar
  */
-
 .navbar-default {
-  background: transparent;
-  box-shadow: none;
-  padding-top: 2px;
-  height: 57px;
+    background: transparent;
+    box-shadow: none;
+    padding-top: 2px;
+    height: 57px;
 }
 
 .navbar-collapse.collapse {

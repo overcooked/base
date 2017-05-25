@@ -1,8 +1,10 @@
 $(document).ready(function() {
     var $grid = $('.grid').imagesLoaded(function() {
         $grid.masonry({
+            itemSelector: '.grid-item',
             transitionDuration: '0',
-            columnWidth: 0
+            columnWidth: '.grid-sizer',
+            percentPosition: true
         });
     });
 
@@ -49,4 +51,4 @@ $(document).ready(function() {
             $grid.masonry('layout');
         }, delayMillis);
     });
-});
+});;

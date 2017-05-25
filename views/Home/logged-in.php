@@ -227,6 +227,8 @@ $user = new User();
           <!-- Display Grid For Posts. -->
           <div class="col-md-10 col-md-offset-1 grid">
 
+            <div class="grid-sizer"></div>
+
                 <?php
                 $postings = DB::getInstance()->query("SELECT * FROM posts ORDER BY post_date DESC");
 
@@ -284,17 +286,6 @@ $user = new User();
         </div>
       </div>
     </section>
-
-    <script type="text/javascript">
-    $( document ).ready(function() {
-      var $grid = $('.grid').imagesLoaded( function() {
-      $grid.masonry({
-        itemSelector: '.grid-item',
-        columnWidth: 0
-        });
-      });
-    });
-    </script>
     <script type="text/javascript">
 
     $(document).ready(function(){

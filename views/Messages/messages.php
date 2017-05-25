@@ -14,7 +14,7 @@ $user->not_logged_in_redirect();
 $previous_chat = false;
 
 // Current Inbox ID.
-$current_inbox_id = '';
+$current_inbox_id = null;
 
 $user_from = null;
 $user_to = null;
@@ -208,6 +208,7 @@ if(isset($_GET["inbox"])) {
                     if($previous_chat) {
 
                       $messages = DB::getInstance()->get('inbox_messages', array('inbox_id', '=', $current_inbox_id));
+
                       if ($messages->count()) {
                           foreach ($messages->results() as $message) {
 
@@ -235,6 +236,8 @@ if(isset($_GET["inbox"])) {
                             }
 
                           }
+                      } else {
+                        echo "No messages";
                       }
 
                     }
@@ -301,8 +304,6 @@ if(isset($_GET["inbox"])) {
     <script type="text/javascript">
       $(document).ready(function() {
 
-        console.log($('.message').length);
-
         $("#send-message-button").on("click",function() {
 
           // Get the input message.
@@ -327,7 +328,7 @@ if(isset($_GET["inbox"])) {
             $('#messaging-area').scrollTop($('#messaging-area')[0].scrollHeight);
 
             $.ajax({
-              url: "send.php",
+              url: "/send",
               type: "post",
               data: {
               'inbox_id': '<?php echo $current_inbox_id; ?>',
@@ -358,7 +359,7 @@ if(isset($_GET["inbox"])) {
 
          time++;
          $.ajax({
-           url: "newmessages.php",
+           url: "/newmessages.php",
            type: "post",
            data: {
            'inbox_id': '<?php echo $current_inbox_id; ?>',

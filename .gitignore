@@ -11,3 +11,4 @@ travis_rsa
 deploy-key
 /core/init.php
 test.php
+/views/Messages

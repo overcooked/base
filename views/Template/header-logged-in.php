@@ -110,7 +110,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 				<ul class="nav navbar-nav hidden-sm" id="logged-in-links" style="position: relative; bottom: -1px; right: 5px;">
 					<li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="<?php echo escape($user_profile_url); ?>">Profile</a></li>
 					<li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="/messages.php">Messages</a></li>
-					<li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="mailto:hello@overcooked.ca">Support</a></li>
+					<li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="mailto:hello@maccraig.net">Support</a></li>
 				</ul>
 
 				<li id="navbar-post-button-wrapper" style="margin-top: 13px;">

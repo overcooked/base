@@ -235,9 +235,9 @@ $user = new User();
               <hr / style="width: 43px; margin-top: 10px; margin-bottom: 8px; margin-left: 0;">
 
               <ul style="line-height: 28px; padding-bottom: 25px;">
-                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Sign In</a></li>
-                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Get Started</a></li>
-                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Affiliates</a></li>
+                <li><a href="/login" style="color: #8898aa; letter-spacing: 0.3px;">Sign In</a></li>
+                <li><a href="/register" style="color: #8898aa; letter-spacing: 0.3px;">Get Started</a></li>
+                <li><a href="/affiliated" style="color: #8898aa; letter-spacing: 0.3px;">Affiliates</a></li>
               </ul>
 
             </div>
@@ -249,9 +249,9 @@ $user = new User();
               <hr / style="width: 43px; margin-top: 10px; margin-bottom: 8px; margin-left: 0;">
 
               <ul style="line-height: 28px; padding-bottom: 25px;">
-                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Privacy Policy</a></li>
-                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Terms &amp; Conditions</a></li>
-                <li><a href="#" style="color: #8898aa; letter-spacing: 0.3px;">Support</a></li>
+                <li><a href="/privacy" style="color: #8898aa; letter-spacing: 0.3px;">Privacy Policy</a></li>
+                <li><a href="/tos" style="color: #8898aa; letter-spacing: 0.3px;">Terms &amp; Conditions</a></li>
+                <li><a href="mailto:hello@maccraig.net" style="color: #8898aa; letter-spacing: 0.3px;">Support</a></li>
               </ul>
 
             </div>
@@ -265,7 +265,7 @@ $user = new User();
               <!--  About/Description. -->
               <p style="color: #cfd7df;">3700 Willingdon Ave, Burnaby, BC V5G 3H2</p>
               <p style="color: #cfd7df;">Phone: +1 (778)-402-3214</p>
-              <p style="color: #cfd7df;">Email: hello@overcooked.ca</p>
+              <p style="color: #cfd7df;">Email: hello@maccraig.net</p>
 
             </div>
 

@@ -122,7 +122,10 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     <section id="listing-image-header">
 
       <!-- The postings image -->
-      <div id="listing-image">
+      <div class="hidden-lg hidden-md" id="listing-image">
+        <img src="<?php echo $image->post_image_url ?>">
+      </div>
+      <div class="hidden-sm hidden-xs" id="listing-image-big">
         <img src="<?php echo $image->post_image_url ?>">
       </div>
 

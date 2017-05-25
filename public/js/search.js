@@ -2,7 +2,7 @@ $(document).ready(function() {
     var $grid = $('.grid').imagesLoaded(function() {
         $grid.masonry({
             itemSelector: '.grid-item',
-            transitionDuration: '0',
+            transitionDuration: '0.1',
             columnWidth: '.grid-sizer',
             percentPosition: true
         });

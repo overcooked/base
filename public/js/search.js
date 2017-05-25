@@ -1,4 +1,15 @@
 $(document).ready(function() {
+    var $grid = $('.grid').imagesLoaded(function() {
+        $(".grid").show();
+        $grid.masonry({
+            itemSelector: '.grid-item',
+            transitionDuration: '0.1',
+            columnWidth: '.grid-sizer',
+            percentPosition: true
+        });
+        $(".spinner").hide();
+    });
+
     var lastentry = "";
 
     $('#search-2').keyup(function(event) {
@@ -15,11 +26,7 @@ $(document).ready(function() {
         //    transitionDuration: '0'
         //});
 
-        var $grid = $('.grid').imagesLoaded(function() {
-            $grid.masonry({
-                transitionDuration: '0'
-            });
-        });
+
 
         // g - global match
         // i - case insensitive
@@ -30,18 +37,17 @@ $(document).ready(function() {
             if (ptrn.test($(this).text())) {
                 if (fltr.test($(this).text())) {
                     $(this).show();
+                    $(this).addClass("item masonry-brick grid-item");
                 } else {
                     $(this).hide();
+                    $(this).removeClass("item masonry-brick grid-item");
                 }
             } else {
                 $(this).hide();
+                $(this).removeClass("item masonry-brick grid-item");
             }
-            $grid.imagesLoaded().progress(function() {
-                $grid.masonry('layout');
-            });
         });
-        $grid.imagesLoaded().progress(function() {
-            $grid.masonry('layout');
-        });
+
+        $grid.masonry('layout');
     });
-});;
+});;;

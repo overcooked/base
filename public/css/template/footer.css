@@ -45,6 +45,7 @@ html {
 body {
   position: relative;
   margin: 0;
+  padding-bottom: 4em;
   min-height: 100%; }
 
 footer {

@@ -132,9 +132,9 @@ $user = new User();
     			<ul class="nav navbar-nav navbar-right hidden-xs">
 
     				<ul class="nav navbar-nav hidden-sm" id="logged-in-links">
-    	        <li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="about.php">About</a></li>
-    	        <li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="howitworks.php">How It Works</a></li>
-    	        <li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="contact.php">Contact</a></li>
+              <li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="/profile.php">Profile</a></li>
+              <li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="/messages.php">Messages</a></li>
+    	        <li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="mailto:hello@overcooked.ca">Support</a></li>
     	      </ul>
 
     				<li id="navbar-post-button-wrapper">

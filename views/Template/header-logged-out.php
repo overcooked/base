@@ -54,7 +54,7 @@
 				</li>
 
 				<li>
-					<a href="mailto:hello@overcooked.ca" class="side-bar-link" style="margin-left: -12px;">
+					<a href="mailto:hello@maccraig.net" class="side-bar-link" style="margin-left: -12px;">
 						<span class="ss-icon">mail</span>
 						<span class="side-bar-link-text move-link">CONTACT US</span>
 					</a>
@@ -77,7 +77,7 @@
         <li><a class="move-link" href="#problem-statement"><span id="moving-arrow" class="ss-icon">up</span>Start Here</a></li>
         <li><a class="move-link" href="#about-section">About</a></li>
         <li><a class="move-link" href="#partners-section">Partners</a></li>
-        <li><a class="move-link hidden-sm" href="mailto:hello@overcooked.ca">Contact Us</a></li>
+        <li><a class="move-link hidden-sm" href="mailto:hello@maccraig.net">Contact Us</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right hidden-xs">

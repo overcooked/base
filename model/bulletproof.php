@@ -64,7 +64,9 @@ class Image implements \ArrayAccess
     /**
      * @var array The mime types allowed for upload
      */
-    protected $mimeTypes = array("jpeg", "jpg", "png", "gif");
+    protected $mimeTypes = array("gif", "jpeg", "png", "swf", "psd",
+    "bmp", "tiff", "tiff", "jpc", "jp2", "jpx",
+    "jb2", "swc", "iff", "wbmp", "xbm", "ico");
 
     /**
      * @var array list of known image types

@@ -99,52 +99,88 @@ if(isset($_GET["inbox"])) {
                   <h1>Recent Messages</h1>
 
                   <?php
-                  // Current Conversation.
-                  if($user_from) {
-                    // Get all inboxes from the current user.
-                    $user_from_account = DB::getInstance()->get('users', array('user_id', '=', $user_from));
-                    $user_from_account = $user_from_account->first();
 
-                    // Get the link to a users profile.
-                    $user_profile_url = '/profile.php?user=' . substr($user_from_account->user_id, 5);
+                  // Get all inboxes from the current user.
+                  $inboxes_again = DB::getInstance()->get('inbox', array('user_from', '=', $user->data()->user_id));
 
-                    echo "
-                    <!-- Conversation -->
-                    <div id='active-chat' class='recent-conversation'>
+                  // Check if any inboxes exist.
+                  if ($inboxes_again->count()) {
+                    foreach ($inboxes_again->results() as $inbox) {
+
+                      // Get the user to relating to the current inbox.
+                      $user_to_convo = DB::getInstance()->get('users', array('user_id', '=', $inbox->user_to));
+                      $user_to_convo = $user_to_convo->first();
+
+                      // Get the link to a users profile.
+                      $inbox_url = '/messages.php?inbox=' . substr($inbox->inbox_id, 6);
+
+                      if($inbox->inbox_id === $current_inbox_id) {
+                        echo "<div id='active-chat' class='recent-conversation'>";
+                      } else {
+                        echo "<div class='recent-conversation'>";
+                      }
+
+                      $profile_link = '/profile.php?user=' . substr($user_to_convo->user_id, 5);
+
+                      echo "
+                      <!-- Profile Image -->
+                      <a href='{$profile_link}' id='profile-image-wrapper'>
+                        <img id='profile-image' src='http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg'>
+                      </a>
+
+                      <!-- Conversation Details -->
+                      <a href='{$inbox_url}' id='conversation-details' style='text-decoration: none;'>
+                      <span id='fullname'>{$user_to_convo->user_first} {$user_to_convo->user_last}</span><br>
+                      ";
+
+                      if($inbox->inbox_id === $current_inbox_id) {
+                        echo "<span id='related-post-name'>Current Chat</span></a></div>";
+                      } else {
+                        echo "<span id='related-post-name'>View Chat</span></a></div>";
+                      }
+
+                    }
+                  }
+
+                  // Get all inboxes from the current user.
+                  $inboxes_again = DB::getInstance()->get('inbox', array('user_to', '=', $user->data()->user_id));
+
+                  // Check if any inboxes exist.
+                  if ($inboxes_again->count()) {
+                    foreach ($inboxes_again->results() as $inbox) {
+
+                      // Get the user to relating to the current inbox.
+                      $user_to_convo = DB::getInstance()->get('users', array('user_id', '=', $inbox->user_from));
+                      $user_to_convo = $user_to_convo->first();
+
+                      if($user_to_convo->user_first != $user->data()->user_first) {
+
+                        // Get the link to a users profile.
+                        $inbox_url = '/messages.php?inbox=' . substr($inbox->inbox_id, 6);
+
+                        if($inbox->inbox_id === $current_inbox_id) {
+                          echo "<div id='active-chat' class='recent-conversation'>";
+                        } else {
+                          echo "<div class='recent-conversation'>";
+                        }
+
+                        echo "
                         <!-- Profile Image -->
                         <div id='profile-image-wrapper'>
                           <img id='profile-image' src='http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg'>
                         </div>
 
                         <!-- Conversation Details -->
-                        <a href='{$user_profile_url}' id='conversation-details' style='text-decoration: none;'>
-                          <span id='fullname'>{$user_from_account->user_first} {$user_from_account->user_last}</span><br>
-                          <span id='related-post-name'>View Profile</span>
-                        </a>
-                    </div>
-                    ";
-                  }
+                        <a href='{$inbox_url}' id='conversation-details' style='text-decoration: none;'>
+                        <span id='fullname'>{$user_to_convo->user_first} {$user_to_convo->user_last}</span><br>
+                        ";
 
-                  // Get all inboxes from the current user.
-                  $inboxes = DB::getInstance()->get('inbox', array('user_from', '=', $user->data()->user_id));
+                        if($inbox->inbox_id === $current_inbox_id) {
+                          echo "<span id='related-post-name'>Current Chat</span></a></div>";
+                        } else {
+                          echo "<span id='related-post-name'>View Chat</span></a></div>";
+                        }
 
-                  /*
-
-                  Inbox ID for inbox link.
-                  Persons first and last name.
-                  If none then print "NO CONVERSATIONS." above in the header.
-
-                   */
-
-                  // Check if any inboxes exist.
-                  if ($inboxes->count()) {
-                    foreach ($inboxes->results() as $inbox) {
-
-                      // See if a chat exists for this user with the current ID.
-                      if($inbox->inbox_id == $current_inbox_id) {
-                        $previous_chat = true;
-                        $user_from = $inbox->user_from;
-                        $user_to = $inbox->user_to;
                       }
 
                     }
@@ -152,38 +188,6 @@ if(isset($_GET["inbox"])) {
 
 
                   ?>
-
-                  <!-- Conversation -->
-                  <div class="recent-conversation">
-
-                    <!-- Profile Image -->
-                    <div id="profile-image-wrapper">
-                      <img id="profile-image" src="https://www.digitalocean.com/assets/media/employees/mike_jennings-a7c68dde.png">
-                    </div>
-
-                    <!-- Conversation Details -->
-                    <p id="conversation-details">
-                      <span id="fullname">Mike Jennings</span><br>
-                      <span id="post">Post:</span>
-                      <span id="related-post-name">Unwanted Fruits/Deformed Can't Sel...</span>
-                    </p>
-
-                  </div>
-
-                  <!-- Conversation -->
-                  <div class="recent-conversation">
-                    <!-- Profile Image -->
-                    <div id="profile-image-wrapper">
-                      <img id="profile-image" src="http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg">
-                    </div>
-
-                    <!-- Conversation Details -->
-                    <p id="conversation-details">
-                      <span id="fullname">Daniel Barney</span><br>
-                      <span id="post">Post:</span>
-                      <span id="related-post-name">Unwanted Fruits/Deformed Can't Sel...</span>
-                    </p>
-                  </div>
 
                 </div>
 

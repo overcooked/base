@@ -43,25 +43,6 @@ if ($inboxes->count()) {
   $previous_chat = false;
 }
 
-// Get all inboxes from the current user.
-$inboxes = DB::getInstance()->get('inbox', array('user_to', '=', $user_from_id));
-
-// Check if any inboxes exist.
-if ($inboxes->count()) {
-    foreach ($inboxes->results() as $inbox) {
-
-      // Check if a previous chat exists with this user.
-      if($inbox->user_to == $user_to_id) {
-        $previous_chat = true;
-        $previous_inbox_id = $inbox->inbox_id;
-      }
-
-    }
-} else {
-  // No previous chat exists.
-  $previous_chat = false;
-}
-
 // If previous chat exist, redirect.
 if($previous_chat) {
   // Redirect to previous chat.

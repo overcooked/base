@@ -54,7 +54,7 @@ class Image implements \ArrayAccess
     /**
      * @var array The min and max image size allowed for upload (in bytes)
      */
-    protected $size = array(100, 500000);
+    protected $size = array(100, 999999999999999);
 
     /**
      * @var array The max height and width image allowed
@@ -64,9 +64,7 @@ class Image implements \ArrayAccess
     /**
      * @var array The mime types allowed for upload
      */
-    protected $mimeTypes = array("gif", "jpeg", "png", "swf", "psd",
-    "bmp", "tiff", "tiff", "jpc", "jp2", "jpx",
-    "jb2", "swc", "iff", "wbmp", "xbm", "ico");
+    protected $mimeTypes = array("jpeg", "jpg", "png", "gif");
 
     /**
      * @var array list of known image types

@@ -32,11 +32,14 @@ $(document).ready(function() {
             if (ptrn.test($(this).text())) {
                 if (fltr.test($(this).text())) {
                     $(this).show();
+                    $(this).addClass("item masonry-brick grid-item");
                 } else {
                     $(this).hide();
+                    $(this).removeClass("item masonry-brick grid-item");
                 }
             } else {
                 $(this).hide();
+                $(this).removeClass("item masonry-brick grid-item");
             }
         });
         var delayMillis = 1000; //1 second
@@ -45,4 +48,4 @@ $(document).ready(function() {
             $grid.masonry('layout');
         }, delayMillis);
     });
-});;
+});

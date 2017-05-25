@@ -4,7 +4,7 @@
 require_once(getcwd() . "/core/init.php");
 
 if(isset($_POST['inbox_id'])) {
-
+  
   $messages = DB::getInstance()->get('inbox_messages', array('inbox_id', '=', $_POST['inbox_id']));
   if ($messages->count()) {
       foreach ($messages->results() as $message) {

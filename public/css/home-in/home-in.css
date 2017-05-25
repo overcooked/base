@@ -12,7 +12,8 @@
 /** Typography Styling. */
 /* ========== ========== ========== ========== */
 .grid {
-  display: none; }
+  display: none;
+  left: 1.1%; }
 
 body {
   background: linear-gradient(90deg, #f2f5f7, #f4f7f6);

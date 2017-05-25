@@ -207,7 +207,11 @@ if(isset($_GET[“inbox”])) {
                     // If a previous chat exists get its messages.
                     if($previous_chat) {
 
+<<<<<<< HEAD
                       $messages = DB::getInstance()->get(‘inbox_messages’, array(‘inbox_id’, ‘=’, $current_inbox_id));
+=======
+                      $messages = DB::getInstance()->get('inbox_messages', array('inbox_id', '=', $current_inbox_id));
+>>>>>>> ef5209d335118657718da6b3ba195a3969674180
 
                       if ($messages->count()) {
                           foreach ($messages->results() as $message) {
@@ -237,7 +241,11 @@ if(isset($_GET[“inbox”])) {
 
                           }
                       } else {
+<<<<<<< HEAD
                         echo “No messages”;
+=======
+                        echo "No messages";
+>>>>>>> ef5209d335118657718da6b3ba195a3969674180
                       }
 
                     }
@@ -303,9 +311,13 @@ if(isset($_GET[“inbox”])) {
     <script type=“text/javascript”>
       $(document).ready(function() {
 
+<<<<<<< HEAD
         console.log($(‘.message’).length);
 
         $(“#send-message-button”).on(“click”,function() {
+=======
+        $("#send-message-button").on("click",function() {
+>>>>>>> ef5209d335118657718da6b3ba195a3969674180
 
           // Get the input message.
           var message = $(“#create-message-input”).val();
@@ -329,8 +341,13 @@ if(isset($_GET[“inbox”])) {
             $(‘#messaging-area’).scrollTop($(‘#messaging-area’)[0].scrollHeight);
 
             $.ajax({
+<<<<<<< HEAD
               url: “/send”,
               type: “post”,
+=======
+              url: "/send",
+              type: "post",
+>>>>>>> ef5209d335118657718da6b3ba195a3969674180
               data: {
               ‘inbox_id’: ‘<?php echo $current_inbox_id; ?>‘,
               ‘user_from’: ‘<?php echo $user->data()->user_id; ?>‘,

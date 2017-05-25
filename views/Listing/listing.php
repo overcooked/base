@@ -181,6 +181,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                   <b>Post Date:</b>
                   {$post->post_date}
                 </small>
+                <br><br>
                 <div class='share-buttons'>
                   <h6 style='padding-bottom: 10px;'>Share on: </h6>
                   <ul>

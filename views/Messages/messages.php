@@ -246,7 +246,7 @@ if(isset($_GET["inbox"])) {
     <!-- To Size The Message Area -->
     <script type="text/javascript">
 
-    $(document).ready(function(){
+    $(document).ready(function() {
       if($("#middle-section").height() > 550) {
         $("#messaging-area").css("height", $("#middle-section").height());
       }
@@ -255,8 +255,10 @@ if(isset($_GET["inbox"])) {
     $(document).ready(function() {
       /* Corrects Message Sizing. */
       $('.message').each(function(index, obj) {
-        if($(this).children('.message-size').height() <= 20) {
-          var message_width = $(this).children('.message-size').children('.text').width() + 30;
+        if($(this).children('.message-size').height() <= 35) {
+          console.log(this);
+          var message_width = $(this).children('.message-size').children('.text').width() + 3;
+          console.log(message_width);
           if(message_width < 300) {
               $(this).children('.message-size').attr('style', 'width: ' + message_width + 'px !important');
           } else {
@@ -287,8 +289,8 @@ if(isset($_GET["inbox"])) {
 
             /* Corrects Message Sizing. */
             $('.message').each(function(index, obj) {
-              if($(this).children('.message-size').height() <= 20) {
-                var message_width = $(this).children('.message-size').children('.text').width() + 30;
+              if($(this).children('.message-size').height() <= 35) {
+                var message_width = $(this).children('.message-size').children('.text').width() + 3;
                 if(message_width < 300) {
                     $(this).children('.message-size').attr('style', 'width: ' + message_width + 'px !important');
                 } else {
@@ -350,8 +352,8 @@ if(isset($_GET["inbox"])) {
 
                /* Corrects Message Sizing. */
                $('.message').each(function(index, obj) {
-                 if($(this).children('.message-size').height() <= 20) {
-                   var message_width = $(this).children('.message-size').children('.text').width() + 30;
+                 if($(this).children('.message-size').height() <= 35) {
+                   var message_width = $(this).children('.message-size').children('.text').width() + 3;
                    if(message_width < 300) {
                        $(this).children('.message-size').attr('style', 'width: ' + message_width + 'px !important');
                    } else {

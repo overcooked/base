@@ -1,18 +1,17 @@
 <?php
 /**
- * Change Password View
+ * Profile Image View.
  * @author Team Point.
  */
 
 $user = new User();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- General. -->
-    <title>Overcooked: Change Password</title>
+    <title>Overcooked: Upload Profile Image</title>
     <meta name="description" content="Overcooked lets you give your extra food to people who really need it.">
 
     <!-- Boiler Plate Tags. -->
@@ -20,7 +19,7 @@ $user = new User();
 
     <!-- Style Files. -->
     <link rel="stylesheet" href="/public/css/changepassword/changepassword.css">
-
+    <link rel="stylesheet" href="/public/css/profileimage/profileimage.css">
 
   </head>
   <body>
@@ -31,13 +30,12 @@ $user = new User();
     <!-- Main Content // Start -->
     <section class="main">
       <div class="container password-change-area">
-
         <!-- Change Password Form Header -->
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3" id="password-form-header">
             <h3 class="center" id="password-page-title">
-              <span class="ss-icon" style="position: relative; top: 3px; right: 1px;">lock</span>
-              Change Your Password
+              <span class="ss-icon" style="position: relative; top: 4px; right: 3px;">adduser</span>
+              Upload Profile Image
             </h3>
           </div>
         </div>
@@ -71,45 +69,49 @@ $user = new User();
             }
             ?>
 
-            <form method="post">
+            <form method="POST" enctype="multipart/form-data">
 
-              <!-- Current Password -->
+              <?php
+              $profile_image = DB::getInstance()->get('users_profile', array('user_id', '=', $user->data()->user_id));
+              $profile_image = $profile_image->first();
+
+              if($profile_image->profile_image_url) {
+                echo "
+                <div class='row'>
+                  <div class='col-sm-4 col-sm-offset-4'>
+                    <img style='height: 90px; width: 90px; display: block; margin: auto; border-radius: 100px; margin-bottom: 25px; object-fit: cover;' src='{$profile_image->profile_image_url}'>
+                  </div>
+                </div>
+                ";
+              } else {
+                echo "
+                <div class='row'>
+                  <div class='col-sm-4 col-sm-offset-4'>
+                    <img style='height: 90px; width: 90px; display: block; margin: auto; border-radius: 100px; margin-bottom: 25px; object-fit: cover;' src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg'>
+                  </div>
+                </div>
+                ";
+              }
+              ?>
+
+              <!-- Profile Image Upload -->
               <div class="form-group">
-                <label for="current_password">Current Password</label>
-                <input type="password" required="true" name="current_password" class="form-control" placeholder="Current Password" id="current_password">
-              </div>
-
-              <hr>
-
-              <!-- New Password -->
-              <div class="form-group">
-                <label for="new_password">New Password</label>
-                <input type="password" required="true" name="new_password" class="form-control" placeholder="New Password" id="new_password">
-              </div>
-
-              <hr>
-
-              <!-- New Password Again -->
-              <div class="form-group">
-                <label for="new_password_again">New Password Again</label>
-                <input type="password" required="true" name="new_password_again" class="form-control" placeholder="Confirm New Password" id="new_password_again">
+                <label class="btn btn-default btn-file">
+                    <span class="ss-icon" style="position: relative; top: 2px; right: 2px;">upload</span> Choose Profile Image
+                    <input class="form-control" type="file" name="profile_image" id="profile_image" required="true" accept="image/jpeg,image/x-png,image/png,/image/jpg"/>
+                </label>
               </div>
 
               <hr>
 
               <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-              <input type="submit" class="btn btn-default update-btn" id="update-btn" name="submit" value="Change Password">
+              <input type="submit" class="btn btn-default update-btn" id="update-btn" name="submit" value="Upload Image">
             </form>
           </div>
         </div>
 
       </div>
     </section>
-
-    <!-- Footer Section -->
-    <?php View::footer(); ?>
-
-    <?php require_once(getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 
   </body>
 </html>

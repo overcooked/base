@@ -47,6 +47,9 @@ require_once (getcwd() . '/core/Controller.php');
 /** 5.) Include sanitize functions to secure inputs. */
 require_once (getcwd() . '/core/View.php');
 
+/** Include sanitize functions to secure inputs. */
+require_once (getcwd() . '/model/bulletproof.php');
+
 /** 6.) Automatic class loader. */
 spl_autoload_register(function($class) {
   require_once (getcwd() . '/model/'  . $class . '.php');

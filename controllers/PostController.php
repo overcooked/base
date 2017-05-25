@@ -23,11 +23,11 @@ if (Input::exists() && Token::check(Input::get('token'))) {
   // Pass name (and optional chmod) to create folder for storage
   $image->setLocation(getcwd() . "/uploads/post_images");
 
-   // Define allowed mime types to upload
-   $image->setMime(array("jpeg", "jpg", "png"));
+  // Define allowed mime types to upload
+  $image->setMime(array("jpeg", "jpg", "png"));
 
-   // Define the min/max image upload size (size in bytes)
-   $image->setSize(1, 9000000);
+  // Define the min/max image upload size (size in bytes)
+  $image->setSize(1, 9000000);
 
   // Validate the input form data.
   $validate = new Validate();

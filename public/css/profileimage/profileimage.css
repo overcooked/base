@@ -1,0 +1,39 @@
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block; }
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  border-color: #ddd !important;
+  color: #7a7e88 !important;
+  height: 40px;
+  line-height: 42px;
+  padding: 0 12px;
+  padding-bottom: 15px !important;
+  background: #ddd !important;
+  border-radius: 4px;
+  font-size: 15px;
+  box-shadow: 0 2px 10px inset rgba(0, 0, 0, 0.1) !important;
+  font-weight: 600;
+  width: 100%;
+  letter-spacing: 0.05em !important;
+  color: #fff;
+  text-decoration: none;
+  cursor: grab;
+  transition: all 0.15s ease; }
+
+/*# sourceMappingURL=profileimage.css.map */

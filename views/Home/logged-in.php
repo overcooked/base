@@ -84,11 +84,28 @@ $user = new User();
     					</button>
     				</li>
 
-    				<li>
-    					<img src="https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg" id="side-bar-profile-image" alt="Profile Image">
-    					<p id="side-bar-name"><?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?></p>
-    					<a href="<?php echo escape($user_profile_url); ?>" id="side-bar-profile">view profile</a>
-    				</li>
+            <?php
+            $profile_image = DB::getInstance()->get('users_profile', array('user_id', '=', $user->data()->user_id));
+            $profile_image = $profile_image->first();
+
+            if($profile_image->profile_image_url) {
+              echo '
+              <li>
+      					<img src=" ' . $profile_image->profile_image_url . '" id="side-bar-profile-image" alt="Profile Image">
+      					<p id="side-bar-name">' . escape($user->data()->user_first) . ' ' . escape($user->data()->user_last) . '</p>
+      					<a href="' . escape($user_profile_url) . '" id="side-bar-profile">view profile</a>
+      				</li>
+              ';
+            } else {
+              echo '
+              <li>
+      					<img src="https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg" id="side-bar-profile-image" alt="Profile Image">
+      					<p id="side-bar-name">' . escape($user->data()->user_first) . ' ' . escape($user->data()->user_last) . '</p>
+      					<a href="' . escape($user_profile_url) . '" id="side-bar-profile">view profile</a>
+      				</li>
+              ';
+            }
+            ?>
 
     				<li>
     					<a href="post.php" class="side-bar-link">
@@ -143,9 +160,15 @@ $user = new User();
 
     				<li class="dropdown">
 
-    					<li>
-    						<img src="https://pbs.twimg.com/profile_images/831234401686007809/8UswQ-Ll_400x400.jpg" id="navbar-profile-image" alt="Profile Image">
-    					</li>
+              <li>
+              <?php
+              if($profile_image->profile_image_url) {
+      				  echo "<img src='{$profile_image->profile_image_url}' id='navbar-profile-image' alt='Profile Image'>";
+              } else {
+                echo "<img src='https://pbs.twimg.com/profile_images/831234401686007809/8UswQ-Ll_400x400.jpg' id='navbar-profile-image' alt='Profile Image'>";
+              }
+              ?>
+              </li>
 
     					<a class="dropdown-toggle" data-toggle="dropdown" id="navbar-profile-dropdown" href=""><?php echo escape($user->data()->user_first) . ' ' . escape($user->data()->user_last); ?><span class="ss-icon" style="font-size: 11px; position: relative; top: 1px; color: #68707b; left: 4px;">dropdown</span></a>
     					<ul class="dropdown-menu" id="navbar-dropdown" role="menu">

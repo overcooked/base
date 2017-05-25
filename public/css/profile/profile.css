@@ -16,7 +16,8 @@ body {
 
 #user-profile-image img {
   height: 115px;
-  width: auto;
+  width: 117px;
+  object-fit: cover;
   border-radius: 100px;
   display: block;
   margin: auto auto 13px;

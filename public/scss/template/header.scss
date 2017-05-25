@@ -245,8 +245,9 @@
 }
 
 #navbar-profile-image {
-  width: 35px;
-  height: auto;
+  width: 38px;
+  height: 35px;
+  object-fit: cover;
   border-radius: 100px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   margin-top: 13px;
@@ -363,14 +364,15 @@
 }
 
 #side-bar-profile-image {
-    width: 64px;
-    height: auto;
+    width: 66px;
+    height: 64px;
     border-radius: 100px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: block;
     margin: 50px auto 10px;
     position: relative;
     left: 28px;
+    object-fit: cover;
 }
 
 #side-bar-name {

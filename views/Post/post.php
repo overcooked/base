@@ -12,7 +12,7 @@ $user = new User();
 <html lang="en">
   <head>
     <!-- General. -->
-    <title>New Post | Overcooked.ca</title>
+    <title>Overcooked: New Listing</title>
     <meta name="description" content="Overcooked: Feed those in need, with your extra food.">
 
     <!-- Boiler Plate Tags. -->

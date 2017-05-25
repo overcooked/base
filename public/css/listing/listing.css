@@ -75,6 +75,8 @@ body {
 
 #listing-poster-info #profile-img {
   height: 55px;
+  width: 57px;
+  object-fit: cover;
   border-radius: 100px; }
 
 #listing-poster-info #posted-by {

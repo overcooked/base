@@ -1,10 +1,46 @@
 <?php
 /**
- * Inbox View.
+ * Chat View.
  * @author Team Point.
  */
 
+// User object.
 $user = new User();
+
+// If the user isn't logged in, redirect to index.
+$user->not_logged_in_redirect();
+
+// Check if a chat exists with ID.
+$previous_chat = false;
+
+// Current Inbox ID.
+$current_inbox_id = '';
+
+$user_from = '';
+$user_to = '';
+
+// Inbox ID exists.
+if(isset($_GET["inbox"])) {
+
+  // Get all inboxes from the current user.
+  $inboxes = DB::getInstance()->get('inbox', array('user_from', '=', $user->data()->user_id));
+  $current_inbox_id = "inbox_" . $_GET["inbox"];
+
+  // Check if any inboxes exist.
+  if ($inboxes->count()) {
+    foreach ($inboxes->results() as $inbox) {
+
+      // See if a chat exists for this user with the current ID.
+      if($inbox->inbox_id == $current_inbox_id) {
+        $previous_chat = true;
+        $user_from = $inbox->user_from;
+        $user_to = $inbox->user_to;
+      }
+
+    }
+  }
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -119,6 +155,45 @@ $user = new User();
                       <p>Start of Conversation</p>
                     </div>
 
+                    <?php
+
+                    // If a previous chat exists get its messages.
+                    if($previous_chat) {
+
+                      $messages = DB::getInstance()->get('inbox_messages', array('inbox_id', '=', $current_inbox_id));
+                      if ($messages->count()) {
+                          foreach ($messages->results() as $message) {
+
+                            // Whether the message was from current user or another one.
+                            if($message->user_from == $user->data()->user_id) {
+                              echo '
+                              <div class="message">
+                                <div class="to message-size">
+                                  <span class="ss-icon">dropdown</span>
+                                  <p class="text">
+                                  ' . $message->inbox_message . '
+                                  </p>
+                                </div>
+                              </div>';
+                            } else {
+                              echo '
+                              <div class="message">
+                                <div class="from message-size">
+                                  <span class="ss-icon">dropdown</span>
+                                  <p class="text">
+                                  ' . $message->inbox_message . '
+                                  </p>
+                                </div>
+                              </div>';
+                            }
+
+                          }
+                      }
+
+                    }
+
+                    ?>
+
                   </div>
 
                 </div>
@@ -134,7 +209,7 @@ $user = new User();
                     <input id="create-message-input" type="text" name="" value="" placeholder="type a message...">
                   </div>
                   <div class="col-sm-2" id="send-wrapper">
-                    <a href="" id="send-message-button">Send</a>
+                    <a id="send-message-button">Send</a>
                   </div>
                 </div>
 
@@ -153,37 +228,77 @@ $user = new User();
       if($("#middle-section").height() > 550) {
         $("#messaging-area").css("height", $("#middle-section").height());
       }
-
-      load_messages();
     });
 
-      function load_messages() {
-        for (var i = 0; i < 20; i++) {
-          $("#messages").append('<!-- Message --> <div class="message"> <div class="from message-size"> <span class="ss-icon">dropdown</span> <p class="text"> This is a message. Now go fuck your own face. </p> </div> </div>');
-          $("#messages").append('<!-- Message --> <div class="message"> <div class="to message-size"> <span class="ss-icon">dropdown</span> <p class="text"> Well that was rude! </p> </div> </div>');
+    $(document).ready(function() {
+      /* Corrects Message Sizing. */
+      $('.message').each(function(index, obj) {
+        if($(this).children('.message-size').height() <= 20) {
+          var message_width = $(this).children('.message-size').children('.text').width() + 30;
+          if(message_width < 300) {
+              $(this).children('.message-size').attr('style', 'width: ' + message_width + 'px !important');
+          } else {
+            $(this).children('.message-size').css("width", message_width);
+          }
         }
-      }
+      });
 
+      $('#messaging-area').scrollTop($('#messaging-area')[0].scrollHeight);
+    });
+
+    </script>
+
+    <!-- Chat Code. -->
+    <script type="text/javascript">
       $(document).ready(function() {
 
-        /* Corrects Message Sizing. */
-        $('.message').each(function(index, obj){
-          if($(this).children('.message-size').height() <= 20) {
-            var message_width = $(this).children('.message-size').children('.text').width() + 30;
-            if(message_width < 300) {
-                $(this).children('.message-size').attr('style', 'width: ' + message_width + 'px !important');
-            } else {
-              $(this).children('.message-size').css("width", message_width);
-            }
+        console.log($('.message').length);
+
+        $("#send-message-button").on("click",function() {
+
+          // Get the input message.
+          var message = $("#create-message-input").val();
+
+          // As long as it isn't an empty message.
+          if(message !== '') {
+            $("#messages").append('<div class="message"> <div class="to message-size"> <span class="ss-icon">dropdown</span> <p class="text"> ' + message + ' </p> </div> </div>');
+
+            /* Corrects Message Sizing. */
+            $('.message').each(function(index, obj) {
+              if($(this).children('.message-size').height() <= 20) {
+                var message_width = $(this).children('.message-size').children('.text').width() + 30;
+                if(message_width < 300) {
+                    $(this).children('.message-size').attr('style', 'width: ' + message_width + 'px !important');
+                } else {
+                  $(this).children('.message-size').css("width", message_width);
+                }
+              }
+            });
+
+            $('#messaging-area').scrollTop($('#messaging-area')[0].scrollHeight);
+
+            $.ajax({
+              url: "send.php",
+              type: "post",
+              data: {
+              'inbox_id': '<?php echo $current_inbox_id; ?>',
+              'user_from': '<?php echo $user->data()->user_id; ?>',
+              'inbox_message': message,
+              },
+              success: function (response) {
+                console.log(response);
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                 console.log(textStatus, errorThrown);
+              }
+            });
+
+            $("#create-message-input").val('');
           }
         });
 
-        $('#messaging-area').scrollTop($('#messaging-area')[0].scrollHeight);
       });
     </script>
-
-    <!-- Mobile Bottom Navigation. -->
-    <?php require_once (getcwd() . "/views/Template/responsive-footer-nav.php"); ?>
 
   </body>
 </html>

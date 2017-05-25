@@ -7,11 +7,6 @@
 
 /* SUDO CODE
 
-Get the URL ID (xxxxxxxxx) - DONE
-Add the post_ to the link url - DONE
-Search if it exists within the database.
-Print its information.
-
 If doesn't exist, say listing doesn't exist.
 */
 

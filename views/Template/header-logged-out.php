@@ -54,13 +54,17 @@
 				</li>
 
 				<li>
-					<a href="#contact-section" class="side-bar-link" style="margin-left: -12px;">
+					<a href="mailto:hello@overcooked.ca" class="side-bar-link" style="margin-left: -12px;">
 						<span class="ss-icon">mail</span>
 						<span class="side-bar-link-text move-link">CONTACT US</span>
 					</a>
 				</li>
 
 				<hr>
+
+				<li>
+          <a href="login.php" style="background: #fff; margin-left: 15px; margin-right: 15px; color: #11927d; border: 1px solid #c0e4de; box-shadow: 0 0px 6px rgba(50,50,93,.05), 0 1px 3px rgba(0,0,0,.03);" class="btn btn-default navbar-btn" id="header-get-started">Sign In</a>
+        </li>
 
         <li>
           <a href="register.php" class="btn btn-default navbar-btn" id="pushout-get-started">Get Started</a>
@@ -73,12 +77,12 @@
         <li><a class="move-link" href="#problem-statement"><span id="moving-arrow" class="ss-icon">up</span>Start Here</a></li>
         <li><a class="move-link" href="#about-section">About</a></li>
         <li><a class="move-link" href="#partners-section">Partners</a></li>
-        <li><a class="move-link hidden-sm" href="#contact-section">Contact Us</a></li>
+        <li><a class="move-link hidden-sm" href="mailto:hello@overcooked.ca">Contact Us</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right hidden-xs">
         <li><a href="/login.php" id="header-sign-in">Sign In <span class="ss-icon">navigateright</span></a></li>
-        <li>
+				<li>
           <a href="register.php" class="btn btn-default navbar-btn" id="header-get-started">Get Started</a>
         </li>
       </ul>

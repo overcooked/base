@@ -68,7 +68,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     // Get the link to a users profile.
     $user_chat_url = '/newchat.php?user=' . substr($poster->user_id, 5);
 
-    $post_listing_url = 'https://overcooked.ca/listing.php?post=' . substr($post->post_id, 5);
+      $post_listing_url = 'https://overcooked.ca/listing.php?post=' . substr($post->post_id, 5);
   }
 } else {
     // No posting found, redirect.
@@ -172,7 +172,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                 <hr>
 
                 <a href='{$user_chat_url}'>Message User About Posting</a>
-
+                <br>
                 <small>
                   <b>Pickup Location:</b>
                   {$post->post_pickup_location}

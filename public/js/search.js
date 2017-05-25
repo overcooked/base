@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    var $grid = $('.grid').imagesLoaded(function() {
+        $grid.masonry({
+            transitionDuration: '0'
+        });
+    });
+
     var lastentry = "";
 
     $('#search-2').keyup(function(event) {
@@ -15,11 +21,7 @@ $(document).ready(function() {
         //    transitionDuration: '0'
         //});
 
-        var $grid = $('.grid').imagesLoaded(function() {
-            $grid.masonry({
-                transitionDuration: '0'
-            });
-        });
+
 
         // g - global match
         // i - case insensitive

@@ -24,9 +24,9 @@ $user = new User();
 
     <!-- Script Files -->
     <script src="/public/js/masonry.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="/public/js/search.js" type="text/javascript"></script>
     <script src="/public/js/filter.js" type="text/javascript"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
   </head>
   <body>
@@ -252,7 +252,7 @@ $user = new User();
                     // Get the ID for the posting.
                     $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
 
-                    echo "
+                        echo "
                       <div class='thumbnail grid-item'>
                         <a href='{$post_listing_url}'>
                           <img src='{$image->post_image_url}' class='img-responsive' alt='Post Image'>

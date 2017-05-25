@@ -115,7 +115,8 @@ body {
   /* Profile Image */
   #profile-image {
     width: 42px;
-    height: auto;
+    height: 40px;
+    object-fit: cover;
     border-radius: 100px;
     box-shadow: inset 0px 0px 37px rgba(0,0,0,0.18);
   }

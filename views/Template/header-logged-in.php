@@ -124,7 +124,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 					if($profile_image->profile_image_url) {
 						echo "<img style='position: relative; top: -1px;' src='{$profile_image->profile_image_url}' id='navbar-profile-image' alt='Profile Image'>";
 					} else {
-						echo "<img style='position: relative; top: -1px;' src='https://pbs.twimg.com/profile_images/831234401686007809/8UswQ-Ll_400x400.jpg' id='navbar-profile-image' alt='Profile Image'>";
+						echo "<img style='position: relative; top: -1px;' src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg' id='navbar-profile-image' alt='Profile Image'>";
 					}
 					?>
 					</li>

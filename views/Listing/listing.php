@@ -54,7 +54,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     $poster = $poster->first();
 
     // Get profile image.
-    $profile_image = DB::getInstance()->get('users_profile', array('user_id', '=', $user->data()->user_id));
+    $profile_image = DB::getInstance()->get('users_profile', array('user_id', '=', $post->user_id));
     $profile_image = $profile_image->first();
 
     // Get the link to a users profile.

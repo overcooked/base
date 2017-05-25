@@ -6,6 +6,9 @@
 
 /** User to check logged in and get user data. */
 $user = new User();
+
+// Get the link to a users profile.
+$user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 ?>
 
 <!DOCTYPE html>
@@ -149,7 +152,7 @@ $user = new User();
     			<ul class="nav navbar-nav navbar-right hidden-xs">
 
     				<ul class="nav navbar-nav hidden-sm" id="logged-in-links">
-              <li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="/profile.php">Profile</a></li>
+              <li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="<?php echo $user_profile_url; ?>">Profile</a></li>
               <li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="/messages.php">Messages</a></li>
     	        <li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="mailto:hello@overcooked.ca">Support</a></li>
     	      </ul>
@@ -165,7 +168,7 @@ $user = new User();
               if($profile_image->profile_image_url) {
       				  echo "<img src='{$profile_image->profile_image_url}' id='navbar-profile-image' alt='Profile Image'>";
               } else {
-                echo "<img src='https://pbs.twimg.com/profile_images/831234401686007809/8UswQ-Ll_400x400.jpg' id='navbar-profile-image' alt='Profile Image'>";
+                echo "<img src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg' id='navbar-profile-image' alt='Profile Image'>";
               }
               ?>
               </li>
@@ -283,7 +286,17 @@ $user = new User();
 
                     // Convert the date.
                     $post_date = strtotime($post->post_date);
-                        $post_date = date('Y-m-d', $post_date);
+                    $post_date = date('Y-m-d', $post_date);
+
+                    // Get profile image.
+                    $profile_image = DB::getInstance()->get('users_profile', array('user_id', '=', $post->user_id));
+                    $profile_image = $profile_image->first();
+
+                    if($profile_image->profile_image_url) {
+                      $profile_image = $profile_image->profile_image_url;
+                    } else {
+                      $profile_image = 'https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg';
+                    }
 
                     // Get the ID for the posting.
                     $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
@@ -303,7 +316,7 @@ $user = new User();
                             <div class='form-divider' style='margin: 5px 0 9px;'></div>
                             <small class='stats-text'>
                                 <b>Posted: </b> {$post_date}
-                                <img class='hidden-xs' id='user-post-profile-image' src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg' />
+                                <img class='hidden-xs' id='user-post-profile-image' src='{$profile_image}' />
                             </small>
                             <tags style='display: none;'>{$post->post_tag}</tags>
                           </div>

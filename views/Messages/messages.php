@@ -122,10 +122,19 @@ if(isset($_GET["inbox"])) {
 
                       $profile_link = '/profile.php?user=' . substr($user_to_convo->user_id, 5);
 
+                      $profile_image = DB::getInstance()->get('users_profile', array('user_id', '=', $user_to_convo->user_id));
+                      $profile_image = $profile_image->first();
+
+                      if($profile_image->profile_image_url) {
+                        $profile_image = $profile_image->profile_image_url;
+                      } else {
+                        $profile_image = 'https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg';
+                      }
+
                       echo "
                       <!-- Profile Image -->
                       <a href='{$profile_link}' id='profile-image-wrapper'>
-                        <img id='profile-image' src='http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg'>
+                        <img id='profile-image' src='{$profile_image}'>
                       </a>
 
                       <!-- Conversation Details -->
@@ -158,6 +167,15 @@ if(isset($_GET["inbox"])) {
                         // Get the link to a users profile.
                         $inbox_url = '/messages.php?inbox=' . substr($inbox->inbox_id, 6);
 
+                        $profile_image = DB::getInstance()->get('users_profile', array('user_id', '=', $user_to_convo->user_id));
+                        $profile_image = $profile_image->first();
+
+                        if($profile_image->profile_image_url) {
+                          $profile_image = $profile_image->profile_image_url;
+                        } else {
+                          $profile_image = 'https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg';
+                        }
+
                         if($inbox->inbox_id === $current_inbox_id) {
                           echo "<div id='active-chat' class='recent-conversation'>";
                         } else {
@@ -167,7 +185,7 @@ if(isset($_GET["inbox"])) {
                         echo "
                         <!-- Profile Image -->
                         <div id='profile-image-wrapper'>
-                          <img id='profile-image' src='http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg'>
+                          <img id='profile-image' src='{$profile_image}'>
                         </div>
 
                         <!-- Conversation Details -->

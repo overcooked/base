@@ -273,7 +273,8 @@ input[name=search-2] {
   border-top: none;
   border-radius: 100px;
   height: 44px;
-  width: 44px;
+  width: 46px;
+  object-fit: cover;
   display: inline;
   float: right;
   position: relative;

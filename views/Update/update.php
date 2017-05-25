@@ -83,6 +83,36 @@ if ($user_description->count()) {
 
             <form method="post">
 
+              <!-- Profile Description -->
+              <div class="form-group" style="margin-bottom: -20px;">
+                <a href="/profileimage.php" style="text-decoration: none !important;">
+                  <?php
+                  $profile_image = DB::getInstance()->get('users_profile', array('user_id', '=', $user->data()->user_id));
+                  $profile_image = $profile_image->first();
+
+                  if($profile_image->profile_image_url) {
+                    echo "
+                    <div class='row'>
+                      <div class='col-sm-4 col-sm-offset-4'>
+                        <img style='height: 75px; width: 75px; display: block; margin: auto; border-radius: 100px; margin-bottom: 25px; object-fit: cover;' src='{$profile_image->profile_image_url}'>
+                      </div>
+                    </div>
+                    ";
+                  } else {
+                    echo "
+                    <div class='row'>
+                      <div class='col-sm-4 col-sm-offset-4'>
+                        <img style='height: 75px; width: 75px; display: block; margin: auto; border-radius: 100px; margin-bottom: 25px; object-fit: cover;' src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg'>
+                      </div>
+                    </div>
+                    ";
+                  }
+                  ?>
+                </a>
+              </div>
+
+              <hr>
+
               <!-- First Name -->
               <div class="form-group">
                 <label for="user_first">First Name</label>

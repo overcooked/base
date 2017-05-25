@@ -90,19 +90,19 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 			<!-- Large view items -->
 			<ul class="nav navbar-nav navbar-right hidden-xs">
 
-				<ul class="nav navbar-nav hidden-sm" id="logged-in-links">
-	        <li><a href="about.php">About</a></li>
-	        <li><a href="howitworks.php">How It Works</a></li>
-	        <li><a href="contact.php">Contact</a></li>
-	      </ul>
+				<ul class="nav navbar-nav hidden-sm" id="logged-in-links" style="position: relative; bottom: -1px; right: 5px;">
+					<li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="about.php">About</a></li>
+					<li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="howitworks.php">How It Works</a></li>
+					<li><a style="color: #7e9098 !important; text-transform: capitalize !important; font-family: proximanova-semibold; font-size: 14px; letter-spacing: 0.3px !important;" href="contact.php">Contact</a></li>
+				</ul>
 
-				<li id="navbar-post-button-wrapper">
+				<li id="navbar-post-button-wrapper" style="margin-top: 13px;">
 					<a href="post.php" id="navbar-post-button">new listing<span class="ss-icon" style="padding-left: 7px; position: relative; top: 2px; left: 1px; font-size: 12px;">textfile</span></a>
 				</li>
 
 				<li class="dropdown">
 
-					<li>
+					<li style="position: relative; top: -1px;">
 						<img src="https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg" id="navbar-profile-image" alt="Profile Image">
 					</li>
 

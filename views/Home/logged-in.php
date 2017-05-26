@@ -117,6 +117,13 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
     					</a>
     				</li>
 
+            <li>
+    					<a href="messages.php" class="side-bar-link">
+    						<span class="ss-icon">chat</span>
+    						<span class="side-bar-link-text">MESSAGES</span>
+    					</a>
+    				</li>
+
     				<li>
     					<a href="update.php" class="side-bar-link">
     						<span class="ss-icon">userfile</span>
@@ -182,6 +189,14 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
     								Profile
     							</a>
     						</li>
+
+                <li>
+    							<a href="update.php">
+    								<span class="ss-icon">chat</span>
+    								Messages
+    							</a>
+    						</li>
+
     						<li>
     							<a href="update.php">
     								<span class="ss-icon">userfile</span>

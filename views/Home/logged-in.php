@@ -32,6 +32,13 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
     <script src="/public/js/search.js" type="text/javascript"></script>
     <script src="/public/js/filter.js" type="text/javascript"></script>
 
+    <style media="screen">
+    #footer {
+      position: relative;
+      top: 155px;
+    }
+    </style>
+
   </head>
   <body>
 
@@ -447,6 +454,9 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
     })(jQuery);
 
     </script>
+
+    <!-- Footer Section -->
+    <?php View::footer(); ?>
 
   </body>
 </html>

@@ -162,18 +162,21 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                   <img src='{$profile_image}' id='profile-img' alt='Profile Image'/>
                   <p id='posted-by'>
                   Posted By
-                  <a href='{$user_profile_url}'>{$poster->user_first} {$poster->user_last}</a><br>
+                  <a style='color: #6cc38a;' href='{$user_profile_url}'>{$poster->user_first} {$poster->user_last}</a><br>
                   <small>Lives In {$poster->user_location}</small>
                   </p>
                 </div>
 
                 <div class='form-divider'></div>
 
-                <p>{$post->post_description}</p>
+                <h3 style='font-size: 22px; padding-bottom: 12px; padding-top: 4px; font-family: proximanova-light; letter-spacing: 0.6px;'>About This Listing</h3>
+                <p style='letter-spacing: 0.3px; line-height: 28px; font-size: 16px; color: #55595d;'>{$post->post_description}</p>
                 <hr>
 
-                <a href='{$user_chat_url}'>Message User About Posting</a>
-                <br>
+                <a style='text-decoration: none; margin: auto; display: block; text-align: center; padding-top: 12px; padding-bottom: 10px; color: #767e8c; border-radius: 2px; background: linear-gradient(90deg, #ececec, #e2e2e2);' href='{$user_chat_url}'>Message User About Listing <span style='position: relative; top: 2px; font-size: 14px; left: 3px;' class='ss-icon'>mail</span></a>
+
+                <hr>
+
                 <small>
                   <b>Pickup Location:</b>
                   {$post->post_pickup_location}
